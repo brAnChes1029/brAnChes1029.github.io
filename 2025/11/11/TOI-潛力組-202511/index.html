@@ -128,6 +128,12 @@ p.spoiler {
               </li> 
                    
           
+            
+              <li class="menu-item">
+                <a href="/tags/">Tags</a>
+              </li> 
+                   
+          
           
         </ul>
       </nav>
@@ -143,35 +149,39 @@ p.spoiler {
 
   
     <div class="post-head">
-    <div class="post-info">
-        <div class="tag-list">
-            
-                
-                    <span class="post-tag">
-                        <a href="/tags/TOI/">
-                            TOI
-                        </a>
-                    </span>    
-                           
-            
-        </div>
-        <div class="post-title">
-            
-            
-                TOI 潛力組 202511
-            
-            
-        </div>
-        <span class="post-date">
-            Nov 11, 2025
-        </span>
-    </div>
-    <div class="post-img">
+  <div class="post-info">
+
+    
+      <div class="tag-list">
         
-            <div class="h-line-primary"></div>
-              
+          <span class="post-tag">
+            <a href="/tags/TOI/">
+              #TOI
+            </a>
+          </span>
+        
+      </div>
+    
+
+    <div class="post-title">
+      
+        TOI 潛力組 202511
+      
     </div>
+
+    <span class="post-date">
+      Nov 11, 2025
+    </span>
+
+  </div>
+
+  <div class="post-img">
+    
+      <div class="h-line-primary"></div>
+    
+  </div>
 </div>
+
     <div class="post-content">
     <p>生病 ಥ_ಥ<br>
 但我覺得北二區之前大概是好不了了，所以要習慣一下。</p>
@@ -187,8 +197,8 @@ P1 是數學，P2 是 DP，P3 是 BCC。</p>
 <h2 id="P1">P1</h2>
 <details>
 <summary>暴雷</summary>
-<p>如果有 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></eq> 個人帽子同一個顏色，那這 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></eq> 個人都會看到 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></eq>。<br>
-如果有超過 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></eq> 個人看到 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></eq>，那就代表要分多組。</p>
+<p>如果有 $n$ 個人帽子同一個顏色，那這 $n$ 個人都會看到 $n-1$。<br>
+如果有超過 $n$ 個人看到 $n-1$，那就代表要分多組。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">typedef</span> <span class="hljs-type">long</span> <span class="hljs-type">long</span> ll;<br><br><span class="hljs-type">int</span> n;<br><span class="hljs-type">int</span> c[<span class="hljs-number">1005</span>];<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br><br>    ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-number">0</span>); cin.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>); cout.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>);<br><br>    cin &gt;&gt; n;<br>    <span class="hljs-keyword">for</span>( <span class="hljs-type">int</span> i=<span class="hljs-number">0</span> ; i&lt;n ; i++ )&#123;<br>        <span class="hljs-type">int</span> x;<br>        cin &gt;&gt; x;<br>        c[x<span class="hljs-number">+1</span>]++;<br>    &#125;<br>    <span class="hljs-type">int</span> all=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>( <span class="hljs-type">int</span> i=<span class="hljs-number">1</span> ; i&lt;<span class="hljs-number">1005</span> ; i++ )&#123;<br>        <span class="hljs-type">int</span> y=(c[i]/i);<br>        <span class="hljs-keyword">if</span>( c[i]%i ) y++;<br>        all+=i*y;<br>    &#125;<br>    cout &lt;&lt; all;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p><img src="/images/TOI202511P1.png" alt="P1"></p>
 </details>
