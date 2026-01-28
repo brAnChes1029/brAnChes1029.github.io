@@ -2,58 +2,42 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
-    <meta name="author" content="brAnChes">
-
-
-    <meta name="subtitle" content="I want to participate in EGOI">
-
-
-
+<meta name="author" content="brAnChes">
+<meta name="subtitle" content="I want to participate in EGOI">
 
 
 
 <title>TOI 潛力組 202511 | brAnChes&#39;s blog</title>
 
-
-
-    <link rel="icon" href="/logo.ico">
-
-
+<link rel="icon" href="/logo.ico">
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
 </style>
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
 
 
 
-    
-        <link rel="stylesheet" href="/css/style.css">
-    
-        <link rel="stylesheet" href="/css/highlight/solarized-dark.css">
-    
-
-
-
-
-    
-        <script src="/js/menu.js"></script>
-    
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+    <link rel="stylesheet" href="/css/highlight/solarized-dark.css">
+  
 
 
 
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
+  
+    <script src="/js/menu.js"></script>
+  
 
 
 
@@ -185,8 +169,36 @@ p.spoiler {
 <summary>暴雷</summary>
 
 <p>P2 一看就是超級裸的背包 DP。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">typedef</span> <span class="hljs-type">long</span> <span class="hljs-type">long</span> ll;<br><br><span class="hljs-type">int</span> n, x;<br><span class="hljs-type">int</span> dp[<span class="hljs-number">10005</span>];<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br><br>    ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-number">0</span>); cin.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>); cout.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>);<br><br>    cin &gt;&gt; n &gt;&gt; x;<br>    <span class="hljs-keyword">for</span>( <span class="hljs-type">int</span> i=<span class="hljs-number">1</span> ; i&lt;<span class="hljs-number">10005</span> ; i++ ) dp[i]=<span class="hljs-number">1e9</span>;<br><br>    <span class="hljs-keyword">for</span>( <span class="hljs-type">int</span> i=<span class="hljs-number">0</span> ; i&lt;n ; i++ )&#123;<br>        <span class="hljs-type">int</span> a, b;<br>        cin &gt;&gt; a &gt;&gt; b;<br>        b+=a;<br>        <span class="hljs-keyword">for</span>( <span class="hljs-type">int</span> j=b ; j&lt;<span class="hljs-number">10005</span> ; j++ )&#123;<br>            dp[j]=<span class="hljs-built_in">min</span>( dp[j], dp[j-b]+a );<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-type">int</span> ans=<span class="hljs-number">1e9</span>;<br>    <span class="hljs-keyword">for</span>( <span class="hljs-type">int</span> i=x ; i&lt;<span class="hljs-number">10005</span> ; i++ ) ans=<span class="hljs-built_in">min</span>( ans, dp[i] );<br>    cout &lt;&lt; ans;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
 
+int n, x;
+int dp[10005];
+
+int main(){
+
+    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+
+    cin &gt;&gt; n &gt;&gt; x;
+    for( int i=1 ; i&lt;10005 ; i++ ) dp[i]=1e9;
+
+    for( int i=0 ; i&lt;n ; i++ ){
+        int a, b;
+        cin &gt;&gt; a &gt;&gt; b;
+        b+=a;
+        for( int j=b ; j&lt;10005 ; j++ ){
+            dp[j]=min( dp[j], dp[j-b]+a );
+        }
+    }
+
+    int ans=1e9;
+    for( int i=x ; i&lt;10005 ; i++ ) ans=min( ans, dp[i] );
+    cout &lt;&lt; ans;
+
+    return 0;
+}
+</code></pre>
 <p><img src="/images/TOI202511P2.png" alt="P2"></p>
 </details>
 
@@ -194,8 +206,34 @@ p.spoiler {
 <summary>暴雷</summary>
 
 <p>如果有 $n$ 個人帽子同一個顏色，那這 $n$ 個人都會看到 $n-1$。<br>如果有超過 $n$ 個人看到 $n-1$，那就代表要分多組。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">typedef</span> <span class="hljs-type">long</span> <span class="hljs-type">long</span> ll;<br><br><span class="hljs-type">int</span> n;<br><span class="hljs-type">int</span> c[<span class="hljs-number">1005</span>];<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br><br>    ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-number">0</span>); cin.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>); cout.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>);<br><br>    cin &gt;&gt; n;<br>    <span class="hljs-keyword">for</span>( <span class="hljs-type">int</span> i=<span class="hljs-number">0</span> ; i&lt;n ; i++ )&#123;<br>        <span class="hljs-type">int</span> x;<br>        cin &gt;&gt; x;<br>        c[x<span class="hljs-number">+1</span>]++;<br>    &#125;<br>    <span class="hljs-type">int</span> all=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>( <span class="hljs-type">int</span> i=<span class="hljs-number">1</span> ; i&lt;<span class="hljs-number">1005</span> ; i++ )&#123;<br>        <span class="hljs-type">int</span> y=(c[i]/i);<br>        <span class="hljs-keyword">if</span>( c[i]%i ) y++;<br>        all+=i*y;<br>    &#125;<br>    cout &lt;&lt; all;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
 
+int n;
+int c[1005];
+
+int main(){
+
+    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+
+    cin &gt;&gt; n;
+    for( int i=0 ; i&lt;n ; i++ ){
+        int x;
+        cin &gt;&gt; x;
+        c[x+1]++;
+    }
+    int all=0;
+    for( int i=1 ; i&lt;1005 ; i++ ){
+        int y=(c[i]/i);
+        if( c[i]%i ) y++;
+        all+=i*y;
+    }
+    cout &lt;&lt; all;
+
+    return 0;
+}
+</code></pre>
 <p><img src="/images/TOI202511P1.png" alt="P1"></p>
 </details>
 
@@ -204,8 +242,103 @@ p.spoiler {
 <summary>暴雷</summary>
 
 <p>先把圖分成很多個邊雙連通分量，如果剪斷的邊不是橋那就沒有影響。<br>把雙連通分量們和橋們組成樹，然後就可以在上面 DP，就能知道剪斷某個橋會影響到下面多少個子樹。<br>實作一樣先<del>找出我的模板</del>先找出橋 (dfs) ，再把雙連通分量編號 (dfs2) ，最後再 DP (dfs3)。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">typedef</span> <span class="hljs-type">long</span> <span class="hljs-type">long</span> ll;<br><br><span class="hljs-type">int</span> n, m, q, c;<br>vector&lt;<span class="hljs-type">int</span>&gt; a[<span class="hljs-number">50005</span>];<br>vector&lt;<span class="hljs-type">int</span>&gt; b[<span class="hljs-number">50005</span>]; <span class="hljs-comment">// BCC</span><br>set&lt; pair&lt;<span class="hljs-type">int</span>,<span class="hljs-type">int</span>&gt; &gt; bridge;<br><span class="hljs-type">int</span> color[<span class="hljs-number">50005</span>];<br><span class="hljs-type">int</span> dep[<span class="hljs-number">50005</span>];<br><span class="hljs-type">int</span> low[<span class="hljs-number">50005</span>];<br><span class="hljs-type">int</span> sz[<span class="hljs-number">50005</span>];<br><span class="hljs-type">int</span> dp[<span class="hljs-number">50005</span>];<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">( <span class="hljs-type">int</span> i, <span class="hljs-type">int</span> p )</span></span>&#123;<br>    <span class="hljs-keyword">for</span>( <span class="hljs-type">int</span> u : a[i] )&#123;<br>        <span class="hljs-keyword">if</span>( u==p ) <span class="hljs-keyword">continue</span>;<br>        <span class="hljs-keyword">if</span>( !dep[u] )&#123;<br>            dep[u]=dep[i]<span class="hljs-number">+1</span>;<br>            low[u]=dep[u];<br>            <span class="hljs-built_in">dfs</span>( u, i );<br>            low[i]=<span class="hljs-built_in">min</span>( low[i], low[u] );<br>            <span class="hljs-keyword">if</span>( low[u]&gt;dep[i] ) bridge.<span class="hljs-built_in">insert</span>(&#123;<span class="hljs-built_in">min</span>(i,u), <span class="hljs-built_in">max</span>(i,u)&#125;);<br>        &#125;<br>        <span class="hljs-keyword">else</span>&#123;<br>            low[i]=<span class="hljs-built_in">min</span>( low[i], dep[u] );<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs2</span><span class="hljs-params">( <span class="hljs-type">int</span> i, <span class="hljs-type">int</span> p )</span></span>&#123;<br>    sz[c]++;<br>    color[i]=c;<br>    <span class="hljs-keyword">for</span>( <span class="hljs-type">int</span> u : a[i] )&#123;<br>        <span class="hljs-keyword">if</span>( u==p || color[u] ) <span class="hljs-keyword">continue</span>;<br>        <span class="hljs-keyword">if</span>( bridge.<span class="hljs-built_in">count</span>(&#123;<span class="hljs-built_in">min</span>(i,u), <span class="hljs-built_in">max</span>(i,u)&#125;) ) <span class="hljs-keyword">continue</span>;<br>        <span class="hljs-built_in">dfs2</span>( u, i );<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs3</span><span class="hljs-params">( <span class="hljs-type">int</span> i, <span class="hljs-type">int</span> p )</span></span>&#123;<br>    dp[i]=sz[i];<br>    <span class="hljs-keyword">for</span>( <span class="hljs-type">int</span> u : b[i] )&#123;<br>        <span class="hljs-keyword">if</span>( u==p ) <span class="hljs-keyword">continue</span>;<br>        <span class="hljs-built_in">dfs3</span>( u, i );<br>        dp[i]+=dp[u];<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br><br>    ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-number">0</span>); cin.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>); cout.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>);<br><br>    cin &gt;&gt; n &gt;&gt; m &gt;&gt; q;<br>    <span class="hljs-keyword">for</span>( <span class="hljs-type">int</span> i=<span class="hljs-number">0</span> ; i&lt;m ; i++ )&#123;<br>        <span class="hljs-type">int</span> x, y;<br>        cin &gt;&gt; x &gt;&gt; y;<br>        a[x].<span class="hljs-built_in">push_back</span>(y);<br>        a[y].<span class="hljs-built_in">push_back</span>(x);<br>    &#125;<br><br>    dep[<span class="hljs-number">0</span>]=low[<span class="hljs-number">0</span>]=<span class="hljs-number">1</span>;<br>    <span class="hljs-built_in">dfs</span>( <span class="hljs-number">0</span>, <span class="hljs-number">-1</span> );<br><br>    <span class="hljs-comment">/*</span><br><span class="hljs-comment">    cout &lt;&lt; bridge.size() &lt;&lt; &#x27;\n&#x27;;</span><br><span class="hljs-comment">    for( auto u : bridge )&#123;</span><br><span class="hljs-comment">        cout &lt;&lt; u.first &lt;&lt; &#x27; &#x27; &lt;&lt; u.second &lt;&lt; &#x27;\n&#x27;;</span><br><span class="hljs-comment">    &#125;</span><br><span class="hljs-comment">    */</span><br><br>    <span class="hljs-keyword">for</span>( <span class="hljs-type">int</span> i=<span class="hljs-number">0</span> ; i&lt;n ; i++ )&#123;<br>        <span class="hljs-keyword">if</span>( color[i] ) <span class="hljs-keyword">continue</span>;<br>        c++;<br>        <span class="hljs-built_in">dfs2</span>( i, <span class="hljs-number">-1</span> );<br>    &#125;<br>    <span class="hljs-keyword">for</span>( <span class="hljs-keyword">auto</span> [x, y] : bridge )&#123;<br>        b[color[x]].<span class="hljs-built_in">push_back</span>(color[y]);<br>        b[color[y]].<span class="hljs-built_in">push_back</span>(color[x]);<br>    &#125;<br>    <span class="hljs-built_in">dfs3</span>( <span class="hljs-number">1</span>, <span class="hljs-number">-1</span> );<br><br>   <span class="hljs-keyword">while</span>( q-- )&#123;<br>        <span class="hljs-type">int</span> x, y;<br>        cin &gt;&gt; x &gt;&gt; y;<br>        <span class="hljs-keyword">if</span>( x&gt;y ) <span class="hljs-built_in">swap</span>(x, y);<br>        <span class="hljs-keyword">if</span>( bridge.<span class="hljs-built_in">count</span>(&#123;x, y&#125;) )&#123;<br>            cout &lt;&lt; n-<span class="hljs-built_in">min</span>( dp[color[x]], dp[color[y]] ) &lt;&lt; <span class="hljs-string">&#x27;\n&#x27;</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span>&#123;<br>            cout &lt;&lt; n &lt;&lt; <span class="hljs-string">&#x27;\n&#x27;</span>;<br>        &#125;<br>   &#125;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
 
+int n, m, q, c;
+vector&lt;int&gt; a[50005];
+vector&lt;int&gt; b[50005]; // BCC
+set&lt; pair&lt;int,int&gt; &gt; bridge;
+int color[50005];
+int dep[50005];
+int low[50005];
+int sz[50005];
+int dp[50005];
+
+void dfs( int i, int p ){
+    for( int u : a[i] ){
+        if( u==p ) continue;
+        if( !dep[u] ){
+            dep[u]=dep[i]+1;
+            low[u]=dep[u];
+            dfs( u, i );
+            low[i]=min( low[i], low[u] );
+            if( low[u]&gt;dep[i] ) bridge.insert({min(i,u), max(i,u)});
+        }
+        else{
+            low[i]=min( low[i], dep[u] );
+        }
+    }
+}
+
+void dfs2( int i, int p ){
+    sz[c]++;
+    color[i]=c;
+    for( int u : a[i] ){
+        if( u==p || color[u] ) continue;
+        if( bridge.count({min(i,u), max(i,u)}) ) continue;
+        dfs2( u, i );
+    }
+}
+
+void dfs3( int i, int p ){
+    dp[i]=sz[i];
+    for( int u : b[i] ){
+        if( u==p ) continue;
+        dfs3( u, i );
+        dp[i]+=dp[u];
+    }
+}
+
+int main(){
+
+    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+
+    cin &gt;&gt; n &gt;&gt; m &gt;&gt; q;
+    for( int i=0 ; i&lt;m ; i++ ){
+        int x, y;
+        cin &gt;&gt; x &gt;&gt; y;
+        a[x].push_back(y);
+        a[y].push_back(x);
+    }
+
+    dep[0]=low[0]=1;
+    dfs( 0, -1 );
+
+    /*
+    cout &lt;&lt; bridge.size() &lt;&lt; &#39;\n&#39;;
+    for( auto u : bridge ){
+        cout &lt;&lt; u.first &lt;&lt; &#39; &#39; &lt;&lt; u.second &lt;&lt; &#39;\n&#39;;
+    }
+    */
+
+    for( int i=0 ; i&lt;n ; i++ ){
+        if( color[i] ) continue;
+        c++;
+        dfs2( i, -1 );
+    }
+    for( auto [x, y] : bridge ){
+        b[color[x]].push_back(color[y]);
+        b[color[y]].push_back(color[x]);
+    }
+    dfs3( 1, -1 );
+
+   while( q-- ){
+        int x, y;
+        cin &gt;&gt; x &gt;&gt; y;
+        if( x&gt;y ) swap(x, y);
+        if( bridge.count({x, y}) ){
+            cout &lt;&lt; n-min( dp[color[x]], dp[color[y]] ) &lt;&lt; &#39;\n&#39;;
+        }
+        else{
+            cout &lt;&lt; n &lt;&lt; &#39;\n&#39;;
+        }
+   }
+
+    return 0;
+}
+</code></pre>
 <p><img src="/images/TOI202511P3.png" alt="P3"></p>
 </details>
 
