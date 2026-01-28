@@ -171,36 +171,7 @@ P1 是數學，P2 是 DP，P3 是 BCC。</p>
 <details>
 <summary>暴雷</summary>
 <p>P2 一看就是超級裸的背包 DP。</p>
-<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
-using namespace std;
-typedef long long ll;
-
-int n, x;
-int dp[10005];
-
-int main(){
-
-    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-
-    cin &gt;&gt; n &gt;&gt; x;
-    for( int i=1 ; i&lt;10005 ; i++ ) dp[i]=1e9;
-
-    for( int i=0 ; i&lt;n ; i++ ){
-        int a, b;
-        cin &gt;&gt; a &gt;&gt; b;
-        b+=a;
-        for( int j=b ; j&lt;10005 ; j++ ){
-            dp[j]=min( dp[j], dp[j-b]+a );
-        }
-    }
-
-    int ans=1e9;
-    for( int i=x ; i&lt;10005 ; i++ ) ans=min( ans, dp[i] );
-    cout &lt;&lt; ans;
-
-    return 0;
-}
-</code></pre>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, x;</span><br><span class="line"><span class="type">int</span> dp[<span class="number">10005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; x;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;<span class="number">10005</span> ; i++ ) dp[i]=<span class="number">1e9</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> a, b;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">        b+=a;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> j=b ; j&lt;<span class="number">10005</span> ; j++ )&#123;</span><br><span class="line">            dp[j]=<span class="built_in">min</span>( dp[j], dp[j-b]+a );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> ans=<span class="number">1e9</span>;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=x ; i&lt;<span class="number">10005</span> ; i++ ) ans=<span class="built_in">min</span>( ans, dp[i] );</span><br><span class="line">    cout &lt;&lt; ans;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="/images/TOI202511P2.png" alt="P2"></p>
 </details>
 <h2 id="P1">P1</h2>
@@ -208,34 +179,7 @@ int main(){
 <summary>暴雷</summary>
 <p>如果有 $n$ 個人帽子同一個顏色，那這 $n$ 個人都會看到 $n-1$。<br>
 如果有超過 $n$ 個人看到 $n-1$，那就代表要分多組。</p>
-<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
-using namespace std;
-typedef long long ll;
-
-int n;
-int c[1005];
-
-int main(){
-
-    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-
-    cin &gt;&gt; n;
-    for( int i=0 ; i&lt;n ; i++ ){
-        int x;
-        cin &gt;&gt; x;
-        c[x+1]++;
-    }
-    int all=0;
-    for( int i=1 ; i&lt;1005 ; i++ ){
-        int y=(c[i]/i);
-        if( c[i]%i ) y++;
-        all+=i*y;
-    }
-    cout &lt;&lt; all;
-
-    return 0;
-}
-</code></pre>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> c[<span class="number">1005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> x;</span><br><span class="line">        cin &gt;&gt; x;</span><br><span class="line">        c[x<span class="number">+1</span>]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> all=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;<span class="number">1005</span> ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> y=(c[i]/i);</span><br><span class="line">        <span class="keyword">if</span>( c[i]%i ) y++;</span><br><span class="line">        all+=i*y;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; all;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="/images/TOI202511P1.png" alt="P1"></p>
 </details>
 <p>時間好多，看來有機會寫超不熟的 <code>BCC</code>。</p>
@@ -245,103 +189,7 @@ int main(){
 <p>先把圖分成很多個邊雙連通分量，如果剪斷的邊不是橋那就沒有影響。<br>
 把雙連通分量們和橋們組成樹，然後就可以在上面 DP，就能知道剪斷某個橋會影響到下面多少個子樹。<br>
 實作一樣先<s>找出我的模板</s>先找出橋 (dfs) ，再把雙連通分量編號 (dfs2) ，最後再 DP (dfs3)。</p>
-<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-typedef long long ll;
-
-int n, m, q, c;
-vector&lt;int&gt; a[50005];
-vector&lt;int&gt; b[50005]; // BCC
-set&lt; pair&lt;int,int&gt; &gt; bridge;
-int color[50005];
-int dep[50005];
-int low[50005];
-int sz[50005];
-int dp[50005];
-
-void dfs( int i, int p ){
-    for( int u : a[i] ){
-        if( u==p ) continue;
-        if( !dep[u] ){
-            dep[u]=dep[i]+1;
-            low[u]=dep[u];
-            dfs( u, i );
-            low[i]=min( low[i], low[u] );
-            if( low[u]&gt;dep[i] ) bridge.insert({min(i,u), max(i,u)});
-        }
-        else{
-            low[i]=min( low[i], dep[u] );
-        }
-    }
-}
-
-void dfs2( int i, int p ){
-    sz[c]++;
-    color[i]=c;
-    for( int u : a[i] ){
-        if( u==p || color[u] ) continue;
-        if( bridge.count({min(i,u), max(i,u)}) ) continue;
-        dfs2( u, i );
-    }
-}
-
-void dfs3( int i, int p ){
-    dp[i]=sz[i];
-    for( int u : b[i] ){
-        if( u==p ) continue;
-        dfs3( u, i );
-        dp[i]+=dp[u];
-    }
-}
-
-int main(){
-
-    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-
-    cin &gt;&gt; n &gt;&gt; m &gt;&gt; q;
-    for( int i=0 ; i&lt;m ; i++ ){
-        int x, y;
-        cin &gt;&gt; x &gt;&gt; y;
-        a[x].push_back(y);
-        a[y].push_back(x);
-    }
-
-    dep[0]=low[0]=1;
-    dfs( 0, -1 );
-
-    /*
-    cout &lt;&lt; bridge.size() &lt;&lt; '\n';
-    for( auto u : bridge ){
-        cout &lt;&lt; u.first &lt;&lt; ' ' &lt;&lt; u.second &lt;&lt; '\n';
-    }
-    */
-
-    for( int i=0 ; i&lt;n ; i++ ){
-        if( color[i] ) continue;
-        c++;
-        dfs2( i, -1 );
-    }
-    for( auto [x, y] : bridge ){
-        b[color[x]].push_back(color[y]);
-        b[color[y]].push_back(color[x]);
-    }
-    dfs3( 1, -1 );
-
-   while( q-- ){
-        int x, y;
-        cin &gt;&gt; x &gt;&gt; y;
-        if( x&gt;y ) swap(x, y);
-        if( bridge.count({x, y}) ){
-            cout &lt;&lt; n-min( dp[color[x]], dp[color[y]] ) &lt;&lt; '\n';
-        }
-        else{
-            cout &lt;&lt; n &lt;&lt; '\n';
-        }
-   }
-
-    return 0;
-}
-</code></pre>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, q, c;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; a[<span class="number">50005</span>];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; b[<span class="number">50005</span>]; <span class="comment">// BCC</span></span><br><span class="line">set&lt; pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; &gt; bridge;</span><br><span class="line"><span class="type">int</span> color[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> dep[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> low[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> sz[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> dp[<span class="number">50005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">( <span class="type">int</span> i, <span class="type">int</span> p )</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> u : a[i] )&#123;</span><br><span class="line">        <span class="keyword">if</span>( u==p ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span>( !dep[u] )&#123;</span><br><span class="line">            dep[u]=dep[i]<span class="number">+1</span>;</span><br><span class="line">            low[u]=dep[u];</span><br><span class="line">            <span class="built_in">dfs</span>( u, i );</span><br><span class="line">            low[i]=<span class="built_in">min</span>( low[i], low[u] );</span><br><span class="line">            <span class="keyword">if</span>( low[u]&gt;dep[i] ) bridge.<span class="built_in">insert</span>(&#123;<span class="built_in">min</span>(i,u), <span class="built_in">max</span>(i,u)&#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            low[i]=<span class="built_in">min</span>( low[i], dep[u] );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs2</span><span class="params">( <span class="type">int</span> i, <span class="type">int</span> p )</span></span>&#123;</span><br><span class="line">    sz[c]++;</span><br><span class="line">    color[i]=c;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> u : a[i] )&#123;</span><br><span class="line">        <span class="keyword">if</span>( u==p || color[u] ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span>( bridge.<span class="built_in">count</span>(&#123;<span class="built_in">min</span>(i,u), <span class="built_in">max</span>(i,u)&#125;) ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="built_in">dfs2</span>( u, i );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs3</span><span class="params">( <span class="type">int</span> i, <span class="type">int</span> p )</span></span>&#123;</span><br><span class="line">    dp[i]=sz[i];</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> u : b[i] )&#123;</span><br><span class="line">        <span class="keyword">if</span>( u==p ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="built_in">dfs3</span>( u, i );</span><br><span class="line">        dp[i]+=dp[u];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m &gt;&gt; q;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;m ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> x, y;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">        a[x].<span class="built_in">push_back</span>(y);</span><br><span class="line">        a[y].<span class="built_in">push_back</span>(x);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    dep[<span class="number">0</span>]=low[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">dfs</span>( <span class="number">0</span>, <span class="number">-1</span> );</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    cout &lt;&lt; bridge.size() &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line"><span class="comment">    for( auto u : bridge )&#123;</span></span><br><span class="line"><span class="comment">        cout &lt;&lt; u.first &lt;&lt; &#x27; &#x27; &lt;&lt; u.second &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">if</span>( color[i] ) <span class="keyword">continue</span>;</span><br><span class="line">        c++;</span><br><span class="line">        <span class="built_in">dfs2</span>( i, <span class="number">-1</span> );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">auto</span> [x, y] : bridge )&#123;</span><br><span class="line">        b[color[x]].<span class="built_in">push_back</span>(color[y]);</span><br><span class="line">        b[color[y]].<span class="built_in">push_back</span>(color[x]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">dfs3</span>( <span class="number">1</span>, <span class="number">-1</span> );</span><br><span class="line"></span><br><span class="line">   <span class="keyword">while</span>( q-- )&#123;</span><br><span class="line">        <span class="type">int</span> x, y;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">        <span class="keyword">if</span>( x&gt;y ) <span class="built_in">swap</span>(x, y);</span><br><span class="line">        <span class="keyword">if</span>( bridge.<span class="built_in">count</span>(&#123;x, y&#125;) )&#123;</span><br><span class="line">            cout &lt;&lt; n-<span class="built_in">min</span>( dp[color[x]], dp[color[y]] ) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            cout &lt;&lt; n &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="/images/TOI202511P3.png" alt="P3"></p>
 </details>
 <h2 id="檢討">檢討</h2>

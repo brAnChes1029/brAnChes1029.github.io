@@ -171,38 +171,7 @@ p.spoiler {
 <summary>暴雷</summary>
 <p>就看 B 陣列然後分成很多小塊，怎麼分就看是不是和在 A 裡的時候鄰居一樣，不一樣就一定要切，一樣就算在同一塊裡面，答案是切幾刀，所以就是塊數減一。但我實作爛了，拿到好多<font color=#ffff00> WA </font> 好可怕 இ௰இ</p>
 <p>還有就是小心數字到 $10^9$，需要 <code>map</code>。</p>
-<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
-using namespace std;
-typedef long long ll;
-
-int n;
-int a[200005];
-int b[200005];
-unordered_map&lt;int,int&gt; p;
-
-int main()&#123;
-
-    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-
-    cin &gt;&gt; n;
-    for( int i=1 ; i&lt;=n ; i++ )&#123;
-        cin &gt;&gt; a[i];
-        p[a[i]]=i;
-    &#125;
-
-    int cnt=0;
-    cin &gt;&gt; b[1];
-    for( int i=2 ; i&lt;=n ; i++ )&#123;
-        cin &gt;&gt; b[i];
-        if( p[b[i-1]]!=p[b[i]]-1 ) cnt++;
-        //cout &lt;&lt; p[b[i-1]] &lt;&lt; ' ' &lt;&lt; p[b[i]] &lt;&lt; '\n';
-    &#125;
-
-    cout &lt;&lt; cnt;
-
-    return 0;
-&#125;
-</code></pre>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[<span class="number">200005</span>];</span><br><span class="line"><span class="type">int</span> b[<span class="number">200005</span>];</span><br><span class="line">unordered_map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; p;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">        p[a[i]]=i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">    cin &gt;&gt; b[<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">2</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        cin &gt;&gt; b[i];</span><br><span class="line">        <span class="keyword">if</span>( p[b[i<span class="number">-1</span>]]!=p[b[i]]<span class="number">-1</span> ) cnt++;</span><br><span class="line">        <span class="comment">//cout &lt;&lt; p[b[i-1]] &lt;&lt; &#x27; &#x27; &lt;&lt; p[b[i]] &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; cnt;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="/images/TOI202509P2.png" alt="P2"></p>
 </details>
 <p>寫完之後看一下 P1 和 P3，P3 是拓樸大裸題但字串分析一臉討厭， <s>先丟掉</s><br>
@@ -218,47 +187,7 @@ P1 看起來有點想法但又不太確定，感覺可以想想看，真有趣�
 感覺全部切成很多個 $2$ 好嗎？指數函數是不是長大很快…但是 $3^2=9$ 比 $2^3=8$ 好耶，代表說我 $X=6$ 要優先切成兩個 $3$。而且 $x=12$ 切成四個 $3$ 是 $3^4=81$，比 $4^3=64$ 好，所以切的大小 $3$ 是最好的，要優先切成大小是 $3$，多的部分再用 $2$ 來補。那先寫個 $X\leq15$ 的子題看看這樣是不是好的。</p>
 <p>哇是好的耶 (☆▽☆)<br>
 那就按照上面的策略寫吧 ~</p>
-<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
-using namespace std;
-typedef long long ll;
-
-ll const mod=1e9+7;
-ll ans[16]=&#123;1, 1, 2, 3, 4, 6, 9, 12, 18, 27, 36, 54, 81, 108, 162, 243&#125;;
-
-ll pw( ll x, ll y )&#123;
-    if( y==0 ) return 1;
-    else if( y==1 ) return x;
-    else&#123;
-        ll z=pw( x, y/2 );
-        if( y&amp;1 ) return z*z%mod*x%mod;
-        else return z*z%mod;
-    &#125;
-&#125;
-
-int main()&#123;
-
-    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-
-    int t;
-    cin &gt;&gt; t;
-    while( t-- )&#123;
-        ll x;
-        cin &gt;&gt; x;
-        if( x&lt;=15 ) cout &lt;&lt; ans[x] &lt;&lt; '\n';
-        else&#123;
-            ll y=x/6;
-            ll z=x%6;
-            if( z!=0 )&#123;
-                y--;
-                z+=6;
-            &#125;
-            cout &lt;&lt; pw( ans[6], y )*ans[z]%mod &lt;&lt; '\n';
-        &#125;
-    &#125;
-
-    return 0;
-&#125;
-</code></pre>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line">ll <span class="type">const</span> mod=<span class="number">1e9</span><span class="number">+7</span>;</span><br><span class="line">ll ans[<span class="number">16</span>]=&#123;<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">12</span>, <span class="number">18</span>, <span class="number">27</span>, <span class="number">36</span>, <span class="number">54</span>, <span class="number">81</span>, <span class="number">108</span>, <span class="number">162</span>, <span class="number">243</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">pw</span><span class="params">( ll x, ll y )</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>( y==<span class="number">0</span> ) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>( y==<span class="number">1</span> ) <span class="keyword">return</span> x;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        ll z=<span class="built_in">pw</span>( x, y/<span class="number">2</span> );</span><br><span class="line">        <span class="keyword">if</span>( y&amp;<span class="number">1</span> ) <span class="keyword">return</span> z*z%mod*x%mod;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> z*z%mod;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> t;</span><br><span class="line">    cin &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span>( t-- )&#123;</span><br><span class="line">        ll x;</span><br><span class="line">        cin &gt;&gt; x;</span><br><span class="line">        <span class="keyword">if</span>( x&lt;=<span class="number">15</span> ) cout &lt;&lt; ans[x] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            ll y=x/<span class="number">6</span>;</span><br><span class="line">            ll z=x%<span class="number">6</span>;</span><br><span class="line">            <span class="keyword">if</span>( z!=<span class="number">0</span> )&#123;</span><br><span class="line">                y--;</span><br><span class="line">                z+=<span class="number">6</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            cout &lt;&lt; <span class="built_in">pw</span>( ans[<span class="number">6</span>], y )*ans[z]%mod &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="/images/TOI202509P1.png" alt="P1"></p>
 </details>
 <p>但是時間只剩 12 分鐘了， P3 至少要 15~20 分吧，可惡</p>
@@ -269,90 +198,7 @@ int main()&#123;
 <summary>暴雷</summary>
 <p>一開始就先字串處理嘛，<s>會不會他的考點其實是這個</s>，然後從有賦值的儲存格開始拓樸，就做完了。<br>
 那個 <code>ana</code> 是 <code>analysis</code> 的意思喔 （￣ ︶ ￣）</p>
-<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
-using namespace std;
-typedef long long ll;
-
-int n, m;
-bool vis[200][30];
-int ind[200005];
-int v[200][30];
-vector&lt;int&gt; a[200005];
-
-void ana( string s, int i, int j )&#123;
-    int k=0;
-    while( s[k]!='+' ) k++;
-    if( s[1]&gt;='A' &amp;&amp; s[1]&lt;='Z' )&#123;
-        int f=stoi(s.substr(2, k-2))*100+s[1]-'A'+1;
-        a[f].push_back(i*100+j);
-        ind[i*100+j]++;
-    &#125;
-    else&#123;
-        v[i][j]+=(s[1]-'0');
-    &#125;
-    k++;
-    if( s[k]&gt;='A' &amp;&amp; s[k]&lt;='Z' )&#123;
-        int f=stoi(s.substr(k+1))*100+s[k]-'A'+1;
-        a[f].push_back(i*100+j);
-        ind[i*100+j]++;
-    &#125;
-    else&#123;
-        v[i][j]+=(s[k]-'0');
-    &#125;
-&#125;
-
-int main()&#123;
-
-    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-
-    cin &gt;&gt; n &gt;&gt; m;
-    queue&lt;int&gt; q;
-    for( int i=1 ; i&lt;=n ; i++ )&#123;
-        for( int j=1 ; j&lt;=m ; j++ )&#123;
-            string s;
-            cin &gt;&gt; s;
-            if( s.length()==1 )&#123;
-                v[i][j]=(s[0]-'0');
-                q.push( i*100+j );
-                vis[i][j]=true;
-            &#125;
-            else if( s.length()==4 )&#123;
-                v[i][j]=(s[1]-'0'+s[3]-'0');
-                q.push( i*100+j );
-                vis[i][j]=true;
-            &#125;
-            else&#123;
-                ana( s, i, j );
-            &#125;
-        &#125;
-    &#125;
-
-    while( !q.empty() )&#123;
-        int x=q.front();
-        q.pop();
-        int i=x/100;
-        int j=x%100;
-        for( int y : a[x] )&#123;
-            ind[y]--;
-            v[y/100][y%100]+=v[i][j];
-            if( ind[y]==0 )&#123;
-                vis[y/100][y%100]=true;
-                q.push(y);
-            &#125;
-        &#125;
-    &#125;
-
-    for( int i=1 ; i&lt;=n ; i++ )&#123;
-        for( int j=1 ; j&lt;=m ; j++ )&#123;
-            if( !vis[i][j] ) cout &lt;&lt; &quot;ERROR &quot;;
-            else cout &lt;&lt; v[i][j] &lt;&lt; ' ';
-        &#125;
-        cout &lt;&lt; '\n';
-    &#125;
-
-    return 0;
-&#125;
-</code></pre>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">200</span>][<span class="number">30</span>];</span><br><span class="line"><span class="type">int</span> ind[<span class="number">200005</span>];</span><br><span class="line"><span class="type">int</span> v[<span class="number">200</span>][<span class="number">30</span>];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; a[<span class="number">200005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ana</span><span class="params">( string s, <span class="type">int</span> i, <span class="type">int</span> j )</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> k=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>( s[k]!=<span class="string">&#x27;+&#x27;</span> ) k++;</span><br><span class="line">    <span class="keyword">if</span>( s[<span class="number">1</span>]&gt;=<span class="string">&#x27;A&#x27;</span> &amp;&amp; s[<span class="number">1</span>]&lt;=<span class="string">&#x27;Z&#x27;</span> )&#123;</span><br><span class="line">        <span class="type">int</span> f=<span class="built_in">stoi</span>(s.<span class="built_in">substr</span>(<span class="number">2</span>, k<span class="number">-2</span>))*<span class="number">100</span>+s[<span class="number">1</span>]-<span class="string">&#x27;A&#x27;</span><span class="number">+1</span>;</span><br><span class="line">        a[f].<span class="built_in">push_back</span>(i*<span class="number">100</span>+j);</span><br><span class="line">        ind[i*<span class="number">100</span>+j]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        v[i][j]+=(s[<span class="number">1</span>]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    k++;</span><br><span class="line">    <span class="keyword">if</span>( s[k]&gt;=<span class="string">&#x27;A&#x27;</span> &amp;&amp; s[k]&lt;=<span class="string">&#x27;Z&#x27;</span> )&#123;</span><br><span class="line">        <span class="type">int</span> f=<span class="built_in">stoi</span>(s.<span class="built_in">substr</span>(k<span class="number">+1</span>))*<span class="number">100</span>+s[k]-<span class="string">&#x27;A&#x27;</span><span class="number">+1</span>;</span><br><span class="line">        a[f].<span class="built_in">push_back</span>(i*<span class="number">100</span>+j);</span><br><span class="line">        ind[i*<span class="number">100</span>+j]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        v[i][j]+=(s[k]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> j=<span class="number">1</span> ; j&lt;=m ; j++ )&#123;</span><br><span class="line">            string s;</span><br><span class="line">            cin &gt;&gt; s;</span><br><span class="line">            <span class="keyword">if</span>( s.<span class="built_in">length</span>()==<span class="number">1</span> )&#123;</span><br><span class="line">                v[i][j]=(s[<span class="number">0</span>]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">                q.<span class="built_in">push</span>( i*<span class="number">100</span>+j );</span><br><span class="line">                vis[i][j]=<span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>( s.<span class="built_in">length</span>()==<span class="number">4</span> )&#123;</span><br><span class="line">                v[i][j]=(s[<span class="number">1</span>]-<span class="string">&#x27;0&#x27;</span>+s[<span class="number">3</span>]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">                q.<span class="built_in">push</span>( i*<span class="number">100</span>+j );</span><br><span class="line">                vis[i][j]=<span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="built_in">ana</span>( s, i, j );</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>( !q.<span class="built_in">empty</span>() )&#123;</span><br><span class="line">        <span class="type">int</span> x=q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="type">int</span> i=x/<span class="number">100</span>;</span><br><span class="line">        <span class="type">int</span> j=x%<span class="number">100</span>;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> y : a[x] )&#123;</span><br><span class="line">            ind[y]--;</span><br><span class="line">            v[y/<span class="number">100</span>][y%<span class="number">100</span>]+=v[i][j];</span><br><span class="line">            <span class="keyword">if</span>( ind[y]==<span class="number">0</span> )&#123;</span><br><span class="line">                vis[y/<span class="number">100</span>][y%<span class="number">100</span>]=<span class="literal">true</span>;</span><br><span class="line">                q.<span class="built_in">push</span>(y);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> j=<span class="number">1</span> ; j&lt;=m ; j++ )&#123;</span><br><span class="line">            <span class="keyword">if</span>( !vis[i][j] ) cout &lt;&lt; <span class="string">&quot;ERROR &quot;</span>;</span><br><span class="line">            <span class="keyword">else</span> cout &lt;&lt; v[i][j] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="/images/TOI202509P3.png" alt="P3"></p>
 </details>
 <h2 id="檢討">檢討</h2>
