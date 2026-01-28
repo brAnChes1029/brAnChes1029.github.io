@@ -163,11 +163,12 @@ p.spoiler {
 </div>
 
     <div class="post-content">
-    <p>好久沒打 TOI 了喔<br>不知道能不能破台 combo 5 呢 ~</p>
-<h2 id="P2"><a href="#P2" class="headerlink" title="P2"></a>P2</h2><p>打潛力組策略就是開場先看題，我覺得 P2 最簡單 (●’◡’●)</p>
+    <p>好久沒打 TOI 了喔<br>
+不知道能不能破台 combo 5 呢 ~</p>
+<h2 id="P2">P2</h2>
+<p>打潛力組策略就是開場先看題，我覺得 P2 最簡單 (●’◡’●)</p>
 <details>
 <summary>暴雷</summary>
-
 <p>就看 B 陣列然後分成很多小塊，怎麼分就看是不是和在 A 裡的時候鄰居一樣，不一樣就一定要切，一樣就算在同一塊裡面，答案是切幾刀，所以就是塊數減一。但我實作爛了，拿到好多<font color=#ffff00> WA </font> 好可怕 இ௰இ</p>
 <p>還有就是小心數字到 $10^9$，需要 <code>map</code>。</p>
 <pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
@@ -194,7 +195,7 @@ int main()&#123;
     for( int i=2 ; i&lt;=n ; i++ )&#123;
         cin &gt;&gt; b[i];
         if( p[b[i-1]]!=p[b[i]]-1 ) cnt++;
-        //cout &lt;&lt; p[b[i-1]] &lt;&lt; &#39; &#39; &lt;&lt; p[b[i]] &lt;&lt; &#39;\n&#39;;
+        //cout &lt;&lt; p[b[i-1]] &lt;&lt; ' ' &lt;&lt; p[b[i]] &lt;&lt; '\n';
     &#125;
 
     cout &lt;&lt; cnt;
@@ -204,16 +205,19 @@ int main()&#123;
 </code></pre>
 <p><img src="/images/TOI202509P2.png" alt="P2"></p>
 </details>
-
-<p>寫完之後看一下 P1 和 P3，P3 是拓樸大裸題但字串分析一臉討厭， <del>先丟掉</del><br>P1 看起來有點想法但又不太確定，感覺可以想想看，真有趣，好想寫喔 (❁´◡&#96;❁)</p>
-<h2 id="P1"><a href="#P1" class="headerlink" title="P1"></a>P1</h2><p>P1 超有料的，愛 P1<br>以下是心路歷程</p>
+<p>寫完之後看一下 P1 和 P3，P3 是拓樸大裸題但字串分析一臉討厭， <s>先丟掉</s><br>
+P1 看起來有點想法但又不太確定，感覺可以想想看，真有趣，好想寫喔 (❁´◡`❁)</p>
+<h2 id="P1">P1</h2>
+<p>P1 超有料的，愛 P1<br>
+以下是心路歷程</p>
 <details>
 <summary>暴雷</summary>
-
-<p>首先就是把數字 $x$ 切成很多塊嘛，至於要切幾塊…可以發現切越多塊得分會先上升再下降，像是 $X&#x3D;5$，切一塊 $5$ 分，兩塊 $6$ 分，三塊 $4$ 分，這樣。有個峰的話是不是要三分搜，但我超不會三分搜欸，上次寫是不是選訓的時候啊…喔好像不用，判斷就 <code>cal(mid)&gt;cal(mid+1)</code> 這樣子就可以好好二分搜了耶，萬歲 (≧∇≦)ﾉ</p>
+<p>首先就是把數字 $x$ 切成很多塊嘛，至於要切幾塊…可以發現切越多塊得分會先上升再下降，像是 $X=5$，切一塊 $5$ 分，兩塊 $6$ 分，三塊 $4$ 分，這樣。有個峰的話是不是要三分搜，但我超不會三分搜欸，上次寫是不是選訓的時候啊…喔好像不用，判斷就 <code>cal(mid)&gt;cal(mid+1)</code> 這樣子就可以好好二分搜了耶，萬歲 (≧∇≦)ﾉ</p>
 <p>等等好像又不對了，數字很大要 mod 耶，這樣要怎麼比大小啊，燒雞 Σ(っ °Д °;)っ</p>
-<p>既然不是 X 分搜，代表說一定要貪心構造出最佳解，呃<br>感覺全部切成很多個 $2$ 好嗎？指數函數是不是長大很快…但是 $3^2&#x3D;9$ 比 $2^3&#x3D;8$ 好耶，代表說我 $X&#x3D;6$ 要優先切成兩個 $3$。而且 $x&#x3D;12$ 切成四個 $3$ 是 $3^4&#x3D;81$，比 $4^3&#x3D;64$ 好，所以切的大小 $3$ 是最好的，要優先切成大小是 $3$，多的部分再用 $2$ 來補。那先寫個 $X\leq15$ 的子題看看這樣是不是好的。</p>
-<p>哇是好的耶 (☆▽☆)<br>那就按照上面的策略寫吧 ~ </p>
+<p>既然不是 X 分搜，代表說一定要貪心構造出最佳解，呃<br>
+感覺全部切成很多個 $2$ 好嗎？指數函數是不是長大很快…但是 $3^2=9$ 比 $2^3=8$ 好耶，代表說我 $X=6$ 要優先切成兩個 $3$。而且 $x=12$ 切成四個 $3$ 是 $3^4=81$，比 $4^3=64$ 好，所以切的大小 $3$ 是最好的，要優先切成大小是 $3$，多的部分再用 $2$ 來補。那先寫個 $X\leq15$ 的子題看看這樣是不是好的。</p>
+<p>哇是好的耶 (☆▽☆)<br>
+那就按照上面的策略寫吧 ~</p>
 <pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
@@ -240,7 +244,7 @@ int main()&#123;
     while( t-- )&#123;
         ll x;
         cin &gt;&gt; x;
-        if( x&lt;=15 ) cout &lt;&lt; ans[x] &lt;&lt; &#39;\n&#39;;
+        if( x&lt;=15 ) cout &lt;&lt; ans[x] &lt;&lt; '\n';
         else&#123;
             ll y=x/6;
             ll z=x%6;
@@ -248,7 +252,7 @@ int main()&#123;
                 y--;
                 z+=6;
             &#125;
-            cout &lt;&lt; pw( ans[6], y )*ans[z]%mod &lt;&lt; &#39;\n&#39;;
+            cout &lt;&lt; pw( ans[6], y )*ans[z]%mod &lt;&lt; '\n';
         &#125;
     &#125;
 
@@ -257,13 +261,14 @@ int main()&#123;
 </code></pre>
 <p><img src="/images/TOI202509P1.png" alt="P1"></p>
 </details>
-
 <p>但是時間只剩 12 分鐘了， P3 至少要 15~20 分吧，可惡</p>
-<h2 id="P3-補題"><a href="#P3-補題" class="headerlink" title="P3 (補題)"></a>P3 (補題)</h2><p>以下直接進暴雷，因為沒什麼好講的…<br>喔對了我為了要補題再申請了一個帳號，結果信箱還是名字一樣會報名失敗，我只好換成學校信箱，名字我不知道寫誰，<del>難道要寫我想像朋友的名字嗎，好怪</del>，所以我就寫了 <span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur ">賴昱龍</span></span>，因為我實在想不到什麼慈文國中的人名，抱歉。</p>
+<h2 id="P3-補題">P3 (補題)</h2>
+<p>以下直接進暴雷，因為沒什麼好講的…<br>
+喔對了我為了要補題再申請了一個帳號，結果信箱還是名字一樣會報名失敗，我只好換成學校信箱，名字我不知道寫誰，<s>難道要寫我想像朋友的名字嗎，好怪</s>，所以我就寫了 <span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur ">賴昱龍</span></span>，因為我實在想不到什麼慈文國中的人名，抱歉。</p>
 <details>
 <summary>暴雷</summary>
-
-<p>一開始就先字串處理嘛，<del>會不會他的考點其實是這個</del>，然後從有賦值的儲存格開始拓樸，就做完了。<br>那個 <code>ana</code> 是 <code>analysis</code> 的意思喔 （￣ ︶ ￣）</p>
+<p>一開始就先字串處理嘛，<s>會不會他的考點其實是這個</s>，然後從有賦值的儲存格開始拓樸，就做完了。<br>
+那個 <code>ana</code> 是 <code>analysis</code> 的意思喔 （￣ ︶ ￣）</p>
 <pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
@@ -276,23 +281,23 @@ vector&lt;int&gt; a[200005];
 
 void ana( string s, int i, int j )&#123;
     int k=0;
-    while( s[k]!=&#39;+&#39; ) k++;
-    if( s[1]&gt;=&#39;A&#39; &amp;&amp; s[1]&lt;=&#39;Z&#39; )&#123;
-        int f=stoi(s.substr(2, k-2))*100+s[1]-&#39;A&#39;+1;
+    while( s[k]!='+' ) k++;
+    if( s[1]&gt;='A' &amp;&amp; s[1]&lt;='Z' )&#123;
+        int f=stoi(s.substr(2, k-2))*100+s[1]-'A'+1;
         a[f].push_back(i*100+j);
         ind[i*100+j]++;
     &#125;
     else&#123;
-        v[i][j]+=(s[1]-&#39;0&#39;);
+        v[i][j]+=(s[1]-'0');
     &#125;
     k++;
-    if( s[k]&gt;=&#39;A&#39; &amp;&amp; s[k]&lt;=&#39;Z&#39; )&#123;
-        int f=stoi(s.substr(k+1))*100+s[k]-&#39;A&#39;+1;
+    if( s[k]&gt;='A' &amp;&amp; s[k]&lt;='Z' )&#123;
+        int f=stoi(s.substr(k+1))*100+s[k]-'A'+1;
         a[f].push_back(i*100+j);
         ind[i*100+j]++;
     &#125;
     else&#123;
-        v[i][j]+=(s[k]-&#39;0&#39;);
+        v[i][j]+=(s[k]-'0');
     &#125;
 &#125;
 
@@ -307,12 +312,12 @@ int main()&#123;
             string s;
             cin &gt;&gt; s;
             if( s.length()==1 )&#123;
-                v[i][j]=(s[0]-&#39;0&#39;);
+                v[i][j]=(s[0]-'0');
                 q.push( i*100+j );
                 vis[i][j]=true;
             &#125;
             else if( s.length()==4 )&#123;
-                v[i][j]=(s[1]-&#39;0&#39;+s[3]-&#39;0&#39;);
+                v[i][j]=(s[1]-'0'+s[3]-'0');
                 q.push( i*100+j );
                 vis[i][j]=true;
             &#125;
@@ -340,9 +345,9 @@ int main()&#123;
     for( int i=1 ; i&lt;=n ; i++ )&#123;
         for( int j=1 ; j&lt;=m ; j++ )&#123;
             if( !vis[i][j] ) cout &lt;&lt; &quot;ERROR &quot;;
-            else cout &lt;&lt; v[i][j] &lt;&lt; &#39; &#39;;
+            else cout &lt;&lt; v[i][j] &lt;&lt; ' ';
         &#125;
-        cout &lt;&lt; &#39;\n&#39;;
+        cout &lt;&lt; '\n';
     &#125;
 
     return 0;
@@ -350,8 +355,9 @@ int main()&#123;
 </code></pre>
 <p><img src="/images/TOI202509P3.png" alt="P3"></p>
 </details>
-
-<h2 id="檢討"><a href="#檢討" class="headerlink" title="檢討"></a>檢討</h2><p>我原本想寫心得與反思，但是看起來很作文，很怪。<br>我覺得最大的問題是實作能力太爛，不管是 P2 卡 bug 太久還是不熟 P3 這種字串處理。應該一般人 P1 P3 西二取一的時候都會把水水的 P3 寫掉吧，畢竟穩定得分總比投資一個還不知道想的是不是對的的東西好。但就比賽體驗來講我還是會選 P1 吧，反正是練習賽，寫出來心情真的很好，<del>讓我差點忘記 combo 毀了</del>。正式賽的話我就不確定了，我覺得我可能會去寫 P3 ＞︿＜</p>
+<h2 id="檢討">檢討</h2>
+<p>我原本想寫心得與反思，但是看起來很作文，很怪。<br>
+我覺得最大的問題是實作能力太爛，不管是 P2 卡 bug 太久還是不熟 P3 這種字串處理。應該一般人 P1 P3 西二取一的時候都會把水水的 P3 寫掉吧，畢竟穩定得分總比投資一個還不知道想的是不是對的的東西好。但就比賽體驗來講我還是會選 P1 吧，反正是練習賽，寫出來心情真的很好，<s>讓我差點忘記 combo 毀了</s>。正式賽的話我就不確定了，我覺得我可能會去寫 P3 ＞︿＜</p>
 
 </div> 
 

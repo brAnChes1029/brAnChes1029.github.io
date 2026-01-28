@@ -163,11 +163,13 @@ p.spoiler {
 </div>
 
     <div class="post-content">
-    <p>生病 ಥ_ಥ<br>但我覺得北二區之前大概是好不了了，所以要習慣一下。</p>
-<p>開場先看題。<br>P1 是數學，P2 是 DP，P3 是 BCC。</p>
-<h2 id="P2"><a href="#P2" class="headerlink" title="P2"></a>P2</h2><details>
+    <p>生病 ಥ_ಥ<br>
+但我覺得北二區之前大概是好不了了，所以要習慣一下。</p>
+<p>開場先看題。<br>
+P1 是數學，P2 是 DP，P3 是 BCC。</p>
+<h2 id="P2">P2</h2>
+<details>
 <summary>暴雷</summary>
-
 <p>P2 一看就是超級裸的背包 DP。</p>
 <pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
 using namespace std;
@@ -201,11 +203,11 @@ int main(){
 </code></pre>
 <p><img src="/images/TOI202511P2.png" alt="P2"></p>
 </details>
-
-<h2 id="P1"><a href="#P1" class="headerlink" title="P1"></a>P1</h2><details>
+<h2 id="P1">P1</h2>
+<details>
 <summary>暴雷</summary>
-
-<p>如果有 $n$ 個人帽子同一個顏色，那這 $n$ 個人都會看到 $n-1$。<br>如果有超過 $n$ 個人看到 $n-1$，那就代表要分多組。</p>
+<p>如果有 $n$ 個人帽子同一個顏色，那這 $n$ 個人都會看到 $n-1$。<br>
+如果有超過 $n$ 個人看到 $n-1$，那就代表要分多組。</p>
 <pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
@@ -236,12 +238,13 @@ int main(){
 </code></pre>
 <p><img src="/images/TOI202511P1.png" alt="P1"></p>
 </details>
-
 <p>時間好多，看來有機會寫超不熟的 <code>BCC</code>。</p>
-<h2 id="P3"><a href="#P3" class="headerlink" title="P3"></a>P3</h2><details>
+<h2 id="P3">P3</h2>
+<details>
 <summary>暴雷</summary>
-
-<p>先把圖分成很多個邊雙連通分量，如果剪斷的邊不是橋那就沒有影響。<br>把雙連通分量們和橋們組成樹，然後就可以在上面 DP，就能知道剪斷某個橋會影響到下面多少個子樹。<br>實作一樣先<del>找出我的模板</del>先找出橋 (dfs) ，再把雙連通分量編號 (dfs2) ，最後再 DP (dfs3)。</p>
+<p>先把圖分成很多個邊雙連通分量，如果剪斷的邊不是橋那就沒有影響。<br>
+把雙連通分量們和橋們組成樹，然後就可以在上面 DP，就能知道剪斷某個橋會影響到下面多少個子樹。<br>
+實作一樣先<s>找出我的模板</s>先找出橋 (dfs) ，再把雙連通分量編號 (dfs2) ，最後再 DP (dfs3)。</p>
 <pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
@@ -307,9 +310,9 @@ int main(){
     dfs( 0, -1 );
 
     /*
-    cout &lt;&lt; bridge.size() &lt;&lt; &#39;\n&#39;;
+    cout &lt;&lt; bridge.size() &lt;&lt; '\n';
     for( auto u : bridge ){
-        cout &lt;&lt; u.first &lt;&lt; &#39; &#39; &lt;&lt; u.second &lt;&lt; &#39;\n&#39;;
+        cout &lt;&lt; u.first &lt;&lt; ' ' &lt;&lt; u.second &lt;&lt; '\n';
     }
     */
 
@@ -329,10 +332,10 @@ int main(){
         cin &gt;&gt; x &gt;&gt; y;
         if( x&gt;y ) swap(x, y);
         if( bridge.count({x, y}) ){
-            cout &lt;&lt; n-min( dp[color[x]], dp[color[y]] ) &lt;&lt; &#39;\n&#39;;
+            cout &lt;&lt; n-min( dp[color[x]], dp[color[y]] ) &lt;&lt; '\n';
         }
         else{
-            cout &lt;&lt; n &lt;&lt; &#39;\n&#39;;
+            cout &lt;&lt; n &lt;&lt; '\n';
         }
    }
 
@@ -341,8 +344,12 @@ int main(){
 </code></pre>
 <p><img src="/images/TOI202511P3.png" alt="P3"></p>
 </details>
-
-<h2 id="檢討"><a href="#檢討" class="headerlink" title="檢討"></a>檢討</h2><p>P1 : 沒事，我數學很好<br>P2 : 沒事，我會 DP<br>P3 : 應該有可以一邊找橋一邊編號的方法，要去查一下<br>總體狀況滿好的，超冷靜，看來生病大腦就沒能量燒雞了 &gt; ᗜ &lt;<br>恭喜 combo 1 ✧*｡ ٩(ˊᗜˋ*)و✧*</p>
+<h2 id="檢討">檢討</h2>
+<p>P1 : 沒事，我數學很好<br>
+P2 : 沒事，我會 DP<br>
+P3 : 應該有可以一邊找橋一邊編號的方法，要去查一下<br>
+總體狀況滿好的，超冷靜，看來生病大腦就沒能量燒雞了 &gt; ᗜ &lt;<br>
+恭喜 combo 1 ✧*｡ ٩(ˊᗜˋ*)و✧*</p>
 
 </div> 
 
