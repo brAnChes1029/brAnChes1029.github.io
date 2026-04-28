@@ -10,7 +10,7 @@
 
 
 
-<title>brAnChes&#39;s blog</title>
+<title>Virtual EGOI 2024 | brAnChes&#39;s blog</title>
 
 <link rel="icon" href="/logo.ico">
 
@@ -138,113 +138,128 @@ p.spoiler {
 
       <div class="main">
         <div class="flex-container">
-          <div class="post-list">
-    
-    
+          <article id="post">
 
-        
-
-        
-            <div class="year-title">2025</div>
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2025/11/19/2025-%E5%8C%97%E4%BA%8C%E5%8D%80/">
-                
-                    2025 北二區
-                
-                </a> 
-            </div>
-            
-            <span class="post-date">Nov 19, 2025</span>
-        </div>
+  
+    <div class="post-head">
+  <div class="post-info">
 
     
-
+      <div class="tag-list">
         
-
+          <span class="post-tag">
+            <a href="/tags/training/">
+              #training
+            </a>
+          </span>
         
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2025/11/11/TOI-%E6%BD%9B%E5%8A%9B%E7%B5%84-202511/">
-                
-                    TOI 潛力組 202511
-                
-                </a> 
-            </div>
-            
-            <span class="post-date">Nov 11, 2025</span>
-        </div>
-
+          <span class="post-tag">
+            <a href="/tags/EGOI/">
+              #EGOI
+            </a>
+          </span>
+        
+      </div>
     
 
-        
-
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2025/10/19/2025-%E3%81%AE-%E6%A0%A1%E9%9A%8A%E5%85%AC%E5%81%87-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">
-                
-                    2025 の 校隊公假 について
-                
-                </a> 
-            </div>
-            
-            <span class="post-date">Oct 19, 2025</span>
-        </div>
-
-    
-
-        
-
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2025/10/01/TOI-%E6%BD%9B%E5%8A%9B%E7%B5%84-202509/">
-                
-                    TOI 潛力組 202509
-                
-                </a> 
-            </div>
-            
-            <span class="post-date">Oct 1, 2025</span>
-        </div>
-
-    
-
-        
-
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2025/09/22/Hello-Blog/">
-                
-                    Hello Blog
-                
-                </a> 
-            </div>
-            
-            <span class="post-date">Sep 22, 2025</span>
-        </div>
-
-    
-    <div id="paginator">
-        
-    <div class=paginator>
-        <div class="h-line-primary"></div>
-        <nav class="pagination">
-            <a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-        </nav>
+    <div class="post-title">
+      
+        Virtual EGOI 2024
+      
     </div>
 
-    </div>
+    <span class="post-date">
+      Apr 28, 2026
+    </span>
+
+  </div>
+
+  <div class="post-img">
+    
+      <div class="h-line-primary"></div>
+    
+  </div>
 </div>
 
+    <div class="post-content">
+    <h1>Day1</h1>
+<p>Day1 是 4/28 在武陵 vir 的，從 <code>8:30</code> 開始打。</p>
+<p><code>0:45</code><br>
+今天題目看得有點快，<s>一定是因為我沒有好好看 pD</s>。<br>
+精神分數 <code>100/~100/12/0</code>。<br>
+pB 我覺得是 DP 優化但細節還沒想。</p>
+<p><code>0:55</code><br>
+<code>100/0/0/0</code>。<br>
+去 pB。</p>
+<p><code>1:03</code><br>
+<code>100/28/0/0</code>。<br>
+pB 先寫一個暴力驗 DP 是好的，接下來優化 let’s go。</p>
+<p><code>1:21</code><br>
+<code>100/100/0/0</code>。<br>
+寫了一個小線段樹，今天進度有點快，現在就 $200$ 了。<br>
+去好好想 pC。</p>
+<p><code>1:42</code><br>
+<code>100/100/12/0</code>。<br>
+先把我會的 $12$ 分拿到。</p>
+<p><code>2:21</code><br>
+$O(N^2)$ WA 了，有點怪欸。<br>
+是說我這個子題因為某陣列初始化把 $j$ 打成 $i$ 花很久時間。</p>
+<p><code>2:23</code><br>
+<code>100/100/35/0</code>。<br>
+差不多半場了，應該要想想辦法弄 pD 了。</p>
+<p><code>3:14</code><br>
+因為 pD $0$ 想法，感覺資訊被我傳一傳就會弄丟，所以又來做 pC 子題，拿到 WA。</p>
+<p><code>3:26</code><br>
+<code>100/100/62/0</code>。<br>
+忘記判到樹的某一層有可能是空的了。<br>
+接下來 pD pC 交替想。</p>
+<p><code>4:14</code><br>
+<code>100/100/62/10</code>。<br>
+可以用 XOR 把資訊包在一起欸，再 XOR 一次資訊就回來了，很棒。<br>
+現在我會做 swap 了。</p>
+<p><code>4:30</code><br>
+<code>100/100/62/19</code>。<br>
+會 swap 有 $19$ 分。</p>
+<p><code>4:58</code><br>
+<code>100/100/62/32</code>。<br>
+用類似的方法做 shift，但我發現我只會做一個方向的，另一個方向還沒想到，然後也沒時間了。</p>
+<p>結果是 <code>100/100/62/32</code>。</p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2026/04/17/%E6%B2%92%E6%9C%89-Virtual-EGOI-2023/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
         </div>
       </div>
       
