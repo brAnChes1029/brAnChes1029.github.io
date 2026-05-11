@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="author" content="brAnChes">
+<meta name="subtitle" content="I want to participate in EGOI">
+
+
+
+<title>Virtual EGOI 2021 | brAnChes&#39;s blog</title>
+
+<link rel="icon" href="/logo.ico">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+<!-- 新增一個腳本區塊來明確觸發渲染，並指定分隔符 -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+          // 明確告訴 KaTeX 支援哪些符號
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false // 避免錯誤時整個頁面崩潰
+      });
+  });
+</script>
+
+
+
+
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+
+
+
+
+  
+    <script src="/js/menu.js"></script>
+  
+
+
+
+
+
+  <style type="text/css">
+.spoiler {
+  display: inline;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style><meta name="generator" content="Hexo 8.0.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            AC
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/tags/">Tags</a>
+              </li> 
+                   
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<script src="/js/menu.js"></script>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+  <div class="post-info">
+
+    
+      <div class="tag-list">
+        
+          <span class="post-tag">
+            <a href="/tags/training/">
+              #training
+            </a>
+          </span>
+        
+          <span class="post-tag">
+            <a href="/tags/EGOI/">
+              #EGOI
+            </a>
+          </span>
+        
+      </div>
+    
+
+    <div class="post-title">
+      
+        Virtual EGOI 2021
+      
+    </div>
+
+    <span class="post-date">
+      Mar 31, 2026
+    </span>
+
+  </div>
+
+  <div class="post-img">
+    
+      <div class="h-line-primary"></div>
+    
+  </div>
+</div>
+
+    <div class="post-content">
+    <h1>Day1</h1>
+<p>Day1 是 3/31 在武陵 vir 的，因為我 <code>14:00</code> 要去烤餅乾，所以從 <code>8:30</code> 開始打。</p>
+<p><code>0:55</code><br>
+看完題目了，精神分數 <code>100/48/9?/0</code>。<br>
+呃其實我沒認真看第四題。</p>
+<p><code>1:03</code><br>
+<code>100/0/0/0</code>。<br>
+pA 就很簡單，接下來決定先寫 pB $48$ 驗想法。</p>
+<p><code>1:33</code><br>
+<code>100/48/0/0</code>。<br>
+代表說 pB 由近到遠拔掉是好的，然後想辦法優化，像是快速找出最近的 pair ( ? ? ?</p>
+<p><code>2:00</code><br>
+pB 一直想到不可做的超詭異線段樹，先跳去 pC。<br>
+看一下之後發現隨機是不是可以做 $100$。</p>
+<p><code>2:39</code><br>
+<code>100/48/51/0</code>，pC 後面兩個子題 RE，有點怪。</p>
+<p><code>2:43</code><br>
+<code>100/48/100/0</code>。<br>
+原來是我 j 打成 i ，超好笑。</p>
+<p><code>4:00</code><br>
+一直想 pB 但沒有進展，要跳去 pD 了。</p>
+<p><code>5:00</code><br>
+不會做 pD 也不會做 pB，唉唉唉。</p>
+<p>結果是 <code>100/48/100/0</code>。</p>
+<hr>
+<h1>Day2</h1>
+<p>Day2 是 4/2 在武陵 vir 的，因為我 <code>14:00</code> 要去上畫地圖課 ( 這是我最喜歡的課欸，要上啦 )，所以從 <code>8:30</code> 開始打。</p>
+<p><code>1:00</code><br>
+看完全部題目，( 對我有看 pD )，精神分數 <code>100/100/7/10</code>。</p>
+<p><code>1:02</code><br>
+pA greedy 拿了一個 $42$，現在 <code>42/0/0/0</code>。<br>
+我好像在 JOIG 看過什麼類似的欸，該不會要 DP。</p>
+<p><code>1:13</code><br>
+DP 過了，成功拿到 <code>100/0/0/0</code>。</p>
+<p><code>1:17</code><br>
+驗一下 pD 我亂 claim 的東西，拿到 $0$ 分，所以精神分數下跌 <code>100/100/7/0</code>。</p>
+<p><code>1:57</code><br>
+確認一下細節之後開寫 pB，<code>100/100/0/0</code>。</p>
+<p><code>2:01</code><br>
+再亂 claim 一次 pD ，再拿一次 $0$。<br>
+我覺得 pD 先放著好了，根本不會做。</p>
+<p><code>3:00</code><br>
+好像成功想到 pC $16$ 分了，以為可以推廣到 $100$ 發現是爛的，反正先做掉。</p>
+<p><code>3:19</code><br>
+pC 拿 $0$ 分了，原來我又把 i 打成 1 了，超級好笑。</p>
+<p><code>3:26</code><br>
+<code>100/100/16/0</code>。</p>
+<p><code>4:02</code><br>
+因為一直沒有進展，所以先把 pC 暴力寫完，<code>100/100/23/0</code>。</p>
+<p><code>5:00</code><br>
+還是沒有進展。</p>
+<p>最後結果 <code>100/100/23/0</code>。</p>
+<hr>
+<h1>傷心的結果</h1>
+<p>Day1 <code>100/48/100/0</code>。<br>
+Day2 <code>100/100/23/0</code>。<br>
+Total <code>471</code>，rk.25。</p>
+<p><a target="_blank" rel="noopener" href="https://stats.egoi.org/editions/2021/results/">記分板</a>，金牌線是 <code>539</code>，所以我拿到銀牌了啦 ಥ_ಥ。</p>
+<hr>
+<h1>檢討</h1>
+<h2 id="Day1">Day1</h2>
+<ol>
+<li>pB 沒做出來就是不應該 ( ˘︹˘ )。</li>
+<li>pD 暴力為什麼沒有寫 ( ˘︹˘ )。</li>
+<li>我是不是不太會區間 DP ?</li>
+</ol>
+<h2 id="Day2">Day2</h2>
+<ol>
+<li>C 沒有想樹那個子題。</li>
+<li><code>check</code> 函數沒有初始化拿到很多 WA ( 補題的時候 )。</li>
+</ol>
+<h2 id="General">General</h2>
+<ol>
+<li>打錯變數的名字。</li>
+<li>pD 拿 $0$ 分 ( 至少 day1 滿不應該的 )。</li>
+<li>是不是要對後半場坐牢擬定什麼策略 ? 這是策略能解決的嗎，如果是的話那應該要逼自己去想子題？</li>
+<li>給每一題比較久的思考時間是好的，至少比跳來跳去好很多 ( 應該 )。</li>
+</ol>
+<hr>
+<h1>其他話</h1>
+<p>我很喜歡 day1 C 和 day2 C。<br>
+因為 4/1 是校慶，我原本想說可以 vir Day2，但是我爸媽不給請假學校又沒安靜的地方，<s>呃反正 Day1 和 Day2 中間本來就休一天。</s><br>
+我把 day2 D 丟給謝鈞因為他想知道我都在幹嘛，結果他也 claim 了一個跟我一模一樣的 WA 的東西。<br>
+摩卡超級強，好可惜他沒有進二階 (˘･_･˘) 。</p>
+<p>EGOI 測資是不是有點像 TOI，因為我一個大 bug 都可以撈不少分、二分搜區間太小竟然可以過，還有 $O(N^4)$ 可以拿到 $O(N^3)$ 子題的分數好棒。</p>
+<hr>
+<h1>題解</h1>
+<p><s>如果武陵太無聊我就會打。</s></p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/2026/04/06/%E9%97%9C%E6%96%BC%E6%88%91%E7%9A%84-handle-%E4%BA%8B%E6%95%85/">Prev</a>
+                </div>
+            
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2026/03/17/EGOI-2-TOI-1/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+  </body>
+</html>
