@@ -10,7 +10,7 @@
 
 
 
-<title>Virtual EGOI 2024 | brAnChes&#39;s blog</title>
+<title>EGOI 2026 | brAnChes&#39;s blog</title>
 
 <link rel="icon" href="/logo.ico">
 
@@ -148,8 +148,8 @@ p.spoiler {
       <div class="tag-list">
         
           <span class="post-tag">
-            <a href="/tags/training/">
-              #training
+            <a href="/tags/contest/">
+              #contest
             </a>
           </span>
         
@@ -164,12 +164,12 @@ p.spoiler {
 
     <div class="post-title">
       
-        Virtual EGOI 2024
+        EGOI 2026
       
     </div>
 
     <span class="post-date">
-      Apr 28, 2026
+      May 11, 2026
     </span>
 
   </div>
@@ -182,83 +182,28 @@ p.spoiler {
 </div>
 
     <div class="post-content">
-    <h1>Day1</h1>
-<p>Day1 是 4/28 在武陵 vir 的，從 <code>8:30</code> 開始打。</p>
-<p><code>0:45</code><br>
-今天題目看得有點快，<s>一定是因為我沒有好好看 pD</s>。<br>
-精神分數 <code>100/~100/12/0</code>。<br>
-pB 我覺得是 DP 優化但細節還沒想。</p>
-<p><code>0:55</code><br>
-<code>100/0/0/0</code>。<br>
-去 pB。</p>
-<p><code>1:03</code><br>
-<code>100/28/0/0</code>。<br>
-pB 先寫一個暴力驗 DP 是好的，接下來優化 let’s go。</p>
-<p><code>1:21</code><br>
-<code>100/100/0/0</code>。<br>
-寫了一個小線段樹，今天進度有點快，現在就 $200$ 了。<br>
-去好好想 pC。</p>
-<p><code>1:42</code><br>
-<code>100/100/12/0</code>。<br>
-先把我會的 $12$ 分拿到。</p>
-<p><code>2:21</code><br>
-$O(N^2)$ WA 了，有點怪欸。<br>
-是說我這個子題因為某陣列初始化把 $j$ 打成 $i$ 花很久時間。</p>
-<p><code>2:23</code><br>
-<code>100/100/35/0</code>。<br>
-差不多半場了，應該要想想辦法弄 pD 了。</p>
-<p><code>3:14</code><br>
-因為 pD $0$ 想法，感覺資訊被我傳一傳就會弄丟，所以又來做 pC 子題，拿到 WA。</p>
-<p><code>3:26</code><br>
-<code>100/100/62/0</code>。<br>
-忘記判到樹的某一層有可能是空的了。<br>
-接下來 pD pC 交替想。</p>
-<p><code>4:14</code><br>
-<code>100/100/62/10</code>。<br>
-可以用 XOR 把資訊包在一起欸，再 XOR 一次資訊就回來了，很棒。<br>
-現在我會做 swap 了。</p>
-<p><code>4:30</code><br>
-<code>100/100/62/19</code>。<br>
-會 swap 有 $19$ 分。</p>
-<p><code>4:58</code><br>
-<code>100/100/62/32</code>。<br>
-用類似的方法做 shift，但我發現我只會做一個方向的，另一個方向還沒想到，然後也沒時間了。</p>
-<p>結果是 <code>100/100/62/32</code>。</p>
-<h1>DAY 2</h1>
-<p>Day2 是 4/29 在武陵 vir 的，從 <code>9:00</code> 開始打。<br>
-其實我今天特別猶豫要不要打，因為星期三圖書館有上課的人，有點吵，但我還是打了。</p>
-<p><code>0:40</code><br>
-<s>好想睡覺喔，旁邊討論室好吵喔</s>。<br>
-精神分數 <code>100/25/?/?</code>。<br>
-pA 最多只會走一次直徑欸，哈哈哈。</p>
-<p><code>1:02</code><br>
-<code>100/0/0/0</code>。<br>
-pB 我覺得是把前面某一坨人移到後面，然後亂猜他凸函數所以來寫二分搜。</p>
-<p><code>1:39</code><br>
-<code>100/44/0/0</code>。<br>
-有點怪了，我以為我的二分搜很對，然後他 check 有夠難寫。<br>
-調一調覺得沒料了，這個應該是假解，感謝 EGOI 送我 $44$ 分。<br>
-( by 事後 : 他根本不是凸函數，而且確實是假解 )</p>
-<p><code>2:11</code><br>
-<code>100/100/0/0</code>。<br>
-突然想到一個很好寫的貪心，結果過了欸。<br>
-pC pD let’s go。</p>
-<p><code>2:31</code><br>
-<code>100/100/0/14.803203</code>。<br>
-pD clique 子題拿到 $4.803203$ 分，star 子題拿好拿滿。</p>
-<p><code>3:16</code><br>
-<code>100/100/0/34</code>。<br>
-會做 path 了，因為 clique 一定可以弄出一條 path，所以就一起做完了。</p>
-<p><code>4:18</code><br>
-<code>100/100/22/34</code>。<br>
-想 + 寫很久之後用 $O(N^2)$ 拿到 pC $22$。<br>
-之後就沒有進展了。</p>
-<p>結果是 <code>100/100/22/34</code>。</p>
-<h1>結果</h1>
-<p>Day1 <code>100/100/62/32</code>。<br>
-Day2 <code>100/100/22/34</code>。<br>
-Total <code>550</code>，rk.11。</p>
-<p><a target="_blank" rel="noopener" href="https://stats.egoi.org/editions/2024/results/">記分板</a>，金牌線是 <code>510</code>。</p>
+    <h1>5/11 (Mon.)</h1>
+<h2 id="登機前">登機前</h2>
+<p>我們是台灣晚上 <code>23:15</code> 的飛機，睿睿要大家 <code>20:45</code> 機場集合之類的，反正大家都很準時然後拍個大合照就出發了。<br>
+因為第一次搭這麼久 ( $14$ 小時 ) 的飛機所以我有點緊張，然後我爸媽和我妹都有來送機。<br>
+這次同行的除了四位國手，還有李忠謀和他老婆，和兩位教授。<br>
+過完海關 ( 海關叫楊岳蓁底迪 ) 之後李忠謀講了一點久義大利的扒手，之後就放我們去逛大街了。</p>
+<h2 id="飛機">飛機</h2>
+<p>上飛機之後我就找了一百公尺來看，但是大概台灣 <code>1:00</code> 多餐就出現了，吃一吃就關燈了 ( ? )，陳瑀萱說就跟著飛機的燈睡覺時差自然就調好了，不用憋到義大利時間晚上十點再睡，所以我就開始睡覺了。<br>
+我睡了台灣時間 <code>2:00~3:50</code>、<code>4:30~7:50</code>、<code>8:50~11:15</code>，但唯一有睡著的只有中間那段，因為實在太難睡了，我爸給我的頭枕超難用，睡一睡就會腰酸背痛脖子酸和腳麻，就慶幸我有早點睡覺和有存歌在手機裡面。</p>
+<h2 id="下飛機和接駁車">下飛機和接駁車</h2>
+<p>下飛機 ( 義大利 <code>7:40</code> ) 過義大利海關，應該還滿快的，還有很多酷酷的自動化設備。<br>
+之後坐一小時的車到飯店，接駁車跟台灣遊覽車很像，不得不說他舒適度優超飛機，非常好睡。<br>
+另外得知有料消息鄧涵云爸媽陪她來義大利，超酷；以及李忠謀有美國護照，<s>原來他跟常貽媗是一掛的</s>。</p>
+<h2 id="飯店">飯店</h2>
+<p>今晚住 Crowne Plaza Milan，$2$ 人房 ( 我跟陳瑀萱，因為她說她可以陪我早點睡 )，這個飯店頂樓有健身房和桑拿和免費的水，房間裡面也有水啦，但只有兩瓶，然後冰箱不能碰，因為碰了要收錢。<br>
+另一個很酷的是他的廁所。</p>
+<h2 id="米蘭旅遊">米蘭旅遊</h2>
+<p>大概 <code>11:00</code> 準備搭捷運去米蘭大教堂，順便吃午餐。<br>
+大教堂前面有超多鴿子會低空飛行差點撞到人有點恐怖，但更恐怖的是塞給你鴿子飼料再勒索錢的人，有個人試圖塞給李忠謀鴿子飼料但是失敗了，哈哈哈。<br>
+午餐吃義大利麵包，口味超多的根本不知道要點什麼，我看到某個有櫛瓜就直接點了，雖然我討厭吃麵包，但這個還滿好吃的。<br>
+吃完李忠謀就放生我們去亂逛，我們去買了紀念品和吃冰淇淋然後走一走之後就累了，所以就提早回去飯店休息了。<br>
+然後哪裡的捷運都差不多欸，根本不可能迷路啦。</p>
 
 </div> 
 
@@ -270,17 +215,12 @@ Total <code>550</code>，rk.11。</p>
     <nav class="post-nav">
         <div class="prev-item">
            
-                <div class="icon arrow-left"></div>
-                <div class="post-link">
-                    <a href="/2026/05/11/EGOI-2026/">Prev</a>
-                </div>
-            
         </div>
         <div class="next-item">
             
                 <div class="icon arrow-right"></div>
                 <div class="post-link">
-                  <a href="/2026/04/17/%E6%B2%92%E6%9C%89-Virtual-EGOI-2023/">Next</a>  
+                  <a href="/2026/04/28/Virtual-EGOI-2024/">Next</a>  
                 </div>  
             
         </div>
