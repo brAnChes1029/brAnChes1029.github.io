@@ -152,14 +152,14 @@ p.spoiler {
       <div class="tag-list">
         
           <span class="post-tag">
-            <a href="/tags/contest/">
-              #contest
+            <a href="/tags/EGOI/">
+              #EGOI
             </a>
           </span>
         
           <span class="post-tag">
-            <a href="/tags/EGOI/">
-              #EGOI
+            <a href="/tags/contest/">
+              #contest
             </a>
           </span>
         
@@ -186,48 +186,121 @@ p.spoiler {
 </div>
 
     <div class="post-content">
-    <p>這邊是 EGOI 2026 的正式比賽過程。<br>如果你想寫題目建議不要看，掰掰。</p>
+    <p>這邊是 EGOI 2026 的正式比賽過程。<br>
+如果你想寫題目建議不要看，掰掰。</p>
 <details>
 <summary>day1 大大大暴雷</summary>
-
-![P1](/images/EGOI2026day1.jpg)
-
+<p><img src="/images/EGOI2026day1.jpg" alt="P1"></p>
 </details>
-
 <hr>
-<h1 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h1><p><code>-10:00</code><br>比賽還沒開始，但我覺得有點緊張，然後我看其他國的選手沒有一個表情比我僵硬的。</p>
-<p><code>0:00</code><br>看題目。<br>很快就發現 pA 可以加號減號分開然後串一串，NO 的 case 也超好判。<br>pB 剛看覺得怪怪的有點複雜，但 greedy 好像是好的，複雜度不知道會不會均攤掉。<br>pC 前面小子題之外的 DP $O(QN^3)$ 有 $41$ 分。<br>pD 第一子題是二分搜，第二子題好像可以隨機。<br>精神分數 <code>100/70?/41/23</code>。</p>
-<p><code>1:08</code><br><code>100/0/0/0</code>。<br>順利，還不想去廁所所以開始寫 pB。</p>
-<p><code>1:40</code><br><code>100/0/0/0</code>。<br>實作有點卡，<del>加上我有點想睡覺了不妙</del>，舉牌子去廁所。<br>很快就有一個人過來帶我去廁所了。</p>
-<p><code>2:00</code><br><code>100/100/0/0</code>。<br>哇過了喔，耶好棒。<br>開始弄 pC 部分分。<br>這時候我發現剩下來的時間一題一小時好像非常不錯，所以之後就用這個節奏打。</p>
-<p><code>2:17</code><br><code>100/100/8/0</code>。<br>拿到一個超級水的小子題。</p>
-<p><code>2:20</code><br><code>100/100/19/0</code>。<br>拿到另一個超級水的小子題。<br>開始做 DP，好像因為亂用 0 base 所以整個故障了，所以一定要好好用 1 base DP。</p>
-<p><code>2:53</code><br><code>100/100/41/0</code>。<br>pC 做到我想要的分數了，所以去上廁所。<br>廁所的紙巾因為會黏在一起所以整個地上都是不小心被弄掉的紙巾，<del>我也貢獻了大概 $5$ 張在地上</del>。<br>回來的時候因為帶我去的人問要不要餅乾，就順手拿了一個義大利餅乾。</p>
-<p><code>3:17</code><br><code>100/100/41/11</code>。<br>輸出答案忘記 $+1$ 之類的 <font color=#FF0000> WA </font> 一次後成功拿到二分搜子題。</p>
-<p><code>3:41</code><br><code>100/100/41/23</code>。<br>隨機 <font color=#FF0000> WA </font> 了兩次，我以為隨機不行，還跑去亂丟問題問 is it true that the judge is adapted 得到 no comment 的回覆 ( 是不是 adapted 其實沒差 )。<br>Sole 好像一直在我後面，我又想了一下 ( 順便吃餅乾 ) 覺得隨機可以吧，<del>來砸 judge</del>，再丟一次就過了。<br>之後我一直在想 pD 後面的大分數，但第三子題就沒想法了，好像是因為我一直不知道要怎樣讓兩個人畫不同地方。</p>
-<p><code>4:00</code><br><code>100/100/41/23</code>。<br>再去廁所，這次是 Sole 帶我去的喔。<br>回來的時候 Sole : In bocca al lupo for your last 1 hour.<br>這句很棒有必要再寫一次。</p>
-<p><code>4:26</code><br><code>100/100/59/23</code>。<br>回來覺得 pD 有點瓶頸，應該多看看 pC，吃義大利餅乾的時候觀察一下發現轉移根本是 second max，$O(NQ)$ 超級好。<br>但這時候我砸了一個 priority_queue : (</p>
-<p><code>4:32</code><br><code>100/100/71/23</code>。<br>根本不用 priority_queue，可以開兩個變數存 max 和 second max 就好。</p>
-<p><code>5:00</code><br><code>100/100/71/23</code>。<br>我覺得打得不錯。</p>
+<h1>Day1</h1>
+<p><code>-10:00</code><br>
+比賽還沒開始，但我覺得有點緊張，然後我看其他國的選手沒有一個表情比我僵硬的。</p>
+<p><code>0:00</code><br>
+看題目。<br>
+很快就發現 pA 可以加號減號分開然後串一串，NO 的 case 也超好判。<br>
+pB 剛看覺得怪怪的有點複雜，但 greedy 好像是好的，複雜度不知道會不會均攤掉。<br>
+pC 前面小子題之外的 DP $O(QN^3)$ 有 $41$ 分。<br>
+pD 第一子題是二分搜，第二子題好像可以隨機。<br>
+精神分數 <code>100/70?/41/23</code>。</p>
+<p><code>1:08</code><br>
+<code>100/0/0/0</code>。<br>
+順利，還不想去廁所所以開始寫 pB。</p>
+<p><code>1:40</code><br>
+<code>100/0/0/0</code>。<br>
+實作有點卡，<s>加上我有點想睡覺了不妙</s>，舉牌子去廁所。<br>
+很快就有一個人過來帶我去廁所了。</p>
+<p><code>2:00</code><br>
+<code>100/100/0/0</code>。<br>
+哇過了喔，耶好棒。<br>
+開始弄 pC 部分分。<br>
+這時候我發現剩下來的時間一題一小時好像非常不錯，所以之後就用這個節奏打。</p>
+<p><code>2:17</code><br>
+<code>100/100/8/0</code>。<br>
+拿到一個超級水的小子題。</p>
+<p><code>2:20</code><br>
+<code>100/100/19/0</code>。<br>
+拿到另一個超級水的小子題。<br>
+開始做 DP，好像因為亂用 0 base 所以整個故障了，所以一定要好好用 1 base DP。</p>
+<p><code>2:53</code><br>
+<code>100/100/41/0</code>。<br>
+pC 做到我想要的分數了，所以去上廁所。<br>
+廁所的紙巾因為會黏在一起所以整個地上都是不小心被弄掉的紙巾，<s>我也貢獻了大概 $5$ 張在地上</s>。<br>
+回來的時候因為帶我去的人問要不要餅乾，就順手拿了一個義大利餅乾。</p>
+<p><code>3:17</code><br>
+<code>100/100/41/11</code>。<br>
+輸出答案忘記 $+1$ 之類的 <font color=#FF0000> WA </font> 一次後成功拿到二分搜子題。</p>
+<p><code>3:41</code><br>
+<code>100/100/41/23</code>。<br>
+隨機 <font color=#FF0000> WA </font> 了兩次，我以為隨機不行，還跑去亂丟問題問 is it true that the judge is adapted 得到 no comment 的回覆 ( 是不是 adapted 其實沒差 )。<br>
+Sole 好像一直在我後面，我又想了一下 ( 順便吃餅乾 ) 覺得隨機可以吧，<s>來砸 judge</s>，再丟一次就過了。<br>
+之後我一直在想 pD 後面的大分數，但第三子題就沒想法了，好像是因為我一直不知道要怎樣讓兩個人畫不同地方。</p>
+<p><code>4:00</code><br>
+<code>100/100/41/23</code>。<br>
+再去廁所，這次是 Sole 帶我去的喔。<br>
+回來的時候 Sole : In bocca al lupo for your last 1 hour.<br>
+這句很棒有必要再寫一次。</p>
+<p><code>4:26</code><br>
+<code>100/100/59/23</code>。<br>
+回來覺得 pD 有點瓶頸，應該多看看 pC，吃義大利餅乾的時候觀察一下發現轉移根本是 second max，$O(NQ)$ 超級好。<br>
+但這時候我砸了一個 priority_queue : (</p>
+<p><code>4:32</code><br>
+<code>100/100/71/23</code>。<br>
+根本不用 priority_queue，可以開兩個變數存 max 和 second max 就好。</p>
+<p><code>5:00</code><br>
+<code>100/100/71/23</code>。<br>
+我覺得打得不錯。</p>
 <hr>
-<h1 id="Day1-小檢討"><a href="#Day1-小檢討" class="headerlink" title="Day1 小檢討"></a>Day1 小檢討</h1><ol>
+<h1>Day1 小檢討</h1>
+<ol>
 <li>DP 平常寫 1 base 就不該在賽中亂用 0 base。</li>
 <li>一題一小時好像是不錯的策略。</li>
 <li>有記得上廁所吃東西，pD 卡住有跳題。</li>
 <li>不想看板但被常貽媗暴雷 😡</li>
 </ol>
 <hr>
-<h1 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h1><p><code>0:00</code><br>看題目。<br>pA 很簡單。<br>pB 感覺可以指定一個美味度，然後看這個美味度可以湊出來的數量上界下界，要怎麼做快一點不知道。<br>pC 有各種可以用並查集的子題，可以拿不少分。<br>pD 感覺實作會有點麻煩。<br>精神分數 <code>100/79/64/20+</code>。</p>
-<p><code>1:03</code><br><code>100/0/0/0</code>。<br>去看 pB，我想先花點時間看可不可以想到比較好的作法再寫，但還是不知道怎樣做比較快，然後 Sole 好像一直在我後面。<br>中間有去上廁所，但好像人太多了，所以舉手之後要等個五分鐘。<br>回來的時候可以看到 Luca 坐在門的旁邊跟我打招呼。</p>
-<p><code>1:45</code><br><code>100/9/0/0</code>。<br>先把一些和正解不相干的簡單子題寫掉。</p>
-<p><code>2:01</code><br><code>100/31/0/0</code>。<br>第二子題 claim 的結論有點瑕疵，又花了一點時間。<br>因為過一小時了，不能一直卡著，所以先去寫 pC pD。</p>
-<p><code>2:45</code><br><code>100/31/64/0</code>。<br>把 pC 所有該拿的子題都拿到了，只是中間因為陣列忘記弄大一點、單調隊列變數寫錯分別 <font color=#FF0000> WA </font> 兩次，而且後者還花了一點時間才成功弄好。<br>以後設觀點來看我覺得我有被 pB 還沒做出來影響到，實作不太穩，但其實我這時候心態是好的，我覺得我最後一小時可以做出 pB 然後把 pD 弄高一點。</p>
-<p><code>3:49</code><br><code>100/31/64/9</code>。<br>真的很難寫，然後還要抱怨 testing tool 幾乎沒什麼用，中間有去上一次廁所。<br>因為快一個小時了，所以先去弄 pB，弄好再回來 pD。</p>
-<p>然後我就在弄 pB 了。<br>我先算出我設定一個美味度，可以湊出蛋糕數量的上下界，然後我的除法可以讓算出來的數字只有 $\sqrt{N}$ 種，總之可以生出大概 $O(N\sqrt{N})$ 這樣的解法，看起來很好。<br>但是怎麼傳怎麼 <font color=#FF0000> WA </font>，而且傳小測資的也會 <font color=#FF0000> WA </font>，所以我決定去做 pD 了。<br>以後設觀點來看有沒有做 pD 根本沒差，pB 沒了就是沒了，但我可能覺得燒雞一題跟燒雞兩題還是有差的？不知道，至少我記得我賽中心態都沒有壞，我好像還會想說別人 pB 也燒雞，所以我 pD 多幾分就會贏之類的，啊根本就不是這樣啊。<br>以後設觀點來看我在賽中算出來的上下界跟 editorial 寫的幾乎一模一樣，而且我回家做就一次就過了，所以為什麼會這樣。</p>
-<p><code>4:55</code><br><code>100/31/64/9</code>。<br>我的 pD 終於弄好了，傳出去得到什麼 Wall Clock Time Limit Exceeded 超級怪，看起來像某種 RE ( 我之前在拿 $9$ 分的時候就看過這個東西了 )，但我不覺得我寫的東西會 RE ?</p>
-<p><code>5:00</code><br><code>100/31/64/9</code>。<br>聽到大家在拍手的時候就有種感覺大概知道完蛋了，以後設觀點來看前面很好的心態感覺是逞強裝出來的，目的是不要在比賽中讓情緒消耗太多時間和心力，所以一直說服自己做得到，之類的。</p>
+<h1>Day2</h1>
+<p><code>0:00</code><br>
+看題目。<br>
+pA 很簡單。<br>
+pB 感覺可以指定一個美味度，然後看這個美味度可以湊出來的數量上界下界，要怎麼做快一點不知道。<br>
+pC 有各種可以用並查集的子題，可以拿不少分。<br>
+pD 感覺實作會有點麻煩。<br>
+精神分數 <code>100/79/64/20+</code>。</p>
+<p><code>1:03</code><br>
+<code>100/0/0/0</code>。<br>
+去看 pB，我想先花點時間看可不可以想到比較好的作法再寫，但還是不知道怎樣做比較快，然後 Sole 好像一直在我後面。<br>
+中間有去上廁所，但好像人太多了，所以舉手之後要等個五分鐘。<br>
+回來的時候可以看到 Luca 坐在門的旁邊跟我打招呼。</p>
+<p><code>1:45</code><br>
+<code>100/9/0/0</code>。<br>
+先把一些和正解不相干的簡單子題寫掉。</p>
+<p><code>2:01</code><br>
+<code>100/31/0/0</code>。<br>
+第二子題 claim 的結論有點瑕疵，又花了一點時間。<br>
+因為過一小時了，不能一直卡著，所以先去寫 pC pD。</p>
+<p><code>2:45</code><br>
+<code>100/31/64/0</code>。<br>
+把 pC 所有該拿的子題都拿到了，只是中間因為陣列忘記弄大一點、單調隊列變數寫錯分別 <font color=#FF0000> WA </font> 兩次，而且後者還花了一點時間才成功弄好。<br>
+以後設觀點來看我覺得我有被 pB 還沒做出來影響到，實作不太穩，但其實我這時候心態是好的，我覺得我最後一小時可以做出 pB 然後把 pD 弄高一點。</p>
+<p><code>3:49</code><br>
+<code>100/31/64/9</code>。<br>
+真的很難寫，然後還要抱怨 testing tool 幾乎沒什麼用，中間有去上一次廁所。<br>
+因為快一個小時了，所以先去弄 pB，弄好再回來 pD。</p>
+<p>然後我就在弄 pB 了。<br>
+我先算出我設定一個美味度，可以湊出蛋糕數量的上下界，然後我的除法可以讓算出來的數字只有 $\sqrt{N}$ 種，總之可以生出大概 $O(N\sqrt{N})$ 這樣的解法，看起來很好。<br>
+但是怎麼傳怎麼 <font color=#FF0000> WA </font>，而且傳小測資的也會 <font color=#FF0000> WA </font>，所以我決定去做 pD 了。<br>
+以後設觀點來看有沒有做 pD 根本沒差，pB 沒了就是沒了，但我可能覺得燒雞一題跟燒雞兩題還是有差的？不知道，至少我記得我賽中心態都沒有壞，我好像還會想說別人 pB 也燒雞，所以我 pD 多幾分就會贏之類的，啊根本就不是這樣啊。<br>
+以後設觀點來看我在賽中算出來的上下界跟 editorial 寫的幾乎一模一樣，而且我回家做就一次就過了，所以為什麼會這樣。</p>
+<p><code>4:55</code><br>
+<code>100/31/64/9</code>。<br>
+我的 pD 終於弄好了，傳出去得到什麼 Wall Clock Time Limit Exceeded 超級怪，看起來像某種 RE ( 我之前在拿 $9$ 分的時候就看過這個東西了 )，但我不覺得我寫的東西會 RE ?</p>
+<p><code>5:00</code><br>
+<code>100/31/64/9</code>。<br>
+聽到大家在拍手的時候就有種感覺大概知道完蛋了，以後設觀點來看前面很好的心態感覺是逞強裝出來的，目的是不要在比賽中讓情緒消耗太多時間和心力，所以一直說服自己做得到，之類的。</p>
 <hr>
-<h1 id="day2-大檢討"><a href="#day2-大檢討" class="headerlink" title="day2 大檢討"></a>day2 大檢討</h1><ol>
+<h1>day2 大檢討</h1>
+<ol>
 <li>不知道 pB 是怎樣，這也不是檢討就有用的東西，畢竟我不記得我那時候寫了什麼。</li>
 <li>策略執行上有跳題和沒在比賽中崩潰至少讓我沒拿到更難看的分數。</li>
 <li>忘記吃東西了。</li>
