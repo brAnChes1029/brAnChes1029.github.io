@@ -205,6 +205,12 @@ p.spoiler {
 <h1>2026</h1>
 <h2 id="day1">day1</h2>
 <h3 id="Ferris-Wheel">Ferris Wheel</h3>
+<details><summary> full </summary>
+<p><code>+</code> 是往比自己大的連，先把全部是 <code>+</code> 的零件分離出來，編號由小往大連。<br>
+<code>-</code> 是往比自己小的連，把剩下的 <code>-</code> 的零件編號由大往小連。</p>
+<p>這時候會有兩條鍊，把 <code>+</code> 編號最大的連到 <code>-</code> 編號最大的，<code>-</code> 編號最小的連到 <code>+</code> 編號最小的。<br>
+如果這裡連不上去 ( 也就是 0 號是 <code>-</code> 或者 N-1 號是 <code>+</code> 的情況 ) 就輸出 <code>NO</code>。</p>
+</details>
 <h3 id="Ovenmasters">Ovenmasters</h3>
 <h3 id="Biscuits">Biscuits</h3>
 <h3 id="Census">Census</h3>
@@ -214,26 +220,31 @@ p.spoiler {
 <details><summary> subtask 2 </summary>
 <p>想要知道是不是存在除了自己的另一個人，可以先在自己的 ID <code>write</code>，然後去檢查其他地方有沒有被 <code>write</code>。<br>
 但是要檢查的地方太多了 : (<br>
-考慮 random 在 $0$ 到 $60$ 之間某個地方 <code>write</code>，然後去檢查其他 $60$ 個地方，這樣 ( 多送幾次 ) 就會過了。</p>
+考慮 random 在 $0$ 到 $60$ 之間某個地方 <code>write</code>，然後去檢查其他 $60$ 個地方，雖然說有 $\frac{1}{61}$ 的機率兩個人會撞到，不過多送幾次就會過了。</p>
 </details>
 <details><summary> subtask 3 </summary>
 <p>使用像是線段樹那樣的想法。</p>
 <p>第一輪，大家都在自己的 ID 上 <code>write 1</code>，然後按照 ID 0-1 2-3 4-5 6-7 這樣分組去看對方寫什麼，對方寫 $1$ 就可以知道這組共有 $2$ 人，看到 $0$ 代表這組只有一個人。<br>
-第二輪，剛剛的各組決定出一個代表在 ID 0 2 4 6 上 <code>write</code> 剛剛的總人數，然後按照 ID 01-23 45-67 這樣分組去看對方寫什麼，把對方寫的人數加進已知總人數。<br>
-第三輪，剛剛的各組決定出一個代表在 ID 0 4 上 <code>write</code> 剛剛的總人數，然後按照 ID 0123-4567 這樣分組去看對方寫什麼，把對方寫的人數加進已知總人數。<br>
+第二輪，01 23 45 67 各組決定出一個代表在 ID=0, 2, 4, 6 上 <code>write</code> 剛剛的總人數，然後按照 ID 01-23 45-67 這樣分組去看對方寫什麼，把對方寫的人數加進已知總人數。<br>
+第三輪，0123 4567 各組決定出一個代表在 ID=0, 4 上 <code>write</code> 剛剛的總人數，然後按照 ID 0123-4567 這樣分組去看對方寫什麼，把對方寫的人數加進已知總人數。<br>
 第四輪，最後的兩個人知道總人數，選一個代表把總人數 <code>write</code> 在 ID=0，之後其他人去 <code>read</code>。</p>
 <p>各組要決定出一個代表才不會有多個人在同一個 ID 上 <code>write</code>，至於怎麼決定出一個代表，如果兩小組中都有人，就選編號小的。</p>
 <p>這個想法可以推廣到 subtask 4，只能寫 0/1 的話，就把總人數用二進位多分幾次傳，可以拿到一些分數。</p>
 </details>
 <details><summary> 優化 1 </summary>
-<p>上面說為了避免多人在同一地點 <code>write</code>，選擇讓編號小的作為代表負責 <code>write</code>，但這樣要花 $7$ 輪才可以傳一個 $N=100$ 這樣大的數字。<br>
-可以讓多人負責不同 bit 在同一輪 <code>write</code>。</p>
-<p>要怎麼選出多人，可以維護每個人在現在這組內的 ranking，合併左右兩邊的時候就把左邊的人 ranking 加上右邊的人數。</p>
+<p>上面說為了避免多人在同一地點 <code>write</code>，選擇讓編號小的作為代表負責 <code>write</code>，但這樣要花 $7$ 輪才可以傳一個 $N=100$ 這樣大的數字。</p>
+<p>其實可以讓多人負責不同 bit，在同一輪 <code>write</code>。</p>
+<p>要怎麼選出多人，可以維護每個人在現在組內的 ranking，合併左右兩邊的時候就把左邊的人 ranking 加上右邊的人數，然後讓 ranking 前 $7$ 大的人負責 $7$ 個 bit。</p>
 </details>
 <details><summary> 優化 2 </summary>
-<p>這樣 merge 是一個樹狀的結構，但是在葉子的地方如果沒幾個人，就不需要用 $7$ bits 傳人數了，可以用少一點的 bits。<br>
+<p>這樣 merge 是一個樹狀的結構，但是在葉子的地方如果沒幾個人，就不需要用 $7$ bits 傳人數了，可以用少一點的 bit。<br>
 但是如果剛好遇上某一區人很多，又不能這樣節省了。</p>
-<p>這裡可以用 random shuffle 把全部人初始分布位置變平均一點，random 的 seed 要是固定的 ( $N$ 個人的程式是分開執行的，但他們打亂的基準要是一樣的，才能成功打亂 )。</p>
+<p>這裡可以用 random shuffle 把全部人初始分布位置變平均一點，random 的 seed 要是固定的 ( $N$ 個人的程式是分開執行的，但他們打亂的基準要是一樣的，才能成功打亂 )。<br>
+至於樹的哪一層要傳幾個 bit 就可能需要調整一下。</p>
+<p>( 我是有成功這樣弄到 $100$ 分 )</p>
+</details>
+<details><summary> 確定性作法 </summary>
+<p><a target="_blank" rel="noopener" href="https://egoi2026.it/competition/census/">官解</a>有說。</p>
 </details>
 <h2 id="day2">day2</h2>
 <h3 id="Watering-Plants">Watering Plants</h3>
