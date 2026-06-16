@@ -243,8 +243,8 @@ p.spoiler {
 Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$ 轉移，所以 Aurora 可以把最好的轉移點擋掉，因此可以直接用 second max 轉移，這樣 DP 就變 $O(N)$ 了。</p>
 </details>
 <details><summary> full </summary>
-<p>令 $B[i]=\text{secondmax}<em>{i \le j} (W_j + B[j + 1])$。<br>
-令 $A[i]=\text{secondmax}</em>{i \le j} (W_j + A[j + 1])$。<br>
+<p>令 $B[i]=\text{secondmax}<em>{i \le j}(W[j]+B[j+1])$。<br>
+令 $A[i]=\text{max}</em>{i \le j}(W[j]+B[j+1])$。<br>
 令 $D[i]=A[i]-B[i]$，$S[i]=A[i]+B[i]$。</p>
 <p>現在要算 $S[i]$，因為 $S[i+1]=A[i+1]+B[i+1]$，而且現在多了新的轉移點 $W[i]+B[i+1]$，他一定比 $B[i+1]$ 大，如果他也比 $A[i+1]$ 大的話就會 $A[i]=W[i]+B[i+1]$，否則就會 $B[i]=W[i]+B[i+1]$，反正總有 $S[i]=A[i+1]+B[i+1]+W[i]=\sum_{j=i}^{N-1} W_j$，所以 $A[0]+B[0]$ 會是全部餅乾的重量！</p>
 <p>算 $D[i]$，多了新的轉移點 $W[i]+B[i+1]$，看上面的討論可以發現 $D[i]=|{D[i+1]-W[i]}|$，而且 $D[i]$ 的值域頂多到 $W_{max}$。</p>
