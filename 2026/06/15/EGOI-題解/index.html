@@ -194,151 +194,103 @@ p.spoiler {
     padding: 5px 10px 5px 25px;
   }
 </style>
-
-<p>我決定要來寫 EGOI 題解　(●’◡’●)<br>希望可以在 $2027$ 的國手開始 virtual 之前把我會的寫完…<del>欸不對，我也是 $2027$ 的國手，而且我已經 vir 完了</del>。<br>主要是我覺得研究英文題解有點麻煩，然後網路上的中文題解不一定好看，那就再生一些不一定好看的題解，樣本數比較多，未來的國手可以多方參考 ( ? )</p>
+<p>我決定要來寫 EGOI 題解　(●’◡’●)<br>
+希望可以在 $2027$ 的國手開始 virtual 之前把我會的寫完…<s>欸不對，我也是 $2027$ 的國手，而且我已經 vir 完了</s>。<br>
+主要是我覺得研究英文題解有點麻煩，然後網路上的中文題解不一定好看，那就再生一些不一定好看的題解，樣本數比較多，未來的國手可以多方參考 ( ? )</p>
 <p>先說我不一定很會寫題解，而且有些題目我根本不會寫。</p>
 <hr>
-<p><a target="_blank" rel="noopener" href="https://stats.egoi.org/tasks/">官方題解</a>可以從這個連結進去，按題目名字，可以在右下方找到 solution。<br>台灣的翻譯題本是 <code>Chinese (zh_tw)</code> ( 從 $2026$ 才開始有台灣翻譯題本，<a target="_blank" rel="noopener" href="https://loj.ac/p?keyword=EGOI">這個中國 judge </a>有一些簡體中文翻譯 )。</p>
+<p><a target="_blank" rel="noopener" href="https://stats.egoi.org/tasks/">官方題解</a>可以從這個連結進去，按題目名字，可以在右下方找到 solution。<br>
+台灣的翻譯題本是 <code>Chinese (zh_tw)</code> ( 從 $2026$ 才開始有台灣翻譯題本，<a target="_blank" rel="noopener" href="https://loj.ac/p?keyword=EGOI">這個中國 judge </a>有一些簡體中文翻譯 )。</p>
 <marquee direction="left" scrollamount="8"> 
-
-現在在施工，請不要靠近，會被磚頭砸到 ( ? ) ⚠️⚠️⚠️
-
+<p>現在在施工，請不要靠近，會被磚頭砸到 ( ? ) ⚠️⚠️⚠️</p>
 </marquee>
-
 <hr>
-<h1 id="2026"><a href="#2026" class="headerlink" title="2026"></a>2026</h1><h2 id="day1"><a href="#day1" class="headerlink" title="day1"></a>day1</h2><h3 id="Ferris-Wheel"><a href="#Ferris-Wheel" class="headerlink" title="Ferris Wheel"></a>Ferris Wheel</h3><details><summary> full </summary>
-
-`+` 是往比自己大的連，先把全部是 `+` 的零件分離出來，編號由小往大連。
-`-` 是往比自己小的連，把剩下的 `-` 的零件編號由大往小連。
-
-這時候會有兩條鍊，把 `+` 編號最大的連到 `-` 編號最大的，`-` 編號最小的連到 `+` 編號最小的。
-如果這裡連不上去 ( 也就是 $0$ 號是 `-` 或者 $N-1$ 號是 `+` 的情況 ) 就輸出 `NO`。
-
-</details>
-
-<h3 id="Ovenmasters"><a href="#Ovenmasters" class="headerlink" title="Ovenmasters"></a>Ovenmasters</h3><h3 id="Biscuits"><a href="#Biscuits" class="headerlink" title="Biscuits"></a>Biscuits</h3><details><summary> subtask 1 </summary>
-
-答案是 $\lfloor \frac{N}{2} \rfloor$。
-
-</details>
-
-<details><summary> subtask 3 </summary>
-
-這裡保證 :
-
-$$W_0 \geq W_1 \geq \dots \geq W_{N-1}$$
-
-Bianca 可以保證她的得分至少為：
-
-$$W_1 + W_3 + W_5 + \dots + W_{N-1-(N \bmod 2)}$$
-
-以下用數學歸納法證明 ( 完蛋我不會數學 )。
-
-對於 $N = 1$，Bianca 可以保證她的分數非負。
-
-假設對於大小為 $M = 1 \dots N-1$ 的堆疊皆成立。當在一個大小為 $N$、權重為 $W_0, W_1, \dots, W_{N-1}$ 的餅乾堆上玩遊戲時，Bianca 會：
-
-- Aurora 選擇 $X = 1$，那麼 Bianca 就選擇 $Y = 0$，並且吃掉總權重至少為 $W_0 + (W_2 + W_4 + \dots) \geq W_1 + W_3 + W_5 + \dots$ 的餅乾。
-- 不然 Bianca 就選擇 $Y = 1$，並且吃掉總權重至少為 $W_1 + (W_3 + W_5 + \dots)$ 的餅乾。
-
-Aurora 可以確保 Bianca 吃掉的餅乾總權重最多為 $W_1 + W_3 + W_5 + \dots$，她可以總是選擇 $X = 0$ 來達到這個目的。
-
-</details>
-
-<details><summary> subtask 2 & 4 </summary>
-
-考慮 DP。
-令 $dp[i]$ 代表考慮 $i, i+1, ... , N-1$ 塊餅乾，Bianca 可以獲得的最高權重。
-可以對每個 $dp[i]$ 枚舉 $X$、$Y$ 來轉移，每次 query 都重新 DP 一次。
-
-</details>
-
-<details><summary> subtask 5 & 6 </summary>
-
-優化剛剛的 DP。
-Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$ 轉移，所以 Aurora 可以把最好的轉移點擋掉，因此可以直接用 second max 轉移，這樣 DP 就變 $O(N)$ 了。
-
-</details>
-
+<h1>2026</h1>
+<h2 id="day1">day1</h2>
+<h3 id="Ferris-Wheel">Ferris Wheel</h3>
 <details><summary> full </summary>
-
-
-令 $B[i]=\text{secondmax}_{i \le j}(W[j]+B[j+1])$。
-
-令 $A[i]=\text{max}_{i \le j}(W[j]+B[j+1])$。
-
-令 $D[i]=A[i]-B[i]$，$S[i]=A[i]+B[i]$。
-
-現在要算 $S[i]$，因為 $S[i+1]=A[i+1]+B[i+1]$，而且現在多了新的轉移點 $W[i]+B[i+1]$，他一定比 $B[i+1]$ 大，如果他也比 $A[i+1]$ 大的話就會 $A[i]=W[i]+B[i+1]$，否則就會 $B[i]=W[i]+B[i+1]$，反正總有 $S[i]=A[i+1]+B[i+1]+W[i]=\sum_{j=i}^{N-1} W_j$，所以 $A[0]+B[0]$ 會是全部餅乾的重量！
-
-算 $D[i]$，多了新的轉移點 $W[i]+B[i+1]$，看上面的討論可以發現 $D[i]=|{D[i+1]-W[i]}|$，而且 $D[i]$ 的值域頂多到 $W_{max}$。
-
-綜合上述，答案 $B[0]=\frac{\text{全部餅乾}-D[0]}{2}$。
-
-想快速知道 $D[0]$，可以用一個線段樹，每個 node $[L,R)$ 存一個大小 $W_{max}$ 的陣列 `bis`，`bis[x]` 代表如果 $D[R]=x$ 這時 $D[L]$ 的值，然後就可以像倍增 :
-
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">st[idx].bis[x]=st[lson].bis[st[rson].bis[x]] </span><br></pre></td></tr></table></figure>
-
+<p><code>+</code> 是往比自己大的連，先把全部是 <code>+</code> 的零件分離出來，編號由小往大連。<br>
+<code>-</code> 是往比自己小的連，把剩下的 <code>-</code> 的零件編號由大往小連。</p>
+<p>這時候會有兩條鍊，把 <code>+</code> 編號最大的連到 <code>-</code> 編號最大的，<code>-</code> 編號最小的連到 <code>+</code> 編號最小的。<br>
+如果這裡連不上去 ( 也就是 $0$ 號是 <code>-</code> 或者 $N-1$ 號是 <code>+</code> 的情況 ) 就輸出 <code>NO</code>。</p>
 </details>
-
-<h3 id="Census"><a href="#Census" class="headerlink" title="Census"></a>Census</h3><details><summary> subtask 1 </summary>
-
-成員的 ID 是連續的 $0,1,2,...,N$，可以先在自己的 ID `write`，之後二分搜。
-
+<h3 id="Ovenmasters">Ovenmasters</h3>
+<h3 id="Biscuits">Biscuits</h3>
+<details><summary> subtask 1 </summary>
+<p>答案是 $\lfloor \frac{N}{2} \rfloor$。</p>
 </details>
-
-<details><summary> subtask 2 </summary>
-
-想要知道是不是存在除了自己的另一個人，可以先在自己的 ID `write`，然後去檢查其他地方有沒有被 `write`。
-但是要檢查的地方太多了 : (
-考慮 random 在 $0$ 到 $60$ 之間某個地方 `write`，然後去檢查其他 $60$ 個地方，雖然說有 $\frac{1}{61}$ 的機率兩個人會撞到，不過多送幾次就會過了。
-
-</details>
-
 <details><summary> subtask 3 </summary>
-
-使用像是線段樹那樣的想法。
-
-第一輪，大家都在自己的 ID 上 `write 1`，然後按照 ID 0-1 2-3 4-5 6-7 這樣分組去看對方寫什麼，對方寫 $1$ 就可以知道這組共有 $2$ 人，看到 $0$ 代表這組只有一個人。
-第二輪，01 23 45 67 各組決定出一個代表在 ID=0, 2, 4, 6 上 `write` 剛剛的總人數，然後按照 ID 01-23 45-67 這樣分組去看對方寫什麼，把對方寫的人數加進已知總人數。
-第三輪，0123 4567 各組決定出一個代表在 ID=0, 4 上 `write` 剛剛的總人數，然後按照 ID 0123-4567 這樣分組去看對方寫什麼，把對方寫的人數加進已知總人數。
-第四輪，最後的兩個人知道總人數，選一個代表把總人數 `write` 在 ID=0，之後其他人去 `read`。
-
-各組要決定出一個代表才不會有多個人在同一個 ID 上 `write`，至於怎麼決定出一個代表，如果兩小組中都有人，就選編號小的。
-
-這個想法可以推廣到 subtask 4，只能寫 0/1 的話，就把總人數用二進位多分幾次傳，可以拿到一些分數。
-
+<p>這裡保證 :</p>
+<p>$$W_0 \geq W_1 \geq \dots \geq W_{N-1}$$</p>
+<p>Bianca 可以保證她的得分至少為：</p>
+<p>$$W_1 + W_3 + W_5 + \dots + W_{N-1-(N \bmod 2)}$$</p>
+<p>以下用數學歸納法證明 ( 完蛋我不會數學 )。</p>
+<p>對於 $N = 1$，Bianca 可以保證她的分數非負。</p>
+<p>假設對於大小為 $M = 1 \dots N-1$ 的堆疊皆成立。當在一個大小為 $N$、權重為 $W_0, W_1, \dots, W_{N-1}$ 的餅乾堆上玩遊戲時，Bianca 會：</p>
+<ul>
+<li>Aurora 選擇 $X = 1$，那麼 Bianca 就選擇 $Y = 0$，並且吃掉總權重至少為 $W_0 + (W_2 + W_4 + \dots) \geq W_1 + W_3 + W_5 + \dots$ 的餅乾。</li>
+<li>不然 Bianca 就選擇 $Y = 1$，並且吃掉總權重至少為 $W_1 + (W_3 + W_5 + \dots)$ 的餅乾。</li>
+</ul>
+<p>Aurora 可以確保 Bianca 吃掉的餅乾總權重最多為 $W_1 + W_3 + W_5 + \dots$，她可以總是選擇 $X = 0$ 來達到這個目的。</p>
 </details>
-
+<details><summary> subtask 2 & 4 </summary>
+<p>考慮 DP。<br>
+令 $dp[i]$ 代表考慮 $i, i+1, … , N-1$ 塊餅乾，Bianca 可以獲得的最高權重。<br>
+可以對每個 $dp[i]$ 枚舉 $X$、$Y$ 來轉移，每次 query 都重新 DP 一次。</p>
+</details>
+<details><summary> subtask 5 & 6 </summary>
+<p>優化剛剛的 DP。<br>
+Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$ 轉移，所以 Aurora 可以把最好的轉移點擋掉，因此可以直接用 second max 轉移，這樣 DP 就變 $O(N)$ 了。</p>
+</details>
+<details><summary> full </summary>
+<p>令 $B[i]=\text{secondmax}_{i \le j}(W[j]+B[j+1])$。<br>
+令 $A[i]=\text{max}_{i \le j}(W[j]+B[j+1])$。<br>
+令 $D[i]=A[i]-B[i]$，$S[i]=A[i]+B[i]$。</p>
+<p>現在要算 $S[i]$，因為 $S[i+1]=A[i+1]+B[i+1]$，而且現在多了新的轉移點 $W[i]+B[i+1]$，他一定比 $B[i+1]$ 大，如果他也比 $A[i+1]$ 大的話就會 $A[i]=W[i]+B[i+1]$，否則就會 $B[i]=W[i]+B[i+1]$，反正總有 $S[i]=A[i+1]+B[i+1]+W[i]=\sum_{j=i}^{N-1} W_j$，所以 $A[0]+B[0]$ 會是全部餅乾的重量！</p>
+<p>算 $D[i]$，多了新的轉移點 $W[i]+B[i+1]$，看上面的討論可以發現 $D[i]=|{D[i+1]-W[i]}|$，而且 $D[i]$ 的值域頂多到 $W_{max}$。</p>
+<p>綜合上述，答案 $B[0]=\frac{\text{全部餅乾}-D[0]}{2}$。</p>
+<p>想快速知道 $D[0]$，可以用一個線段樹，每個 node $[L,R)$ 存一個大小 $W_{max}$ 的陣列 <code>bis</code>，<code>bis[x]</code> 代表如果 $D[R]=x$ 這時 $D[L]$ 的值，然後就可以像倍增 :</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">st[idx].bis[x]=st[lson].bis[st[rson].bis[x]] </span><br></pre></td></tr></table></figure>
+</details>
+<h3 id="Census">Census</h3>
+<details><summary> subtask 1 </summary>
+<p>成員的 ID 是連續的 $0,1,2,…,N$，可以先在自己的 ID <code>write</code>，之後二分搜。</p>
+</details>
+<details><summary> subtask 2 </summary>
+<p>想要知道是不是存在除了自己的另一個人，可以先在自己的 ID <code>write</code>，然後去檢查其他地方有沒有被 <code>write</code>。<br>
+但是要檢查的地方太多了 : (<br>
+考慮 random 在 $0$ 到 $60$ 之間某個地方 <code>write</code>，然後去檢查其他 $60$ 個地方，雖然說有 $\frac{1}{61}$ 的機率兩個人會撞到，不過多送幾次就會過了。</p>
+</details>
+<details><summary> subtask 3 </summary>
+<p>使用像是線段樹那樣的想法。</p>
+<p>第一輪，大家都在自己的 ID 上 <code>write 1</code>，然後按照 ID 0-1 2-3 4-5 6-7 這樣分組去看對方寫什麼，對方寫 $1$ 就可以知道這組共有 $2$ 人，看到 $0$ 代表這組只有一個人。<br>
+第二輪，01 23 45 67 各組決定出一個代表在 ID=0, 2, 4, 6 上 <code>write</code> 剛剛的總人數，然後按照 ID 01-23 45-67 這樣分組去看對方寫什麼，把對方寫的人數加進已知總人數。<br>
+第三輪，0123 4567 各組決定出一個代表在 ID=0, 4 上 <code>write</code> 剛剛的總人數，然後按照 ID 0123-4567 這樣分組去看對方寫什麼，把對方寫的人數加進已知總人數。<br>
+第四輪，最後的兩個人知道總人數，選一個代表把總人數 <code>write</code> 在 ID=0，之後其他人去 <code>read</code>。</p>
+<p>各組要決定出一個代表才不會有多個人在同一個 ID 上 <code>write</code>，至於怎麼決定出一個代表，如果兩小組中都有人，就選編號小的。</p>
+<p>這個想法可以推廣到 subtask 4，只能寫 0/1 的話，就把總人數用二進位多分幾次傳，可以拿到一些分數。</p>
+</details>
 <details><summary> 優化 1 </summary>
-
-上面說為了避免多人在同一地點 `write`，選擇讓編號小的作為代表負責 `write`，但這樣要花 $7$ 輪才可以傳一個 $N=100$ 這樣大的數字。
-
-其實可以讓多人負責不同 bit，在同一輪 `write`。
-
-要怎麼選出多人，可以維護每個人在現在組內的 ranking，合併左右兩邊的時候就把左邊的人 ranking 加上右邊的人數，然後讓 ranking 前 $7$ 大的人負責 $7$ 個 bit。
-
+<p>上面說為了避免多人在同一地點 <code>write</code>，選擇讓編號小的作為代表負責 <code>write</code>，但這樣要花 $7$ 輪才可以傳一個 $N=100$ 這樣大的數字。</p>
+<p>其實可以讓多人負責不同 bit，在同一輪 <code>write</code>。</p>
+<p>要怎麼選出多人，可以維護每個人在現在組內的 ranking，合併左右兩邊的時候就把左邊的人 ranking 加上右邊的人數，然後讓 ranking 前 $7$ 大的人負責 $7$ 個 bit。</p>
 </details>
-
 <details><summary> 優化 2 </summary>
-
-這樣 merge 是一個樹狀的結構，但是在葉子的地方如果沒幾個人，就不需要用 $7$ bits 傳人數了，可以用少一點的 bit。
-但是如果剛好遇上某一區人很多，又不能這樣節省了。
-
-這裡可以用 random shuffle 把全部人初始分布位置變平均一點，random 的 seed 要是固定的 ( $N$ 個人的程式是分開執行的，但他們打亂的基準要是一樣的，才能成功打亂 )。
-至於樹的哪一層要傳幾個 bit 就可能需要調整一下。
-
-( 我是有成功這樣弄到 $100$ 分 )
-
+<p>這樣 merge 是一個樹狀的結構，但是在葉子的地方如果沒幾個人，就不需要用 $7$ bits 傳人數了，可以用少一點的 bit。<br>
+但是如果剛好遇上某一區人很多，又不能這樣節省了。</p>
+<p>這裡可以用 random shuffle 把全部人初始分布位置變平均一點，random 的 seed 要是固定的 ( $N$ 個人的程式是分開執行的，但他們打亂的基準要是一樣的，才能成功打亂 )。<br>
+至於樹的哪一層要傳幾個 bit 就可能需要調整一下。</p>
+<p>( 我是有成功這樣弄到 $100$ 分 )</p>
 </details>
-
 <details><summary> 確定性作法 </summary>
-
-[官解](https://egoi2026.it/competition/census/)有說。
-
+<p><a target="_blank" rel="noopener" href="https://egoi2026.it/competition/census/">官解</a>有說。</p>
 </details>
+<h2 id="day2">day2</h2>
+<h3 id="Watering-Plants">Watering Plants</h3>
+<h3 id="Cakes">Cakes</h3>
+<h3 id="Fox-Families">Fox Families</h3>
+<h3 id="Seating-Plan">Seating Plan</h3>
 
-<h2 id="day2"><a href="#day2" class="headerlink" title="day2"></a>day2</h2><h3 id="Watering-Plants"><a href="#Watering-Plants" class="headerlink" title="Watering Plants"></a>Watering Plants</h3><h3 id="Cakes"><a href="#Cakes" class="headerlink" title="Cakes"></a>Cakes</h3><h3 id="Fox-Families"><a href="#Fox-Families" class="headerlink" title="Fox Families"></a>Fox Families</h3><h3 id="Seating-Plan"><a href="#Seating-Plan" class="headerlink" title="Seating Plan"></a>Seating Plan</h3>
 </div> 
 
 <script>
