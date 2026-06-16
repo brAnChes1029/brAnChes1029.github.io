@@ -1,105 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2025 北二區</title>
-    <url>/2025/11/19/2025-%E5%8C%97%E4%BA%8C%E5%8D%80/</url>
-    <content><![CDATA[<p>今天 11/13 是我們的北二區學科能競，經過很久的練習<s>以及感冒的攻擊</s>，我終究能不能笑到最後呢…</p>
-<h2 id="前日談">前日談</h2>
-<p>上禮拜四 ( 運動會 ) 我跟江語萱一起搭公車回家，車上有很多人。<br>
-我 : 好多人喔，希望我不要感冒，下禮拜要打北二區。<br>
-: ㄟㄟ，說不定–<br>
-我 : 嗯，不要亂講…<br>
-然後隔天就感冒了，而且頗嚴重，還有 <font color=#76F72D>AC</font> 色的鼻涕，真可怕。<br>
-這個故事告訴我們不要亂講話，還有比賽前要戴口罩。</p>
-<h2 id="賽前">賽前</h2>
-<p>前天我先列了一個 <code>list</code>，叫做 <code>I will win 北二區</code>，基本上就是寫要帶 codebook、鉛筆盒、擤鼻涕的衛生紙、證件等等啦，還有帶江語萱的五魔方去玩。<br>
-前天還有在包包裡放 $1e9$ 種餅乾，因為我不喜歡吃麵包，但大腦需要能量。</p>
-<p>北二區武陵的車好像 6:30 要出發，所以大概 5:40?  要起床，然後車上繼續睡，然後車上好冷喔。<br>
-大概 7:00 開始吃東西，但我覺得有點太早了，下次可以考慮晚一點。<br>
-7:25 因為新竹中學前面在大塞車，我們下車走過去，大概有在 7:35 到。我定的穩定精神策略之一是跟著賴秉宏，他應該是一個滿令人安心的人吧，因為不是對手，之前考科班他也人很好。<br>
-抽號碼我抽到 7 ，贏在起跑點 *✧(☆▽☆)✧*<br>
-然後就是開場巴拉巴拉拖了很久，我記得地科和化學的老師都說他們小時候也在這裡比賽過，<s>然後什麼都沒拿到</s>，然後開始打預防針，<s>現在看起來就是給我打的</s>。<br>
-期間我問賴秉宏，<br>
-我 : 你要拿第幾名 ?<br>
-: 嗯，至少要前三吧。<br>
-: 那你呢 ?<br>
-我 : 第一。</p>
-<p>然後就是各自比賽去。</p>
-<h2 id="比賽">比賽</h2>
-<p>我比賽的教室好像和去年不同間，去年是右邊那間，今年是左邊。<br>
-開場先讀題 :</p>
-<ol>
-<li>給你兩個分數，乘起來然後化簡</li>
-<li>給你一個數線，求某固定時間長度表演可以獲得的最大收入</li>
-<li>給你很多字串，問可以拼成幾個三角形，須滿足三角形邊長不等式和字串黏在一起的字元要一樣</li>
-<li>給你一個 $N&lt;200$ 的圖，問一次走兩步可以到那些點</li>
-<li>不知道在寫什麼</li>
-<li>給你數字 $X&lt;10^{18}$，找到 $a+b+c=x$ 且 $LCM(a,b,c)$ 最小</li>
-</ol>
-<p>我覺得</p>
-<ol>
-<li>分數乘法簽到題</li>
-<li>滑窗簽到題</li>
-<li>實作噁心題</li>
-<li>我愛圖論題</li>
-<li>看不懂在幹嘛題</li>
-<li>數學題</li>
-</ol>
-<p><code>0:30</code><br>
-<code>100/100/0/0/0/0</code><br>
-拿到 $200$ 。</p>
-<p><code>0:50</code><br>
-<code>100/100/0/100/0/0</code><br>
-發現第四題可以 Warshall 欸，給他 WA 過去就 <font color=#76F72D>AC</font> 了。</p>
-<p><code>1:30</code><br>
-<code>100/100/0/100/0/10</code><br>
-看第六題，亂猜可以拆 $2$ 的冪次，顯然大假解但騙到 $10$ 分，這時候大概 1:30 吧，然後我第六題也沒想法了，去看第三題。</p>
-<p><code>1:50</code><br>
-<code>100/100/0/100/0/10</code><br>
-第三題寫一寫覺得不對，實作也太多，然後越來越噁，像是要前綴和還要判是否重複還要判 $8$ 種連接方向，實作不下去了去廁所。<br>
-監考人員是不是根本不知道女廁在哪，繞超久，我在此特別紀錄女廁是左轉到底會經過木工教室然後樓梯向上走 $0.5$ 層樓。</p>
-<p><code>2:20</code><br>
-<code>100/100/30/100/0/10</code><br>
-寫不下去了，先撈子題。<br>
-接下來我打算 all-in 第六題，因為第五題我覺得是看不懂的二分圖匹配，然後我不想理第三題了。</p>
-<p><code>2:50</code><br>
-<code>100/100/30/100/0/10</code><br>
-我覺得可以枚舉 $X$ 的每一個奇因數然後拆拆看，$2$ 的冪次要特判掉，這樣應該是好的。<br>
-然後寫不完。</p>
-<p><code>3:00</code><br>
-<code>100/100/30/100/0/10</code><br>
-結束了，死了。</p>
-<h2 id="賽後">賽後</h2>
-<p>其實 p6 剩十分鐘的時候我就知道完蛋了，我會 2hr 40 分，別人隨便也會，說不定更高，因為不燒實作 p3 應該會 $100$，會數學 p6 應該會 $100$，都不會就跟我一樣。<br>
-全國還是有，但名次應該是涼了。<br>
-一出場人要來問我分數，但我心情不好沒理他，想知道別人幾分的心情我是可以理解啦，抱歉。<br>
-學弟倒是還好，<s>可能因為我是學姐，反正一定比他們高，也不用問</s>，就去拜訪朋友回來然後就吃午餐，宋睿軒去拜訪朋友很久後也回來，他可能早就知道我喜歡藏分，也沒問什麼，倒是挺好。<br>
-吃完飯打電話給媽媽聊天，聊完就 13:00 了。</p>
-<p>學弟帶了很多桌遊，我們玩了犯人在跳舞，<s>我到現在還弄不太清楚全部規則</s>，反正就隨便玩，線索只要有輪到我這基本都看得出來，沒線索就亂出一通。完快一個小時後差不多膩了，看歐陽祐嘉 ( 我們班的第一名兼地科校隊 ) 人怎麼不見了，就聽說他沒晉級口試心情不好 (?) ，老師陪他爬山去了，讓我也很想去。</p>
-<p>14:00 歐陽祐嘉和老師回來了，我就吵說也想去爬山，結果發現他們是去新竹中學繞一圈，反正裡面也就這樣挺無趣，歐陽祐嘉和老師就再陪我去走一圈。<br>
-一出去就遇到口試完的林正捷，所以我們從三人行變成四人行。<br>
-一路上我覺得新竹中學真的好大喔，又景色優美，還有後山和很像森林步道的地方，<s>武陵又輸</s>，還有宿舍，感覺從一頭走到另一頭至少要 20 分鐘吧，他們下課真夠用嗎。<br>
-我們邊走老師邊給我們介紹植物，我還撿了松果，總之非常推薦校園散步，五星好評，推薦給未來考砸了或是考很好的北二區選手來此地走走。</p>
-<p>回來大概 15:00，混一下化學校隊洪瑋澤也回來了，分享了他沒看到廣用試紙神農氏嘗百鹽的經歷，<s>原來堂堂化學校隊鹽都用吃的嗎</s>。<br>
-然後他說他大失分可能沒全國，但他看起來也沒怎樣，或是我看不出來，反正我覺得他穩啦，只是名次可能跟我一樣涼了。</p>
-<p>15:30 去訂正一下空間向量考卷，寫一寫晃一晃就 16:00 ，再混一混就 16:30 ，大概可以頒獎了。<br>
-期間心情稍緩決定和宋睿軒攤牌，然後同分，宋睿軒大概是出於對我的策略不了解還是怎樣，說要獎金平分，我就知道雖然名次涼了，但他要送我錢，哈哈哈哈哈。</p>
-<h2 id="頒獎">頒獎</h2>
-<p>我記得資訊第一個頒獎，就很不意外的我 rk.4 宋睿軒 rk.3，然後他送我錢，雖然有點不甘心但有全國了。<br>
-接下來好像頒地科，林正捷拿到 rk.5 根本超強。<br>
-最後頒化學，賴秉宏怎麼失常掉到 rk.5 了，我們兩個早上在講的都沒有人達成喔 QAQ<br>
-洪瑋澤雖然吃鹽但還是 rk.9 進全國，虛驚一場，然後武陵另一個人勇奪 rk.1 保住我們的化學 rk.1 combo，洪瑋澤明年就靠你了，<s>你拿不到我幫你拿資訊 rk.1</s>。</p>
-<h2 id="後記">後記</h2>
-<p>我覺得不甘心的心情是隨著時間漸漸增加到全國前一個禮拜達到一個高峰，然後慢慢下降，所以全國的時候已經沒有那種強烈的復仇慾望會影響我比賽了。<br>
-謝鈞證明出第六題我的作法應該是對的，他還證明出一個公式解，超級厲害。<br>
-反正我明年要第一名啦，可惡。</p>
-]]></content>
-      <tags>
-        <tag>學科能競</tag>
-        <tag>contest</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2025 の 校隊公假 について</title>
     <url>/2025/10/19/2025-%E3%81%AE-%E6%A0%A1%E9%9A%8A%E5%85%AC%E5%81%87-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</url>
     <content><![CDATA[<p>現在一段終於考完了 (≧∇≦)ﾉ<br>
@@ -305,6 +206,105 @@ p4 : 字串，應該可以撈一些<br>
 ]]></content>
       <tags>
         <tag>training</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2025 北二區</title>
+    <url>/2025/11/19/2025-%E5%8C%97%E4%BA%8C%E5%8D%80/</url>
+    <content><![CDATA[<p>今天 11/13 是我們的北二區學科能競，經過很久的練習<s>以及感冒的攻擊</s>，我終究能不能笑到最後呢…</p>
+<h2 id="前日談">前日談</h2>
+<p>上禮拜四 ( 運動會 ) 我跟江語萱一起搭公車回家，車上有很多人。<br>
+我 : 好多人喔，希望我不要感冒，下禮拜要打北二區。<br>
+: ㄟㄟ，說不定–<br>
+我 : 嗯，不要亂講…<br>
+然後隔天就感冒了，而且頗嚴重，還有 <font color=#76F72D>AC</font> 色的鼻涕，真可怕。<br>
+這個故事告訴我們不要亂講話，還有比賽前要戴口罩。</p>
+<h2 id="賽前">賽前</h2>
+<p>前天我先列了一個 <code>list</code>，叫做 <code>I will win 北二區</code>，基本上就是寫要帶 codebook、鉛筆盒、擤鼻涕的衛生紙、證件等等啦，還有帶江語萱的五魔方去玩。<br>
+前天還有在包包裡放 $1e9$ 種餅乾，因為我不喜歡吃麵包，但大腦需要能量。</p>
+<p>北二區武陵的車好像 6:30 要出發，所以大概 5:40?  要起床，然後車上繼續睡，然後車上好冷喔。<br>
+大概 7:00 開始吃東西，但我覺得有點太早了，下次可以考慮晚一點。<br>
+7:25 因為新竹中學前面在大塞車，我們下車走過去，大概有在 7:35 到。我定的穩定精神策略之一是跟著賴秉宏，他應該是一個滿令人安心的人吧，因為不是對手，之前考科班他也人很好。<br>
+抽號碼我抽到 7 ，贏在起跑點 *✧(☆▽☆)✧*<br>
+然後就是開場巴拉巴拉拖了很久，我記得地科和化學的老師都說他們小時候也在這裡比賽過，<s>然後什麼都沒拿到</s>，然後開始打預防針，<s>現在看起來就是給我打的</s>。<br>
+期間我問賴秉宏，<br>
+我 : 你要拿第幾名 ?<br>
+: 嗯，至少要前三吧。<br>
+: 那你呢 ?<br>
+我 : 第一。</p>
+<p>然後就是各自比賽去。</p>
+<h2 id="比賽">比賽</h2>
+<p>我比賽的教室好像和去年不同間，去年是右邊那間，今年是左邊。<br>
+開場先讀題 :</p>
+<ol>
+<li>給你兩個分數，乘起來然後化簡</li>
+<li>給你一個數線，求某固定時間長度表演可以獲得的最大收入</li>
+<li>給你很多字串，問可以拼成幾個三角形，須滿足三角形邊長不等式和字串黏在一起的字元要一樣</li>
+<li>給你一個 $N&lt;200$ 的圖，問一次走兩步可以到那些點</li>
+<li>不知道在寫什麼</li>
+<li>給你數字 $X&lt;10^{18}$，找到 $a+b+c=x$ 且 $LCM(a,b,c)$ 最小</li>
+</ol>
+<p>我覺得</p>
+<ol>
+<li>分數乘法簽到題</li>
+<li>滑窗簽到題</li>
+<li>實作噁心題</li>
+<li>我愛圖論題</li>
+<li>看不懂在幹嘛題</li>
+<li>數學題</li>
+</ol>
+<p><code>0:30</code><br>
+<code>100/100/0/0/0/0</code><br>
+拿到 $200$ 。</p>
+<p><code>0:50</code><br>
+<code>100/100/0/100/0/0</code><br>
+發現第四題可以 Warshall 欸，給他 WA 過去就 <font color=#76F72D>AC</font> 了。</p>
+<p><code>1:30</code><br>
+<code>100/100/0/100/0/10</code><br>
+看第六題，亂猜可以拆 $2$ 的冪次，顯然大假解但騙到 $10$ 分，這時候大概 1:30 吧，然後我第六題也沒想法了，去看第三題。</p>
+<p><code>1:50</code><br>
+<code>100/100/0/100/0/10</code><br>
+第三題寫一寫覺得不對，實作也太多，然後越來越噁，像是要前綴和還要判是否重複還要判 $8$ 種連接方向，實作不下去了去廁所。<br>
+監考人員是不是根本不知道女廁在哪，繞超久，我在此特別紀錄女廁是左轉到底會經過木工教室然後樓梯向上走 $0.5$ 層樓。</p>
+<p><code>2:20</code><br>
+<code>100/100/30/100/0/10</code><br>
+寫不下去了，先撈子題。<br>
+接下來我打算 all-in 第六題，因為第五題我覺得是看不懂的二分圖匹配，然後我不想理第三題了。</p>
+<p><code>2:50</code><br>
+<code>100/100/30/100/0/10</code><br>
+我覺得可以枚舉 $X$ 的每一個奇因數然後拆拆看，$2$ 的冪次要特判掉，這樣應該是好的。<br>
+然後寫不完。</p>
+<p><code>3:00</code><br>
+<code>100/100/30/100/0/10</code><br>
+結束了，死了。</p>
+<h2 id="賽後">賽後</h2>
+<p>其實 p6 剩十分鐘的時候我就知道完蛋了，我會 2hr 40 分，別人隨便也會，說不定更高，因為不燒實作 p3 應該會 $100$，會數學 p6 應該會 $100$，都不會就跟我一樣。<br>
+全國還是有，但名次應該是涼了。<br>
+一出場人要來問我分數，但我心情不好沒理他，想知道別人幾分的心情我是可以理解啦，抱歉。<br>
+學弟倒是還好，<s>可能因為我是學姐，反正一定比他們高，也不用問</s>，就去拜訪朋友回來然後就吃午餐，宋睿軒去拜訪朋友很久後也回來，他可能早就知道我喜歡藏分，也沒問什麼，倒是挺好。<br>
+吃完飯打電話給媽媽聊天，聊完就 13:00 了。</p>
+<p>學弟帶了很多桌遊，我們玩了犯人在跳舞，<s>我到現在還弄不太清楚全部規則</s>，反正就隨便玩，線索只要有輪到我這基本都看得出來，沒線索就亂出一通。完快一個小時後差不多膩了，看歐陽祐嘉 ( 我們班的第一名兼地科校隊 ) 人怎麼不見了，就聽說他沒晉級口試心情不好 (?) ，老師陪他爬山去了，讓我也很想去。</p>
+<p>14:00 歐陽祐嘉和老師回來了，我就吵說也想去爬山，結果發現他們是去新竹中學繞一圈，反正裡面也就這樣挺無趣，歐陽祐嘉和老師就再陪我去走一圈。<br>
+一出去就遇到口試完的林正捷，所以我們從三人行變成四人行。<br>
+一路上我覺得新竹中學真的好大喔，又景色優美，還有後山和很像森林步道的地方，<s>武陵又輸</s>，還有宿舍，感覺從一頭走到另一頭至少要 20 分鐘吧，他們下課真夠用嗎。<br>
+我們邊走老師邊給我們介紹植物，我還撿了松果，總之非常推薦校園散步，五星好評，推薦給未來考砸了或是考很好的北二區選手來此地走走。</p>
+<p>回來大概 15:00，混一下化學校隊洪瑋澤也回來了，分享了他沒看到廣用試紙神農氏嘗百鹽的經歷，<s>原來堂堂化學校隊鹽都用吃的嗎</s>。<br>
+然後他說他大失分可能沒全國，但他看起來也沒怎樣，或是我看不出來，反正我覺得他穩啦，只是名次可能跟我一樣涼了。</p>
+<p>15:30 去訂正一下空間向量考卷，寫一寫晃一晃就 16:00 ，再混一混就 16:30 ，大概可以頒獎了。<br>
+期間心情稍緩決定和宋睿軒攤牌，然後同分，宋睿軒大概是出於對我的策略不了解還是怎樣，說要獎金平分，我就知道雖然名次涼了，但他要送我錢，哈哈哈哈哈。</p>
+<h2 id="頒獎">頒獎</h2>
+<p>我記得資訊第一個頒獎，就很不意外的我 rk.4 宋睿軒 rk.3，然後他送我錢，雖然有點不甘心但有全國了。<br>
+接下來好像頒地科，林正捷拿到 rk.5 根本超強。<br>
+最後頒化學，賴秉宏怎麼失常掉到 rk.5 了，我們兩個早上在講的都沒有人達成喔 QAQ<br>
+洪瑋澤雖然吃鹽但還是 rk.9 進全國，虛驚一場，然後武陵另一個人勇奪 rk.1 保住我們的化學 rk.1 combo，洪瑋澤明年就靠你了，<s>你拿不到我幫你拿資訊 rk.1</s>。</p>
+<h2 id="後記">後記</h2>
+<p>我覺得不甘心的心情是隨著時間漸漸增加到全國前一個禮拜達到一個高峰，然後慢慢下降，所以全國的時候已經沒有那種強烈的復仇慾望會影響我比賽了。<br>
+謝鈞證明出第六題我的作法應該是對的，他還證明出一個公式解，超級厲害。<br>
+反正我明年要第一名啦，可惡。</p>
+]]></content>
+      <tags>
+        <tag>學科能競</tag>
+        <tag>contest</tag>
       </tags>
   </entry>
   <entry>
@@ -778,67 +778,6 @@ pD 感覺實作會有點麻煩。<br>
       </tags>
   </entry>
   <entry>
-    <title>EGOI 二模 / TOI pre</title>
-    <url>/2026/03/07/EGOI-%E4%BA%8C%E6%A8%A1-TOI-pre/</url>
-    <content><![CDATA[<p>今天是 EGOI 二模、TOI 初選還有我生日 🎉</p>
-<h2 id="比賽">比賽</h2>
-<p><code>13:00</code><br>
-到師大公館校區。</p>
-<p><code>13:10</code><br>
-到試場一樓報到，遇到睿睿和輔導員采黎，然後發現我跟宋睿軒同一個考場，還有我們那個考場超級少人。</p>
-<p><code>13:20</code><br>
-到考場，我們的考場黎廁所超級遠，感覺有 $100$ 公尺欸。<br>
-還有我學姊在隔壁考場監考，所以不會來救我了，喔不。</p>
-<p><code>13:40</code><br>
-據說別的考場電腦集體燒雞，所以考試延後 <code>30</code> 分鐘。<br>
-所以我就在考場前面的椅子上坐著睡覺。</p>
-<p><code>14:30</code><br>
-考試開始，先開 vscode 看看有沒有問題。</p>
-<p><code>14:40</code><br>
-開始看題目。</p>
-<p><code>14:47</code><br>
-看完了，精神分數 <code>100/28/100/100/100</code>。</p>
-<p><code>15:00</code><br>
-pA 過了，現在有 <code>100/0/0/0/0</code>。</p>
-<p><code>15:10</code><br>
-發現我 pC 想的 DP 是假解，我現在只會做 $19$。<br>
-再看一下 pD 確定不是假解之後決定先寫。</p>
-<p><code>15:27</code><br>
-pD $34$，燒。</p>
-<p><code>15:35</code><br>
-原來是沒打等於喔，<code>100/0/0/100/0</code>。<br>
-翻來翻去之後決定先寫 pC $19$。</p>
-<p><code>16:00</code><br>
-pC 拿到三個 WA 了，十分不妙，要去廁所。</p>
-<p><code>16:10</code><br>
-<code>100/0/19/100/0</code>。<br>
-pB 經典款河內塔先寫好了。</p>
-<p><code>16:40</code><br>
-<code>100/28/19/100/0</code>。<br>
-開始一直翻，因為我感覺 pB 好像高一北二區有看過，感覺能推滿，然後 pE 大方向都想好了，只差一些細節。</p>
-<p><code>17:30</code><br>
-然後我就既沒有推好 B 又沒有在 E 拿到該拿的分數，大燒雞。</p>
-<h2 id="EGOI">EGOI</h2>
-<p>大燒雞，因為楊岳蓁會 $400$ 王禹喬會 $319$，然後我覺得我好好打應該要大於等於 $319$。<br>
-所以我的模考分數掉到 rk.2 然後還只和 rk.3 差 $1$ 分，距離摔下國手線至少有 $100$ 分吧，反正就是國手線以上但分數很難看。</p>
-<h2 id="TOI">TOI</h2>
-<p>rk.35 距離我前 20 的目標超級遠，到底要怎麼打這麼爛。</p>
-<h2 id="檢討">檢討</h2>
-<p>我覺得這次是策略的大失敗，準確來說根本沒有策略吧，爛死了。</p>
-<ol>
-<li>開場題目看太快，沒有好好想，也沒有圈出可以拿的子題，都隨便看然後直接去寫。</li>
-<li>沒有想好中間一題想多久，導致兩邊跳來跳去然後 $0$ 分。</li>
-<li>把 5hr 策略套進來用結果發現時間不夠所以一直做出浪費時間的行為。</li>
-</ol>
-<p>所以說根本沒準備 3hr 策略是本次的根本原因 (吧)，5hr 的時候是一題 $20$ 分鐘以上，3hr 的時候就想說時間有點少要想快一點，結果一直跳來跳去什麼都沒想到。</p>
-]]></content>
-      <tags>
-        <tag>contest</tag>
-        <tag>EGOI</tag>
-        <tag>TOI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>EGOI 2026 後日談</title>
     <url>/2026/06/12/EGOI-2026-%E5%BE%8C%E6%97%A5%E8%AB%87/</url>
     <content><![CDATA[<p>這裡是 EGOI 2026 後日談。<br>
@@ -921,6 +860,180 @@ pB 經典款河內塔先寫好了。</p>
       <tags>
         <tag>EGOI</tag>
         <tag>other</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>EGOI 二模 / TOI pre</title>
+    <url>/2026/03/07/EGOI-%E4%BA%8C%E6%A8%A1-TOI-pre/</url>
+    <content><![CDATA[<p>今天是 EGOI 二模、TOI 初選還有我生日 🎉</p>
+<h2 id="比賽">比賽</h2>
+<p><code>13:00</code><br>
+到師大公館校區。</p>
+<p><code>13:10</code><br>
+到試場一樓報到，遇到睿睿和輔導員采黎，然後發現我跟宋睿軒同一個考場，還有我們那個考場超級少人。</p>
+<p><code>13:20</code><br>
+到考場，我們的考場黎廁所超級遠，感覺有 $100$ 公尺欸。<br>
+還有我學姊在隔壁考場監考，所以不會來救我了，喔不。</p>
+<p><code>13:40</code><br>
+據說別的考場電腦集體燒雞，所以考試延後 <code>30</code> 分鐘。<br>
+所以我就在考場前面的椅子上坐著睡覺。</p>
+<p><code>14:30</code><br>
+考試開始，先開 vscode 看看有沒有問題。</p>
+<p><code>14:40</code><br>
+開始看題目。</p>
+<p><code>14:47</code><br>
+看完了，精神分數 <code>100/28/100/100/100</code>。</p>
+<p><code>15:00</code><br>
+pA 過了，現在有 <code>100/0/0/0/0</code>。</p>
+<p><code>15:10</code><br>
+發現我 pC 想的 DP 是假解，我現在只會做 $19$。<br>
+再看一下 pD 確定不是假解之後決定先寫。</p>
+<p><code>15:27</code><br>
+pD $34$，燒。</p>
+<p><code>15:35</code><br>
+原來是沒打等於喔，<code>100/0/0/100/0</code>。<br>
+翻來翻去之後決定先寫 pC $19$。</p>
+<p><code>16:00</code><br>
+pC 拿到三個 WA 了，十分不妙，要去廁所。</p>
+<p><code>16:10</code><br>
+<code>100/0/19/100/0</code>。<br>
+pB 經典款河內塔先寫好了。</p>
+<p><code>16:40</code><br>
+<code>100/28/19/100/0</code>。<br>
+開始一直翻，因為我感覺 pB 好像高一北二區有看過，感覺能推滿，然後 pE 大方向都想好了，只差一些細節。</p>
+<p><code>17:30</code><br>
+然後我就既沒有推好 B 又沒有在 E 拿到該拿的分數，大燒雞。</p>
+<h2 id="EGOI">EGOI</h2>
+<p>大燒雞，因為楊岳蓁會 $400$ 王禹喬會 $319$，然後我覺得我好好打應該要大於等於 $319$。<br>
+所以我的模考分數掉到 rk.2 然後還只和 rk.3 差 $1$ 分，距離摔下國手線至少有 $100$ 分吧，反正就是國手線以上但分數很難看。</p>
+<h2 id="TOI">TOI</h2>
+<p>rk.35 距離我前 20 的目標超級遠，到底要怎麼打這麼爛。</p>
+<h2 id="檢討">檢討</h2>
+<p>我覺得這次是策略的大失敗，準確來說根本沒有策略吧，爛死了。</p>
+<ol>
+<li>開場題目看太快，沒有好好想，也沒有圈出可以拿的子題，都隨便看然後直接去寫。</li>
+<li>沒有想好中間一題想多久，導致兩邊跳來跳去然後 $0$ 分。</li>
+<li>把 5hr 策略套進來用結果發現時間不夠所以一直做出浪費時間的行為。</li>
+</ol>
+<p>所以說根本沒準備 3hr 策略是本次的根本原因 (吧)，5hr 的時候是一題 $20$ 分鐘以上，3hr 的時候就想說時間有點少要想快一點，結果一直跳來跳去什麼都沒想到。</p>
+]]></content>
+      <tags>
+        <tag>contest</tag>
+        <tag>EGOI</tag>
+        <tag>TOI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>EGOI 題解</title>
+    <url>/2026/06/15/EGOI-%E9%A1%8C%E8%A7%A3/</url>
+    <content><![CDATA[<style>
+  summary {
+    background-color: #3f6665;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px 10px 5px 25px;
+  }
+</style>
+<p>我決定要來寫 EGOI 題解　(●’◡’●)<br>
+希望可以在 $2027$ 的國手開始 virtual 之前把我會的寫完…<s>欸不對，我也是 $2027$ 的國手，而且我已經 vir 完了</s>。<br>
+主要是我覺得研究英文題解有點麻煩，然後網路上的中文題解不一定好看，那就再生一些不一定好看的題解，樣本數比較多，未來的國手可以多方參考 ( ? )</p>
+<p>先說我不一定很會寫題解，而且有些題目我根本不會寫。</p>
+<hr>
+<p><a href="https://stats.egoi.org/tasks/">官方題解</a>可以從這個連結進去，按題目名字，可以在右下方找到 solution。<br>
+台灣的翻譯題本是 <code>Chinese (zh_tw)</code> ( 從 $2026$ 才開始有台灣翻譯題本，<a href="https://loj.ac/p?keyword=EGOI">這個中國 judge </a>有一些簡體中文翻譯 )。</p>
+<marquee direction="left" scrollamount="8"> 
+<p>現在在施工，請不要靠近，會被磚頭砸到 ( ? ) ⚠️⚠️⚠️</p>
+</marquee>
+<hr>
+<h1>2026</h1>
+<h2 id="day1">day1</h2>
+<h3 id="Ferris-Wheel">Ferris Wheel</h3>
+<details><summary> full </summary>
+<p><code>+</code> 是往比自己大的連，先把全部是 <code>+</code> 的零件分離出來，編號由小往大連。<br>
+<code>-</code> 是往比自己小的連，把剩下的 <code>-</code> 的零件編號由大往小連。</p>
+<p>這時候會有兩條鍊，把 <code>+</code> 編號最大的連到 <code>-</code> 編號最大的，<code>-</code> 編號最小的連到 <code>+</code> 編號最小的。<br>
+如果這裡連不上去 ( 也就是 $0$ 號是 <code>-</code> 或者 $N-1$ 號是 <code>+</code> 的情況 ) 就輸出 <code>NO</code>。</p>
+</details>
+<h3 id="Ovenmasters">Ovenmasters</h3>
+<h3 id="Biscuits">Biscuits</h3>
+<details><summary> subtask 1 </summary>
+<p>答案是 $\lfloor \frac{N}{2} \rfloor$。</p>
+</details>
+<details><summary> subtask 3 </summary>
+<p>這裡保證 :</p>
+<p>$$W_0 \geq W_1 \geq \dots \geq W_{N-1}$$</p>
+<p>Bianca 可以保證她的得分至少為：</p>
+<p>$$W_1 + W_3 + W_5 + \dots + W_{N-1-(N \bmod 2)}$$</p>
+<p>以下用數學歸納法證明 ( 完蛋我不會數學 )。</p>
+<p>對於 $N = 1$，Bianca 可以保證她的分數非負。</p>
+<p>假設對於大小為 $M = 1 \dots N-1$ 的堆疊皆成立。當在一個大小為 $N$、權重為 $W_0, W_1, \dots, W_{N-1}$ 的餅乾堆上玩遊戲時，Bianca 會：</p>
+<ul>
+<li>Aurora 選擇 $X = 1$，那麼 Bianca 就選擇 $Y = 0$，並且吃掉總權重至少為 $W_0 + (W_2 + W_4 + \dots) \geq W_1 + W_3 + W_5 + \dots$ 的餅乾。</li>
+<li>不然 Bianca 就選擇 $Y = 1$，並且吃掉總權重至少為 $W_1 + (W_3 + W_5 + \dots)$ 的餅乾。</li>
+</ul>
+<p>Aurora 可以確保 Bianca 吃掉的餅乾總權重最多為 $W_1 + W_3 + W_5 + \dots$，她可以總是選擇 $X = 0$ 來達到這個目的。</p>
+</details>
+<details><summary> subtask 2 & 4 </summary>
+<p>考慮 DP。<br>
+令 $dp[i]$ 代表考慮 $i, i+1, … , N-1$ 塊餅乾，Bianca 可以獲得的最高權重。<br>
+可以對每個 $dp[i]$ 枚舉 $X$、$Y$ 來轉移，每次 query 都重新 DP 一次。</p>
+</details>
+<details><summary> subtask 5 & 6 </summary>
+<p>優化剛剛的 DP。<br>
+Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$ 轉移，所以 Aurora 可以把最好的轉移點擋掉，因此可以直接用 second max 轉移，這樣 DP 就變 $O(N)$ 了。</p>
+</details>
+<details><summary> full </summary>
+<p>令 $B[i]=\text{secondmax}_{i \le j}(W[j]+B[j+1])$。<br>
+令 $A[i]=\text{max}_{i \le j}(W[j]+B[j+1])$。<br>
+令 $D[i]=A[i]-B[i]$，$S[i]=A[i]+B[i]$。</p>
+<p>現在要算 $S[i]$，因為 $S[i+1]=A[i+1]+B[i+1]$，而且現在多了新的轉移點 $W[i]+B[i+1]$，他一定比 $B[i+1]$ 大，如果他也比 $A[i+1]$ 大的話就會 $A[i]=W[i]+B[i+1]$，否則就會 $B[i]=W[i]+B[i+1]$，反正總有 $S[i]=A[i+1]+B[i+1]+W[i]=\sum_{j=i}^{N-1} W[j]$，所以 $A[0]+B[0]$ 會是全部餅乾的重量！</p>
+<p>現在改算 $D[i]$，看上面的討論可以發現 $D[i]=|{D[i+1]-W[i]}|$，而且 $D[i]$ 的值域頂多到 $W_{max}$。</p>
+<p>綜合上述，答案 $B[0]=\frac{\text{全部餅乾}-D[0]}{2}$。</p>
+<p>想快速知道 $D[0]$，可以用一個線段樹，每個 node $[L,R)$ 存一個大小 $W_{max}$ 的陣列 <code>bis</code>，<code>bis[x]</code> 代表如果 $D[R]=x$ 這時 $D[L]$ 的值，然後就可以像倍增 :</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">st[idx].bis[x]=st[lson].bis[st[rson].bis[x]] </span><br></pre></td></tr></table></figure>
+</details>
+<h3 id="Census">Census</h3>
+<details><summary> subtask 1 </summary>
+<p>成員的 ID 是連續的 $0,1,2,…,N$，可以先在自己的 ID <code>write</code>，之後二分搜。</p>
+</details>
+<details><summary> subtask 2 </summary>
+<p>想要知道是不是存在除了自己的另一個人，可以先在自己的 ID <code>write</code>，然後去檢查其他地方有沒有被 <code>write</code>。<br>
+但是要檢查的地方太多了 : (<br>
+考慮 random 在 $0$ 到 $60$ 之間某個地方 <code>write</code>，然後去檢查其他 $60$ 個地方，雖然說有 $\frac{1}{61}$ 的機率兩個人會撞到，不過多送幾次就會過了。</p>
+</details>
+<details><summary> subtask 3 </summary>
+<p>使用像是線段樹那樣的想法。</p>
+<p>第一輪，大家都在自己的 ID 上 <code>write 1</code>，然後按照 ID 0-1 2-3 4-5 6-7 這樣分組去看對方寫什麼，對方寫 $1$ 就可以知道這組共有 $2$ 人，看到 $0$ 代表這組只有一個人。<br>
+第二輪，01 23 45 67 各組決定出一個代表在 ID=0, 2, 4, 6 上 <code>write</code> 剛剛的總人數，然後按照 ID 01-23 45-67 這樣分組去看對方寫什麼，把對方寫的人數加進已知總人數。<br>
+第三輪，0123 4567 各組決定出一個代表在 ID=0, 4 上 <code>write</code> 剛剛的總人數，然後按照 ID 0123-4567 這樣分組去看對方寫什麼，把對方寫的人數加進已知總人數。<br>
+第四輪，最後的兩個人知道總人數，選一個代表把總人數 <code>write</code> 在 ID=0，之後其他人去 <code>read</code>。</p>
+<p>各組要決定出一個代表才不會有多個人在同一個 ID 上 <code>write</code>，至於怎麼決定出一個代表，如果兩小組中都有人，就選編號小的。</p>
+<p>這個想法可以推廣到 subtask 4，只能寫 0/1 的話，就把總人數用二進位多分幾次傳，可以拿到一些分數。</p>
+</details>
+<details><summary> 優化 1 </summary>
+<p>上面說為了避免多人在同一地點 <code>write</code>，選擇讓編號小的作為代表負責 <code>write</code>，但這樣要花 $7$ 輪才可以傳一個 $N=100$ 這樣大的數字。</p>
+<p>其實可以讓多人負責不同 bit，在同一輪 <code>write</code>。</p>
+<p>要怎麼選出多人，可以維護每個人在現在組內的 ranking，合併左右兩邊的時候就把左邊的人 ranking 加上右邊的人數，然後讓 ranking 前 $7$ 大的人負責 $7$ 個 bit。</p>
+</details>
+<details><summary> 優化 2 </summary>
+<p>這樣 merge 是一個樹狀的結構，但是在葉子的地方如果沒幾個人，就不需要用 $7$ bits 傳人數了，可以用少一點的 bit。<br>
+但是如果剛好遇上某一區人很多，又不能這樣節省了。</p>
+<p>這裡可以用 random shuffle 把全部人初始分布位置變平均一點，random 的 seed 要是固定的 ( $N$ 個人的程式是分開執行的，但他們打亂的基準要是一樣的，才能成功打亂 )。<br>
+至於樹的哪一層要傳幾個 bit 就可能需要調整一下。</p>
+<p>( 我是有成功這樣弄到 $100$ 分 )</p>
+</details>
+<details><summary> 確定性作法 </summary>
+<p><a href="https://egoi2026.it/competition/census/">官解</a>有說。</p>
+</details>
+<h2 id="day2">day2</h2>
+<h3 id="Watering-Plants">Watering Plants</h3>
+<h3 id="Cakes">Cakes</h3>
+<h3 id="Fox-Families">Fox Families</h3>
+<h3 id="Seating-Plan">Seating Plan</h3>
+]]></content>
+      <tags>
+        <tag>EGOI</tag>
+        <tag>solutions</tag>
       </tags>
   </entry>
   <entry>
@@ -1082,116 +1195,599 @@ pA $13$ 拿到 <font color=#FF0000> WA WA WA </font> ，十分不妙，出去吃
       </tags>
   </entry>
   <entry>
-    <title>EGOI 題解</title>
-    <url>/2026/06/15/EGOI-%E9%A1%8C%E8%A7%A3/</url>
-    <content><![CDATA[<style>
-  summary {
-    background-color: #3f6665;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding: 5px 10px 5px 25px;
-  }
-</style>
-<p>我決定要來寫 EGOI 題解　(●’◡’●)<br>
-希望可以在 $2027$ 的國手開始 virtual 之前把我會的寫完…<s>欸不對，我也是 $2027$ 的國手，而且我已經 vir 完了</s>。<br>
-主要是我覺得研究英文題解有點麻煩，然後網路上的中文題解不一定好看，那就再生一些不一定好看的題解，樣本數比較多，未來的國手可以多方參考 ( ? )</p>
-<p>先說我不一定很會寫題解，而且有些題目我根本不會寫。</p>
-<hr>
-<p><a href="https://stats.egoi.org/tasks/">官方題解</a>可以從這個連結進去，按題目名字，可以在右下方找到 solution。<br>
-台灣的翻譯題本是 <code>Chinese (zh_tw)</code> ( 從 $2026$ 才開始有台灣翻譯題本，<a href="https://loj.ac/p?keyword=EGOI">這個中國 judge </a>有一些簡體中文翻譯 )。</p>
-<marquee direction="left" scrollamount="8"> 
-<p>現在在施工，請不要靠近，會被磚頭砸到 ( ? ) ⚠️⚠️⚠️</p>
+    <title>Hello Blog</title>
+    <url>/2025/09/22/Hello-Blog/</url>
+    <content><![CDATA[<h1>大大</h1>
+<h2 id="大">大</h2>
+<h3 id="中">中</h3>
+<p>單行程式 <code>ijk</code><br>
+一堆程式</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Blog!\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><s>劃掉</s></p>
+<span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur ">1029</span></span>
+<p><em>斜斜的</em><br>
+<em>斜斜的</em><br>
+<strong>粗</strong><br>
+<u>底線</u><br>
+<font color=#FF0000> WA </font><br>
+<font color=#76F72D> AC </font></p>
+<details>
+<summary>暴雷</summary>
+<p>EGOI</p>
+<p><code>EGOI</code></p>
+<p>$EGOI$</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">mt19937 <span class="title">mt</span><span class="params">(chrono::steady_clock::now().time_since_epoch().count())</span></span>;</span><br></pre></td></tr></table></figure>
+</details>
+<p>$1+1=2$</p>
+<ol>
+<li>TOI</li>
+<li>EGOI</li>
+<li>APIO</li>
+<li>IOI</li>
+</ol>
+<blockquote>
+<p>EGOI</p>
+<blockquote>
+<p>EGOI</p>
+<blockquote>
+<p>EGOI</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><a href="https://dailyakari.com/">點燈</a></p>
+<table>
+<thead>
+<tr>
+<th>Column 1</th>
+<th>Column 2</th>
+<th>Column 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text1</td>
+<td>Text2</td>
+<td>Text3</td>
+</tr>
+<tr>
+<td>Text4</td>
+<td>Text5</td>
+<td>Text6</td>
+</tr>
+</tbody>
+</table>
+<marquee direction="left" scrollamount="5"> 
+<p>EGOIEGOIEGOIEGOI</p>
 </marquee>
-<hr>
-<h1>2026</h1>
-<h2 id="day1">day1</h2>
-<h3 id="Ferris-Wheel">Ferris Wheel</h3>
-<details><summary> full </summary>
-<p><code>+</code> 是往比自己大的連，先把全部是 <code>+</code> 的零件分離出來，編號由小往大連。<br>
-<code>-</code> 是往比自己小的連，把剩下的 <code>-</code> 的零件編號由大往小連。</p>
-<p>這時候會有兩條鍊，把 <code>+</code> 編號最大的連到 <code>-</code> 編號最大的，<code>-</code> 編號最小的連到 <code>+</code> 編號最小的。<br>
-如果這裡連不上去 ( 也就是 $0$ 號是 <code>-</code> 或者 $N-1$ 號是 <code>+</code> 的情況 ) 就輸出 <code>NO</code>。</p>
-</details>
-<h3 id="Ovenmasters">Ovenmasters</h3>
-<h3 id="Biscuits">Biscuits</h3>
-<details><summary> subtask 1 </summary>
-<p>答案是 $\lfloor \frac{N}{2} \rfloor$。</p>
-</details>
-<details><summary> subtask 3 </summary>
-<p>這裡保證 :</p>
-<p>$$W_0 \geq W_1 \geq \dots \geq W_{N-1}$$</p>
-<p>Bianca 可以保證她的得分至少為：</p>
-<p>$$W_1 + W_3 + W_5 + \dots + W_{N-1-(N \bmod 2)}$$</p>
-<p>以下用數學歸納法證明 ( 完蛋我不會數學 )。</p>
-<p>對於 $N = 1$，Bianca 可以保證她的分數非負。</p>
-<p>假設對於大小為 $M = 1 \dots N-1$ 的堆疊皆成立。當在一個大小為 $N$、權重為 $W_0, W_1, \dots, W_{N-1}$ 的餅乾堆上玩遊戲時，Bianca 會：</p>
-<ul>
-<li>Aurora 選擇 $X = 1$，那麼 Bianca 就選擇 $Y = 0$，並且吃掉總權重至少為 $W_0 + (W_2 + W_4 + \dots) \geq W_1 + W_3 + W_5 + \dots$ 的餅乾。</li>
-<li>不然 Bianca 就選擇 $Y = 1$，並且吃掉總權重至少為 $W_1 + (W_3 + W_5 + \dots)$ 的餅乾。</li>
-</ul>
-<p>Aurora 可以確保 Bianca 吃掉的餅乾總權重最多為 $W_1 + W_3 + W_5 + \dots$，她可以總是選擇 $X = 0$ 來達到這個目的。</p>
-</details>
-<details><summary> subtask 2 & 4 </summary>
-<p>考慮 DP。<br>
-令 $dp[i]$ 代表考慮 $i, i+1, … , N-1$ 塊餅乾，Bianca 可以獲得的最高權重。<br>
-可以對每個 $dp[i]$ 枚舉 $X$、$Y$ 來轉移，每次 query 都重新 DP 一次。</p>
-</details>
-<details><summary> subtask 5 & 6 </summary>
-<p>優化剛剛的 DP。<br>
-Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$ 轉移，所以 Aurora 可以把最好的轉移點擋掉，因此可以直接用 second max 轉移，這樣 DP 就變 $O(N)$ 了。</p>
-</details>
-<details><summary> full </summary>
-<p>令 $B[i]=\text{secondmax}_{i \le j}(W[j]+B[j+1])$。<br>
-令 $A[i]=\text{max}_{i \le j}(W[j]+B[j+1])$。<br>
-令 $D[i]=A[i]-B[i]$，$S[i]=A[i]+B[i]$。</p>
-<p>現在要算 $S[i]$，因為 $S[i+1]=A[i+1]+B[i+1]$，而且現在多了新的轉移點 $W[i]+B[i+1]$，他一定比 $B[i+1]$ 大，如果他也比 $A[i+1]$ 大的話就會 $A[i]=W[i]+B[i+1]$，否則就會 $B[i]=W[i]+B[i+1]$，反正總有 $S[i]=A[i+1]+B[i+1]+W[i]=\sum_{j=i}^{N-1} W_j$，所以 $A[0]+B[0]$ 會是全部餅乾的重量！</p>
-<p>算 $D[i]$，多了新的轉移點 $W[i]+B[i+1]$，看上面的討論可以發現 $D[i]=|{D[i+1]-W[i]}|$，而且 $D[i]$ 的值域頂多到 $W_{max}$。</p>
-<p>綜合上述，答案 $B[0]=\frac{\text{全部餅乾}-D[0]}{2}$。</p>
-<p>想快速知道 $D[0]$，可以用一個線段樹，每個 node $[L,R)$ 存一個大小 $W_{max}$ 的陣列 <code>bis</code>，<code>bis[x]</code> 代表如果 $D[R]=x$ 這時 $D[L]$ 的值，然後就可以像倍增 :</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">st[idx].bis[x]=st[lson].bis[st[rson].bis[x]] </span><br></pre></td></tr></table></figure>
-</details>
-<h3 id="Census">Census</h3>
-<details><summary> subtask 1 </summary>
-<p>成員的 ID 是連續的 $0,1,2,…,N$，可以先在自己的 ID <code>write</code>，之後二分搜。</p>
-</details>
-<details><summary> subtask 2 </summary>
-<p>想要知道是不是存在除了自己的另一個人，可以先在自己的 ID <code>write</code>，然後去檢查其他地方有沒有被 <code>write</code>。<br>
-但是要檢查的地方太多了 : (<br>
-考慮 random 在 $0$ 到 $60$ 之間某個地方 <code>write</code>，然後去檢查其他 $60$ 個地方，雖然說有 $\frac{1}{61}$ 的機率兩個人會撞到，不過多送幾次就會過了。</p>
-</details>
-<details><summary> subtask 3 </summary>
-<p>使用像是線段樹那樣的想法。</p>
-<p>第一輪，大家都在自己的 ID 上 <code>write 1</code>，然後按照 ID 0-1 2-3 4-5 6-7 這樣分組去看對方寫什麼，對方寫 $1$ 就可以知道這組共有 $2$ 人，看到 $0$ 代表這組只有一個人。<br>
-第二輪，01 23 45 67 各組決定出一個代表在 ID=0, 2, 4, 6 上 <code>write</code> 剛剛的總人數，然後按照 ID 01-23 45-67 這樣分組去看對方寫什麼，把對方寫的人數加進已知總人數。<br>
-第三輪，0123 4567 各組決定出一個代表在 ID=0, 4 上 <code>write</code> 剛剛的總人數，然後按照 ID 0123-4567 這樣分組去看對方寫什麼，把對方寫的人數加進已知總人數。<br>
-第四輪，最後的兩個人知道總人數，選一個代表把總人數 <code>write</code> 在 ID=0，之後其他人去 <code>read</code>。</p>
-<p>各組要決定出一個代表才不會有多個人在同一個 ID 上 <code>write</code>，至於怎麼決定出一個代表，如果兩小組中都有人，就選編號小的。</p>
-<p>這個想法可以推廣到 subtask 4，只能寫 0/1 的話，就把總人數用二進位多分幾次傳，可以拿到一些分數。</p>
-</details>
-<details><summary> 優化 1 </summary>
-<p>上面說為了避免多人在同一地點 <code>write</code>，選擇讓編號小的作為代表負責 <code>write</code>，但這樣要花 $7$ 輪才可以傳一個 $N=100$ 這樣大的數字。</p>
-<p>其實可以讓多人負責不同 bit，在同一輪 <code>write</code>。</p>
-<p>要怎麼選出多人，可以維護每個人在現在組內的 ranking，合併左右兩邊的時候就把左邊的人 ranking 加上右邊的人數，然後讓 ranking 前 $7$ 大的人負責 $7$ 個 bit。</p>
-</details>
-<details><summary> 優化 2 </summary>
-<p>這樣 merge 是一個樹狀的結構，但是在葉子的地方如果沒幾個人，就不需要用 $7$ bits 傳人數了，可以用少一點的 bit。<br>
-但是如果剛好遇上某一區人很多，又不能這樣節省了。</p>
-<p>這裡可以用 random shuffle 把全部人初始分布位置變平均一點，random 的 seed 要是固定的 ( $N$ 個人的程式是分開執行的，但他們打亂的基準要是一樣的，才能成功打亂 )。<br>
-至於樹的哪一層要傳幾個 bit 就可能需要調整一下。</p>
-<p>( 我是有成功這樣弄到 $100$ 分 )</p>
-</details>
-<details><summary> 確定性作法 </summary>
-<p><a href="https://egoi2026.it/competition/census/">官解</a>有說。</p>
-</details>
-<h2 id="day2">day2</h2>
-<h3 id="Watering-Plants">Watering Plants</h3>
-<h3 id="Cakes">Cakes</h3>
-<h3 id="Fox-Families">Fox Families</h3>
-<h3 id="Seating-Plan">Seating Plan</h3>
 ]]></content>
       <tags>
+        <tag>testing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TOI 潛力組 202511</title>
+    <url>/2025/11/11/TOI-%E6%BD%9B%E5%8A%9B%E7%B5%84-202511/</url>
+    <content><![CDATA[<p>生病 ಥ_ಥ<br>
+但我覺得北二區之前大概是好不了了，所以要習慣一下。</p>
+<p>開場先看題。<br>
+P1 是數學，P2 是 DP，P3 是 BCC。</p>
+<h2 id="P2">P2</h2>
+<details>
+<summary>暴雷</summary>
+<p>P2 一看就是超級裸的背包 DP。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, x;</span><br><span class="line"><span class="type">int</span> dp[<span class="number">10005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; x;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;<span class="number">10005</span> ; i++ ) dp[i]=<span class="number">1e9</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> a, b;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">        b+=a;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> j=b ; j&lt;<span class="number">10005</span> ; j++ )&#123;</span><br><span class="line">            dp[j]=<span class="built_in">min</span>( dp[j], dp[j-b]+a );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> ans=<span class="number">1e9</span>;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=x ; i&lt;<span class="number">10005</span> ; i++ ) ans=<span class="built_in">min</span>( ans, dp[i] );</span><br><span class="line">    cout &lt;&lt; ans;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/TOI202511P2.png" alt="P2"></p>
+</details>
+<h2 id="P1">P1</h2>
+<details>
+<summary>暴雷</summary>
+<p>如果有 $n$ 個人帽子同一個顏色，那這 $n$ 個人都會看到 $n-1$。<br>
+如果有超過 $n$ 個人看到 $n-1$，那就代表要分多組。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> c[<span class="number">1005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> x;</span><br><span class="line">        cin &gt;&gt; x;</span><br><span class="line">        c[x<span class="number">+1</span>]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> all=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;<span class="number">1005</span> ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> y=(c[i]/i);</span><br><span class="line">        <span class="keyword">if</span>( c[i]%i ) y++;</span><br><span class="line">        all+=i*y;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; all;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/TOI202511P1.png" alt="P1"></p>
+</details>
+<p>時間好多，看來有機會寫超不熟的 <code>BCC</code>。</p>
+<h2 id="P3">P3</h2>
+<details>
+<summary>暴雷</summary>
+<p>先把圖分成很多個邊雙連通分量，如果剪斷的邊不是橋那就沒有影響。<br>
+把雙連通分量們和橋們組成樹，然後就可以在上面 DP，就能知道剪斷某個橋會影響到下面多少個子樹。<br>
+實作一樣先<s>找出我的模板</s>先找出橋 (dfs) ，再把雙連通分量編號 (dfs2) ，最後再 DP (dfs3)。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, q, c;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; a[<span class="number">50005</span>];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; b[<span class="number">50005</span>]; <span class="comment">// BCC</span></span><br><span class="line">set&lt; pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; &gt; bridge;</span><br><span class="line"><span class="type">int</span> color[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> dep[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> low[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> sz[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> dp[<span class="number">50005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">( <span class="type">int</span> i, <span class="type">int</span> p )</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> u : a[i] )&#123;</span><br><span class="line">        <span class="keyword">if</span>( u==p ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span>( !dep[u] )&#123;</span><br><span class="line">            dep[u]=dep[i]<span class="number">+1</span>;</span><br><span class="line">            low[u]=dep[u];</span><br><span class="line">            <span class="built_in">dfs</span>( u, i );</span><br><span class="line">            low[i]=<span class="built_in">min</span>( low[i], low[u] );</span><br><span class="line">            <span class="keyword">if</span>( low[u]&gt;dep[i] ) bridge.<span class="built_in">insert</span>(&#123;<span class="built_in">min</span>(i,u), <span class="built_in">max</span>(i,u)&#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            low[i]=<span class="built_in">min</span>( low[i], dep[u] );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs2</span><span class="params">( <span class="type">int</span> i, <span class="type">int</span> p )</span></span>&#123;</span><br><span class="line">    sz[c]++;</span><br><span class="line">    color[i]=c;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> u : a[i] )&#123;</span><br><span class="line">        <span class="keyword">if</span>( u==p || color[u] ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span>( bridge.<span class="built_in">count</span>(&#123;<span class="built_in">min</span>(i,u), <span class="built_in">max</span>(i,u)&#125;) ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="built_in">dfs2</span>( u, i );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs3</span><span class="params">( <span class="type">int</span> i, <span class="type">int</span> p )</span></span>&#123;</span><br><span class="line">    dp[i]=sz[i];</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> u : b[i] )&#123;</span><br><span class="line">        <span class="keyword">if</span>( u==p ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="built_in">dfs3</span>( u, i );</span><br><span class="line">        dp[i]+=dp[u];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m &gt;&gt; q;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;m ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> x, y;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">        a[x].<span class="built_in">push_back</span>(y);</span><br><span class="line">        a[y].<span class="built_in">push_back</span>(x);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    dep[<span class="number">0</span>]=low[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">dfs</span>( <span class="number">0</span>, <span class="number">-1</span> );</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    cout &lt;&lt; bridge.size() &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line"><span class="comment">    for( auto u : bridge )&#123;</span></span><br><span class="line"><span class="comment">        cout &lt;&lt; u.first &lt;&lt; &#x27; &#x27; &lt;&lt; u.second &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">if</span>( color[i] ) <span class="keyword">continue</span>;</span><br><span class="line">        c++;</span><br><span class="line">        <span class="built_in">dfs2</span>( i, <span class="number">-1</span> );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">auto</span> [x, y] : bridge )&#123;</span><br><span class="line">        b[color[x]].<span class="built_in">push_back</span>(color[y]);</span><br><span class="line">        b[color[y]].<span class="built_in">push_back</span>(color[x]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">dfs3</span>( <span class="number">1</span>, <span class="number">-1</span> );</span><br><span class="line"></span><br><span class="line">   <span class="keyword">while</span>( q-- )&#123;</span><br><span class="line">        <span class="type">int</span> x, y;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">        <span class="keyword">if</span>( x&gt;y ) <span class="built_in">swap</span>(x, y);</span><br><span class="line">        <span class="keyword">if</span>( bridge.<span class="built_in">count</span>(&#123;x, y&#125;) )&#123;</span><br><span class="line">            cout &lt;&lt; n-<span class="built_in">min</span>( dp[color[x]], dp[color[y]] ) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            cout &lt;&lt; n &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/TOI202511P3.png" alt="P3"></p>
+</details>
+<h2 id="檢討">檢討</h2>
+<p>P1 : 沒事，<s>我數學很好</s><br>
+P2 : 沒事，我會 DP<br>
+P3 : 應該有可以一邊找橋一邊編號的方法，要去查一下<br>
+總體狀況滿好的，超冷靜，看來生病大腦就沒能量燒雞了 &gt; ᗜ &lt;<br>
+恭喜 combo 1 ✧*｡ ٩(ˊᗜˋ*)و✧*</p>
+]]></content>
+      <tags>
+        <tag>TOI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Virtual EGOI 2021</title>
+    <url>/2026/03/31/Virtual-EGOI-2021/</url>
+    <content><![CDATA[<h1>Day1</h1>
+<p>Day1 是 3/31 在武陵 vir 的，因為我 <code>14:00</code> 要去烤餅乾，所以從 <code>8:30</code> 開始打。</p>
+<p><code>0:55</code><br>
+看完題目了，精神分數 <code>100/48/9?/0</code>。<br>
+呃其實我沒認真看第四題。</p>
+<p><code>1:03</code><br>
+<code>100/0/0/0</code>。<br>
+pA 就很簡單，接下來決定先寫 pB $48$ 驗想法。</p>
+<p><code>1:33</code><br>
+<code>100/48/0/0</code>。<br>
+代表說 pB 由近到遠拔掉是好的，然後想辦法優化，像是快速找出最近的 pair ( ? ? ?</p>
+<p><code>2:00</code><br>
+pB 一直想到不可做的超詭異線段樹，先跳去 pC。<br>
+看一下之後發現隨機是不是可以做 $100$。</p>
+<p><code>2:39</code><br>
+<code>100/48/51/0</code>，pC 後面兩個子題 RE，有點怪。</p>
+<p><code>2:43</code><br>
+<code>100/48/100/0</code>。<br>
+原來是我 j 打成 i ，超好笑。</p>
+<p><code>4:00</code><br>
+一直想 pB 但沒有進展，要跳去 pD 了。</p>
+<p><code>5:00</code><br>
+不會做 pD 也不會做 pB，唉唉唉。</p>
+<p>結果是 <code>100/48/100/0</code>。</p>
+<hr>
+<h1>Day2</h1>
+<p>Day2 是 4/2 在武陵 vir 的，因為我 <code>14:00</code> 要去上畫地圖課 ( 這是我最喜歡的課欸，要上啦 )，所以從 <code>8:30</code> 開始打。</p>
+<p><code>1:00</code><br>
+看完全部題目，( 對我有看 pD )，精神分數 <code>100/100/7/10</code>。</p>
+<p><code>1:02</code><br>
+pA greedy 拿了一個 $42$，現在 <code>42/0/0/0</code>。<br>
+我好像在 JOIG 看過什麼類似的欸，該不會要 DP。</p>
+<p><code>1:13</code><br>
+DP 過了，成功拿到 <code>100/0/0/0</code>。</p>
+<p><code>1:17</code><br>
+驗一下 pD 我亂 claim 的東西，拿到 $0$ 分，所以精神分數下跌 <code>100/100/7/0</code>。</p>
+<p><code>1:57</code><br>
+確認一下細節之後開寫 pB，<code>100/100/0/0</code>。</p>
+<p><code>2:01</code><br>
+再亂 claim 一次 pD ，再拿一次 $0$。<br>
+我覺得 pD 先放著好了，根本不會做。</p>
+<p><code>3:00</code><br>
+好像成功想到 pC $16$ 分了，以為可以推廣到 $100$ 發現是爛的，反正先做掉。</p>
+<p><code>3:19</code><br>
+pC 拿 $0$ 分了，原來我又把 i 打成 1 了，超級好笑。</p>
+<p><code>3:26</code><br>
+<code>100/100/16/0</code>。</p>
+<p><code>4:02</code><br>
+因為一直沒有進展，所以先把 pC 暴力寫完，<code>100/100/23/0</code>。</p>
+<p><code>5:00</code><br>
+還是沒有進展。</p>
+<p>最後結果 <code>100/100/23/0</code>。</p>
+<hr>
+<h1>傷心的結果</h1>
+<p>Day1 <code>100/48/100/0</code>。<br>
+Day2 <code>100/100/23/0</code>。<br>
+Total <code>471</code>，rk.25。</p>
+<p><a href="https://stats.egoi.org/editions/2021/results/">記分板</a>，金牌線是 <code>539</code>，所以我拿到銀牌了啦 ಥ_ಥ。</p>
+<hr>
+<h1>檢討</h1>
+<h2 id="Day1">Day1</h2>
+<ol>
+<li>pB 沒做出來就是不應該 ( ˘︹˘ )。</li>
+<li>pD 暴力為什麼沒有寫 ( ˘︹˘ )。</li>
+<li>我是不是不太會區間 DP ?</li>
+</ol>
+<h2 id="Day2">Day2</h2>
+<ol>
+<li>C 沒有想樹那個子題。</li>
+<li><code>check</code> 函數沒有初始化拿到很多 WA ( 補題的時候 )。</li>
+</ol>
+<h2 id="General">General</h2>
+<ol>
+<li>打錯變數的名字。</li>
+<li>pD 拿 $0$ 分 ( 至少 day1 滿不應該的 )。</li>
+<li>是不是要對後半場坐牢擬定什麼策略 ? 這是策略能解決的嗎，如果是的話那應該要逼自己去想子題？</li>
+<li>給每一題比較久的思考時間是好的，至少比跳來跳去好很多 ( 應該 )。</li>
+</ol>
+<hr>
+<h1>其他話</h1>
+<p>我很喜歡 day1 C 和 day2 C。<br>
+因為 4/1 是校慶，我原本想說可以 vir Day2，但是我爸媽不給請假學校又沒安靜的地方，<s>呃反正 Day1 和 Day2 中間本來就休一天。</s><br>
+我把 day2 D 丟給謝鈞因為他想知道我都在幹嘛，結果他也 claim 了一個跟我一模一樣的 WA 的東西。<br>
+摩卡超級強，好可惜他沒有進二階 (˘･_･˘) 。</p>
+<p>EGOI 測資是不是有點像 TOI，因為我一個大 bug 都可以撈不少分、二分搜區間太小竟然可以過，還有 $O(N^4)$ 可以拿到 $O(N^3)$ 子題的分數好棒。</p>
+]]></content>
+      <tags>
+        <tag>training</tag>
         <tag>EGOI</tag>
-        <tag>solutions</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Virtual EGOI 2022</title>
+    <url>/2026/04/07/Virtual-EGOI-2022/</url>
+    <content><![CDATA[<h1>Day1</h1>
+<p>Day1 是 4/7 在武陵 vir 的，從 <code>8:30</code> 開始打。</p>
+<p><code>0:20</code><br>
+呃我有點想睡覺了，然後我怎麼現在才想完 pA，有點久。</p>
+<p><code>0:55</code><br>
+看完了，我覺得可以做 <code>100/14/15/25</code>。</p>
+<p><code>1:07</code><br>
+<code>100/0/0/0</code>。<br>
+pA 過了，再看一下 BCD，發現 pD $50$ 是 LCA，精神分數 <code>100/14/15/50</code>。</p>
+<p><code>2:17</code><br>
+<code>100/0/0/50</code>。<br>
+LCA 寫爛花了一點時間，快半場了應該要去看看 pC。<br>
+然後我一直再想 to make Maria lose the next challenge 是指第二次要輸還是最後要輸就好，發現花太多時間決定要切去 pB，成功把精神分數推到 <code>100/62/15/50</code>。<br>
+是說 pB 是不是去年一模有有點像的東西，但我去年亂考一通，我也不知道。</p>
+<p><code>3:32</code><br>
+<code>100/14/0/50</code>。<br>
+有點奇怪了，因為 QOJ 說我 subtask 什麼 dependency 沒過所以直接 skip 掉，傳幾次之後<s>我要先懷疑他子題切爛了</s>，拿去 <a href="http://oj.uz">oj.uz</a> 傳。</p>
+<p><code>3:45</code><br>
+<code>100/62/0/50</code>。<br>
+<a href="http://oj.uz">oj.uz</a> 說我成功拿到 $62$ 分了 (╬▔皿▔)<br>
+然後我好像知道怎麼做 pB $100$ 了欸，精神分數 <code>100/100/15/50</code>。</p>
+<p><code>4:39</code><br>
+<code>100/100/0/50</code>。<br>
+因為我忘記 mod WA 很多次，然後現在剩 $20$ 分鐘了 pC 還是 $0$ 分，所以趕快去寫。</p>
+<p><code>4:58:00</code><br>
+寫完了欸，但武陵的網路燒雞了。</p>
+<p><code>4:59:59</code><br>
+<code>100/100/15/50</code>。<br>
+耶在最後終於連到網路了 !</p>
+<p>結果是 <code>100/100/15/50</code>。<br>
+最後一秒拿到 $15$ 分好開心喔。</p>
+<hr>
+<h1>Day 2</h1>
+<p>Day2 是 4/9 在武陵 vir 的，從 <code>8:30</code> 開始打因為我 <code>14:00</code> 要上畫地圖課。</p>
+<p><code>0:??</code><br>
+新發現，我的鍵盤沒電了，怎麼會這樣。</p>
+<p><code>1:00</code><br>
+看完了，現在狀況有點不妙，因為我 pA 好像只會做 $51$，其他會做的看起來也很少，精神分數 <code>51/55/10/20</code>。<br>
+因為 pA 沒推滿先擺著，pB 有 $9$ 個不完全相關的子題，感覺可以分開做，所以先做 pB。</p>
+<p><code>1:55</code><br>
+<code>0/ (12,9,13,8,0,0,0,7,6) /0/0</code>。<br>
+我大概以 $5$ 分鐘一個 submission 成功撈到 pB $55$ 分。<br>
+這場有兩個非典，然後我都不會做，所以我要趕快撈一撈然後回去 pA。</p>
+<p><code>2:31</code><br>
+<code>0/55/10/0</code>。<br>
+去 pD，把精神分數推到 <code>51/55/10/29</code>。</p>
+<p><code>3:06</code><br>
+<code>0/55/10/11</code>。<br>
+就是 pD 的表有夠難建，<s>打到一半差點生氣</s>。</p>
+<p><code>3:13</code><br>
+<code>0/55/10/29</code>。<br>
+pD 差不多了，回去想 pA，精神分數 <code>71/55/10/29</code>。<br>
+我一直很想 claim pA 複雜度是要 $O(N+S^2)$，但我想到的只有 $O(NS)$，我不知道 $5e8$ 兩秒會不會過，畢竟 TOI $4e8$ 四秒都可以不過了。</p>
+<p><code>3:46</code><br>
+<code>100/55/10/29</code>。<br>
+原來 EGOI judge 那麼快喔。<br>
+pB 好像有個 $6$ 分的子題但沒有很好寫，pD rotate 我就不會了，pC 感覺在哪裡看過可以對層數二分搜 ? 我不知道。</p>
+<p><code>4:45</code><br>
+pC WA $0$ 分，原來是我的用的 version 是爛的。</p>
+<p><code>4:49</code><br>
+<code>100/55/100/29</code>。</p>
+<p><code>4:50</code><br>
+<s>江語萱跑來圖書館印科展海報，所以我就去跟她聊天。</s></p>
+<p>結果是 <code>100/55/100/29</code>。</p>
+<hr>
+<h1>驚險的結果</h1>
+<p>Day1 <code>100/100/15/50</code>。<br>
+Day2 <code>100/55/100/29</code>。<br>
+Total <code>549</code>，rk.10。</p>
+<p><a href="https://stats.egoi.org/editions/2022/results/">記分板</a>，金牌線是 <code>548</code>，所以我比金牌線高 $1$ 分喔 w(ﾟДﾟ)w。</p>
+<hr>
+<h1>檢討</h1>
+<h2 id="Day1">Day1</h2>
+<ol>
+<li>中間想東西忘記去吃餅乾，導致後面肚子有點餓。</li>
+<li>LCA 竟然會寫爛。</li>
+<li>DP 沒有 mod。</li>
+<li>該拿的都算有拿到。</li>
+</ol>
+<h2 id="Day2">Day2</h2>
+<ol>
+<li>pB 還有個 $6$ 分的子題沒撈完。</li>
+<li>pD 其實再推一下就可以有 $53$ 了。</li>
+<li>亂 claim 複雜度不知道好不好，但是做不出來的話好像可以稍微 claim 爛一點的複雜度 ? 然後 EGOI judge 感覺兩秒 $5e8$ 很快。</li>
+<li>比賽前一定一定要檢查鍵盤有沒有電。</li>
+</ol>
+<h2 id="General">General</h2>
+<p>沒特別要說的。</p>
+<hr>
+<h1>其他話</h1>
+<p>day1 整個都非常好玩。<br>
+day2 D 打表非常不好玩。<br>
+謝鈞一直跟我要 EGOI 題目去做，是不是要入坑競程了。<br>
+睿睿叫我們補似魔，但沒有人要寫。<br>
+希望我之後可以跟別人一起 vir，看楊岳蓁要不要打。</p>
+<hr>
+<h1>題解</h1>
+<p>終於找到比我的瀏海還醜的東西了，看來 EGOI 是希望我不要看解自己想。<br>
+<img src="/images/EGOI_2022_offi_sol.png" alt="P1"></p>
+]]></content>
+      <tags>
+        <tag>training</tag>
+        <tag>EGOI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TOI 潛力組 202509</title>
+    <url>/2025/10/01/TOI-%E6%BD%9B%E5%8A%9B%E7%B5%84-202509/</url>
+    <content><![CDATA[<p>好久沒打 TOI 了喔<br>
+不知道能不能破台 combo 5 呢 ~</p>
+<h2 id="P2">P2</h2>
+<p>打潛力組策略就是開場先看題，我覺得 P2 最簡單 (●’◡’●)</p>
+<details>
+<summary>暴雷</summary>
+<p>就看 B 陣列然後分成很多小塊，怎麼分就看是不是和在 A 裡的時候鄰居一樣，不一樣就一定要切，一樣就算在同一塊裡面，答案是切幾刀，所以就是塊數減一。但我實作爛了，拿到好多<font color=#ffff00> WA </font> 好可怕 இ௰இ</p>
+<p>還有就是小心數字到 $10^9$，需要 <code>map</code>。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[<span class="number">200005</span>];</span><br><span class="line"><span class="type">int</span> b[<span class="number">200005</span>];</span><br><span class="line">unordered_map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; p;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">        p[a[i]]=i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">    cin &gt;&gt; b[<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">2</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        cin &gt;&gt; b[i];</span><br><span class="line">        <span class="keyword">if</span>( p[b[i<span class="number">-1</span>]]!=p[b[i]]<span class="number">-1</span> ) cnt++;</span><br><span class="line">        <span class="comment">//cout &lt;&lt; p[b[i-1]] &lt;&lt; &#x27; &#x27; &lt;&lt; p[b[i]] &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; cnt;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/TOI202509P2.png" alt="P2"></p>
+</details>
+<p>寫完之後看一下 P1 和 P3，P3 是拓樸大裸題但字串分析一臉討厭， <s>先丟掉</s><br>
+P1 看起來有點想法但又不太確定，感覺可以想想看，真有趣，好想寫喔 (❁´◡`❁)</p>
+<h2 id="P1">P1</h2>
+<p>P1 超有料的，愛 P1<br>
+以下是心路歷程</p>
+<details>
+<summary>暴雷</summary>
+<p>首先就是把數字 $x$ 切成很多塊嘛，至於要切幾塊…可以發現切越多塊得分會先上升再下降，像是 $X=5$，切一塊 $5$ 分，兩塊 $6$ 分，三塊 $4$ 分，這樣。有個峰的話是不是要三分搜，但我超不會三分搜欸，上次寫是不是選訓的時候啊…喔好像不用，判斷就 <code>cal(mid)&gt;cal(mid+1)</code> 這樣子就可以好好二分搜了耶，萬歲 (≧∇≦)ﾉ</p>
+<p>等等好像又不對了，數字很大要 mod 耶，這樣要怎麼比大小啊，燒雞 Σ(っ °Д °;)っ</p>
+<p>既然不是 X 分搜，代表說一定要貪心構造出最佳解，呃<br>
+感覺全部切成很多個 $2$ 好嗎？指數函數是不是長大很快…但是 $3^2=9$ 比 $2^3=8$ 好耶，代表說我 $X=6$ 要優先切成兩個 $3$。而且 $x=12$ 切成四個 $3$ 是 $3^4=81$，比 $4^3=64$ 好，所以切的大小 $3$ 是最好的，要優先切成大小是 $3$，多的部分再用 $2$ 來補。那先寫個 $X\leq15$ 的子題看看這樣是不是好的。</p>
+<p>哇是好的耶 (☆▽☆)<br>
+那就按照上面的策略寫吧 ~</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line">ll <span class="type">const</span> mod=<span class="number">1e9</span><span class="number">+7</span>;</span><br><span class="line">ll ans[<span class="number">16</span>]=&#123;<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">12</span>, <span class="number">18</span>, <span class="number">27</span>, <span class="number">36</span>, <span class="number">54</span>, <span class="number">81</span>, <span class="number">108</span>, <span class="number">162</span>, <span class="number">243</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">pw</span><span class="params">( ll x, ll y )</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>( y==<span class="number">0</span> ) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>( y==<span class="number">1</span> ) <span class="keyword">return</span> x;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        ll z=<span class="built_in">pw</span>( x, y/<span class="number">2</span> );</span><br><span class="line">        <span class="keyword">if</span>( y&amp;<span class="number">1</span> ) <span class="keyword">return</span> z*z%mod*x%mod;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> z*z%mod;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> t;</span><br><span class="line">    cin &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span>( t-- )&#123;</span><br><span class="line">        ll x;</span><br><span class="line">        cin &gt;&gt; x;</span><br><span class="line">        <span class="keyword">if</span>( x&lt;=<span class="number">15</span> ) cout &lt;&lt; ans[x] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            ll y=x/<span class="number">6</span>;</span><br><span class="line">            ll z=x%<span class="number">6</span>;</span><br><span class="line">            <span class="keyword">if</span>( z!=<span class="number">0</span> )&#123;</span><br><span class="line">                y--;</span><br><span class="line">                z+=<span class="number">6</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            cout &lt;&lt; <span class="built_in">pw</span>( ans[<span class="number">6</span>], y )*ans[z]%mod &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/TOI202509P1.png" alt="P1"></p>
+</details>
+<p>但是時間只剩 12 分鐘了， P3 至少要 15~20 分吧，可惡</p>
+<h2 id="P3-補題">P3 (補題)</h2>
+<details>
+<summary>暴雷</summary>
+<p>一開始就先字串處理嘛，<s>會不會他的考點其實是這個</s>，然後從有賦值的儲存格開始拓樸，就做完了。<br>
+那個 <code>ana</code> 是 <code>analysis</code> 的意思喔 （￣ ︶ ￣）</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">200</span>][<span class="number">30</span>];</span><br><span class="line"><span class="type">int</span> ind[<span class="number">200005</span>];</span><br><span class="line"><span class="type">int</span> v[<span class="number">200</span>][<span class="number">30</span>];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; a[<span class="number">200005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ana</span><span class="params">( string s, <span class="type">int</span> i, <span class="type">int</span> j )</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> k=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>( s[k]!=<span class="string">&#x27;+&#x27;</span> ) k++;</span><br><span class="line">    <span class="keyword">if</span>( s[<span class="number">1</span>]&gt;=<span class="string">&#x27;A&#x27;</span> &amp;&amp; s[<span class="number">1</span>]&lt;=<span class="string">&#x27;Z&#x27;</span> )&#123;</span><br><span class="line">        <span class="type">int</span> f=<span class="built_in">stoi</span>(s.<span class="built_in">substr</span>(<span class="number">2</span>, k<span class="number">-2</span>))*<span class="number">100</span>+s[<span class="number">1</span>]-<span class="string">&#x27;A&#x27;</span><span class="number">+1</span>;</span><br><span class="line">        a[f].<span class="built_in">push_back</span>(i*<span class="number">100</span>+j);</span><br><span class="line">        ind[i*<span class="number">100</span>+j]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        v[i][j]+=(s[<span class="number">1</span>]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    k++;</span><br><span class="line">    <span class="keyword">if</span>( s[k]&gt;=<span class="string">&#x27;A&#x27;</span> &amp;&amp; s[k]&lt;=<span class="string">&#x27;Z&#x27;</span> )&#123;</span><br><span class="line">        <span class="type">int</span> f=<span class="built_in">stoi</span>(s.<span class="built_in">substr</span>(k<span class="number">+1</span>))*<span class="number">100</span>+s[k]-<span class="string">&#x27;A&#x27;</span><span class="number">+1</span>;</span><br><span class="line">        a[f].<span class="built_in">push_back</span>(i*<span class="number">100</span>+j);</span><br><span class="line">        ind[i*<span class="number">100</span>+j]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        v[i][j]+=(s[k]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> j=<span class="number">1</span> ; j&lt;=m ; j++ )&#123;</span><br><span class="line">            string s;</span><br><span class="line">            cin &gt;&gt; s;</span><br><span class="line">            <span class="keyword">if</span>( s.<span class="built_in">length</span>()==<span class="number">1</span> )&#123;</span><br><span class="line">                v[i][j]=(s[<span class="number">0</span>]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">                q.<span class="built_in">push</span>( i*<span class="number">100</span>+j );</span><br><span class="line">                vis[i][j]=<span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>( s.<span class="built_in">length</span>()==<span class="number">4</span> )&#123;</span><br><span class="line">                v[i][j]=(s[<span class="number">1</span>]-<span class="string">&#x27;0&#x27;</span>+s[<span class="number">3</span>]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">                q.<span class="built_in">push</span>( i*<span class="number">100</span>+j );</span><br><span class="line">                vis[i][j]=<span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="built_in">ana</span>( s, i, j );</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>( !q.<span class="built_in">empty</span>() )&#123;</span><br><span class="line">        <span class="type">int</span> x=q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="type">int</span> i=x/<span class="number">100</span>;</span><br><span class="line">        <span class="type">int</span> j=x%<span class="number">100</span>;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> y : a[x] )&#123;</span><br><span class="line">            ind[y]--;</span><br><span class="line">            v[y/<span class="number">100</span>][y%<span class="number">100</span>]+=v[i][j];</span><br><span class="line">            <span class="keyword">if</span>( ind[y]==<span class="number">0</span> )&#123;</span><br><span class="line">                vis[y/<span class="number">100</span>][y%<span class="number">100</span>]=<span class="literal">true</span>;</span><br><span class="line">                q.<span class="built_in">push</span>(y);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> j=<span class="number">1</span> ; j&lt;=m ; j++ )&#123;</span><br><span class="line">            <span class="keyword">if</span>( !vis[i][j] ) cout &lt;&lt; <span class="string">&quot;ERROR &quot;</span>;</span><br><span class="line">            <span class="keyword">else</span> cout &lt;&lt; v[i][j] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/TOI202509P3.png" alt="P3"></p>
+</details>
+<h2 id="檢討">檢討</h2>
+<p>我覺得最大的問題是實作能力太爛，不管是 P2 卡 bug 太久還是不熟 P3 這種字串處理。應該一般人 P1 P3 西二取一的時候都會把水水的 P3 寫掉吧，畢竟穩定得分總比投資一個還不知道想的是不是對的的東西好。但就比賽體驗來講我還是會選 P1 吧，反正是練習賽，寫出來心情真的很好，<s>讓我差點忘記 combo 毀了</s>。正式賽的話我就不確定了，我覺得我可能會去寫 P3 ＞︿＜</p>
+]]></content>
+      <tags>
+        <tag>TOI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Virtual EGOI 2024</title>
+    <url>/2026/04/28/Virtual-EGOI-2024/</url>
+    <content><![CDATA[<h1>Day1</h1>
+<p>Day1 是 4/28 在武陵 vir 的，從 <code>8:30</code> 開始打。</p>
+<p><code>0:45</code><br>
+今天題目看得有點快，<s>一定是因為我沒有好好看 pD</s>。<br>
+精神分數 <code>100/~100/12/0</code>。<br>
+pB 我覺得是 DP 優化但細節還沒想。</p>
+<p><code>0:55</code><br>
+<code>100/0/0/0</code>。<br>
+去 pB。</p>
+<p><code>1:03</code><br>
+<code>100/28/0/0</code>。<br>
+pB 先寫一個暴力驗 DP 是好的，接下來優化 let’s go。</p>
+<p><code>1:21</code><br>
+<code>100/100/0/0</code>。<br>
+寫了一個小線段樹，今天進度有點快，現在就 $200$ 了。<br>
+去好好想 pC。</p>
+<p><code>1:42</code><br>
+<code>100/100/12/0</code>。<br>
+先把我會的 $12$ 分拿到。</p>
+<p><code>2:21</code><br>
+$O(N^2)$ WA 了，有點怪欸。<br>
+是說我這個子題因為某陣列初始化把 $j$ 打成 $i$ 花很久時間。</p>
+<p><code>2:23</code><br>
+<code>100/100/35/0</code>。<br>
+差不多半場了，應該要想想辦法弄 pD 了。</p>
+<p><code>3:14</code><br>
+因為 pD $0$ 想法，感覺資訊被我傳一傳就會弄丟，所以又來做 pC 子題，拿到 WA。</p>
+<p><code>3:26</code><br>
+<code>100/100/62/0</code>。<br>
+忘記判到樹的某一層有可能是空的了。<br>
+接下來 pD pC 交替想。</p>
+<p><code>4:14</code><br>
+<code>100/100/62/10</code>。<br>
+可以用 XOR 把資訊包在一起欸，再 XOR 一次資訊就回來了，很棒。<br>
+現在我會做 swap 了。</p>
+<p><code>4:30</code><br>
+<code>100/100/62/19</code>。<br>
+會 swap 有 $19$ 分。</p>
+<p><code>4:58</code><br>
+<code>100/100/62/32</code>。<br>
+用類似的方法做 shift，但我發現我只會做一個方向的，另一個方向還沒想到，然後也沒時間了。</p>
+<p>結果是 <code>100/100/62/32</code>。</p>
+<hr>
+<h1>DAY 2</h1>
+<p>Day2 是 4/29 在武陵 vir 的，從 <code>9:00</code> 開始打。<br>
+其實我今天特別猶豫要不要打，因為星期三圖書館有上課的人，有點吵，但我還是打了。</p>
+<p><code>0:40</code><br>
+<s>好想睡覺喔，旁邊討論室好吵喔</s>。<br>
+精神分數 <code>100/25/?/?</code>。<br>
+pA 最多只會走一次直徑欸，哈哈哈。</p>
+<p><code>1:02</code><br>
+<code>100/0/0/0</code>。<br>
+pB 我覺得是把前面某一坨人移到後面，然後亂猜他凸函數所以來寫二分搜。</p>
+<p><code>1:39</code><br>
+<code>100/44/0/0</code>。<br>
+有點怪了，我以為我的二分搜很對，然後他 check 有夠難寫。<br>
+調一調覺得沒料了，這個應該是假解，感謝 EGOI 送我 $44$ 分。<br>
+( by 事後 : 他根本不是凸函數，而且確實是假解 )</p>
+<p><code>2:11</code><br>
+<code>100/100/0/0</code>。<br>
+突然想到一個很好寫的貪心，結果過了欸。<br>
+pC pD let’s go。</p>
+<p><code>2:31</code><br>
+<code>100/100/0/14.803203</code>。<br>
+pD clique 子題拿到 $4.803203$ 分，star 子題拿好拿滿。</p>
+<p><code>3:16</code><br>
+<code>100/100/0/34</code>。<br>
+會做 path 了，因為 clique 一定可以弄出一條 path，所以就一起做完了。</p>
+<p><code>4:18</code><br>
+<code>100/100/22/34</code>。<br>
+想 + 寫很久之後用 $O(N^2)$ 拿到 pC $22$。<br>
+之後就沒有進展了。</p>
+<p>結果是 <code>100/100/22/34</code>。</p>
+<hr>
+<h1>結果</h1>
+<p>Day1 <code>100/100/62/32</code>。<br>
+Day2 <code>100/100/22/34</code>。<br>
+Total <code>550</code>，rk.11。</p>
+<p><a href="https://stats.egoi.org/editions/2024/results/">記分板</a>，金牌線是 <code>510</code>。</p>
+]]></content>
+      <tags>
+        <tag>training</tag>
+        <tag>EGOI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>沒有 Virtual EGOI 2023</title>
+    <url>/2026/04/17/%E6%B2%92%E6%9C%89-Virtual-EGOI-2023/</url>
+    <content><![CDATA[<h1>Day1</h1>
+<p>Day1 是 4/15 在國培 vir 的，從 <code>15:20</code> 開始打，但大家都沒有打完。</p>
+<p>我記得是一開場我就把 pA 寫掉，pB 不會先丟著，把 pC $20$ 分寫掉，<s>然後不會 pB 我就去吃飯了，結果剛吃到飯就想到了</s>。</p>
+<p>楊岳蓁說可以算我們都是 <code>100/100/20/15</code> ( ? ? ? )</p>
+<hr>
+<h1>Day 2</h1>
+<p>Day2 是 4/17 在國培 vir 的，從 <code>13:30</code> 開始打。</p>
+<p><code>1:00</code><br>
+看完了，pA pB 我都會做，精神分數 <code>100/100/41/10</code>。</p>
+<p><code>1:02</code><br>
+<code>34/0/0/0</code>。<br>
+pA 拿到 $34$ 分有點怪，因為我看不出有什麼問題所以跳到 pB。</p>
+<p><code>1:14</code><br>
+<code>34/100/0/0</code>。<br>
+pB 過了，所以回去 pA。</p>
+<p><code>1:52</code><br>
+<code>100/100/0/0</code>。<br>
+我以為我不會用 vector 的 insert，所以手刻一個，但還是沒用，然後就開始暴傳 assert，但還是沒有用。<br>
+結果我發現我直接看錯輸入格式，原來我今天是 drunk，之後要多多小心。</p>
+<p><code>2:06</code><br>
+<code>100/100/0/10</code>。<br>
+pD $O(N)$ $10$ 分先寫完了，之後應該會去盡量把 pC 做好一點。</p>
+<p><code>2:27</code><br>
+<code>100/100/12/10</code>。<br>
+pC 第一子題過了。</p>
+<p><code>2:59</code><br>
+<code>100/100/22/10</code>。<br>
+pC 第二子題過了，然後我覺得他很難寫，不過大機率是我的問題。</p>
+<p><code>3:16</code><br>
+<code>100/100/41/10</code>。<br>
+pC 第三子題過了，我覺得 0 當根一定有解的子題看起來很有料，但我沒辦法做到好的複雜度。</p>
+<p><code>4:03</code><br>
+<code>100/100/41/30</code>。<br>
+pD 切一半可以拿 $30$ 分。</p>
+<p><code>4:15</code><br>
+李忠謀跑來<s>打擾</s>，他說他站在我後面我就會有壓力，然後就會想到，結果我真的想到我可以用爛爛的複雜度做 $N&lt;=100$ 欸，李忠謀有料喔。</p>
+<p><code>5:00</code><br>
+因為我度數弄爛了 ( 後來發現的 )，所以啥都沒拿到。</p>
+<p>結果是 <code>100/100/41/30</code>。</p>
+<hr>
+<h1>跟楊岳蓁幾乎一模一樣的結果</h1>
+<p>Day1 <code>100/100/20/15</code>。<br>
+Day2 <code>100/100/41/30</code>。<br>
+Total <code>506</code>，rk.12。</p>
+<p><a href="https://stats.egoi.org/editions/2023/results/">記分板</a>，金牌線是 <code>468</code>，然後我和楊岳蓁同分但她拿的子題是 <code>100/100/61/10</code>。</p>
+<hr>
+<h1>檢討</h1>
+<h2 id="Day1">Day1</h2>
+<ol>
+<li>就不應該時間沒喬好就開始打，然後打一打又不打了。</li>
+<li>pB 想建圖想太久了。</li>
+</ol>
+<h2 id="Day2">Day2</h2>
+<ol>
+<li>pA 看錯題目特別不應該。</li>
+<li>pC 找樹的時候把度數減掉，然後多一堆假的根，損失 $13$ 分。</li>
+<li>pC 寫子題寫有點久。</li>
+</ol>
+<h2 id="General">General</h2>
+<p>沒特別要說的。</p>
+<hr>
+<h1>其他話</h1>
+<p>我跟楊岳蓁特別有默契，都 $506$ 分。<br>
+day2 pC subtask 2 做法附贈 subtask 1，而且我很確定這個東西不應該要過 subtask 1。</p>
+<hr>
+<h1>題解</h1>
+<h2 id="day2-pA">day2 pA</h2>
+<details>
+<summary> $100$ 分 </summary>
+<p>對於第 $i$ 個人，假設他前面的人都坐好了，你會發現他前面最多只有一半的人不能和他坐在一起，最差也像這樣 :<br>
+❌✅❌✅❌✅<br>
+反正一定有位子坐，像上面那個例子就是坐最後面。<br>
+所以可以直接開個 <code>vector</code> 之類的存目前的人都怎麼坐，然後對每個 $i$ 找他可以插入在哪，這樣是 $O(N^2)$。</p>
+</details>
+<h2 id="day2-pB">day2 pB</h2>
+<details>
+<summary> $100$ 分 </summary>
+<p>DP，列狀態 <code>dp[i][j][k]</code> 代表考慮前 $i$ 個糖果中抓 $j$ 個，交換 $k$ 次可以達到的最大價值。<br>
+如果不選第 $i$ 個糖果，那就是從 <code>dp[i-1][j][k]</code> 直接轉移；如果要選第 $i$ 個，那就是從 <code>dp[i-1][j-1][k-(i-j)]+a[i]</code> 轉移。<br>
+最後就找最小的 $k$ 使 <code>dp[N][F][k]</code> 大於價值 $T$，找不到就是 NO。</p>
+</details>
+<h2 id="day2-pC">day2 pC</h2>
+<details>
+<summary> subtask 1&2 </summary>
+<p>構造看看。<br>
+subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點數比 $3$ 大那就一定構的出來 ( 如果有人不能指到 $0$ 那就讓他指到隨便一個可以指到 $0$ 的人 )，$N=3$ 我是拿去亂窮舉每種方法。</p>
+</details>
+<details>
+<summary> subtask 3 </summary>
+<p>原本就存在的邊要構成很多有向樹才有料，其它像是環、不是有向樹的 DAG 通通不合法，直接 NO。<br>
+最後把有向樹們的樹根抓出來，全部連到某一棵有向樹的樹根就可以了。</p>
+</details>
+<details>
+<summary> subtask 4&5 </summary>
+<p>如果有解，就是把有向樹們的樹根連到另一個有根樹的任一節點，這樣才可以構成一個大的有向樹。</p>
+<p>subtask 4 可以枚舉答案的樹根，然後用 DFS BFS 之類的任何方法把其它有向樹加進來，我的作法是 $O(N)$ 枚舉答案的樹根，然後再 $O(N)$ 考慮我要抓進來的每一個有向樹，再 $O(N)$ 看可不可以順利連邊，這樣是 $O(N^3)$。<br>
+然後其實可以用 <code>set</code> 存所有還沒被抓進來的有向樹樹根，因為不能建的邊就 $K$ 條，所以試圖建邊時最多失敗 $O(K)$ 次，<s>這樣就 ok 了</s>，這樣可以 $O((N+K)logN)$ 過 subtask 5。</p>
+</details>
+<details>
+<summary> $100$ 分  </summary>
+<p>接下來的問題只剩要找誰當答案的樹根，先考慮 $M=0$ ，這時全部有向樹都是一個點，比較好想。</p>
+<p>可以隨便以 $x$ 為根跑 DFS，看他可以到哪裡，如果他可以到全部人，那就很棒；不行的話再以某個沒被拜訪到的 $y$ 為根跑 DFS…假設最後一個開始 DFS 的是 $z$，代表說 $x$ $y$ 都不能當根，因為他們都到不了 $z$，這時候只要檢查 $z$ 是不是可行的根，你可以以 $z$ 為開頭跑一次 DFS 看是不是可以到所有人，如果可以那就成功找到根了，不行的話就確定無解了，可以輸出 NO。</p>
+<p>如果會做 $M=0$ 那很多有向樹的狀況也差不多了。</p>
+</details>]]></content>
+      <tags>
+        <tag>training</tag>
+        <tag>EGOI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>策略</title>
+    <url>/2026/03/09/%E7%AD%96%E7%95%A5/</url>
+    <content><![CDATA[<h2 id="5hr-OI">5hr OI</h2>
+<ol>
+<li><code>0:00~1:00?</code> 開場看題目，看多久應該要依照比賽決定 ? 像是 EGOI 一模可以看快一點，EGOI 的話應該可以看差不多一個小時 ? 然後一個題目除非已經很確定怎麼做不然不要太快跳，EGOI 的話可能可以差不多 $15$ 分鐘。要標出所有這段時間覺得可做的子題，在子題編號下面畫底線或是圈起來，在子題旁邊大致寫下目前想法。規劃那些子題要一起做 or 直接寫滿分 ( 這個部分也可以之後做 )。</li>
+<li><code>1:00~2:30</code> 把剛剛覺得可做的東西按照任意順序做出來，為每 (子) 題設時間，實作最多 $30$ 分鐘，debug 也不要超過 $25$ 分鐘，超過先跳。</li>
+<li><code>2:30</code> 有非典的話差不多要開始做了。</li>
+<li><code>2:30~4:00</code> review 一次還沒做出來的東西，嘗試審題的時候覺得可做的新方向，<code>3:30</code> 沒什麼會做的就差不多要開始喇分了。</li>
+<li><code>4:00~5:00</code> 繼續做完感覺可做的東西，做完了就想沒做的東西，做不完的話 <code>4:00</code> 一定要開始喇分和取捨，<s>把期望值比較低的丟掉</s>。</li>
+<li>實作分 check point，用 judge 驗想法。</li>
+<li>找不到 bug 要跳。</li>
+<li>多上廁所和吃東西。</li>
+<li>不要看別人螢幕，不要想其他事。</li>
+<li>多畫圖，多寫字，不要空想。</li>
+<li>該拿的都拿就會贏了。</li>
+</ol>
+<h2 id="3hr-OI">3hr OI</h2>
+]]></content>
+      <tags>
+        <tag>training</tag>
+        <tag>other</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>關於我的 handle 事故</title>
+    <url>/2026/04/06/%E9%97%9C%E6%96%BC%E6%88%91%E7%9A%84-handle-%E4%BA%8B%E6%95%85/</url>
+    <content><![CDATA[<p>好像不小心被發現了，我是覺得沒什麼好看的啦，你們還是不要看好了。<br>
+然後我的生日是 3/7 不是 10/29，不要再問了，唉。<br>
+打錯陳羿安的名字我很抱歉。</p>
+]]></content>
+      <tags>
+        <tag>other</tag>
       </tags>
   </entry>
   <entry>
@@ -1464,602 +2060,6 @@ Sole 說想跟我們 say goodbye properly，但其他人跑光了，所以我們
 ]]></content>
       <tags>
         <tag>EGOI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello Blog</title>
-    <url>/2025/09/22/Hello-Blog/</url>
-    <content><![CDATA[<h1>大大</h1>
-<h2 id="大">大</h2>
-<h3 id="中">中</h3>
-<p>單行程式 <code>ijk</code><br>
-一堆程式</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Blog!\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><s>劃掉</s></p>
-<span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur ">1029</span></span>
-<p><em>斜斜的</em><br>
-<em>斜斜的</em><br>
-<strong>粗</strong><br>
-<u>底線</u><br>
-<font color=#FF0000> WA </font><br>
-<font color=#76F72D> AC </font></p>
-<details>
-<summary>暴雷</summary>
-<p>EGOI</p>
-<p><code>EGOI</code></p>
-<p>$EGOI$</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">mt19937 <span class="title">mt</span><span class="params">(chrono::steady_clock::now().time_since_epoch().count())</span></span>;</span><br></pre></td></tr></table></figure>
-</details>
-<p>$1+1=2$</p>
-<ol>
-<li>TOI</li>
-<li>EGOI</li>
-<li>APIO</li>
-<li>IOI</li>
-</ol>
-<blockquote>
-<p>EGOI</p>
-<blockquote>
-<p>EGOI</p>
-<blockquote>
-<p>EGOI</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p><a href="https://dailyakari.com/">點燈</a></p>
-<table>
-<thead>
-<tr>
-<th>Column 1</th>
-<th>Column 2</th>
-<th>Column 3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Text1</td>
-<td>Text2</td>
-<td>Text3</td>
-</tr>
-<tr>
-<td>Text4</td>
-<td>Text5</td>
-<td>Text6</td>
-</tr>
-</tbody>
-</table>
-<marquee direction="left" scrollamount="5"> 
-<p>EGOIEGOIEGOIEGOI</p>
-</marquee>
-]]></content>
-      <tags>
-        <tag>testing</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TOI 潛力組 202509</title>
-    <url>/2025/10/01/TOI-%E6%BD%9B%E5%8A%9B%E7%B5%84-202509/</url>
-    <content><![CDATA[<p>好久沒打 TOI 了喔<br>
-不知道能不能破台 combo 5 呢 ~</p>
-<h2 id="P2">P2</h2>
-<p>打潛力組策略就是開場先看題，我覺得 P2 最簡單 (●’◡’●)</p>
-<details>
-<summary>暴雷</summary>
-<p>就看 B 陣列然後分成很多小塊，怎麼分就看是不是和在 A 裡的時候鄰居一樣，不一樣就一定要切，一樣就算在同一塊裡面，答案是切幾刀，所以就是塊數減一。但我實作爛了，拿到好多<font color=#ffff00> WA </font> 好可怕 இ௰இ</p>
-<p>還有就是小心數字到 $10^9$，需要 <code>map</code>。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[<span class="number">200005</span>];</span><br><span class="line"><span class="type">int</span> b[<span class="number">200005</span>];</span><br><span class="line">unordered_map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; p;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">        p[a[i]]=i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">    cin &gt;&gt; b[<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">2</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        cin &gt;&gt; b[i];</span><br><span class="line">        <span class="keyword">if</span>( p[b[i<span class="number">-1</span>]]!=p[b[i]]<span class="number">-1</span> ) cnt++;</span><br><span class="line">        <span class="comment">//cout &lt;&lt; p[b[i-1]] &lt;&lt; &#x27; &#x27; &lt;&lt; p[b[i]] &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; cnt;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/TOI202509P2.png" alt="P2"></p>
-</details>
-<p>寫完之後看一下 P1 和 P3，P3 是拓樸大裸題但字串分析一臉討厭， <s>先丟掉</s><br>
-P1 看起來有點想法但又不太確定，感覺可以想想看，真有趣，好想寫喔 (❁´◡`❁)</p>
-<h2 id="P1">P1</h2>
-<p>P1 超有料的，愛 P1<br>
-以下是心路歷程</p>
-<details>
-<summary>暴雷</summary>
-<p>首先就是把數字 $x$ 切成很多塊嘛，至於要切幾塊…可以發現切越多塊得分會先上升再下降，像是 $X=5$，切一塊 $5$ 分，兩塊 $6$ 分，三塊 $4$ 分，這樣。有個峰的話是不是要三分搜，但我超不會三分搜欸，上次寫是不是選訓的時候啊…喔好像不用，判斷就 <code>cal(mid)&gt;cal(mid+1)</code> 這樣子就可以好好二分搜了耶，萬歲 (≧∇≦)ﾉ</p>
-<p>等等好像又不對了，數字很大要 mod 耶，這樣要怎麼比大小啊，燒雞 Σ(っ °Д °;)っ</p>
-<p>既然不是 X 分搜，代表說一定要貪心構造出最佳解，呃<br>
-感覺全部切成很多個 $2$ 好嗎？指數函數是不是長大很快…但是 $3^2=9$ 比 $2^3=8$ 好耶，代表說我 $X=6$ 要優先切成兩個 $3$。而且 $x=12$ 切成四個 $3$ 是 $3^4=81$，比 $4^3=64$ 好，所以切的大小 $3$ 是最好的，要優先切成大小是 $3$，多的部分再用 $2$ 來補。那先寫個 $X\leq15$ 的子題看看這樣是不是好的。</p>
-<p>哇是好的耶 (☆▽☆)<br>
-那就按照上面的策略寫吧 ~</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line">ll <span class="type">const</span> mod=<span class="number">1e9</span><span class="number">+7</span>;</span><br><span class="line">ll ans[<span class="number">16</span>]=&#123;<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">12</span>, <span class="number">18</span>, <span class="number">27</span>, <span class="number">36</span>, <span class="number">54</span>, <span class="number">81</span>, <span class="number">108</span>, <span class="number">162</span>, <span class="number">243</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">pw</span><span class="params">( ll x, ll y )</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>( y==<span class="number">0</span> ) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>( y==<span class="number">1</span> ) <span class="keyword">return</span> x;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        ll z=<span class="built_in">pw</span>( x, y/<span class="number">2</span> );</span><br><span class="line">        <span class="keyword">if</span>( y&amp;<span class="number">1</span> ) <span class="keyword">return</span> z*z%mod*x%mod;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> z*z%mod;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> t;</span><br><span class="line">    cin &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span>( t-- )&#123;</span><br><span class="line">        ll x;</span><br><span class="line">        cin &gt;&gt; x;</span><br><span class="line">        <span class="keyword">if</span>( x&lt;=<span class="number">15</span> ) cout &lt;&lt; ans[x] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            ll y=x/<span class="number">6</span>;</span><br><span class="line">            ll z=x%<span class="number">6</span>;</span><br><span class="line">            <span class="keyword">if</span>( z!=<span class="number">0</span> )&#123;</span><br><span class="line">                y--;</span><br><span class="line">                z+=<span class="number">6</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            cout &lt;&lt; <span class="built_in">pw</span>( ans[<span class="number">6</span>], y )*ans[z]%mod &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/TOI202509P1.png" alt="P1"></p>
-</details>
-<p>但是時間只剩 12 分鐘了， P3 至少要 15~20 分吧，可惡</p>
-<h2 id="P3-補題">P3 (補題)</h2>
-<details>
-<summary>暴雷</summary>
-<p>一開始就先字串處理嘛，<s>會不會他的考點其實是這個</s>，然後從有賦值的儲存格開始拓樸，就做完了。<br>
-那個 <code>ana</code> 是 <code>analysis</code> 的意思喔 （￣ ︶ ￣）</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">200</span>][<span class="number">30</span>];</span><br><span class="line"><span class="type">int</span> ind[<span class="number">200005</span>];</span><br><span class="line"><span class="type">int</span> v[<span class="number">200</span>][<span class="number">30</span>];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; a[<span class="number">200005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ana</span><span class="params">( string s, <span class="type">int</span> i, <span class="type">int</span> j )</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> k=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>( s[k]!=<span class="string">&#x27;+&#x27;</span> ) k++;</span><br><span class="line">    <span class="keyword">if</span>( s[<span class="number">1</span>]&gt;=<span class="string">&#x27;A&#x27;</span> &amp;&amp; s[<span class="number">1</span>]&lt;=<span class="string">&#x27;Z&#x27;</span> )&#123;</span><br><span class="line">        <span class="type">int</span> f=<span class="built_in">stoi</span>(s.<span class="built_in">substr</span>(<span class="number">2</span>, k<span class="number">-2</span>))*<span class="number">100</span>+s[<span class="number">1</span>]-<span class="string">&#x27;A&#x27;</span><span class="number">+1</span>;</span><br><span class="line">        a[f].<span class="built_in">push_back</span>(i*<span class="number">100</span>+j);</span><br><span class="line">        ind[i*<span class="number">100</span>+j]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        v[i][j]+=(s[<span class="number">1</span>]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    k++;</span><br><span class="line">    <span class="keyword">if</span>( s[k]&gt;=<span class="string">&#x27;A&#x27;</span> &amp;&amp; s[k]&lt;=<span class="string">&#x27;Z&#x27;</span> )&#123;</span><br><span class="line">        <span class="type">int</span> f=<span class="built_in">stoi</span>(s.<span class="built_in">substr</span>(k<span class="number">+1</span>))*<span class="number">100</span>+s[k]-<span class="string">&#x27;A&#x27;</span><span class="number">+1</span>;</span><br><span class="line">        a[f].<span class="built_in">push_back</span>(i*<span class="number">100</span>+j);</span><br><span class="line">        ind[i*<span class="number">100</span>+j]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        v[i][j]+=(s[k]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> j=<span class="number">1</span> ; j&lt;=m ; j++ )&#123;</span><br><span class="line">            string s;</span><br><span class="line">            cin &gt;&gt; s;</span><br><span class="line">            <span class="keyword">if</span>( s.<span class="built_in">length</span>()==<span class="number">1</span> )&#123;</span><br><span class="line">                v[i][j]=(s[<span class="number">0</span>]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">                q.<span class="built_in">push</span>( i*<span class="number">100</span>+j );</span><br><span class="line">                vis[i][j]=<span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>( s.<span class="built_in">length</span>()==<span class="number">4</span> )&#123;</span><br><span class="line">                v[i][j]=(s[<span class="number">1</span>]-<span class="string">&#x27;0&#x27;</span>+s[<span class="number">3</span>]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">                q.<span class="built_in">push</span>( i*<span class="number">100</span>+j );</span><br><span class="line">                vis[i][j]=<span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="built_in">ana</span>( s, i, j );</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>( !q.<span class="built_in">empty</span>() )&#123;</span><br><span class="line">        <span class="type">int</span> x=q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="type">int</span> i=x/<span class="number">100</span>;</span><br><span class="line">        <span class="type">int</span> j=x%<span class="number">100</span>;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> y : a[x] )&#123;</span><br><span class="line">            ind[y]--;</span><br><span class="line">            v[y/<span class="number">100</span>][y%<span class="number">100</span>]+=v[i][j];</span><br><span class="line">            <span class="keyword">if</span>( ind[y]==<span class="number">0</span> )&#123;</span><br><span class="line">                vis[y/<span class="number">100</span>][y%<span class="number">100</span>]=<span class="literal">true</span>;</span><br><span class="line">                q.<span class="built_in">push</span>(y);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> j=<span class="number">1</span> ; j&lt;=m ; j++ )&#123;</span><br><span class="line">            <span class="keyword">if</span>( !vis[i][j] ) cout &lt;&lt; <span class="string">&quot;ERROR &quot;</span>;</span><br><span class="line">            <span class="keyword">else</span> cout &lt;&lt; v[i][j] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/TOI202509P3.png" alt="P3"></p>
-</details>
-<h2 id="檢討">檢討</h2>
-<p>我覺得最大的問題是實作能力太爛，不管是 P2 卡 bug 太久還是不熟 P3 這種字串處理。應該一般人 P1 P3 西二取一的時候都會把水水的 P3 寫掉吧，畢竟穩定得分總比投資一個還不知道想的是不是對的的東西好。但就比賽體驗來講我還是會選 P1 吧，反正是練習賽，寫出來心情真的很好，<s>讓我差點忘記 combo 毀了</s>。正式賽的話我就不確定了，我覺得我可能會去寫 P3 ＞︿＜</p>
-]]></content>
-      <tags>
-        <tag>TOI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TOI 潛力組 202511</title>
-    <url>/2025/11/11/TOI-%E6%BD%9B%E5%8A%9B%E7%B5%84-202511/</url>
-    <content><![CDATA[<p>生病 ಥ_ಥ<br>
-但我覺得北二區之前大概是好不了了，所以要習慣一下。</p>
-<p>開場先看題。<br>
-P1 是數學，P2 是 DP，P3 是 BCC。</p>
-<h2 id="P2">P2</h2>
-<details>
-<summary>暴雷</summary>
-<p>P2 一看就是超級裸的背包 DP。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, x;</span><br><span class="line"><span class="type">int</span> dp[<span class="number">10005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; x;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;<span class="number">10005</span> ; i++ ) dp[i]=<span class="number">1e9</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> a, b;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">        b+=a;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> j=b ; j&lt;<span class="number">10005</span> ; j++ )&#123;</span><br><span class="line">            dp[j]=<span class="built_in">min</span>( dp[j], dp[j-b]+a );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> ans=<span class="number">1e9</span>;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=x ; i&lt;<span class="number">10005</span> ; i++ ) ans=<span class="built_in">min</span>( ans, dp[i] );</span><br><span class="line">    cout &lt;&lt; ans;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/TOI202511P2.png" alt="P2"></p>
-</details>
-<h2 id="P1">P1</h2>
-<details>
-<summary>暴雷</summary>
-<p>如果有 $n$ 個人帽子同一個顏色，那這 $n$ 個人都會看到 $n-1$。<br>
-如果有超過 $n$ 個人看到 $n-1$，那就代表要分多組。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> c[<span class="number">1005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> x;</span><br><span class="line">        cin &gt;&gt; x;</span><br><span class="line">        c[x<span class="number">+1</span>]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> all=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;<span class="number">1005</span> ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> y=(c[i]/i);</span><br><span class="line">        <span class="keyword">if</span>( c[i]%i ) y++;</span><br><span class="line">        all+=i*y;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; all;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/TOI202511P1.png" alt="P1"></p>
-</details>
-<p>時間好多，看來有機會寫超不熟的 <code>BCC</code>。</p>
-<h2 id="P3">P3</h2>
-<details>
-<summary>暴雷</summary>
-<p>先把圖分成很多個邊雙連通分量，如果剪斷的邊不是橋那就沒有影響。<br>
-把雙連通分量們和橋們組成樹，然後就可以在上面 DP，就能知道剪斷某個橋會影響到下面多少個子樹。<br>
-實作一樣先<s>找出我的模板</s>先找出橋 (dfs) ，再把雙連通分量編號 (dfs2) ，最後再 DP (dfs3)。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, q, c;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; a[<span class="number">50005</span>];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; b[<span class="number">50005</span>]; <span class="comment">// BCC</span></span><br><span class="line">set&lt; pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; &gt; bridge;</span><br><span class="line"><span class="type">int</span> color[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> dep[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> low[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> sz[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> dp[<span class="number">50005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">( <span class="type">int</span> i, <span class="type">int</span> p )</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> u : a[i] )&#123;</span><br><span class="line">        <span class="keyword">if</span>( u==p ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span>( !dep[u] )&#123;</span><br><span class="line">            dep[u]=dep[i]<span class="number">+1</span>;</span><br><span class="line">            low[u]=dep[u];</span><br><span class="line">            <span class="built_in">dfs</span>( u, i );</span><br><span class="line">            low[i]=<span class="built_in">min</span>( low[i], low[u] );</span><br><span class="line">            <span class="keyword">if</span>( low[u]&gt;dep[i] ) bridge.<span class="built_in">insert</span>(&#123;<span class="built_in">min</span>(i,u), <span class="built_in">max</span>(i,u)&#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            low[i]=<span class="built_in">min</span>( low[i], dep[u] );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs2</span><span class="params">( <span class="type">int</span> i, <span class="type">int</span> p )</span></span>&#123;</span><br><span class="line">    sz[c]++;</span><br><span class="line">    color[i]=c;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> u : a[i] )&#123;</span><br><span class="line">        <span class="keyword">if</span>( u==p || color[u] ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span>( bridge.<span class="built_in">count</span>(&#123;<span class="built_in">min</span>(i,u), <span class="built_in">max</span>(i,u)&#125;) ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="built_in">dfs2</span>( u, i );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs3</span><span class="params">( <span class="type">int</span> i, <span class="type">int</span> p )</span></span>&#123;</span><br><span class="line">    dp[i]=sz[i];</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> u : b[i] )&#123;</span><br><span class="line">        <span class="keyword">if</span>( u==p ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="built_in">dfs3</span>( u, i );</span><br><span class="line">        dp[i]+=dp[u];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m &gt;&gt; q;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;m ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> x, y;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">        a[x].<span class="built_in">push_back</span>(y);</span><br><span class="line">        a[y].<span class="built_in">push_back</span>(x);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    dep[<span class="number">0</span>]=low[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">dfs</span>( <span class="number">0</span>, <span class="number">-1</span> );</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    cout &lt;&lt; bridge.size() &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line"><span class="comment">    for( auto u : bridge )&#123;</span></span><br><span class="line"><span class="comment">        cout &lt;&lt; u.first &lt;&lt; &#x27; &#x27; &lt;&lt; u.second &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">if</span>( color[i] ) <span class="keyword">continue</span>;</span><br><span class="line">        c++;</span><br><span class="line">        <span class="built_in">dfs2</span>( i, <span class="number">-1</span> );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">auto</span> [x, y] : bridge )&#123;</span><br><span class="line">        b[color[x]].<span class="built_in">push_back</span>(color[y]);</span><br><span class="line">        b[color[y]].<span class="built_in">push_back</span>(color[x]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">dfs3</span>( <span class="number">1</span>, <span class="number">-1</span> );</span><br><span class="line"></span><br><span class="line">   <span class="keyword">while</span>( q-- )&#123;</span><br><span class="line">        <span class="type">int</span> x, y;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">        <span class="keyword">if</span>( x&gt;y ) <span class="built_in">swap</span>(x, y);</span><br><span class="line">        <span class="keyword">if</span>( bridge.<span class="built_in">count</span>(&#123;x, y&#125;) )&#123;</span><br><span class="line">            cout &lt;&lt; n-<span class="built_in">min</span>( dp[color[x]], dp[color[y]] ) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            cout &lt;&lt; n &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/TOI202511P3.png" alt="P3"></p>
-</details>
-<h2 id="檢討">檢討</h2>
-<p>P1 : 沒事，<s>我數學很好</s><br>
-P2 : 沒事，我會 DP<br>
-P3 : 應該有可以一邊找橋一邊編號的方法，要去查一下<br>
-總體狀況滿好的，超冷靜，看來生病大腦就沒能量燒雞了 &gt; ᗜ &lt;<br>
-恭喜 combo 1 ✧*｡ ٩(ˊᗜˋ*)و✧*</p>
-]]></content>
-      <tags>
-        <tag>TOI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Virtual EGOI 2021</title>
-    <url>/2026/03/31/Virtual-EGOI-2021/</url>
-    <content><![CDATA[<h1>Day1</h1>
-<p>Day1 是 3/31 在武陵 vir 的，因為我 <code>14:00</code> 要去烤餅乾，所以從 <code>8:30</code> 開始打。</p>
-<p><code>0:55</code><br>
-看完題目了，精神分數 <code>100/48/9?/0</code>。<br>
-呃其實我沒認真看第四題。</p>
-<p><code>1:03</code><br>
-<code>100/0/0/0</code>。<br>
-pA 就很簡單，接下來決定先寫 pB $48$ 驗想法。</p>
-<p><code>1:33</code><br>
-<code>100/48/0/0</code>。<br>
-代表說 pB 由近到遠拔掉是好的，然後想辦法優化，像是快速找出最近的 pair ( ? ? ?</p>
-<p><code>2:00</code><br>
-pB 一直想到不可做的超詭異線段樹，先跳去 pC。<br>
-看一下之後發現隨機是不是可以做 $100$。</p>
-<p><code>2:39</code><br>
-<code>100/48/51/0</code>，pC 後面兩個子題 RE，有點怪。</p>
-<p><code>2:43</code><br>
-<code>100/48/100/0</code>。<br>
-原來是我 j 打成 i ，超好笑。</p>
-<p><code>4:00</code><br>
-一直想 pB 但沒有進展，要跳去 pD 了。</p>
-<p><code>5:00</code><br>
-不會做 pD 也不會做 pB，唉唉唉。</p>
-<p>結果是 <code>100/48/100/0</code>。</p>
-<hr>
-<h1>Day2</h1>
-<p>Day2 是 4/2 在武陵 vir 的，因為我 <code>14:00</code> 要去上畫地圖課 ( 這是我最喜歡的課欸，要上啦 )，所以從 <code>8:30</code> 開始打。</p>
-<p><code>1:00</code><br>
-看完全部題目，( 對我有看 pD )，精神分數 <code>100/100/7/10</code>。</p>
-<p><code>1:02</code><br>
-pA greedy 拿了一個 $42$，現在 <code>42/0/0/0</code>。<br>
-我好像在 JOIG 看過什麼類似的欸，該不會要 DP。</p>
-<p><code>1:13</code><br>
-DP 過了，成功拿到 <code>100/0/0/0</code>。</p>
-<p><code>1:17</code><br>
-驗一下 pD 我亂 claim 的東西，拿到 $0$ 分，所以精神分數下跌 <code>100/100/7/0</code>。</p>
-<p><code>1:57</code><br>
-確認一下細節之後開寫 pB，<code>100/100/0/0</code>。</p>
-<p><code>2:01</code><br>
-再亂 claim 一次 pD ，再拿一次 $0$。<br>
-我覺得 pD 先放著好了，根本不會做。</p>
-<p><code>3:00</code><br>
-好像成功想到 pC $16$ 分了，以為可以推廣到 $100$ 發現是爛的，反正先做掉。</p>
-<p><code>3:19</code><br>
-pC 拿 $0$ 分了，原來我又把 i 打成 1 了，超級好笑。</p>
-<p><code>3:26</code><br>
-<code>100/100/16/0</code>。</p>
-<p><code>4:02</code><br>
-因為一直沒有進展，所以先把 pC 暴力寫完，<code>100/100/23/0</code>。</p>
-<p><code>5:00</code><br>
-還是沒有進展。</p>
-<p>最後結果 <code>100/100/23/0</code>。</p>
-<hr>
-<h1>傷心的結果</h1>
-<p>Day1 <code>100/48/100/0</code>。<br>
-Day2 <code>100/100/23/0</code>。<br>
-Total <code>471</code>，rk.25。</p>
-<p><a href="https://stats.egoi.org/editions/2021/results/">記分板</a>，金牌線是 <code>539</code>，所以我拿到銀牌了啦 ಥ_ಥ。</p>
-<hr>
-<h1>檢討</h1>
-<h2 id="Day1">Day1</h2>
-<ol>
-<li>pB 沒做出來就是不應該 ( ˘︹˘ )。</li>
-<li>pD 暴力為什麼沒有寫 ( ˘︹˘ )。</li>
-<li>我是不是不太會區間 DP ?</li>
-</ol>
-<h2 id="Day2">Day2</h2>
-<ol>
-<li>C 沒有想樹那個子題。</li>
-<li><code>check</code> 函數沒有初始化拿到很多 WA ( 補題的時候 )。</li>
-</ol>
-<h2 id="General">General</h2>
-<ol>
-<li>打錯變數的名字。</li>
-<li>pD 拿 $0$ 分 ( 至少 day1 滿不應該的 )。</li>
-<li>是不是要對後半場坐牢擬定什麼策略 ? 這是策略能解決的嗎，如果是的話那應該要逼自己去想子題？</li>
-<li>給每一題比較久的思考時間是好的，至少比跳來跳去好很多 ( 應該 )。</li>
-</ol>
-<hr>
-<h1>其他話</h1>
-<p>我很喜歡 day1 C 和 day2 C。<br>
-因為 4/1 是校慶，我原本想說可以 vir Day2，但是我爸媽不給請假學校又沒安靜的地方，<s>呃反正 Day1 和 Day2 中間本來就休一天。</s><br>
-我把 day2 D 丟給謝鈞因為他想知道我都在幹嘛，結果他也 claim 了一個跟我一模一樣的 WA 的東西。<br>
-摩卡超級強，好可惜他沒有進二階 (˘･_･˘) 。</p>
-<p>EGOI 測資是不是有點像 TOI，因為我一個大 bug 都可以撈不少分、二分搜區間太小竟然可以過，還有 $O(N^4)$ 可以拿到 $O(N^3)$ 子題的分數好棒。</p>
-]]></content>
-      <tags>
-        <tag>training</tag>
-        <tag>EGOI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Virtual EGOI 2022</title>
-    <url>/2026/04/07/Virtual-EGOI-2022/</url>
-    <content><![CDATA[<h1>Day1</h1>
-<p>Day1 是 4/7 在武陵 vir 的，從 <code>8:30</code> 開始打。</p>
-<p><code>0:20</code><br>
-呃我有點想睡覺了，然後我怎麼現在才想完 pA，有點久。</p>
-<p><code>0:55</code><br>
-看完了，我覺得可以做 <code>100/14/15/25</code>。</p>
-<p><code>1:07</code><br>
-<code>100/0/0/0</code>。<br>
-pA 過了，再看一下 BCD，發現 pD $50$ 是 LCA，精神分數 <code>100/14/15/50</code>。</p>
-<p><code>2:17</code><br>
-<code>100/0/0/50</code>。<br>
-LCA 寫爛花了一點時間，快半場了應該要去看看 pC。<br>
-然後我一直再想 to make Maria lose the next challenge 是指第二次要輸還是最後要輸就好，發現花太多時間決定要切去 pB，成功把精神分數推到 <code>100/62/15/50</code>。<br>
-是說 pB 是不是去年一模有有點像的東西，但我去年亂考一通，我也不知道。</p>
-<p><code>3:32</code><br>
-<code>100/14/0/50</code>。<br>
-有點奇怪了，因為 QOJ 說我 subtask 什麼 dependency 沒過所以直接 skip 掉，傳幾次之後<s>我要先懷疑他子題切爛了</s>，拿去 <a href="http://oj.uz">oj.uz</a> 傳。</p>
-<p><code>3:45</code><br>
-<code>100/62/0/50</code>。<br>
-<a href="http://oj.uz">oj.uz</a> 說我成功拿到 $62$ 分了 (╬▔皿▔)<br>
-然後我好像知道怎麼做 pB $100$ 了欸，精神分數 <code>100/100/15/50</code>。</p>
-<p><code>4:39</code><br>
-<code>100/100/0/50</code>。<br>
-因為我忘記 mod WA 很多次，然後現在剩 $20$ 分鐘了 pC 還是 $0$ 分，所以趕快去寫。</p>
-<p><code>4:58:00</code><br>
-寫完了欸，但武陵的網路燒雞了。</p>
-<p><code>4:59:59</code><br>
-<code>100/100/15/50</code>。<br>
-耶在最後終於連到網路了 !</p>
-<p>結果是 <code>100/100/15/50</code>。<br>
-最後一秒拿到 $15$ 分好開心喔。</p>
-<hr>
-<h1>Day 2</h1>
-<p>Day2 是 4/9 在武陵 vir 的，從 <code>8:30</code> 開始打因為我 <code>14:00</code> 要上畫地圖課。</p>
-<p><code>0:??</code><br>
-新發現，我的鍵盤沒電了，怎麼會這樣。</p>
-<p><code>1:00</code><br>
-看完了，現在狀況有點不妙，因為我 pA 好像只會做 $51$，其他會做的看起來也很少，精神分數 <code>51/55/10/20</code>。<br>
-因為 pA 沒推滿先擺著，pB 有 $9$ 個不完全相關的子題，感覺可以分開做，所以先做 pB。</p>
-<p><code>1:55</code><br>
-<code>0/ (12,9,13,8,0,0,0,7,6) /0/0</code>。<br>
-我大概以 $5$ 分鐘一個 submission 成功撈到 pB $55$ 分。<br>
-這場有兩個非典，然後我都不會做，所以我要趕快撈一撈然後回去 pA。</p>
-<p><code>2:31</code><br>
-<code>0/55/10/0</code>。<br>
-去 pD，把精神分數推到 <code>51/55/10/29</code>。</p>
-<p><code>3:06</code><br>
-<code>0/55/10/11</code>。<br>
-就是 pD 的表有夠難建，<s>打到一半差點生氣</s>。</p>
-<p><code>3:13</code><br>
-<code>0/55/10/29</code>。<br>
-pD 差不多了，回去想 pA，精神分數 <code>71/55/10/29</code>。<br>
-我一直很想 claim pA 複雜度是要 $O(N+S^2)$，但我想到的只有 $O(NS)$，我不知道 $5e8$ 兩秒會不會過，畢竟 TOI $4e8$ 四秒都可以不過了。</p>
-<p><code>3:46</code><br>
-<code>100/55/10/29</code>。<br>
-原來 EGOI judge 那麼快喔。<br>
-pB 好像有個 $6$ 分的子題但沒有很好寫，pD rotate 我就不會了，pC 感覺在哪裡看過可以對層數二分搜 ? 我不知道。</p>
-<p><code>4:45</code><br>
-pC WA $0$ 分，原來是我的用的 version 是爛的。</p>
-<p><code>4:49</code><br>
-<code>100/55/100/29</code>。</p>
-<p><code>4:50</code><br>
-<s>江語萱跑來圖書館印科展海報，所以我就去跟她聊天。</s></p>
-<p>結果是 <code>100/55/100/29</code>。</p>
-<hr>
-<h1>驚險的結果</h1>
-<p>Day1 <code>100/100/15/50</code>。<br>
-Day2 <code>100/55/100/29</code>。<br>
-Total <code>549</code>，rk.10。</p>
-<p><a href="https://stats.egoi.org/editions/2022/results/">記分板</a>，金牌線是 <code>548</code>，所以我比金牌線高 $1$ 分喔 w(ﾟДﾟ)w。</p>
-<hr>
-<h1>檢討</h1>
-<h2 id="Day1">Day1</h2>
-<ol>
-<li>中間想東西忘記去吃餅乾，導致後面肚子有點餓。</li>
-<li>LCA 竟然會寫爛。</li>
-<li>DP 沒有 mod。</li>
-<li>該拿的都算有拿到。</li>
-</ol>
-<h2 id="Day2">Day2</h2>
-<ol>
-<li>pB 還有個 $6$ 分的子題沒撈完。</li>
-<li>pD 其實再推一下就可以有 $53$ 了。</li>
-<li>亂 claim 複雜度不知道好不好，但是做不出來的話好像可以稍微 claim 爛一點的複雜度 ? 然後 EGOI judge 感覺兩秒 $5e8$ 很快。</li>
-<li>比賽前一定一定要檢查鍵盤有沒有電。</li>
-</ol>
-<h2 id="General">General</h2>
-<p>沒特別要說的。</p>
-<hr>
-<h1>其他話</h1>
-<p>day1 整個都非常好玩。<br>
-day2 D 打表非常不好玩。<br>
-謝鈞一直跟我要 EGOI 題目去做，是不是要入坑競程了。<br>
-睿睿叫我們補似魔，但沒有人要寫。<br>
-希望我之後可以跟別人一起 vir，看楊岳蓁要不要打。</p>
-<hr>
-<h1>題解</h1>
-<p>終於找到比我的瀏海還醜的東西了，看來 EGOI 是希望我不要看解自己想。<br>
-<img src="/images/EGOI_2022_offi_sol.png" alt="P1"></p>
-]]></content>
-      <tags>
-        <tag>training</tag>
-        <tag>EGOI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Virtual EGOI 2024</title>
-    <url>/2026/04/28/Virtual-EGOI-2024/</url>
-    <content><![CDATA[<h1>Day1</h1>
-<p>Day1 是 4/28 在武陵 vir 的，從 <code>8:30</code> 開始打。</p>
-<p><code>0:45</code><br>
-今天題目看得有點快，<s>一定是因為我沒有好好看 pD</s>。<br>
-精神分數 <code>100/~100/12/0</code>。<br>
-pB 我覺得是 DP 優化但細節還沒想。</p>
-<p><code>0:55</code><br>
-<code>100/0/0/0</code>。<br>
-去 pB。</p>
-<p><code>1:03</code><br>
-<code>100/28/0/0</code>。<br>
-pB 先寫一個暴力驗 DP 是好的，接下來優化 let’s go。</p>
-<p><code>1:21</code><br>
-<code>100/100/0/0</code>。<br>
-寫了一個小線段樹，今天進度有點快，現在就 $200$ 了。<br>
-去好好想 pC。</p>
-<p><code>1:42</code><br>
-<code>100/100/12/0</code>。<br>
-先把我會的 $12$ 分拿到。</p>
-<p><code>2:21</code><br>
-$O(N^2)$ WA 了，有點怪欸。<br>
-是說我這個子題因為某陣列初始化把 $j$ 打成 $i$ 花很久時間。</p>
-<p><code>2:23</code><br>
-<code>100/100/35/0</code>。<br>
-差不多半場了，應該要想想辦法弄 pD 了。</p>
-<p><code>3:14</code><br>
-因為 pD $0$ 想法，感覺資訊被我傳一傳就會弄丟，所以又來做 pC 子題，拿到 WA。</p>
-<p><code>3:26</code><br>
-<code>100/100/62/0</code>。<br>
-忘記判到樹的某一層有可能是空的了。<br>
-接下來 pD pC 交替想。</p>
-<p><code>4:14</code><br>
-<code>100/100/62/10</code>。<br>
-可以用 XOR 把資訊包在一起欸，再 XOR 一次資訊就回來了，很棒。<br>
-現在我會做 swap 了。</p>
-<p><code>4:30</code><br>
-<code>100/100/62/19</code>。<br>
-會 swap 有 $19$ 分。</p>
-<p><code>4:58</code><br>
-<code>100/100/62/32</code>。<br>
-用類似的方法做 shift，但我發現我只會做一個方向的，另一個方向還沒想到，然後也沒時間了。</p>
-<p>結果是 <code>100/100/62/32</code>。</p>
-<hr>
-<h1>DAY 2</h1>
-<p>Day2 是 4/29 在武陵 vir 的，從 <code>9:00</code> 開始打。<br>
-其實我今天特別猶豫要不要打，因為星期三圖書館有上課的人，有點吵，但我還是打了。</p>
-<p><code>0:40</code><br>
-<s>好想睡覺喔，旁邊討論室好吵喔</s>。<br>
-精神分數 <code>100/25/?/?</code>。<br>
-pA 最多只會走一次直徑欸，哈哈哈。</p>
-<p><code>1:02</code><br>
-<code>100/0/0/0</code>。<br>
-pB 我覺得是把前面某一坨人移到後面，然後亂猜他凸函數所以來寫二分搜。</p>
-<p><code>1:39</code><br>
-<code>100/44/0/0</code>。<br>
-有點怪了，我以為我的二分搜很對，然後他 check 有夠難寫。<br>
-調一調覺得沒料了，這個應該是假解，感謝 EGOI 送我 $44$ 分。<br>
-( by 事後 : 他根本不是凸函數，而且確實是假解 )</p>
-<p><code>2:11</code><br>
-<code>100/100/0/0</code>。<br>
-突然想到一個很好寫的貪心，結果過了欸。<br>
-pC pD let’s go。</p>
-<p><code>2:31</code><br>
-<code>100/100/0/14.803203</code>。<br>
-pD clique 子題拿到 $4.803203$ 分，star 子題拿好拿滿。</p>
-<p><code>3:16</code><br>
-<code>100/100/0/34</code>。<br>
-會做 path 了，因為 clique 一定可以弄出一條 path，所以就一起做完了。</p>
-<p><code>4:18</code><br>
-<code>100/100/22/34</code>。<br>
-想 + 寫很久之後用 $O(N^2)$ 拿到 pC $22$。<br>
-之後就沒有進展了。</p>
-<p>結果是 <code>100/100/22/34</code>。</p>
-<hr>
-<h1>結果</h1>
-<p>Day1 <code>100/100/62/32</code>。<br>
-Day2 <code>100/100/22/34</code>。<br>
-Total <code>550</code>，rk.11。</p>
-<p><a href="https://stats.egoi.org/editions/2024/results/">記分板</a>，金牌線是 <code>510</code>。</p>
-]]></content>
-      <tags>
-        <tag>training</tag>
-        <tag>EGOI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>沒有 Virtual EGOI 2023</title>
-    <url>/2026/04/17/%E6%B2%92%E6%9C%89-Virtual-EGOI-2023/</url>
-    <content><![CDATA[<h1>Day1</h1>
-<p>Day1 是 4/15 在國培 vir 的，從 <code>15:20</code> 開始打，但大家都沒有打完。</p>
-<p>我記得是一開場我就把 pA 寫掉，pB 不會先丟著，把 pC $20$ 分寫掉，<s>然後不會 pB 我就去吃飯了，結果剛吃到飯就想到了</s>。</p>
-<p>楊岳蓁說可以算我們都是 <code>100/100/20/15</code> ( ? ? ? )</p>
-<hr>
-<h1>Day 2</h1>
-<p>Day2 是 4/17 在國培 vir 的，從 <code>13:30</code> 開始打。</p>
-<p><code>1:00</code><br>
-看完了，pA pB 我都會做，精神分數 <code>100/100/41/10</code>。</p>
-<p><code>1:02</code><br>
-<code>34/0/0/0</code>。<br>
-pA 拿到 $34$ 分有點怪，因為我看不出有什麼問題所以跳到 pB。</p>
-<p><code>1:14</code><br>
-<code>34/100/0/0</code>。<br>
-pB 過了，所以回去 pA。</p>
-<p><code>1:52</code><br>
-<code>100/100/0/0</code>。<br>
-我以為我不會用 vector 的 insert，所以手刻一個，但還是沒用，然後就開始暴傳 assert，但還是沒有用。<br>
-結果我發現我直接看錯輸入格式，原來我今天是 drunk，之後要多多小心。</p>
-<p><code>2:06</code><br>
-<code>100/100/0/10</code>。<br>
-pD $O(N)$ $10$ 分先寫完了，之後應該會去盡量把 pC 做好一點。</p>
-<p><code>2:27</code><br>
-<code>100/100/12/10</code>。<br>
-pC 第一子題過了。</p>
-<p><code>2:59</code><br>
-<code>100/100/22/10</code>。<br>
-pC 第二子題過了，然後我覺得他很難寫，不過大機率是我的問題。</p>
-<p><code>3:16</code><br>
-<code>100/100/41/10</code>。<br>
-pC 第三子題過了，我覺得 0 當根一定有解的子題看起來很有料，但我沒辦法做到好的複雜度。</p>
-<p><code>4:03</code><br>
-<code>100/100/41/30</code>。<br>
-pD 切一半可以拿 $30$ 分。</p>
-<p><code>4:15</code><br>
-李忠謀跑來<s>打擾</s>，他說他站在我後面我就會有壓力，然後就會想到，結果我真的想到我可以用爛爛的複雜度做 $N&lt;=100$ 欸，李忠謀有料喔。</p>
-<p><code>5:00</code><br>
-因為我度數弄爛了 ( 後來發現的 )，所以啥都沒拿到。</p>
-<p>結果是 <code>100/100/41/30</code>。</p>
-<hr>
-<h1>跟楊岳蓁幾乎一模一樣的結果</h1>
-<p>Day1 <code>100/100/20/15</code>。<br>
-Day2 <code>100/100/41/30</code>。<br>
-Total <code>506</code>，rk.12。</p>
-<p><a href="https://stats.egoi.org/editions/2023/results/">記分板</a>，金牌線是 <code>468</code>，然後我和楊岳蓁同分但她拿的子題是 <code>100/100/61/10</code>。</p>
-<hr>
-<h1>檢討</h1>
-<h2 id="Day1">Day1</h2>
-<ol>
-<li>就不應該時間沒喬好就開始打，然後打一打又不打了。</li>
-<li>pB 想建圖想太久了。</li>
-</ol>
-<h2 id="Day2">Day2</h2>
-<ol>
-<li>pA 看錯題目特別不應該。</li>
-<li>pC 找樹的時候把度數減掉，然後多一堆假的根，損失 $13$ 分。</li>
-<li>pC 寫子題寫有點久。</li>
-</ol>
-<h2 id="General">General</h2>
-<p>沒特別要說的。</p>
-<hr>
-<h1>其他話</h1>
-<p>我跟楊岳蓁特別有默契，都 $506$ 分。<br>
-day2 pC subtask 2 做法附贈 subtask 1，而且我很確定這個東西不應該要過 subtask 1。</p>
-<hr>
-<h1>題解</h1>
-<h2 id="day2-pA">day2 pA</h2>
-<details>
-<summary> $100$ 分 </summary>
-<p>對於第 $i$ 個人，假設他前面的人都坐好了，你會發現他前面最多只有一半的人不能和他坐在一起，最差也像這樣 :<br>
-❌✅❌✅❌✅<br>
-反正一定有位子坐，像上面那個例子就是坐最後面。<br>
-所以可以直接開個 <code>vector</code> 之類的存目前的人都怎麼坐，然後對每個 $i$ 找他可以插入在哪，這樣是 $O(N^2)$。</p>
-</details>
-<h2 id="day2-pB">day2 pB</h2>
-<details>
-<summary> $100$ 分 </summary>
-<p>DP，列狀態 <code>dp[i][j][k]</code> 代表考慮前 $i$ 個糖果中抓 $j$ 個，交換 $k$ 次可以達到的最大價值。<br>
-如果不選第 $i$ 個糖果，那就是從 <code>dp[i-1][j][k]</code> 直接轉移；如果要選第 $i$ 個，那就是從 <code>dp[i-1][j-1][k-(i-j)]+a[i]</code> 轉移。<br>
-最後就找最小的 $k$ 使 <code>dp[N][F][k]</code> 大於價值 $T$，找不到就是 NO。</p>
-</details>
-<h2 id="day2-pC">day2 pC</h2>
-<details>
-<summary> subtask 1&2 </summary>
-<p>構造看看。<br>
-subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點數比 $3$ 大那就一定構的出來 ( 如果有人不能指到 $0$ 那就讓他指到隨便一個可以指到 $0$ 的人 )，$N=3$ 我是拿去亂窮舉每種方法。</p>
-</details>
-<details>
-<summary> subtask 3 </summary>
-<p>原本就存在的邊要構成很多有向樹才有料，其它像是環、不是有向樹的 DAG 通通不合法，直接 NO。<br>
-最後把有向樹們的樹根抓出來，全部連到某一棵有向樹的樹根就可以了。</p>
-</details>
-<details>
-<summary> subtask 4&5 </summary>
-<p>如果有解，就是把有向樹們的樹根連到另一個有根樹的任一節點，這樣才可以構成一個大的有向樹。</p>
-<p>subtask 4 可以枚舉答案的樹根，然後用 DFS BFS 之類的任何方法把其它有向樹加進來，我的作法是 $O(N)$ 枚舉答案的樹根，然後再 $O(N)$ 考慮我要抓進來的每一個有向樹，再 $O(N)$ 看可不可以順利連邊，這樣是 $O(N^3)$。<br>
-然後其實可以用 <code>set</code> 存所有還沒被抓進來的有向樹樹根，因為不能建的邊就 $K$ 條，所以試圖建邊時最多失敗 $O(K)$ 次，<s>這樣就 ok 了</s>，這樣可以 $O((N+K)logN)$ 過 subtask 5。</p>
-</details>
-<details>
-<summary> $100$ 分  </summary>
-<p>接下來的問題只剩要找誰當答案的樹根，先考慮 $M=0$ ，這時全部有向樹都是一個點，比較好想。</p>
-<p>可以隨便以 $x$ 為根跑 DFS，看他可以到哪裡，如果他可以到全部人，那就很棒；不行的話再以某個沒被拜訪到的 $y$ 為根跑 DFS…假設最後一個開始 DFS 的是 $z$，代表說 $x$ $y$ 都不能當根，因為他們都到不了 $z$，這時候只要檢查 $z$ 是不是可行的根，你可以以 $z$ 為開頭跑一次 DFS 看是不是可以到所有人，如果可以那就成功找到根了，不行的話就確定無解了，可以輸出 NO。</p>
-<p>如果會做 $M=0$ 那很多有向樹的狀況也差不多了。</p>
-</details>]]></content>
-      <tags>
-        <tag>training</tag>
-        <tag>EGOI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>關於我的 handle 事故</title>
-    <url>/2026/04/06/%E9%97%9C%E6%96%BC%E6%88%91%E7%9A%84-handle-%E4%BA%8B%E6%95%85/</url>
-    <content><![CDATA[<p>好像不小心被發現了，我是覺得沒什麼好看的啦，你們還是不要看好了。<br>
-然後我的生日是 3/7 不是 10/29，不要再問了，唉。<br>
-打錯陳羿安的名字我很抱歉。</p>
-]]></content>
-      <tags>
-        <tag>other</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>策略</title>
-    <url>/2026/03/09/%E7%AD%96%E7%95%A5/</url>
-    <content><![CDATA[<h2 id="5hr-OI">5hr OI</h2>
-<ol>
-<li><code>0:00~1:00?</code> 開場看題目，看多久應該要依照比賽決定 ? 像是 EGOI 一模可以看快一點，EGOI 的話應該可以看差不多一個小時 ? 然後一個題目除非已經很確定怎麼做不然不要太快跳，EGOI 的話可能可以差不多 $15$ 分鐘。要標出所有這段時間覺得可做的子題，在子題編號下面畫底線或是圈起來，在子題旁邊大致寫下目前想法。規劃那些子題要一起做 or 直接寫滿分 ( 這個部分也可以之後做 )。</li>
-<li><code>1:00~2:30</code> 把剛剛覺得可做的東西按照任意順序做出來，為每 (子) 題設時間，實作最多 $30$ 分鐘，debug 也不要超過 $25$ 分鐘，超過先跳。</li>
-<li><code>2:30</code> 有非典的話差不多要開始做了。</li>
-<li><code>2:30~4:00</code> review 一次還沒做出來的東西，嘗試審題的時候覺得可做的新方向，<code>3:30</code> 沒什麼會做的就差不多要開始喇分了。</li>
-<li><code>4:00~5:00</code> 繼續做完感覺可做的東西，做完了就想沒做的東西，做不完的話 <code>4:00</code> 一定要開始喇分和取捨，<s>把期望值比較低的丟掉</s>。</li>
-<li>實作分 check point，用 judge 驗想法。</li>
-<li>找不到 bug 要跳。</li>
-<li>多上廁所和吃東西。</li>
-<li>不要看別人螢幕，不要想其他事。</li>
-<li>多畫圖，多寫字，不要空想。</li>
-<li>該拿的都拿就會贏了。</li>
-</ol>
-<h2 id="3hr-OI">3hr OI</h2>
-]]></content>
-      <tags>
-        <tag>training</tag>
-        <tag>other</tag>
       </tags>
   </entry>
 </search>

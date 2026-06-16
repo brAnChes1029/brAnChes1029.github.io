@@ -246,8 +246,8 @@ Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$
 <p>令 $B[i]=\text{secondmax}_{i \le j}(W[j]+B[j+1])$。<br>
 令 $A[i]=\text{max}_{i \le j}(W[j]+B[j+1])$。<br>
 令 $D[i]=A[i]-B[i]$，$S[i]=A[i]+B[i]$。</p>
-<p>現在要算 $S[i]$，因為 $S[i+1]=A[i+1]+B[i+1]$，而且現在多了新的轉移點 $W[i]+B[i+1]$，他一定比 $B[i+1]$ 大，如果他也比 $A[i+1]$ 大的話就會 $A[i]=W[i]+B[i+1]$，否則就會 $B[i]=W[i]+B[i+1]$，反正總有 $S[i]=A[i+1]+B[i+1]+W[i]=\sum_{j=i}^{N-1} W_j$，所以 $A[0]+B[0]$ 會是全部餅乾的重量！</p>
-<p>算 $D[i]$，多了新的轉移點 $W[i]+B[i+1]$，看上面的討論可以發現 $D[i]=|{D[i+1]-W[i]}|$，而且 $D[i]$ 的值域頂多到 $W_{max}$。</p>
+<p>現在要算 $S[i]$，因為 $S[i+1]=A[i+1]+B[i+1]$，而且現在多了新的轉移點 $W[i]+B[i+1]$，他一定比 $B[i+1]$ 大，如果他也比 $A[i+1]$ 大的話就會 $A[i]=W[i]+B[i+1]$，否則就會 $B[i]=W[i]+B[i+1]$，反正總有 $S[i]=A[i+1]+B[i+1]+W[i]=\sum_{j=i}^{N-1} W[j]$，所以 $A[0]+B[0]$ 會是全部餅乾的重量！</p>
+<p>現在改算 $D[i]$，看上面的討論可以發現 $D[i]=|{D[i+1]-W[i]}|$，而且 $D[i]$ 的值域頂多到 $W_{max}$。</p>
 <p>綜合上述，答案 $B[0]=\frac{\text{全部餅乾}-D[0]}{2}$。</p>
 <p>想快速知道 $D[0]$，可以用一個線段樹，每個 node $[L,R)$ 存一個大小 $W_{max}$ 的陣列 <code>bis</code>，<code>bis[x]</code> 代表如果 $D[R]=x$ 這時 $D[L]$ 的值，然後就可以像倍增 :</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">st[idx].bis[x]=st[lson].bis[st[rson].bis[x]] </span><br></pre></td></tr></table></figure>
