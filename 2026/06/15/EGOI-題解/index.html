@@ -215,6 +215,18 @@ p.spoiler {
 如果這裡連不上去 ( 也就是 $0$ 號是 <code>-</code> 或者 $N-1$ 號是 <code>+</code> 的情況 ) 就輸出 <code>NO</code>。</p>
 </details>
 <h3 id="Ovenmasters">Ovenmasters</h3>
+<details><summary> full </summary>
+<p>首先每堆披薩第一個先加入答案，一個想法是可以從所有第二個的披薩和生氣的披薩這個集合裡面每次挑 index 最小的，然後看看能不能成功加進答案，之後再更新集合。<br>
+不過這樣是 $O(N^2logN)$。</p>
+<p>這邊有幾個觀察 :</p>
+<ol>
+<li>先把所有桌子按照擺在最上面的披薩編號 $a[i]$ 由小到大排好，編號 $x$ 的披薩目標是放在第 $i$ 桌，必須先滿足 $a[i]&lt;x&lt;a[i+1]$ 這個條件，並且把 $x$ 號成功放上去之後桌上披薩的大小順序不會改變。</li>
+<li>假設編號 $x$ 的披薩目標是放在 $i$ 桌，編號 $y$ 的披薩目標是放在 $j$ 桌 ( $i&lt;j$ )，且這兩個披薩都有滿足上面的條件，無論如何都是先放 $x$。就算 $y$ 的編號比較小，先放 $y$ 的話它也會直接搶到 $x$ 想放的位置。</li>
+<li>生氣的披薩在答案裡的順序一定是由小到大，因為如果在某一時間 $i$ 號披薩生氣地離開，所有編號比 $i$ 小的披薩也會生氣地離開。</li>
+</ol>
+<p>接下來就可以用 <code>priority_queue</code> 存現在滿足條件的的披薩們各自目標是放到哪一桌上 ( 由桌子編號小到編號大 )，接下來就是把披薩擺上去，然後更新滿足條件的披薩放進 <code>priority_queue</code> ( 如果剛剛在 $i$ 桌放了一個新披薩，$i$ 和 $i-1$ 號桌都要更新，因為 $a[i]$ 變大了，可能會使 $i-1$ 號桌的候選披薩符合條件 )。<br>
+至於生氣離開的披薩就看現在這個桌子的 $min=a[0]$ 是多少，就可以再用一個指針把所有 $x&lt;a[0]$ 的生氣披薩放進答案。</p>
+</details>
 <h3 id="Biscuits">Biscuits</h3>
 <details><summary> subtask 1 </summary>
 <p>答案是 $\lfloor \frac{N}{2} \rfloor$。</p>
@@ -231,7 +243,7 @@ p.spoiler {
 <li>Aurora 選擇 $X = 1$，那麼 Bianca 就選擇 $Y = 0$，並且吃掉總權重至少為 $W_0 + (W_2 + W_4 + \dots) \geq W_1 + W_3 + W_5 + \dots$ 的餅乾。</li>
 <li>不然 Bianca 就選擇 $Y = 1$，並且吃掉總權重至少為 $W_1 + (W_3 + W_5 + \dots)$ 的餅乾。</li>
 </ul>
-<p>Aurora 可以確保 Bianca 吃掉的餅乾總權重最多為 $W_1 + W_3 + W_5 + \dots$，她可以總是選擇 $X = 0$ 來達到這個目的。</p>
+<p>Aurora 可以總是選擇 $X = 0$ 確保 Bianca 吃掉的餅乾總權重最多為 $W_1 + W_3 + W_5 + \dots$。</p>
 </details>
 <details><summary> subtask 2 & 4 </summary>
 <p>考慮 DP。<br>
