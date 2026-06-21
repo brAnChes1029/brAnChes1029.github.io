@@ -194,8 +194,8 @@ p.spoiler {
     padding: 5px 10px 5px 25px;
   }
 </style>
-<p>我決定要來寫 EGOI 題解　(●’◡’●)<br>
-希望可以在 $2027$ 的國手開始 virtual 之前把我會的寫完…<s>欸不對，我也是 $2027$ 的國手，而且我已經 vir 完了</s>。<br>
+<p>我決定要來寫 EGOI 題解　(●’◡’●)</p>
+<p>希望可以在 $2027$ 的國手開始 virtual 之前把我會的寫完…<s>欸不對，我也是 $2027$ 的國手，而且我已經 vir 完了</s>。<br>
 主要是我覺得研究英文題解有點麻煩，然後網路上的中文題解不一定好看，那就再生一些不一定好看的題解，樣本數比較多，未來的國手可以多方參考 ( ? )</p>
 <hr>
 <p><a target="_blank" rel="noopener" href="https://stats.egoi.org/tasks/">官方題解</a>可以從這個連結進去，按題目名字，可以在右下方找到 solution。<br>
@@ -294,7 +294,7 @@ Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$
 <p>( 我是有成功這樣弄到 $100$ 分 )</p>
 </details>
 <details><summary> 確定性作法 </summary>
-<p><a target="_blank" rel="noopener" href="https://egoi2026.it/competition/census/">官解</a>有說。</p>
+<p><a target="_blank" rel="noopener" href="https://egoi2026.it/competition/census/">官解</a>最下面那堆。</p>
 </details>
 <h2 id="day2">day2</h2>
 <h3 id="Watering-Plants">Watering Plants</h3>
@@ -305,6 +305,16 @@ Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$
 <p>算答案的時候就把 <code>ans[i]</code> 和他的時間戳到現在這段澆花時間 ( 可能沒有 ) 加起來。</p>
 </details>
 <h3 id="Cakes">Cakes</h3>
+<details><summary> full 1 </summary>
+<p>$A[i]$ 代表 $i$ 號配料有多少個，$max$ 代表最多個的配料有多少個。</p>
+<p>現在決定一個美味度 $d$，這個美味度最少會做出 $L=\lceil \frac{max}{d} \rceil$ 個蛋糕，最多也只能做出 $R=\sum_{i=0}^{N-1} \lfloor \frac{A[i]}{d} \rfloor$ 個蛋糕，至於在 $[L,R]$ 中的個數都是可以被做出來的。<br>
+接下來枚舉所有美味度 $d$，計算這個美味度最多可以做出多少個蛋糕 ( 也就是 $R$ )。可以枚舉 $\lfloor \frac{A[i]}{d} \rfloor=1, 2, 3, …$ 的蛋糕分別有幾個 ( 使用前綴和 )，就可以用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E8%B0%83%E5%92%8C%E7%BA%A7%E6%95%B0">調和級數和</a>在 $O(NlogN)$ 算完。</p>
+<p>詢問想做 $x$ 塊蛋糕時，因為美味度越大可以做出來的最多的蛋糕數 $R$ 越少，所以選擇最小的美味度 $d=\lceil \frac{max}{x} \rceil$，接下來再檢查美味度 $d$ 可以做出最多的蛋糕數量是不是大於 $x$ 就好了。</p>
+</details>
+<details><summary> full 2 </summary>
+<p>官解。</p>
+<p>也可以不用先算出每個美味度最多可以做出多少蛋糕，因為 $\lceil \frac{max}{x} \rceil$ 最多只有 $\sqrt{max}$ 種不一樣的值 ( <a target="_blank" rel="noopener" href="https://hackmd.io/o1_Ere88RuC5U2YQMP6q5g#/1/3">見這邊</a> )，所以可以算過的存起來，遇到新的就暴力算。</p>
+</details>
 <h3 id="Fox-Families">Fox Families</h3>
 <h3 id="Seating-Plan">Seating Plan</h3>
 
