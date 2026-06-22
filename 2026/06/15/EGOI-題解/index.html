@@ -333,8 +333,8 @@ Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$
 <p>每個連通塊紀錄 $minL$、$minR$、$maxL$、$maxR$。<br>
 觀察到我要把區間 $[L,R]$ 和一個連通塊合併時，以下情況會無法合併 :</p>
 <ol>
-<li>$L&lt;minL \text{and} R&lt;minR$</li>
-<li>$L&gt;maxL \text{and} R&gt;maxR$</li>
+<li>$L&lt;minL \text{ and } R&lt;minR$</li>
+<li>$L&gt;maxL \text{ and } R&gt;maxR$</li>
 </ol>
 <p>用一個 <code>set</code> 存連通塊，按照 $minL$ 由小到大排序，這裡有一個性質是 $minR$、$maxL$、$maxR$ 也都會分別遞增 ( 可以畫圖然後反證看看 )。<br>
 要加入區間 $[L,R]$ 時，先用二分搜找到第一個 $minL \leq L$，然後嘗試合併，一直重覆到無法合併，就直接停止 ( 根據上面說的性質，接下來的連通塊也都無法和 $[L,R]$ 合併 )。</p>
