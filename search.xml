@@ -893,6 +893,67 @@ pD 感覺實作會有點麻煩。<br>
       </tags>
   </entry>
   <entry>
+    <title>EGOI 二模 / TOI pre</title>
+    <url>/2026/03/07/EGOI-%E4%BA%8C%E6%A8%A1-TOI-pre/</url>
+    <content><![CDATA[<p>今天是 EGOI 二模、TOI 初選還有我生日 🎉</p>
+<h2 id="比賽">比賽</h2>
+<p><code>13:00</code><br>
+到師大公館校區。</p>
+<p><code>13:10</code><br>
+到試場一樓報到，遇到睿睿和輔導員采黎，然後發現我跟宋睿軒同一個考場，還有我們那個考場超級少人。</p>
+<p><code>13:20</code><br>
+到考場，我們的考場黎廁所超級遠，感覺有 $100$ 公尺欸。<br>
+還有我學姊在隔壁考場監考，所以不會來救我了，喔不。</p>
+<p><code>13:40</code><br>
+據說別的考場電腦集體燒雞，所以考試延後 <code>30</code> 分鐘。<br>
+所以我就在考場前面的椅子上坐著睡覺。</p>
+<p><code>14:30</code><br>
+考試開始，先開 vscode 看看有沒有問題。</p>
+<p><code>14:40</code><br>
+開始看題目。</p>
+<p><code>14:47</code><br>
+看完了，精神分數 <code>100/28/100/100/100</code>。</p>
+<p><code>15:00</code><br>
+pA 過了，現在有 <code>100/0/0/0/0</code>。</p>
+<p><code>15:10</code><br>
+發現我 pC 想的 DP 是假解，我現在只會做 $19$。<br>
+再看一下 pD 確定不是假解之後決定先寫。</p>
+<p><code>15:27</code><br>
+pD $34$，燒。</p>
+<p><code>15:35</code><br>
+原來是沒打等於喔，<code>100/0/0/100/0</code>。<br>
+翻來翻去之後決定先寫 pC $19$。</p>
+<p><code>16:00</code><br>
+pC 拿到三個 WA 了，十分不妙，要去廁所。</p>
+<p><code>16:10</code><br>
+<code>100/0/19/100/0</code>。<br>
+pB 經典款河內塔先寫好了。</p>
+<p><code>16:40</code><br>
+<code>100/28/19/100/0</code>。<br>
+開始一直翻，因為我感覺 pB 好像高一北二區有看過，感覺能推滿，然後 pE 大方向都想好了，只差一些細節。</p>
+<p><code>17:30</code><br>
+然後我就既沒有推好 B 又沒有在 E 拿到該拿的分數，大燒雞。</p>
+<h2 id="EGOI">EGOI</h2>
+<p>大燒雞，因為楊岳蓁會 $400$ 王禹喬會 $319$，然後我覺得我好好打應該要大於等於 $319$。<br>
+所以我的模考分數掉到 rk.2 然後還只和 rk.3 差 $1$ 分，距離摔下國手線至少有 $100$ 分吧，反正就是國手線以上但分數很難看。</p>
+<h2 id="TOI">TOI</h2>
+<p>rk.35 距離我前 20 的目標超級遠，到底要怎麼打這麼爛。</p>
+<h2 id="檢討">檢討</h2>
+<p>我覺得這次是策略的大失敗，準確來說根本沒有策略吧，爛死了。</p>
+<ol>
+<li>開場題目看太快，沒有好好想，也沒有圈出可以拿的子題，都隨便看然後直接去寫。</li>
+<li>沒有想好中間一題想多久，導致兩邊跳來跳去然後 $0$ 分。</li>
+<li>把 5hr 策略套進來用結果發現時間不夠所以一直做出浪費時間的行為。</li>
+</ol>
+<p>所以說根本沒準備 3hr 策略是本次的根本原因 (吧)，5hr 的時候是一題 $20$ 分鐘以上，3hr 的時候就想說時間有點少要想快一點，結果一直跳來跳去什麼都沒想到。</p>
+]]></content>
+      <tags>
+        <tag>contest</tag>
+        <tag>EGOI</tag>
+        <tag>TOI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>EGOI 2026</title>
     <url>/2026/05/11/EGOI-2026/</url>
     <content><![CDATA[<p>先說 EGOI 比賽題目這裡沒有暴雷 (*^▽^*)<br>
@@ -1165,67 +1226,6 @@ Sole 說想跟我們 say goodbye properly，但其他人跑光了，所以我們
       </tags>
   </entry>
   <entry>
-    <title>EGOI 二模 / TOI pre</title>
-    <url>/2026/03/07/EGOI-%E4%BA%8C%E6%A8%A1-TOI-pre/</url>
-    <content><![CDATA[<p>今天是 EGOI 二模、TOI 初選還有我生日 🎉</p>
-<h2 id="比賽">比賽</h2>
-<p><code>13:00</code><br>
-到師大公館校區。</p>
-<p><code>13:10</code><br>
-到試場一樓報到，遇到睿睿和輔導員采黎，然後發現我跟宋睿軒同一個考場，還有我們那個考場超級少人。</p>
-<p><code>13:20</code><br>
-到考場，我們的考場黎廁所超級遠，感覺有 $100$ 公尺欸。<br>
-還有我學姊在隔壁考場監考，所以不會來救我了，喔不。</p>
-<p><code>13:40</code><br>
-據說別的考場電腦集體燒雞，所以考試延後 <code>30</code> 分鐘。<br>
-所以我就在考場前面的椅子上坐著睡覺。</p>
-<p><code>14:30</code><br>
-考試開始，先開 vscode 看看有沒有問題。</p>
-<p><code>14:40</code><br>
-開始看題目。</p>
-<p><code>14:47</code><br>
-看完了，精神分數 <code>100/28/100/100/100</code>。</p>
-<p><code>15:00</code><br>
-pA 過了，現在有 <code>100/0/0/0/0</code>。</p>
-<p><code>15:10</code><br>
-發現我 pC 想的 DP 是假解，我現在只會做 $19$。<br>
-再看一下 pD 確定不是假解之後決定先寫。</p>
-<p><code>15:27</code><br>
-pD $34$，燒。</p>
-<p><code>15:35</code><br>
-原來是沒打等於喔，<code>100/0/0/100/0</code>。<br>
-翻來翻去之後決定先寫 pC $19$。</p>
-<p><code>16:00</code><br>
-pC 拿到三個 WA 了，十分不妙，要去廁所。</p>
-<p><code>16:10</code><br>
-<code>100/0/19/100/0</code>。<br>
-pB 經典款河內塔先寫好了。</p>
-<p><code>16:40</code><br>
-<code>100/28/19/100/0</code>。<br>
-開始一直翻，因為我感覺 pB 好像高一北二區有看過，感覺能推滿，然後 pE 大方向都想好了，只差一些細節。</p>
-<p><code>17:30</code><br>
-然後我就既沒有推好 B 又沒有在 E 拿到該拿的分數，大燒雞。</p>
-<h2 id="EGOI">EGOI</h2>
-<p>大燒雞，因為楊岳蓁會 $400$ 王禹喬會 $319$，然後我覺得我好好打應該要大於等於 $319$。<br>
-所以我的模考分數掉到 rk.2 然後還只和 rk.3 差 $1$ 分，距離摔下國手線至少有 $100$ 分吧，反正就是國手線以上但分數很難看。</p>
-<h2 id="TOI">TOI</h2>
-<p>rk.35 距離我前 20 的目標超級遠，到底要怎麼打這麼爛。</p>
-<h2 id="檢討">檢討</h2>
-<p>我覺得這次是策略的大失敗，準確來說根本沒有策略吧，爛死了。</p>
-<ol>
-<li>開場題目看太快，沒有好好想，也沒有圈出可以拿的子題，都隨便看然後直接去寫。</li>
-<li>沒有想好中間一題想多久，導致兩邊跳來跳去然後 $0$ 分。</li>
-<li>把 5hr 策略套進來用結果發現時間不夠所以一直做出浪費時間的行為。</li>
-</ol>
-<p>所以說根本沒準備 3hr 策略是本次的根本原因 (吧)，5hr 的時候是一題 $20$ 分鐘以上，3hr 的時候就想說時間有點少要想快一點，結果一直跳來跳去什麼都沒想到。</p>
-]]></content>
-      <tags>
-        <tag>contest</tag>
-        <tag>EGOI</tag>
-        <tag>TOI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>EGOI 題解</title>
     <url>/2026/06/15/EGOI-%E9%A1%8C%E8%A7%A3/</url>
     <content><![CDATA[<style>
@@ -1266,7 +1266,7 @@ pB 經典款河內塔先寫好了。</p>
 <p>遇到箱子的時候就會「卡住」:<br>
 <img src="/images/EGOI_sol_2023d1pC-3.png" alt=""></p>
 <p>所以最後再往下戳就可以知道箱子在哪了 !<br>
-<img src="/images/EGOI_sol_2023d1p-4.png" alt=""></p>
+<img src="/images/EGOI_sol_2023d1pC-4.png" alt=""></p>
 <p>但如果箱子在粉紅色區域，就沒辦法知道了，所以需要先這樣走個 L 形，排除箱子在粉色區域的可能性 :<br>
 <img src="/images/EGOI_sol_2023d1pC-5.png" alt=""></p>
 <p>如果箱子不在粉色區域，代表第一列和最後一行都會是空的，就可以用上面說的方法在灰色區域找到箱子了。<br>
@@ -1459,6 +1459,164 @@ Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$
       </tags>
   </entry>
   <entry>
+    <title>Hello Blog</title>
+    <url>/2025/09/22/Hello-Blog/</url>
+    <content><![CDATA[<h1>大大</h1>
+<h2 id="大">大</h2>
+<h3 id="中">中</h3>
+<p>單行程式 <code>ijk</code><br>
+一堆程式</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Blog!\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><s>劃掉</s></p>
+<span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur ">1029</span></span>
+<p><em>斜斜的</em><br>
+<em>斜斜的</em><br>
+<strong>粗</strong><br>
+<u>底線</u><br>
+<font color=#FF0000> WA </font><br>
+<font color=#76F72D> AC </font></p>
+<details>
+<summary>暴雷</summary>
+<p>EGOI</p>
+<p><code>EGOI</code></p>
+<p>$EGOI$</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">mt19937 <span class="title">mt</span><span class="params">(chrono::steady_clock::now().time_since_epoch().count())</span></span>;</span><br></pre></td></tr></table></figure>
+</details>
+<p>$1+1=2$</p>
+<ol>
+<li>TOI</li>
+<li>EGOI</li>
+<li>APIO</li>
+<li>IOI</li>
+</ol>
+<blockquote>
+<p>EGOI</p>
+<blockquote>
+<p>EGOI</p>
+<blockquote>
+<p>EGOI</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><a href="https://dailyakari.com/">點燈</a></p>
+<table>
+<thead>
+<tr>
+<th>Column 1</th>
+<th>Column 2</th>
+<th>Column 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text1</td>
+<td>Text2</td>
+<td>Text3</td>
+</tr>
+<tr>
+<td>Text4</td>
+<td>Text5</td>
+<td>Text6</td>
+</tr>
+</tbody>
+</table>
+<video src="影片" controls width="100%" height="auto">
+</video>
+]]></content>
+      <tags>
+        <tag>testing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TOI 潛力組 202509</title>
+    <url>/2025/10/01/TOI-%E6%BD%9B%E5%8A%9B%E7%B5%84-202509/</url>
+    <content><![CDATA[<p>好久沒打 TOI 了喔<br>
+不知道能不能破台 combo 5 呢 ~</p>
+<h2 id="P2">P2</h2>
+<p>打潛力組策略就是開場先看題，我覺得 P2 最簡單 (●’◡’●)</p>
+<details>
+<summary>暴雷</summary>
+<p>就看 B 陣列然後分成很多小塊，怎麼分就看是不是和在 A 裡的時候鄰居一樣，不一樣就一定要切，一樣就算在同一塊裡面，答案是切幾刀，所以就是塊數減一。但我實作爛了，拿到好多<font color=#ffff00> WA </font> 好可怕 இ௰இ</p>
+<p>還有就是小心數字到 $10^9$，需要 <code>map</code>。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[<span class="number">200005</span>];</span><br><span class="line"><span class="type">int</span> b[<span class="number">200005</span>];</span><br><span class="line">unordered_map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; p;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">        p[a[i]]=i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">    cin &gt;&gt; b[<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">2</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        cin &gt;&gt; b[i];</span><br><span class="line">        <span class="keyword">if</span>( p[b[i<span class="number">-1</span>]]!=p[b[i]]<span class="number">-1</span> ) cnt++;</span><br><span class="line">        <span class="comment">//cout &lt;&lt; p[b[i-1]] &lt;&lt; &#x27; &#x27; &lt;&lt; p[b[i]] &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; cnt;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/TOI202509P2.png" alt="P2"></p>
+</details>
+<p>寫完之後看一下 P1 和 P3，P3 是拓樸大裸題但字串分析一臉討厭， <s>先丟掉</s><br>
+P1 看起來有點想法但又不太確定，感覺可以想想看，真有趣，好想寫喔 (❁´◡`❁)</p>
+<h2 id="P1">P1</h2>
+<p>P1 超有料的，愛 P1<br>
+以下是心路歷程</p>
+<details>
+<summary>暴雷</summary>
+<p>首先就是把數字 $x$ 切成很多塊嘛，至於要切幾塊…可以發現切越多塊得分會先上升再下降，像是 $X=5$，切一塊 $5$ 分，兩塊 $6$ 分，三塊 $4$ 分，這樣。有個峰的話是不是要三分搜，但我超不會三分搜欸，上次寫是不是選訓的時候啊…喔好像不用，判斷就 <code>cal(mid)&gt;cal(mid+1)</code> 這樣子就可以好好二分搜了耶，萬歲 (≧∇≦)ﾉ</p>
+<p>等等好像又不對了，數字很大要 mod 耶，這樣要怎麼比大小啊，燒雞 Σ(っ °Д °;)っ</p>
+<p>既然不是 X 分搜，代表說一定要貪心構造出最佳解，呃<br>
+感覺全部切成很多個 $2$ 好嗎？指數函數是不是長大很快…但是 $3^2=9$ 比 $2^3=8$ 好耶，代表說我 $X=6$ 要優先切成兩個 $3$。而且 $x=12$ 切成四個 $3$ 是 $3^4=81$，比 $4^3=64$ 好，所以切的大小 $3$ 是最好的，要優先切成大小是 $3$，多的部分再用 $2$ 來補。那先寫個 $X\leq15$ 的子題看看這樣是不是好的。</p>
+<p>哇是好的耶 (☆▽☆)<br>
+那就按照上面的策略寫吧 ~</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line">ll <span class="type">const</span> mod=<span class="number">1e9</span><span class="number">+7</span>;</span><br><span class="line">ll ans[<span class="number">16</span>]=&#123;<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">12</span>, <span class="number">18</span>, <span class="number">27</span>, <span class="number">36</span>, <span class="number">54</span>, <span class="number">81</span>, <span class="number">108</span>, <span class="number">162</span>, <span class="number">243</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">pw</span><span class="params">( ll x, ll y )</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>( y==<span class="number">0</span> ) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>( y==<span class="number">1</span> ) <span class="keyword">return</span> x;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        ll z=<span class="built_in">pw</span>( x, y/<span class="number">2</span> );</span><br><span class="line">        <span class="keyword">if</span>( y&amp;<span class="number">1</span> ) <span class="keyword">return</span> z*z%mod*x%mod;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> z*z%mod;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> t;</span><br><span class="line">    cin &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span>( t-- )&#123;</span><br><span class="line">        ll x;</span><br><span class="line">        cin &gt;&gt; x;</span><br><span class="line">        <span class="keyword">if</span>( x&lt;=<span class="number">15</span> ) cout &lt;&lt; ans[x] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            ll y=x/<span class="number">6</span>;</span><br><span class="line">            ll z=x%<span class="number">6</span>;</span><br><span class="line">            <span class="keyword">if</span>( z!=<span class="number">0</span> )&#123;</span><br><span class="line">                y--;</span><br><span class="line">                z+=<span class="number">6</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            cout &lt;&lt; <span class="built_in">pw</span>( ans[<span class="number">6</span>], y )*ans[z]%mod &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/TOI202509P1.png" alt="P1"></p>
+</details>
+<p>但是時間只剩 12 分鐘了， P3 至少要 15~20 分吧，可惡</p>
+<h2 id="P3-補題">P3 (補題)</h2>
+<details>
+<summary>暴雷</summary>
+<p>一開始就先字串處理嘛，<s>會不會他的考點其實是這個</s>，然後從有賦值的儲存格開始拓樸，就做完了。<br>
+那個 <code>ana</code> 是 <code>analysis</code> 的意思喔 （￣ ︶ ￣）</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">200</span>][<span class="number">30</span>];</span><br><span class="line"><span class="type">int</span> ind[<span class="number">200005</span>];</span><br><span class="line"><span class="type">int</span> v[<span class="number">200</span>][<span class="number">30</span>];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; a[<span class="number">200005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ana</span><span class="params">( string s, <span class="type">int</span> i, <span class="type">int</span> j )</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> k=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>( s[k]!=<span class="string">&#x27;+&#x27;</span> ) k++;</span><br><span class="line">    <span class="keyword">if</span>( s[<span class="number">1</span>]&gt;=<span class="string">&#x27;A&#x27;</span> &amp;&amp; s[<span class="number">1</span>]&lt;=<span class="string">&#x27;Z&#x27;</span> )&#123;</span><br><span class="line">        <span class="type">int</span> f=<span class="built_in">stoi</span>(s.<span class="built_in">substr</span>(<span class="number">2</span>, k<span class="number">-2</span>))*<span class="number">100</span>+s[<span class="number">1</span>]-<span class="string">&#x27;A&#x27;</span><span class="number">+1</span>;</span><br><span class="line">        a[f].<span class="built_in">push_back</span>(i*<span class="number">100</span>+j);</span><br><span class="line">        ind[i*<span class="number">100</span>+j]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        v[i][j]+=(s[<span class="number">1</span>]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    k++;</span><br><span class="line">    <span class="keyword">if</span>( s[k]&gt;=<span class="string">&#x27;A&#x27;</span> &amp;&amp; s[k]&lt;=<span class="string">&#x27;Z&#x27;</span> )&#123;</span><br><span class="line">        <span class="type">int</span> f=<span class="built_in">stoi</span>(s.<span class="built_in">substr</span>(k<span class="number">+1</span>))*<span class="number">100</span>+s[k]-<span class="string">&#x27;A&#x27;</span><span class="number">+1</span>;</span><br><span class="line">        a[f].<span class="built_in">push_back</span>(i*<span class="number">100</span>+j);</span><br><span class="line">        ind[i*<span class="number">100</span>+j]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        v[i][j]+=(s[k]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> j=<span class="number">1</span> ; j&lt;=m ; j++ )&#123;</span><br><span class="line">            string s;</span><br><span class="line">            cin &gt;&gt; s;</span><br><span class="line">            <span class="keyword">if</span>( s.<span class="built_in">length</span>()==<span class="number">1</span> )&#123;</span><br><span class="line">                v[i][j]=(s[<span class="number">0</span>]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">                q.<span class="built_in">push</span>( i*<span class="number">100</span>+j );</span><br><span class="line">                vis[i][j]=<span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>( s.<span class="built_in">length</span>()==<span class="number">4</span> )&#123;</span><br><span class="line">                v[i][j]=(s[<span class="number">1</span>]-<span class="string">&#x27;0&#x27;</span>+s[<span class="number">3</span>]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">                q.<span class="built_in">push</span>( i*<span class="number">100</span>+j );</span><br><span class="line">                vis[i][j]=<span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="built_in">ana</span>( s, i, j );</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>( !q.<span class="built_in">empty</span>() )&#123;</span><br><span class="line">        <span class="type">int</span> x=q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="type">int</span> i=x/<span class="number">100</span>;</span><br><span class="line">        <span class="type">int</span> j=x%<span class="number">100</span>;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> y : a[x] )&#123;</span><br><span class="line">            ind[y]--;</span><br><span class="line">            v[y/<span class="number">100</span>][y%<span class="number">100</span>]+=v[i][j];</span><br><span class="line">            <span class="keyword">if</span>( ind[y]==<span class="number">0</span> )&#123;</span><br><span class="line">                vis[y/<span class="number">100</span>][y%<span class="number">100</span>]=<span class="literal">true</span>;</span><br><span class="line">                q.<span class="built_in">push</span>(y);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> j=<span class="number">1</span> ; j&lt;=m ; j++ )&#123;</span><br><span class="line">            <span class="keyword">if</span>( !vis[i][j] ) cout &lt;&lt; <span class="string">&quot;ERROR &quot;</span>;</span><br><span class="line">            <span class="keyword">else</span> cout &lt;&lt; v[i][j] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/TOI202509P3.png" alt="P3"></p>
+</details>
+<h2 id="檢討">檢討</h2>
+<p>我覺得最大的問題是實作能力太爛，不管是 P2 卡 bug 太久還是不熟 P3 這種字串處理。應該一般人 P1 P3 西二取一的時候都會把水水的 P3 寫掉吧，畢竟穩定得分總比投資一個還不知道想的是不是對的的東西好。但就比賽體驗來講我還是會選 P1 吧，反正是練習賽，寫出來心情真的很好，<s>讓我差點忘記 combo 毀了</s>。正式賽的話我就不確定了，我覺得我可能會去寫 P3 ＞︿＜</p>
+]]></content>
+      <tags>
+        <tag>TOI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TOI 潛力組 202511</title>
+    <url>/2025/11/11/TOI-%E6%BD%9B%E5%8A%9B%E7%B5%84-202511/</url>
+    <content><![CDATA[<p>生病 ಥ_ಥ<br>
+但我覺得北二區之前大概是好不了了，所以要習慣一下。</p>
+<p>開場先看題。<br>
+P1 是數學，P2 是 DP，P3 是 BCC。</p>
+<h2 id="P2">P2</h2>
+<details>
+<summary>暴雷</summary>
+<p>P2 一看就是超級裸的背包 DP。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, x;</span><br><span class="line"><span class="type">int</span> dp[<span class="number">10005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; x;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;<span class="number">10005</span> ; i++ ) dp[i]=<span class="number">1e9</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> a, b;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">        b+=a;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> j=b ; j&lt;<span class="number">10005</span> ; j++ )&#123;</span><br><span class="line">            dp[j]=<span class="built_in">min</span>( dp[j], dp[j-b]+a );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> ans=<span class="number">1e9</span>;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=x ; i&lt;<span class="number">10005</span> ; i++ ) ans=<span class="built_in">min</span>( ans, dp[i] );</span><br><span class="line">    cout &lt;&lt; ans;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/TOI202511P2.png" alt="P2"></p>
+</details>
+<h2 id="P1">P1</h2>
+<details>
+<summary>暴雷</summary>
+<p>如果有 $n$ 個人帽子同一個顏色，那這 $n$ 個人都會看到 $n-1$。<br>
+如果有超過 $n$ 個人看到 $n-1$，那就代表要分多組。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> c[<span class="number">1005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> x;</span><br><span class="line">        cin &gt;&gt; x;</span><br><span class="line">        c[x<span class="number">+1</span>]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> all=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;<span class="number">1005</span> ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> y=(c[i]/i);</span><br><span class="line">        <span class="keyword">if</span>( c[i]%i ) y++;</span><br><span class="line">        all+=i*y;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; all;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/TOI202511P1.png" alt="P1"></p>
+</details>
+<p>時間好多，看來有機會寫超不熟的 <code>BCC</code>。</p>
+<h2 id="P3">P3</h2>
+<details>
+<summary>暴雷</summary>
+<p>先把圖分成很多個邊雙連通分量，如果剪斷的邊不是橋那就沒有影響。<br>
+把雙連通分量們和橋們組成樹，然後就可以在上面 DP，就能知道剪斷某個橋會影響到下面多少個子樹。<br>
+實作一樣先<s>找出我的模板</s>先找出橋 (dfs) ，再把雙連通分量編號 (dfs2) ，最後再 DP (dfs3)。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, q, c;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; a[<span class="number">50005</span>];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; b[<span class="number">50005</span>]; <span class="comment">// BCC</span></span><br><span class="line">set&lt; pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; &gt; bridge;</span><br><span class="line"><span class="type">int</span> color[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> dep[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> low[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> sz[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> dp[<span class="number">50005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">( <span class="type">int</span> i, <span class="type">int</span> p )</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> u : a[i] )&#123;</span><br><span class="line">        <span class="keyword">if</span>( u==p ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span>( !dep[u] )&#123;</span><br><span class="line">            dep[u]=dep[i]<span class="number">+1</span>;</span><br><span class="line">            low[u]=dep[u];</span><br><span class="line">            <span class="built_in">dfs</span>( u, i );</span><br><span class="line">            low[i]=<span class="built_in">min</span>( low[i], low[u] );</span><br><span class="line">            <span class="keyword">if</span>( low[u]&gt;dep[i] ) bridge.<span class="built_in">insert</span>(&#123;<span class="built_in">min</span>(i,u), <span class="built_in">max</span>(i,u)&#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            low[i]=<span class="built_in">min</span>( low[i], dep[u] );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs2</span><span class="params">( <span class="type">int</span> i, <span class="type">int</span> p )</span></span>&#123;</span><br><span class="line">    sz[c]++;</span><br><span class="line">    color[i]=c;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> u : a[i] )&#123;</span><br><span class="line">        <span class="keyword">if</span>( u==p || color[u] ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span>( bridge.<span class="built_in">count</span>(&#123;<span class="built_in">min</span>(i,u), <span class="built_in">max</span>(i,u)&#125;) ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="built_in">dfs2</span>( u, i );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs3</span><span class="params">( <span class="type">int</span> i, <span class="type">int</span> p )</span></span>&#123;</span><br><span class="line">    dp[i]=sz[i];</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> u : b[i] )&#123;</span><br><span class="line">        <span class="keyword">if</span>( u==p ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="built_in">dfs3</span>( u, i );</span><br><span class="line">        dp[i]+=dp[u];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m &gt;&gt; q;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;m ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> x, y;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">        a[x].<span class="built_in">push_back</span>(y);</span><br><span class="line">        a[y].<span class="built_in">push_back</span>(x);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    dep[<span class="number">0</span>]=low[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">dfs</span>( <span class="number">0</span>, <span class="number">-1</span> );</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    cout &lt;&lt; bridge.size() &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line"><span class="comment">    for( auto u : bridge )&#123;</span></span><br><span class="line"><span class="comment">        cout &lt;&lt; u.first &lt;&lt; &#x27; &#x27; &lt;&lt; u.second &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">if</span>( color[i] ) <span class="keyword">continue</span>;</span><br><span class="line">        c++;</span><br><span class="line">        <span class="built_in">dfs2</span>( i, <span class="number">-1</span> );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">auto</span> [x, y] : bridge )&#123;</span><br><span class="line">        b[color[x]].<span class="built_in">push_back</span>(color[y]);</span><br><span class="line">        b[color[y]].<span class="built_in">push_back</span>(color[x]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">dfs3</span>( <span class="number">1</span>, <span class="number">-1</span> );</span><br><span class="line"></span><br><span class="line">   <span class="keyword">while</span>( q-- )&#123;</span><br><span class="line">        <span class="type">int</span> x, y;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">        <span class="keyword">if</span>( x&gt;y ) <span class="built_in">swap</span>(x, y);</span><br><span class="line">        <span class="keyword">if</span>( bridge.<span class="built_in">count</span>(&#123;x, y&#125;) )&#123;</span><br><span class="line">            cout &lt;&lt; n-<span class="built_in">min</span>( dp[color[x]], dp[color[y]] ) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            cout &lt;&lt; n &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/TOI202511P3.png" alt="P3"></p>
+</details>
+<h2 id="檢討">檢討</h2>
+<p>P1 : 沒事，<s>我數學很好</s><br>
+P2 : 沒事，我會 DP<br>
+P3 : 應該有可以一邊找橋一邊編號的方法，要去查一下<br>
+總體狀況滿好的，超冷靜，看來生病大腦就沒能量燒雞了 &gt; ᗜ &lt;<br>
+恭喜 combo 1 ✧*｡ ٩(ˊᗜˋ*)و✧*</p>
+]]></content>
+      <tags>
+        <tag>TOI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>EGOI 國培 ( 以及阿飄 )</title>
     <url>/2026/04/13/EGOI-%E5%9C%8B%E5%9F%B9/</url>
     <content><![CDATA[<p>很高興我可以當上 EGOI 國手，<s>雖然沒有很意外</s>，但就是有種想像的東西成真了的感覺吧。<br>
@@ -1617,258 +1775,6 @@ pA $13$ 拿到 <font color=#FF0000> WA WA WA </font> ，十分不妙，出去吃
       </tags>
   </entry>
   <entry>
-    <title>TOI 潛力組 202509</title>
-    <url>/2025/10/01/TOI-%E6%BD%9B%E5%8A%9B%E7%B5%84-202509/</url>
-    <content><![CDATA[<p>好久沒打 TOI 了喔<br>
-不知道能不能破台 combo 5 呢 ~</p>
-<h2 id="P2">P2</h2>
-<p>打潛力組策略就是開場先看題，我覺得 P2 最簡單 (●’◡’●)</p>
-<details>
-<summary>暴雷</summary>
-<p>就看 B 陣列然後分成很多小塊，怎麼分就看是不是和在 A 裡的時候鄰居一樣，不一樣就一定要切，一樣就算在同一塊裡面，答案是切幾刀，所以就是塊數減一。但我實作爛了，拿到好多<font color=#ffff00> WA </font> 好可怕 இ௰இ</p>
-<p>還有就是小心數字到 $10^9$，需要 <code>map</code>。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[<span class="number">200005</span>];</span><br><span class="line"><span class="type">int</span> b[<span class="number">200005</span>];</span><br><span class="line">unordered_map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; p;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">        p[a[i]]=i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">    cin &gt;&gt; b[<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">2</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        cin &gt;&gt; b[i];</span><br><span class="line">        <span class="keyword">if</span>( p[b[i<span class="number">-1</span>]]!=p[b[i]]<span class="number">-1</span> ) cnt++;</span><br><span class="line">        <span class="comment">//cout &lt;&lt; p[b[i-1]] &lt;&lt; &#x27; &#x27; &lt;&lt; p[b[i]] &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; cnt;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/TOI202509P2.png" alt="P2"></p>
-</details>
-<p>寫完之後看一下 P1 和 P3，P3 是拓樸大裸題但字串分析一臉討厭， <s>先丟掉</s><br>
-P1 看起來有點想法但又不太確定，感覺可以想想看，真有趣，好想寫喔 (❁´◡`❁)</p>
-<h2 id="P1">P1</h2>
-<p>P1 超有料的，愛 P1<br>
-以下是心路歷程</p>
-<details>
-<summary>暴雷</summary>
-<p>首先就是把數字 $x$ 切成很多塊嘛，至於要切幾塊…可以發現切越多塊得分會先上升再下降，像是 $X=5$，切一塊 $5$ 分，兩塊 $6$ 分，三塊 $4$ 分，這樣。有個峰的話是不是要三分搜，但我超不會三分搜欸，上次寫是不是選訓的時候啊…喔好像不用，判斷就 <code>cal(mid)&gt;cal(mid+1)</code> 這樣子就可以好好二分搜了耶，萬歲 (≧∇≦)ﾉ</p>
-<p>等等好像又不對了，數字很大要 mod 耶，這樣要怎麼比大小啊，燒雞 Σ(っ °Д °;)っ</p>
-<p>既然不是 X 分搜，代表說一定要貪心構造出最佳解，呃<br>
-感覺全部切成很多個 $2$ 好嗎？指數函數是不是長大很快…但是 $3^2=9$ 比 $2^3=8$ 好耶，代表說我 $X=6$ 要優先切成兩個 $3$。而且 $x=12$ 切成四個 $3$ 是 $3^4=81$，比 $4^3=64$ 好，所以切的大小 $3$ 是最好的，要優先切成大小是 $3$，多的部分再用 $2$ 來補。那先寫個 $X\leq15$ 的子題看看這樣是不是好的。</p>
-<p>哇是好的耶 (☆▽☆)<br>
-那就按照上面的策略寫吧 ~</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line">ll <span class="type">const</span> mod=<span class="number">1e9</span><span class="number">+7</span>;</span><br><span class="line">ll ans[<span class="number">16</span>]=&#123;<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">12</span>, <span class="number">18</span>, <span class="number">27</span>, <span class="number">36</span>, <span class="number">54</span>, <span class="number">81</span>, <span class="number">108</span>, <span class="number">162</span>, <span class="number">243</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">pw</span><span class="params">( ll x, ll y )</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>( y==<span class="number">0</span> ) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>( y==<span class="number">1</span> ) <span class="keyword">return</span> x;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        ll z=<span class="built_in">pw</span>( x, y/<span class="number">2</span> );</span><br><span class="line">        <span class="keyword">if</span>( y&amp;<span class="number">1</span> ) <span class="keyword">return</span> z*z%mod*x%mod;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> z*z%mod;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> t;</span><br><span class="line">    cin &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span>( t-- )&#123;</span><br><span class="line">        ll x;</span><br><span class="line">        cin &gt;&gt; x;</span><br><span class="line">        <span class="keyword">if</span>( x&lt;=<span class="number">15</span> ) cout &lt;&lt; ans[x] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            ll y=x/<span class="number">6</span>;</span><br><span class="line">            ll z=x%<span class="number">6</span>;</span><br><span class="line">            <span class="keyword">if</span>( z!=<span class="number">0</span> )&#123;</span><br><span class="line">                y--;</span><br><span class="line">                z+=<span class="number">6</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            cout &lt;&lt; <span class="built_in">pw</span>( ans[<span class="number">6</span>], y )*ans[z]%mod &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/TOI202509P1.png" alt="P1"></p>
-</details>
-<p>但是時間只剩 12 分鐘了， P3 至少要 15~20 分吧，可惡</p>
-<h2 id="P3-補題">P3 (補題)</h2>
-<details>
-<summary>暴雷</summary>
-<p>一開始就先字串處理嘛，<s>會不會他的考點其實是這個</s>，然後從有賦值的儲存格開始拓樸，就做完了。<br>
-那個 <code>ana</code> 是 <code>analysis</code> 的意思喔 （￣ ︶ ￣）</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">200</span>][<span class="number">30</span>];</span><br><span class="line"><span class="type">int</span> ind[<span class="number">200005</span>];</span><br><span class="line"><span class="type">int</span> v[<span class="number">200</span>][<span class="number">30</span>];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; a[<span class="number">200005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ana</span><span class="params">( string s, <span class="type">int</span> i, <span class="type">int</span> j )</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> k=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>( s[k]!=<span class="string">&#x27;+&#x27;</span> ) k++;</span><br><span class="line">    <span class="keyword">if</span>( s[<span class="number">1</span>]&gt;=<span class="string">&#x27;A&#x27;</span> &amp;&amp; s[<span class="number">1</span>]&lt;=<span class="string">&#x27;Z&#x27;</span> )&#123;</span><br><span class="line">        <span class="type">int</span> f=<span class="built_in">stoi</span>(s.<span class="built_in">substr</span>(<span class="number">2</span>, k<span class="number">-2</span>))*<span class="number">100</span>+s[<span class="number">1</span>]-<span class="string">&#x27;A&#x27;</span><span class="number">+1</span>;</span><br><span class="line">        a[f].<span class="built_in">push_back</span>(i*<span class="number">100</span>+j);</span><br><span class="line">        ind[i*<span class="number">100</span>+j]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        v[i][j]+=(s[<span class="number">1</span>]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    k++;</span><br><span class="line">    <span class="keyword">if</span>( s[k]&gt;=<span class="string">&#x27;A&#x27;</span> &amp;&amp; s[k]&lt;=<span class="string">&#x27;Z&#x27;</span> )&#123;</span><br><span class="line">        <span class="type">int</span> f=<span class="built_in">stoi</span>(s.<span class="built_in">substr</span>(k<span class="number">+1</span>))*<span class="number">100</span>+s[k]-<span class="string">&#x27;A&#x27;</span><span class="number">+1</span>;</span><br><span class="line">        a[f].<span class="built_in">push_back</span>(i*<span class="number">100</span>+j);</span><br><span class="line">        ind[i*<span class="number">100</span>+j]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        v[i][j]+=(s[k]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> j=<span class="number">1</span> ; j&lt;=m ; j++ )&#123;</span><br><span class="line">            string s;</span><br><span class="line">            cin &gt;&gt; s;</span><br><span class="line">            <span class="keyword">if</span>( s.<span class="built_in">length</span>()==<span class="number">1</span> )&#123;</span><br><span class="line">                v[i][j]=(s[<span class="number">0</span>]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">                q.<span class="built_in">push</span>( i*<span class="number">100</span>+j );</span><br><span class="line">                vis[i][j]=<span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>( s.<span class="built_in">length</span>()==<span class="number">4</span> )&#123;</span><br><span class="line">                v[i][j]=(s[<span class="number">1</span>]-<span class="string">&#x27;0&#x27;</span>+s[<span class="number">3</span>]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">                q.<span class="built_in">push</span>( i*<span class="number">100</span>+j );</span><br><span class="line">                vis[i][j]=<span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="built_in">ana</span>( s, i, j );</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>( !q.<span class="built_in">empty</span>() )&#123;</span><br><span class="line">        <span class="type">int</span> x=q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="type">int</span> i=x/<span class="number">100</span>;</span><br><span class="line">        <span class="type">int</span> j=x%<span class="number">100</span>;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> y : a[x] )&#123;</span><br><span class="line">            ind[y]--;</span><br><span class="line">            v[y/<span class="number">100</span>][y%<span class="number">100</span>]+=v[i][j];</span><br><span class="line">            <span class="keyword">if</span>( ind[y]==<span class="number">0</span> )&#123;</span><br><span class="line">                vis[y/<span class="number">100</span>][y%<span class="number">100</span>]=<span class="literal">true</span>;</span><br><span class="line">                q.<span class="built_in">push</span>(y);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;=n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> j=<span class="number">1</span> ; j&lt;=m ; j++ )&#123;</span><br><span class="line">            <span class="keyword">if</span>( !vis[i][j] ) cout &lt;&lt; <span class="string">&quot;ERROR &quot;</span>;</span><br><span class="line">            <span class="keyword">else</span> cout &lt;&lt; v[i][j] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/TOI202509P3.png" alt="P3"></p>
-</details>
-<h2 id="檢討">檢討</h2>
-<p>我覺得最大的問題是實作能力太爛，不管是 P2 卡 bug 太久還是不熟 P3 這種字串處理。應該一般人 P1 P3 西二取一的時候都會把水水的 P3 寫掉吧，畢竟穩定得分總比投資一個還不知道想的是不是對的的東西好。但就比賽體驗來講我還是會選 P1 吧，反正是練習賽，寫出來心情真的很好，<s>讓我差點忘記 combo 毀了</s>。正式賽的話我就不確定了，我覺得我可能會去寫 P3 ＞︿＜</p>
-]]></content>
-      <tags>
-        <tag>TOI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello Blog</title>
-    <url>/2025/09/22/Hello-Blog/</url>
-    <content><![CDATA[<h1>大大</h1>
-<h2 id="大">大</h2>
-<h3 id="中">中</h3>
-<p>單行程式 <code>ijk</code><br>
-一堆程式</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Blog!\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><s>劃掉</s></p>
-<span class="spoiler" onclick="this.classList.toggle('spoiler')"><span class="spoiler-blur ">1029</span></span>
-<p><em>斜斜的</em><br>
-<em>斜斜的</em><br>
-<strong>粗</strong><br>
-<u>底線</u><br>
-<font color=#FF0000> WA </font><br>
-<font color=#76F72D> AC </font></p>
-<details>
-<summary>暴雷</summary>
-<p>EGOI</p>
-<p><code>EGOI</code></p>
-<p>$EGOI$</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">mt19937 <span class="title">mt</span><span class="params">(chrono::steady_clock::now().time_since_epoch().count())</span></span>;</span><br></pre></td></tr></table></figure>
-</details>
-<p>$1+1=2$</p>
-<ol>
-<li>TOI</li>
-<li>EGOI</li>
-<li>APIO</li>
-<li>IOI</li>
-</ol>
-<blockquote>
-<p>EGOI</p>
-<blockquote>
-<p>EGOI</p>
-<blockquote>
-<p>EGOI</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p><a href="https://dailyakari.com/">點燈</a></p>
-<table>
-<thead>
-<tr>
-<th>Column 1</th>
-<th>Column 2</th>
-<th>Column 3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Text1</td>
-<td>Text2</td>
-<td>Text3</td>
-</tr>
-<tr>
-<td>Text4</td>
-<td>Text5</td>
-<td>Text6</td>
-</tr>
-</tbody>
-</table>
-<video src="影片" controls width="100%" height="auto">
-</video>
-]]></content>
-      <tags>
-        <tag>testing</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TOI 潛力組 202511</title>
-    <url>/2025/11/11/TOI-%E6%BD%9B%E5%8A%9B%E7%B5%84-202511/</url>
-    <content><![CDATA[<p>生病 ಥ_ಥ<br>
-但我覺得北二區之前大概是好不了了，所以要習慣一下。</p>
-<p>開場先看題。<br>
-P1 是數學，P2 是 DP，P3 是 BCC。</p>
-<h2 id="P2">P2</h2>
-<details>
-<summary>暴雷</summary>
-<p>P2 一看就是超級裸的背包 DP。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, x;</span><br><span class="line"><span class="type">int</span> dp[<span class="number">10005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; x;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;<span class="number">10005</span> ; i++ ) dp[i]=<span class="number">1e9</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> a, b;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">        b+=a;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> j=b ; j&lt;<span class="number">10005</span> ; j++ )&#123;</span><br><span class="line">            dp[j]=<span class="built_in">min</span>( dp[j], dp[j-b]+a );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> ans=<span class="number">1e9</span>;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=x ; i&lt;<span class="number">10005</span> ; i++ ) ans=<span class="built_in">min</span>( ans, dp[i] );</span><br><span class="line">    cout &lt;&lt; ans;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/TOI202511P2.png" alt="P2"></p>
-</details>
-<h2 id="P1">P1</h2>
-<details>
-<summary>暴雷</summary>
-<p>如果有 $n$ 個人帽子同一個顏色，那這 $n$ 個人都會看到 $n-1$。<br>
-如果有超過 $n$ 個人看到 $n-1$，那就代表要分多組。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> c[<span class="number">1005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> x;</span><br><span class="line">        cin &gt;&gt; x;</span><br><span class="line">        c[x<span class="number">+1</span>]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> all=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">1</span> ; i&lt;<span class="number">1005</span> ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> y=(c[i]/i);</span><br><span class="line">        <span class="keyword">if</span>( c[i]%i ) y++;</span><br><span class="line">        all+=i*y;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; all;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/TOI202511P1.png" alt="P1"></p>
-</details>
-<p>時間好多，看來有機會寫超不熟的 <code>BCC</code>。</p>
-<h2 id="P3">P3</h2>
-<details>
-<summary>暴雷</summary>
-<p>先把圖分成很多個邊雙連通分量，如果剪斷的邊不是橋那就沒有影響。<br>
-把雙連通分量們和橋們組成樹，然後就可以在上面 DP，就能知道剪斷某個橋會影響到下面多少個子樹。<br>
-實作一樣先<s>找出我的模板</s>先找出橋 (dfs) ，再把雙連通分量編號 (dfs2) ，最後再 DP (dfs3)。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, q, c;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; a[<span class="number">50005</span>];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; b[<span class="number">50005</span>]; <span class="comment">// BCC</span></span><br><span class="line">set&lt; pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; &gt; bridge;</span><br><span class="line"><span class="type">int</span> color[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> dep[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> low[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> sz[<span class="number">50005</span>];</span><br><span class="line"><span class="type">int</span> dp[<span class="number">50005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">( <span class="type">int</span> i, <span class="type">int</span> p )</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> u : a[i] )&#123;</span><br><span class="line">        <span class="keyword">if</span>( u==p ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span>( !dep[u] )&#123;</span><br><span class="line">            dep[u]=dep[i]<span class="number">+1</span>;</span><br><span class="line">            low[u]=dep[u];</span><br><span class="line">            <span class="built_in">dfs</span>( u, i );</span><br><span class="line">            low[i]=<span class="built_in">min</span>( low[i], low[u] );</span><br><span class="line">            <span class="keyword">if</span>( low[u]&gt;dep[i] ) bridge.<span class="built_in">insert</span>(&#123;<span class="built_in">min</span>(i,u), <span class="built_in">max</span>(i,u)&#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            low[i]=<span class="built_in">min</span>( low[i], dep[u] );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs2</span><span class="params">( <span class="type">int</span> i, <span class="type">int</span> p )</span></span>&#123;</span><br><span class="line">    sz[c]++;</span><br><span class="line">    color[i]=c;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> u : a[i] )&#123;</span><br><span class="line">        <span class="keyword">if</span>( u==p || color[u] ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span>( bridge.<span class="built_in">count</span>(&#123;<span class="built_in">min</span>(i,u), <span class="built_in">max</span>(i,u)&#125;) ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="built_in">dfs2</span>( u, i );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs3</span><span class="params">( <span class="type">int</span> i, <span class="type">int</span> p )</span></span>&#123;</span><br><span class="line">    dp[i]=sz[i];</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> u : b[i] )&#123;</span><br><span class="line">        <span class="keyword">if</span>( u==p ) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="built_in">dfs3</span>( u, i );</span><br><span class="line">        dp[i]+=dp[u];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m &gt;&gt; q;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;m ; i++ )&#123;</span><br><span class="line">        <span class="type">int</span> x, y;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">        a[x].<span class="built_in">push_back</span>(y);</span><br><span class="line">        a[y].<span class="built_in">push_back</span>(x);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    dep[<span class="number">0</span>]=low[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">dfs</span>( <span class="number">0</span>, <span class="number">-1</span> );</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    cout &lt;&lt; bridge.size() &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line"><span class="comment">    for( auto u : bridge )&#123;</span></span><br><span class="line"><span class="comment">        cout &lt;&lt; u.first &lt;&lt; &#x27; &#x27; &lt;&lt; u.second &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">if</span>( color[i] ) <span class="keyword">continue</span>;</span><br><span class="line">        c++;</span><br><span class="line">        <span class="built_in">dfs2</span>( i, <span class="number">-1</span> );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">auto</span> [x, y] : bridge )&#123;</span><br><span class="line">        b[color[x]].<span class="built_in">push_back</span>(color[y]);</span><br><span class="line">        b[color[y]].<span class="built_in">push_back</span>(color[x]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">dfs3</span>( <span class="number">1</span>, <span class="number">-1</span> );</span><br><span class="line"></span><br><span class="line">   <span class="keyword">while</span>( q-- )&#123;</span><br><span class="line">        <span class="type">int</span> x, y;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">        <span class="keyword">if</span>( x&gt;y ) <span class="built_in">swap</span>(x, y);</span><br><span class="line">        <span class="keyword">if</span>( bridge.<span class="built_in">count</span>(&#123;x, y&#125;) )&#123;</span><br><span class="line">            cout &lt;&lt; n-<span class="built_in">min</span>( dp[color[x]], dp[color[y]] ) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            cout &lt;&lt; n &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/TOI202511P3.png" alt="P3"></p>
-</details>
-<h2 id="檢討">檢討</h2>
-<p>P1 : 沒事，<s>我數學很好</s><br>
-P2 : 沒事，我會 DP<br>
-P3 : 應該有可以一邊找橋一邊編號的方法，要去查一下<br>
-總體狀況滿好的，超冷靜，看來生病大腦就沒能量燒雞了 &gt; ᗜ &lt;<br>
-恭喜 combo 1 ✧*｡ ٩(ˊᗜˋ*)و✧*</p>
-]]></content>
-      <tags>
-        <tag>TOI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Virtual EGOI 2021</title>
-    <url>/2026/03/31/Virtual-EGOI-2021/</url>
-    <content><![CDATA[<h1>Day1</h1>
-<p>Day1 是 3/31 在武陵 vir 的，因為我 <code>14:00</code> 要去烤餅乾，所以從 <code>8:30</code> 開始打。</p>
-<p><code>0:55</code><br>
-看完題目了，精神分數 <code>100/48/9?/0</code>。<br>
-呃其實我沒認真看第四題。</p>
-<p><code>1:03</code><br>
-<code>100/0/0/0</code>。<br>
-pA 就很簡單，接下來決定先寫 pB $48$ 驗想法。</p>
-<p><code>1:33</code><br>
-<code>100/48/0/0</code>。<br>
-代表說 pB 由近到遠拔掉是好的，然後想辦法優化，像是快速找出最近的 pair ( ? ? ?</p>
-<p><code>2:00</code><br>
-pB 一直想到不可做的超詭異線段樹，先跳去 pC。<br>
-看一下之後發現隨機是不是可以做 $100$。</p>
-<p><code>2:39</code><br>
-<code>100/48/51/0</code>，pC 後面兩個子題 RE，有點怪。</p>
-<p><code>2:43</code><br>
-<code>100/48/100/0</code>。<br>
-原來是我 j 打成 i ，超好笑。</p>
-<p><code>4:00</code><br>
-一直想 pB 但沒有進展，要跳去 pD 了。</p>
-<p><code>5:00</code><br>
-不會做 pD 也不會做 pB，唉唉唉。</p>
-<p>結果是 <code>100/48/100/0</code>。</p>
-<hr>
-<h1>Day2</h1>
-<p>Day2 是 4/2 在武陵 vir 的，因為我 <code>14:00</code> 要去上畫地圖課 ( 這是我最喜歡的課欸，要上啦 )，所以從 <code>8:30</code> 開始打。</p>
-<p><code>1:00</code><br>
-看完全部題目，( 對我有看 pD )，精神分數 <code>100/100/7/10</code>。</p>
-<p><code>1:02</code><br>
-pA greedy 拿了一個 $42$，現在 <code>42/0/0/0</code>。<br>
-我好像在 JOIG 看過什麼類似的欸，該不會要 DP。</p>
-<p><code>1:13</code><br>
-DP 過了，成功拿到 <code>100/0/0/0</code>。</p>
-<p><code>1:17</code><br>
-驗一下 pD 我亂 claim 的東西，拿到 $0$ 分，所以精神分數下跌 <code>100/100/7/0</code>。</p>
-<p><code>1:57</code><br>
-確認一下細節之後開寫 pB，<code>100/100/0/0</code>。</p>
-<p><code>2:01</code><br>
-再亂 claim 一次 pD ，再拿一次 $0$。<br>
-我覺得 pD 先放著好了，根本不會做。</p>
-<p><code>3:00</code><br>
-好像成功想到 pC $16$ 分了，以為可以推廣到 $100$ 發現是爛的，反正先做掉。</p>
-<p><code>3:19</code><br>
-pC 拿 $0$ 分了，原來我又把 i 打成 1 了，超級好笑。</p>
-<p><code>3:26</code><br>
-<code>100/100/16/0</code>。</p>
-<p><code>4:02</code><br>
-因為一直沒有進展，所以先把 pC 暴力寫完，<code>100/100/23/0</code>。</p>
-<p><code>5:00</code><br>
-還是沒有進展。</p>
-<p>最後結果 <code>100/100/23/0</code>。</p>
-<hr>
-<h1>傷心的結果</h1>
-<p>Day1 <code>100/48/100/0</code>。<br>
-Day2 <code>100/100/23/0</code>。<br>
-Total <code>471</code>，rk.25。</p>
-<p><a href="https://stats.egoi.org/editions/2021/results/">記分板</a>，金牌線是 <code>539</code>，所以我拿到銀牌了啦 ಥ_ಥ。</p>
-<hr>
-<h1>檢討</h1>
-<h2 id="Day1">Day1</h2>
-<ol>
-<li>pB 沒做出來就是不應該 ( ˘︹˘ )。</li>
-<li>pD 暴力為什麼沒有寫 ( ˘︹˘ )。</li>
-<li>我是不是不太會區間 DP ?</li>
-</ol>
-<h2 id="Day2">Day2</h2>
-<ol>
-<li>C 沒有想樹那個子題。</li>
-<li><code>check</code> 函數沒有初始化拿到很多 WA ( 補題的時候 )。</li>
-</ol>
-<h2 id="General">General</h2>
-<ol>
-<li>打錯變數的名字。</li>
-<li>pD 拿 $0$ 分 ( 至少 day1 滿不應該的 )。</li>
-<li>是不是要對後半場坐牢擬定什麼策略 ? 這是策略能解決的嗎，如果是的話那應該要逼自己去想子題？</li>
-<li>給每一題比較久的思考時間是好的，至少比跳來跳去好很多 ( 應該 )。</li>
-</ol>
-<hr>
-<h1>其他話</h1>
-<p>我很喜歡 day1 C 和 day2 C。<br>
-因為 4/1 是校慶，我原本想說可以 vir Day2，但是我爸媽不給請假學校又沒安靜的地方，<s>呃反正 Day1 和 Day2 中間本來就休一天。</s><br>
-我把 day2 D 丟給謝鈞因為他想知道我都在幹嘛，結果他也 claim 了一個跟我一模一樣的 WA 的東西。<br>
-摩卡超級強，好可惜他沒有進二階 (˘･_･˘) 。</p>
-<p>EGOI 測資是不是有點像 TOI，因為我一個大 bug 都可以撈不少分、二分搜區間太小竟然可以過，還有 $O(N^4)$ 可以拿到 $O(N^3)$ 子題的分數好棒。</p>
-]]></content>
-      <tags>
-        <tag>training</tag>
-        <tag>EGOI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Virtual EGOI 2022</title>
     <url>/2026/04/07/Virtual-EGOI-2022/</url>
     <content><![CDATA[<h1>Day1</h1>
@@ -1970,6 +1876,188 @@ day2 D 打表非常不好玩。<br>
 <h1>題解</h1>
 <p>終於找到比我的瀏海還醜的東西了，看來 EGOI 是希望我不要看解自己想。<br>
 <img src="/images/EGOI_2022_offi_sol.png" alt="P1"></p>
+]]></content>
+      <tags>
+        <tag>training</tag>
+        <tag>EGOI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Virtual EGOI 2024</title>
+    <url>/2026/04/28/Virtual-EGOI-2024/</url>
+    <content><![CDATA[<h1>Day1</h1>
+<p>Day1 是 4/28 在武陵 vir 的，從 <code>8:30</code> 開始打。</p>
+<p><code>0:45</code><br>
+今天題目看得有點快，<s>一定是因為我沒有好好看 pD</s>。<br>
+精神分數 <code>100/~100/12/0</code>。<br>
+pB 我覺得是 DP 優化但細節還沒想。</p>
+<p><code>0:55</code><br>
+<code>100/0/0/0</code>。<br>
+去 pB。</p>
+<p><code>1:03</code><br>
+<code>100/28/0/0</code>。<br>
+pB 先寫一個暴力驗 DP 是好的，接下來優化 let’s go。</p>
+<p><code>1:21</code><br>
+<code>100/100/0/0</code>。<br>
+寫了一個小線段樹，今天進度有點快，現在就 $200$ 了。<br>
+去好好想 pC。</p>
+<p><code>1:42</code><br>
+<code>100/100/12/0</code>。<br>
+先把我會的 $12$ 分拿到。</p>
+<p><code>2:21</code><br>
+$O(N^2)$ WA 了，有點怪欸。<br>
+是說我這個子題因為某陣列初始化把 $j$ 打成 $i$ 花很久時間。</p>
+<p><code>2:23</code><br>
+<code>100/100/35/0</code>。<br>
+差不多半場了，應該要想想辦法弄 pD 了。</p>
+<p><code>3:14</code><br>
+因為 pD $0$ 想法，感覺資訊被我傳一傳就會弄丟，所以又來做 pC 子題，拿到 WA。</p>
+<p><code>3:26</code><br>
+<code>100/100/62/0</code>。<br>
+忘記判到樹的某一層有可能是空的了。<br>
+接下來 pD pC 交替想。</p>
+<p><code>4:14</code><br>
+<code>100/100/62/10</code>。<br>
+可以用 XOR 把資訊包在一起欸，再 XOR 一次資訊就回來了，很棒。<br>
+現在我會做 swap 了。</p>
+<p><code>4:30</code><br>
+<code>100/100/62/19</code>。<br>
+會 swap 有 $19$ 分。</p>
+<p><code>4:58</code><br>
+<code>100/100/62/32</code>。<br>
+用類似的方法做 shift，但我發現我只會做一個方向的，另一個方向還沒想到，然後也沒時間了。</p>
+<p>結果是 <code>100/100/62/32</code>。</p>
+<hr>
+<h1>DAY 2</h1>
+<p>Day2 是 4/29 在武陵 vir 的，從 <code>9:00</code> 開始打。<br>
+其實我今天特別猶豫要不要打，因為星期三圖書館有上課的人，有點吵，但我還是打了。</p>
+<p><code>0:40</code><br>
+<s>好想睡覺喔，旁邊討論室好吵喔</s>。<br>
+精神分數 <code>100/25/?/?</code>。<br>
+pA 最多只會走一次直徑欸，哈哈哈。</p>
+<p><code>1:02</code><br>
+<code>100/0/0/0</code>。<br>
+pB 我覺得是把前面某一坨人移到後面，然後亂猜他凸函數所以來寫二分搜。</p>
+<p><code>1:39</code><br>
+<code>100/44/0/0</code>。<br>
+有點怪了，我以為我的二分搜很對，然後他 check 有夠難寫。<br>
+調一調覺得沒料了，這個應該是假解，感謝 EGOI 送我 $44$ 分。<br>
+( by 事後 : 他根本不是凸函數，而且確實是假解 )</p>
+<p><code>2:11</code><br>
+<code>100/100/0/0</code>。<br>
+突然想到一個很好寫的貪心，結果過了欸。<br>
+pC pD let’s go。</p>
+<p><code>2:31</code><br>
+<code>100/100/0/14.803203</code>。<br>
+pD clique 子題拿到 $4.803203$ 分，star 子題拿好拿滿。</p>
+<p><code>3:16</code><br>
+<code>100/100/0/34</code>。<br>
+會做 path 了，因為 clique 一定可以弄出一條 path，所以就一起做完了。</p>
+<p><code>4:18</code><br>
+<code>100/100/22/34</code>。<br>
+想 + 寫很久之後用 $O(N^2)$ 拿到 pC $22$。<br>
+之後就沒有進展了。</p>
+<p>結果是 <code>100/100/22/34</code>。</p>
+<hr>
+<h1>結果</h1>
+<p>Day1 <code>100/100/62/32</code>。<br>
+Day2 <code>100/100/22/34</code>。<br>
+Total <code>550</code>，rk.11。</p>
+<p><a href="https://stats.egoi.org/editions/2024/results/">記分板</a>，金牌線是 <code>510</code>。</p>
+]]></content>
+      <tags>
+        <tag>training</tag>
+        <tag>EGOI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Virtual EGOI 2021</title>
+    <url>/2026/03/31/Virtual-EGOI-2021/</url>
+    <content><![CDATA[<h1>Day1</h1>
+<p>Day1 是 3/31 在武陵 vir 的，因為我 <code>14:00</code> 要去烤餅乾，所以從 <code>8:30</code> 開始打。</p>
+<p><code>0:55</code><br>
+看完題目了，精神分數 <code>100/48/9?/0</code>。<br>
+呃其實我沒認真看第四題。</p>
+<p><code>1:03</code><br>
+<code>100/0/0/0</code>。<br>
+pA 就很簡單，接下來決定先寫 pB $48$ 驗想法。</p>
+<p><code>1:33</code><br>
+<code>100/48/0/0</code>。<br>
+代表說 pB 由近到遠拔掉是好的，然後想辦法優化，像是快速找出最近的 pair ( ? ? ?</p>
+<p><code>2:00</code><br>
+pB 一直想到不可做的超詭異線段樹，先跳去 pC。<br>
+看一下之後發現隨機是不是可以做 $100$。</p>
+<p><code>2:39</code><br>
+<code>100/48/51/0</code>，pC 後面兩個子題 RE，有點怪。</p>
+<p><code>2:43</code><br>
+<code>100/48/100/0</code>。<br>
+原來是我 j 打成 i ，超好笑。</p>
+<p><code>4:00</code><br>
+一直想 pB 但沒有進展，要跳去 pD 了。</p>
+<p><code>5:00</code><br>
+不會做 pD 也不會做 pB，唉唉唉。</p>
+<p>結果是 <code>100/48/100/0</code>。</p>
+<hr>
+<h1>Day2</h1>
+<p>Day2 是 4/2 在武陵 vir 的，因為我 <code>14:00</code> 要去上畫地圖課 ( 這是我最喜歡的課欸，要上啦 )，所以從 <code>8:30</code> 開始打。</p>
+<p><code>1:00</code><br>
+看完全部題目，( 對我有看 pD )，精神分數 <code>100/100/7/10</code>。</p>
+<p><code>1:02</code><br>
+pA greedy 拿了一個 $42$，現在 <code>42/0/0/0</code>。<br>
+我好像在 JOIG 看過什麼類似的欸，該不會要 DP。</p>
+<p><code>1:13</code><br>
+DP 過了，成功拿到 <code>100/0/0/0</code>。</p>
+<p><code>1:17</code><br>
+驗一下 pD 我亂 claim 的東西，拿到 $0$ 分，所以精神分數下跌 <code>100/100/7/0</code>。</p>
+<p><code>1:57</code><br>
+確認一下細節之後開寫 pB，<code>100/100/0/0</code>。</p>
+<p><code>2:01</code><br>
+再亂 claim 一次 pD ，再拿一次 $0$。<br>
+我覺得 pD 先放著好了，根本不會做。</p>
+<p><code>3:00</code><br>
+好像成功想到 pC $16$ 分了，以為可以推廣到 $100$ 發現是爛的，反正先做掉。</p>
+<p><code>3:19</code><br>
+pC 拿 $0$ 分了，原來我又把 i 打成 1 了，超級好笑。</p>
+<p><code>3:26</code><br>
+<code>100/100/16/0</code>。</p>
+<p><code>4:02</code><br>
+因為一直沒有進展，所以先把 pC 暴力寫完，<code>100/100/23/0</code>。</p>
+<p><code>5:00</code><br>
+還是沒有進展。</p>
+<p>最後結果 <code>100/100/23/0</code>。</p>
+<hr>
+<h1>傷心的結果</h1>
+<p>Day1 <code>100/48/100/0</code>。<br>
+Day2 <code>100/100/23/0</code>。<br>
+Total <code>471</code>，rk.25。</p>
+<p><a href="https://stats.egoi.org/editions/2021/results/">記分板</a>，金牌線是 <code>539</code>，所以我拿到銀牌了啦 ಥ_ಥ。</p>
+<hr>
+<h1>檢討</h1>
+<h2 id="Day1">Day1</h2>
+<ol>
+<li>pB 沒做出來就是不應該 ( ˘︹˘ )。</li>
+<li>pD 暴力為什麼沒有寫 ( ˘︹˘ )。</li>
+<li>我是不是不太會區間 DP ?</li>
+</ol>
+<h2 id="Day2">Day2</h2>
+<ol>
+<li>C 沒有想樹那個子題。</li>
+<li><code>check</code> 函數沒有初始化拿到很多 WA ( 補題的時候 )。</li>
+</ol>
+<h2 id="General">General</h2>
+<ol>
+<li>打錯變數的名字。</li>
+<li>pD 拿 $0$ 分 ( 至少 day1 滿不應該的 )。</li>
+<li>是不是要對後半場坐牢擬定什麼策略 ? 這是策略能解決的嗎，如果是的話那應該要逼自己去想子題？</li>
+<li>給每一題比較久的思考時間是好的，至少比跳來跳去好很多 ( 應該 )。</li>
+</ol>
+<hr>
+<h1>其他話</h1>
+<p>我很喜歡 day1 C 和 day2 C。<br>
+因為 4/1 是校慶，我原本想說可以 vir Day2，但是我爸媽不給請假學校又沒安靜的地方，<s>呃反正 Day1 和 Day2 中間本來就休一天。</s><br>
+我把 day2 D 丟給謝鈞因為他想知道我都在幹嘛，結果他也 claim 了一個跟我一模一樣的 WA 的東西。<br>
+摩卡超級強，好可惜他沒有進二階 (˘･_･˘) 。</p>
+<p>EGOI 測資是不是有點像 TOI，因為我一個大 bug 都可以撈不少分、二分搜區間太小竟然可以過，還有 $O(N^4)$ 可以拿到 $O(N^3)$ 子題的分數好棒。</p>
 ]]></content>
       <tags>
         <tag>training</tag>
@@ -2082,94 +2170,6 @@ day2 pC subtask 2 做法附贈 subtask 1，而且我很確定這個東西不應�
 ]]></content>
       <tags>
         <tag>other</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Virtual EGOI 2024</title>
-    <url>/2026/04/28/Virtual-EGOI-2024/</url>
-    <content><![CDATA[<h1>Day1</h1>
-<p>Day1 是 4/28 在武陵 vir 的，從 <code>8:30</code> 開始打。</p>
-<p><code>0:45</code><br>
-今天題目看得有點快，<s>一定是因為我沒有好好看 pD</s>。<br>
-精神分數 <code>100/~100/12/0</code>。<br>
-pB 我覺得是 DP 優化但細節還沒想。</p>
-<p><code>0:55</code><br>
-<code>100/0/0/0</code>。<br>
-去 pB。</p>
-<p><code>1:03</code><br>
-<code>100/28/0/0</code>。<br>
-pB 先寫一個暴力驗 DP 是好的，接下來優化 let’s go。</p>
-<p><code>1:21</code><br>
-<code>100/100/0/0</code>。<br>
-寫了一個小線段樹，今天進度有點快，現在就 $200$ 了。<br>
-去好好想 pC。</p>
-<p><code>1:42</code><br>
-<code>100/100/12/0</code>。<br>
-先把我會的 $12$ 分拿到。</p>
-<p><code>2:21</code><br>
-$O(N^2)$ WA 了，有點怪欸。<br>
-是說我這個子題因為某陣列初始化把 $j$ 打成 $i$ 花很久時間。</p>
-<p><code>2:23</code><br>
-<code>100/100/35/0</code>。<br>
-差不多半場了，應該要想想辦法弄 pD 了。</p>
-<p><code>3:14</code><br>
-因為 pD $0$ 想法，感覺資訊被我傳一傳就會弄丟，所以又來做 pC 子題，拿到 WA。</p>
-<p><code>3:26</code><br>
-<code>100/100/62/0</code>。<br>
-忘記判到樹的某一層有可能是空的了。<br>
-接下來 pD pC 交替想。</p>
-<p><code>4:14</code><br>
-<code>100/100/62/10</code>。<br>
-可以用 XOR 把資訊包在一起欸，再 XOR 一次資訊就回來了，很棒。<br>
-現在我會做 swap 了。</p>
-<p><code>4:30</code><br>
-<code>100/100/62/19</code>。<br>
-會 swap 有 $19$ 分。</p>
-<p><code>4:58</code><br>
-<code>100/100/62/32</code>。<br>
-用類似的方法做 shift，但我發現我只會做一個方向的，另一個方向還沒想到，然後也沒時間了。</p>
-<p>結果是 <code>100/100/62/32</code>。</p>
-<hr>
-<h1>DAY 2</h1>
-<p>Day2 是 4/29 在武陵 vir 的，從 <code>9:00</code> 開始打。<br>
-其實我今天特別猶豫要不要打，因為星期三圖書館有上課的人，有點吵，但我還是打了。</p>
-<p><code>0:40</code><br>
-<s>好想睡覺喔，旁邊討論室好吵喔</s>。<br>
-精神分數 <code>100/25/?/?</code>。<br>
-pA 最多只會走一次直徑欸，哈哈哈。</p>
-<p><code>1:02</code><br>
-<code>100/0/0/0</code>。<br>
-pB 我覺得是把前面某一坨人移到後面，然後亂猜他凸函數所以來寫二分搜。</p>
-<p><code>1:39</code><br>
-<code>100/44/0/0</code>。<br>
-有點怪了，我以為我的二分搜很對，然後他 check 有夠難寫。<br>
-調一調覺得沒料了，這個應該是假解，感謝 EGOI 送我 $44$ 分。<br>
-( by 事後 : 他根本不是凸函數，而且確實是假解 )</p>
-<p><code>2:11</code><br>
-<code>100/100/0/0</code>。<br>
-突然想到一個很好寫的貪心，結果過了欸。<br>
-pC pD let’s go。</p>
-<p><code>2:31</code><br>
-<code>100/100/0/14.803203</code>。<br>
-pD clique 子題拿到 $4.803203$ 分，star 子題拿好拿滿。</p>
-<p><code>3:16</code><br>
-<code>100/100/0/34</code>。<br>
-會做 path 了，因為 clique 一定可以弄出一條 path，所以就一起做完了。</p>
-<p><code>4:18</code><br>
-<code>100/100/22/34</code>。<br>
-想 + 寫很久之後用 $O(N^2)$ 拿到 pC $22$。<br>
-之後就沒有進展了。</p>
-<p>結果是 <code>100/100/22/34</code>。</p>
-<hr>
-<h1>結果</h1>
-<p>Day1 <code>100/100/62/32</code>。<br>
-Day2 <code>100/100/22/34</code>。<br>
-Total <code>550</code>，rk.11。</p>
-<p><a href="https://stats.egoi.org/editions/2024/results/">記分板</a>，金牌線是 <code>510</code>。</p>
-]]></content>
-      <tags>
-        <tag>training</tag>
-        <tag>EGOI</tag>
       </tags>
   </entry>
 </search>
