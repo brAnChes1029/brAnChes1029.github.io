@@ -194,320 +194,223 @@ p.spoiler {
     padding: 5px 10px 5px 25px;
   }
 </style>
-
 <p>我決定要來寫 EGOI 題解 ! !</p>
-<p>希望可以在 $2027$ 的國手開始 virtual 之前把我會的寫完…<del>欸不對，我也是 $2027$ 的國手，而且我已經 vir 完了</del>。<br>主要是我覺得研究英文題解有點麻煩，然後網路上的中文題解不一定好看，雖然我不一定很會寫題解，如果能幫到未來的國手就好了 (❁´◡`❁)</p>
-<p>「🟡」代表我不會寫滿分。<br>如果題解有任何問題歡迎跟我說。</p>
+<p>希望可以在 $2027$ 的國手開始 virtual 之前把我會的寫完…<s>欸不對，我也是 $2027$ 的國手，而且我已經 vir 完了</s>。<br>
+主要是我覺得研究英文題解有點麻煩，然後網路上的中文題解不一定好看，雖然我不一定很會寫題解，如果能幫到未來的國手就好了 (❁´◡`❁)</p>
+<p>「🟡」代表我不會寫滿分。<br>
+如果題解有任何問題歡迎跟我說。</p>
 <hr>
-<p><a target="_blank" rel="noopener" href="https://stats.egoi.org/tasks/">官方題解</a>，按題目名字，可以在右下方找到 solution。<br>台灣的翻譯題本是 <code>Chinese (zh_tw)</code> ( 從 $2026$ 才開始有台灣翻譯題本，<a target="_blank" rel="noopener" href="https://loj.ac/p?keyword=EGOI">這個中國 judge </a>有一些簡體中文翻譯 )。</p>
+<p><a target="_blank" rel="noopener" href="https://stats.egoi.org/tasks/">官方題解</a>，按題目名字，可以在右下方找到 solution。<br>
+台灣的翻譯題本是 <code>Chinese (zh_tw)</code> ( 從 $2026$ 才開始有台灣翻譯題本，<a target="_blank" rel="noopener" href="https://loj.ac/p?keyword=EGOI">這個中國 judge </a>有一些簡體中文翻譯 )。</p>
 <marquee direction="left" scrollamount="8"> 
-
-現在在施工，請不要靠近，會被磚頭砸到 ( ? ) ⚠️⚠️⚠️
-
+<p>現在在施工，請不要靠近，會被磚頭砸到 ( ? ) ⚠️⚠️⚠️</p>
 </marquee>
-
 <hr>
-<h1 id="2023"><a href="#2023" class="headerlink" title="2023"></a>2023</h1><h2 id="day1"><a href="#day1" class="headerlink" title="day1"></a>day1</h2><h3 id="Inflation"><a href="#Inflation" class="headerlink" title="Inflation"></a>Inflation</h3><h3 id="Padel-Prize-Pursuit"><a href="#Padel-Prize-Pursuit" class="headerlink" title="Padel Prize Pursuit"></a>Padel Prize Pursuit</h3><h3 id="Find-the-Box"><a href="#Find-the-Box" class="headerlink" title="Find the Box"></a>Find the Box</h3><details>
+<h1>2023</h1>
+<h2 id="day1">day1</h2>
+<h3 id="Inflation">Inflation</h3>
+<h3 id="Padel-Prize-Pursuit">Padel Prize Pursuit</h3>
+<h3 id="Find-the-Box">Find the Box</h3>
+<details>
 <summary> $Q=50$ ( $20$ 分 ) </summary>
-
-假設迷宮是 $n$ 列 $m$ 行。
-對於第 $i$ 列，往下移動到列最前面，然後從 $j=0$ 一直往右走到 $j=m-1$，箱子就在機器人停的格子右邊那格。
-
+<p>假設迷宮是 $n$ 列 $m$ 行。<br>
+對於第 $i$ 列，往下移動到列最前面，然後從 $j=0$ 一直往右走到 $j=m-1$，箱子就在機器人停的格子右邊那格。</p>
 </details>
-
 <details>
 <summary> full </summary>
-
-如果箱子在灰色區域，可以這樣走 :
-![](/images/EGOI_sol_2023d1pC_1.png)
-![](/images/EGOI_sol_2023d1pC_2.png)
-
-遇到箱子的時候就會「卡住」:
-![](/images/EGOI_sol_2023d1pC_3.png)
-
-所以最後再往下戳就可以知道箱子在哪了 !
-![](/images/EGOI_sol_2023d1pC_4.png)
-
-但如果箱子在粉紅色區域，就沒辦法知道了，所以需要先這樣走個 $L$ 形，排除箱子在粉色區域的可能性 :
-![](/images/EGOI_sol_2023d1pC_5.png)
-
-如果箱子不在粉色區域，代表第一列和最後一行都會是空的，就可以用上面說的方法在灰色區域找到箱子了。
-這樣是 $Q=2$。
-
+<p>如果箱子在灰色區域，可以這樣走 :<br>
+<img src="/images/EGOI_sol_2023d1pC-1.png" alt=""><br>
+<img src="/images/EGOI_sol_2023d1pC-2.png" alt=""></p>
+<p>遇到箱子的時候就會「卡住」:<br>
+<img src="/images/EGOI_sol_2023d1pC-3.png" alt=""></p>
+<p>所以最後再往下戳就可以知道箱子在哪了 !<br>
+<img src="/images/EGOI_sol_2023d1p-4.png" alt=""></p>
+<p>但如果箱子在粉紅色區域，就沒辦法知道了，所以需要先這樣走個 L 形，排除箱子在粉色區域的可能性 :<br>
+<img src="/images/EGOI_sol_2023d1pC-5.png" alt=""></p>
+<p>如果箱子不在粉色區域，代表第一列和最後一行都會是空的，就可以用上面說的方法在灰色區域找到箱子了。<br>
+這樣是 $Q=2$。</p>
 </details>
-
-<h3 id="Bikes-vs-Cars"><a href="#Bikes-vs-Cars" class="headerlink" title="Bikes vs Cars"></a>Bikes vs Cars</h3><h2 id="day2"><a href="#day2" class="headerlink" title="day2"></a>day2</h2><h3 id="Carnival-General"><a href="#Carnival-General" class="headerlink" title="Carnival General"></a>Carnival General</h3><details>
+<h3 id="Bikes-vs-Cars">Bikes vs Cars</h3>
+<h2 id="day2">day2</h2>
+<h3 id="Carnival-General">Carnival General</h3>
+<details>
 <summary> full </summary>
-
-對於第 $i$ 個人，假設他前面的人都坐好了，你會發現他前面最多只有一半的人不能和他坐在一起，最差也像這樣 :
-❌✅❌✅❌✅
-反正一定有位子坐，像上面那個例子就是坐最後面。
-所以可以直接開個 `vector` 之類的存目前的人都怎麼坐，然後對每個 $i$ 找他可以插入在哪，這樣是 $\mathcal{O}(N^2)$。
-
+<p>對於第 $i$ 個人，假設他前面的人都坐好了，你會發現他前面最多只有一半的人不能和他坐在一起，最差也像這樣 :<br>
+❌✅❌✅❌✅<br>
+反正一定有位子坐，像上面那個例子就是坐最後面。<br>
+所以可以直接開個 <code>vector</code> 之類的存目前的人都怎麼坐，然後對每個 $i$ 找他可以插入在哪，這樣是 $\mathcal{O}(N^2)$。</p>
 </details>
-
-<h3 id="Candy"><a href="#Candy" class="headerlink" title="Candy"></a>Candy</h3><details>
+<h3 id="Candy">Candy</h3>
+<details>
 <summary> full </summary>
-
-DP。
-列狀態 $dp[i][j][k]$ 代表考慮前 $i$ 個糖果中抓 $j$ 個，交換 $k$ 次可以達到的最大價值。
-如果不選第 $i$ 個糖果，那就是從 $dp[i-1][j][k]$ 直接轉移；如果要選第 $i$ 個，那就是從 $dp[i-1][j-1][k-(i-j)]+a[i]$ 轉移。
-最後就找最小的 $k$ 使 $dp[N][F][k]$ 大於價值 $T$，找不到就是 NO。
-
+<p>DP。<br>
+列狀態 $dp[i][j][k]$ 代表考慮前 $i$ 個糖果中抓 $j$ 個，交換 $k$ 次可以達到的最大價值。<br>
+如果不選第 $i$ 個糖果，那就是從 $dp[i-1][j][k]$ 直接轉移；如果要選第 $i$ 個，那就是從 $dp[i-1][j-1][k-(i-j)]+a[i]$ 轉移。<br>
+最後就找最小的 $k$ 使 $dp[N][F][k]$ 大於價值 $T$，找不到就是 NO。</p>
 </details>
-
-<h3 id="Sopsug"><a href="#Sopsug" class="headerlink" title="Sopsug"></a>Sopsug</h3><blockquote>
+<h3 id="Sopsug">Sopsug</h3>
+<blockquote>
 <p>這題本來的測資就不太好 ( 我和楊岳蓁的假解在 ojuz 都過了 )，<a target="_blank" rel="noopener" href="https://qoj.ac/contest/1355/problem/7160">QOJ</a> 的測資是有加強過的。</p>
 </blockquote>
 <details>
 <summary> subtask 1 & 2 </summary>
-
-構造看看。
-subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點數比 $3$ 大那就一定構的出來 ( 如果有人不能指到 $0$ 那就讓他指到隨便一個可以指到 $0$ 的人 )，$N=3$ 我是拿去亂窮舉每種方法。
-
+<p>構造看看。<br>
+subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點數比 $3$ 大那就一定構的出來 ( 如果有人不能指到 $0$ 那就讓他指到隨便一個可以指到 $0$ 的人 )，$N=3$ 我是拿去亂窮舉每種方法。</p>
 </details>
-
 <details>
 <summary> subtask 3 </summary>
-
-原本就存在的邊要構成很多有向樹才會有解，其它像是環、不是有向樹的 DAG 通通不合法，直接 NO。
-最後把有向樹們的樹根抓出來，全部連到某一棵有向樹的樹根就可以了。
-
+<p>原本就存在的邊要構成很多有向樹才會有解，其它像是環、不是有向樹的 DAG 通通不合法，直接 NO。<br>
+最後把有向樹們的樹根抓出來，全部連到某一棵有向樹的樹根就可以了。</p>
 </details>
-
 <details>
 <summary> subtask 4 & 5 </summary>
-
-如果有解，就是把有向樹們的樹根連到另一個有根樹的任一節點，這樣才可以構成一個大的有向樹。
-
-subtask 4 可以枚舉答案的樹根，然後用 DFS BFS 之類的任何方法把其它有向樹加進來，我的作法是 $\mathcal{O}(N)$ 枚舉答案的樹根，然後再 $\mathcal{O}(N)$ 考慮我要抓進來的每一個有向樹，再 $\mathcal{O}(N)$ 看可不可以順利連邊，這樣是 $\mathcal{O}(N^3)$。
-
-其實可以用 `set` 存所有還沒被抓進來的有向樹樹根，因為不能建的邊只有 $K$ 條，所以試圖建邊時最多失敗 $\mathcal{O}(K)$ 次，~~這樣就 OK 了~~，可以 $\mathcal{O}((N+K)logN)$ 過 subtask 5。
-
+<p>如果有解，就是把有向樹們的樹根連到另一個有根樹的任一節點，這樣才可以構成一個大的有向樹。</p>
+<p>subtask 4 可以枚舉答案的樹根，然後用 DFS BFS 之類的任何方法把其它有向樹加進來，我的作法是 $\mathcal{O}(N)$ 枚舉答案的樹根，然後再 $\mathcal{O}(N)$ 考慮我要抓進來的每一個有向樹，再 $\mathcal{O}(N)$ 看可不可以順利連邊，這樣是 $\mathcal{O}(N^3)$。</p>
+<p>其實可以用 <code>set</code> 存所有還沒被抓進來的有向樹樹根，因為不能建的邊只有 $K$ 條，所以試圖建邊時最多失敗 $\mathcal{O}(K)$ 次，<s>這樣就 OK 了</s>，可以 $\mathcal{O}((N+K)logN)$ 過 subtask 5。</p>
 </details>
 <details>
 <summary> full  </summary>
-
-最後問題只剩要找誰當答案的樹根，先考慮 $M=0$ ，這時全部有向樹都是一個點，比較好想。
-
-可以隨便以 $x$ 為根跑 DFS，看他可以到哪裡，如果他可以到全部人，那就很棒；不行的話再以某個沒被拜訪到的 $y$ 為根跑 DFS...假設最後一個開始 DFS 的是 $z$，代表說 $x$ $y$ 都不能當根，因為他們都到不了 $z$，這時候只要檢查 $z$ 是不是可行的根，你可以以 $z$ 為開頭跑一次 DFS 看是不是可以到所有人，如果可以那就成功找到根了，不行的話就確定無解了，輸出 NO。
-
-如果會做 $M=0$ 那很多有向樹的狀況也差不多了。
-
+<p>最後問題只剩要找誰當答案的樹根，先考慮 $M=0$ ，這時全部有向樹都是一個點，比較好想。</p>
+<p>可以隨便以 $x$ 為根跑 DFS，看他可以到哪裡，如果他可以到全部人，那就很棒；不行的話再以某個沒被拜訪到的 $y$ 為根跑 DFS…假設最後一個開始 DFS 的是 $z$，代表說 $x$ $y$ 都不能當根，因為他們都到不了 $z$，這時候只要檢查 $z$ 是不是可行的根，你可以以 $z$ 為開頭跑一次 DFS 看是不是可以到所有人，如果可以那就成功找到根了，不行的話就確定無解了，輸出 NO。</p>
+<p>如果會做 $M=0$ 那很多有向樹的狀況也差不多了。</p>
 </details>
-
-<h3 id="Guessing-Game"><a href="#Guessing-Game" class="headerlink" title="Guessing Game"></a>Guessing Game</h3><h1 id="2026"><a href="#2026" class="headerlink" title="2026"></a>2026</h1><h2 id="day1-1"><a href="#day1-1" class="headerlink" title="day1"></a>day1</h2><h3 id="Ferris-Wheel"><a href="#Ferris-Wheel" class="headerlink" title="Ferris Wheel"></a>Ferris Wheel</h3><details><summary> full </summary>
-
-`+` 是往比自己大的連，先把全部是 `+` 的零件分離出來，編號由小往大連。
-`-` 是往比自己小的連，把剩下的 `-` 的零件編號由大往小連。
-
-這時候會有兩條鍊，把 `+` 編號最大的連到 `-` 編號最大的，`-` 編號最小的連到 `+` 編號最小的。
-如果這裡連不上去 ( 也就是 $0$ 號是 `-` 或者 $N-1$ 號是 `+` 的情況 ) 就輸出 `NO`。
-
+<h3 id="Guessing-Game">Guessing Game</h3>
+<h1>2026</h1>
+<h2 id="day1-2">day1</h2>
+<h3 id="Ferris-Wheel">Ferris Wheel</h3>
+<details><summary> full </summary>
+<p><code>+</code> 是往比自己大的連，先把全部是 <code>+</code> 的零件分離出來，編號由小往大連。<br>
+<code>-</code> 是往比自己小的連，把剩下的 <code>-</code> 的零件編號由大往小連。</p>
+<p>這時候會有兩條鍊，把 <code>+</code> 編號最大的連到 <code>-</code> 編號最大的，<code>-</code> 編號最小的連到 <code>+</code> 編號最小的。<br>
+如果這裡連不上去 ( 也就是 $0$ 號是 <code>-</code> 或者 $N-1$ 號是 <code>+</code> 的情況 ) 就輸出 <code>NO</code>。</p>
 </details>
-
-<h3 id="Ovenmasters"><a href="#Ovenmasters" class="headerlink" title="Ovenmasters"></a>Ovenmasters</h3><details><summary> full </summary>
-
-首先每堆披薩第一個先加入答案，一個想法是可以從所有第二個的披薩和生氣的披薩這個集合裡面每次挑 index 最小的，然後看看能不能成功加進答案，之後再更新集合。
-不過這樣是 $\mathcal{O}(N^2 \log N)$。
-
-這邊有幾個觀察 :
-1. 先把所有桌子按照擺在最上面的披薩編號 $a[i]$ 由小到大排好，編號 $x$ 的披薩目標是放在第 $i$ 桌，必須先滿足 $a[i]<x<a[i+1]$ 這個條件，並且把 $x$ 號成功放上去之後桌上披薩的大小順序不會改變。
-2. 假設編號 $x$ 的披薩目標是放在 $i$ 桌，編號 $y$ 的披薩目標是放在 $j$ 桌 ( $i<j$ )，且這兩個披薩都有滿足上面的條件，一定有 $x<y$，而且一定是先放 $x$。
-3. 生氣的披薩在答案裡的順序一定是由小到大，因為如果在某一時間 $i$ 號披薩生氣地離開，所有編號比 $i$ 小的披薩也會生氣地離開。
-
-接下來就可以用 `priority_queue` 存現在滿足條件的的披薩們各自目標是放到哪一桌上 ( 由桌子編號小到編號大 )，把披薩擺上去，然後更新滿足條件的披薩放進 `priority_queue` ( 如果剛剛在 $i$ 桌放了一個新披薩，$i$ 和 $i-1$ 號桌都要更新，因為 $a[i]$ 變大了，可能會使 $i-1$ 號桌的候選披薩符合條件 )。
-至於生氣離開的披薩就看現在這個桌子的 $min=a[0]$ 是多少，就可以再用一個指針把所有 $x<a[0]$ 的生氣披薩放進答案。
-
+<h3 id="Ovenmasters">Ovenmasters</h3>
+<details><summary> full </summary>
+<p>首先每堆披薩第一個先加入答案，一個想法是可以從所有第二個的披薩和生氣的披薩這個集合裡面每次挑 index 最小的，然後看看能不能成功加進答案，之後再更新集合。<br>
+不過這樣是 $\mathcal{O}(N^2 \log N)$。</p>
+<p>這邊有幾個觀察 :</p>
+<ol>
+<li>先把所有桌子按照擺在最上面的披薩編號 $a[i]$ 由小到大排好，編號 $x$ 的披薩目標是放在第 $i$ 桌，必須先滿足 $a[i]&lt;x&lt;a[i+1]$ 這個條件，並且把 $x$ 號成功放上去之後桌上披薩的大小順序不會改變。</li>
+<li>假設編號 $x$ 的披薩目標是放在 $i$ 桌，編號 $y$ 的披薩目標是放在 $j$ 桌 ( $i&lt;j$ )，且這兩個披薩都有滿足上面的條件，一定有 $x&lt;y$，而且一定是先放 $x$。</li>
+<li>生氣的披薩在答案裡的順序一定是由小到大，因為如果在某一時間 $i$ 號披薩生氣地離開，所有編號比 $i$ 小的披薩也會生氣地離開。</li>
+</ol>
+<p>接下來就可以用 <code>priority_queue</code> 存現在滿足條件的的披薩們各自目標是放到哪一桌上 ( 由桌子編號小到編號大 )，把披薩擺上去，然後更新滿足條件的披薩放進 <code>priority_queue</code> ( 如果剛剛在 $i$ 桌放了一個新披薩，$i$ 和 $i-1$ 號桌都要更新，因為 $a[i]$ 變大了，可能會使 $i-1$ 號桌的候選披薩符合條件 )。<br>
+至於生氣離開的披薩就看現在這個桌子的 $min=a[0]$ 是多少，就可以再用一個指針把所有 $x&lt;a[0]$ 的生氣披薩放進答案。</p>
 </details>
-
-<h3 id="Biscuits"><a href="#Biscuits" class="headerlink" title="Biscuits"></a>Biscuits</h3><details><summary> subtask 1 </summary>
-
-答案是 $\lfloor \frac{N}{2} \rfloor$。
-
+<h3 id="Biscuits">Biscuits</h3>
+<details><summary> subtask 1 </summary>
+<p>答案是 $\lfloor \frac{N}{2} \rfloor$。</p>
 </details>
-
 <details><summary> subtask 3 </summary>
-
-這裡保證 :
-
-$$W_0 \geq W_1 \geq \dots \geq W_{N-1}$$
-
-Bianca 可以保證她的得分至少為：
-
-$$W_1 + W_3 + W_5 + \dots + W_{N-1-(N \bmod 2)}$$
-
-以下用數學歸納法證明 ( 完蛋我不會數學 )。
-
-對於 $N = 1$，Bianca 可以保證她的分數非負。
-
-假設對於大小為 $1 \dots N-1$ 的餅乾堆皆成立。當在一個大小為 $N$、權重為 $W_0, W_1, \dots, W_{N-1}$ 的餅乾堆上玩遊戲時，Bianca 會：
-
-- Aurora 選擇 $X = 1$，那麼 Bianca 就選擇 $Y = 0$，並且吃掉總權重至少為 $W_0 + (W_2 + W_4 + \dots) \geq W_1 + W_3 + W_5 + \dots$ 的餅乾。
-- 不然 Bianca 就選擇 $Y = 1$，並且吃掉總權重至少為 $W_1 + (W_3 + W_5 + \dots)$ 的餅乾。
-
-Aurora 可以總是選擇 $X = 0$ 確保 Bianca 吃掉的餅乾總權重最多為 $W_1 + W_3 + W_5 + \dots$。
-
+<p>這裡保證 :</p>
+<p>$$W_0 \geq W_1 \geq \dots \geq W_{N-1}$$</p>
+<p>Bianca 可以保證她的得分至少為：</p>
+<p>$$W_1 + W_3 + W_5 + \dots + W_{N-1-(N \bmod 2)}$$</p>
+<p>以下用數學歸納法證明 ( 完蛋我不會數學 )。</p>
+<p>對於 $N = 1$，Bianca 可以保證她的分數非負。</p>
+<p>假設對於大小為 $1 \dots N-1$ 的餅乾堆皆成立。當在一個大小為 $N$、權重為 $W_0, W_1, \dots, W_{N-1}$ 的餅乾堆上玩遊戲時，Bianca 會：</p>
+<ul>
+<li>Aurora 選擇 $X = 1$，那麼 Bianca 就選擇 $Y = 0$，並且吃掉總權重至少為 $W_0 + (W_2 + W_4 + \dots) \geq W_1 + W_3 + W_5 + \dots$ 的餅乾。</li>
+<li>不然 Bianca 就選擇 $Y = 1$，並且吃掉總權重至少為 $W_1 + (W_3 + W_5 + \dots)$ 的餅乾。</li>
+</ul>
+<p>Aurora 可以總是選擇 $X = 0$ 確保 Bianca 吃掉的餅乾總權重最多為 $W_1 + W_3 + W_5 + \dots$。</p>
 </details>
-
 <details><summary> subtask 2 & 4 </summary>
-
-考慮 DP。
-令 $dp[i]$ 代表考慮 $i, i+1, ... , N-1$ 塊餅乾，Bianca 可以獲得的最高權重。
-可以對每個 $dp[i]$ 枚舉 $X$、$Y$ 來轉移，每次 query 都重新 DP 一次。
-
+<p>考慮 DP。<br>
+令 $dp[i]$ 代表考慮 $i, i+1, … , N-1$ 塊餅乾，Bianca 可以獲得的最高權重。<br>
+可以對每個 $dp[i]$ 枚舉 $X$、$Y$ 來轉移，每次 query 都重新 DP 一次。</p>
 </details>
-
 <details><summary> subtask 5 & 6 </summary>
-
-優化剛剛的 DP。
-Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$ 轉移，所以 Aurora 可以把最好的轉移點擋掉，因此可以直接用 second max 轉移，這樣 DP 就變 $\mathcal{O}(N)$ 了。
-
+<p>優化剛剛的 DP。<br>
+Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$ 轉移，所以 Aurora 可以把最好的轉移點擋掉，因此可以直接用 second max 轉移，這樣 DP 就變 $\mathcal{O}(N)$ 了。</p>
 </details>
-
 <details><summary> full </summary>
-
-令 $B[i]=\text{secondmax}\_{i \le j}(W[j]+B[j+1])$。
-令 $A[i]=\text{max}\_{i \le j}(W[j]+B[j+1])$。
-令 $D[i]=A[i]-B[i]$，$S[i]=A[i]+B[i]$。
-
-現在要算 $S[i]$，因為 $S[i+1]=A[i+1]+B[i+1]$，而且現在多了新的轉移點 $W[i]+B[i+1]$，他一定比 $B[i+1]$ 大，如果他也比 $A[i+1]$ 大的話就會 $A[i]=W[i]+B[i+1]$，否則就會 $B[i]=W[i]+B[i+1]$，反正總有 $S[i]=A[i+1]+B[i+1]+W[i]=\sum_{j=i}^{N-1} W[j]$，所以 $A[0]+B[0]$ 會是全部餅乾的重量！
-
-現在改算 $D[i]$，看上面的討論可以發現 $D[i]=|{D[i+1]-W[i]}|$，而且 $D[i]$ 的值域頂多到 $W_{max}$。
-
-綜合上述，答案 $B[0]=\frac{\text{全部餅乾}-D[0]}{2}$。
-
-想快速知道 $D[0]$，可以用一個線段樹，每個 node $[L,R)$ 存一個大小 $W_{max}$ 的陣列 `bis`，`bis[x]` 代表如果 $D[R]=x$ 這時 $D[L]$ 的值，然後就可以像倍增 :
-
+<p>令 $B[i]=\text{secondmax}_{i \le j}(W[j]+B[j+1])$。<br>
+令 $A[i]=\text{max}_{i \le j}(W[j]+B[j+1])$。<br>
+令 $D[i]=A[i]-B[i]$，$S[i]=A[i]+B[i]$。</p>
+<p>現在要算 $S[i]$，因為 $S[i+1]=A[i+1]+B[i+1]$，而且現在多了新的轉移點 $W[i]+B[i+1]$，他一定比 $B[i+1]$ 大，如果他也比 $A[i+1]$ 大的話就會 $A[i]=W[i]+B[i+1]$，否則就會 $B[i]=W[i]+B[i+1]$，反正總有 $S[i]=A[i+1]+B[i+1]+W[i]=\sum_{j=i}^{N-1} W[j]$，所以 $A[0]+B[0]$ 會是全部餅乾的重量！</p>
+<p>現在改算 $D[i]$，看上面的討論可以發現 $D[i]=|{D[i+1]-W[i]}|$，而且 $D[i]$ 的值域頂多到 $W_{max}$。</p>
+<p>綜合上述，答案 $B[0]=\frac{\text{全部餅乾}-D[0]}{2}$。</p>
+<p>想快速知道 $D[0]$，可以用一個線段樹，每個 node $[L,R)$ 存一個大小 $W_{max}$ 的陣列 <code>bis</code>，<code>bis[x]</code> 代表如果 $D[R]=x$ 這時 $D[L]$ 的值，然後就可以像倍增 :</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">st[idx].bis[x]=st[lson].bis[st[rson].bis[x]] </span><br></pre></td></tr></table></figure>
-
 </details>
-
-<h3 id="Census"><a href="#Census" class="headerlink" title="Census"></a>Census</h3><details><summary> subtask 1 </summary>
-
-成員的 ID 是連續的 $0,1,2,...,N$，可以先在自己的 ID `write`，之後二分搜。
-
+<h3 id="Census">Census</h3>
+<details><summary> subtask 1 </summary>
+<p>成員的 ID 是連續的 $0,1,2,…,N$，可以先在自己的 ID <code>write</code>，之後二分搜。</p>
 </details>
-
 <details><summary> subtask 2 </summary>
-
-想要知道是不是存在除了自己的另一個人，可以先在自己的 ID `write`，然後去檢查其他地方有沒有被 `write`。
-但是要檢查的地方太多了 : (
-考慮 random 在 $0$ 到 $60$ 之間某個地方 `write`，然後去檢查其他 $60$ 個地方，雖然說有 $\frac{1}{61}$ 的機率兩個人會撞到，不過多送幾次就會過了。
-
+<p>想要知道是不是存在除了自己的另一個人，可以先在自己的 ID <code>write</code>，然後去檢查其他地方有沒有被 <code>write</code>。<br>
+但是要檢查的地方太多了 : (<br>
+考慮 random 在 $0$ 到 $60$ 之間某個地方 <code>write</code>，然後去檢查其他 $60$ 個地方，雖然說有 $\frac{1}{61}$ 的機率兩個人會撞到，不過多送幾次就會過了。</p>
 </details>
-
 <details><summary> subtask 3 </summary>
-
-使用像是線段樹那樣的想法。
-
-第一輪，大家都在自己的 ID 上 `write 1`，然後按照 ID 0-1 2-3 4-5 6-7 這樣分組去看對方寫什麼，對方寫 $1$ 就可以知道這組共有 $2$ 人，看到 $0$ 代表這組只有一個人。
-第二輪，01 23 45 67 各組決定出一個代表在 ID=0, 2, 4, 6 上 `write` 剛剛的總人數，然後按照 ID 01-23 45-67 這樣分組去看對方寫什麼，把對方寫的人數加進已知總人數。
-第三輪，0123 4567 各組決定出一個代表在 ID=0, 4 上 `write` 剛剛的總人數，然後按照 ID 0123-4567 這樣分組去看對方寫什麼，把對方寫的人數加進已知總人數。
-第四輪，最後的兩個人知道總人數，選一個代表把總人數 `write` 在 ID=0，之後其他人去 `read`。
-
-各組要決定出一個代表才不會有多個人在同一個 ID 上 `write`，至於怎麼決定出一個代表，如果兩小組中都有人，就選編號小的。
-
-這個想法可以推廣到 subtask 4，只能寫 0/1 的話，就把總人數用二進位多分幾次傳，可以拿到一些分數。
-
+<p>使用像是線段樹那樣的想法。</p>
+<p>第一輪，大家都在自己的 ID 上 <code>write 1</code>，然後按照 ID 0-1 2-3 4-5 6-7 這樣分組去看對方寫什麼，對方寫 $1$ 就可以知道這組共有 $2$ 人，看到 $0$ 代表這組只有一個人。<br>
+第二輪，01 23 45 67 各組決定出一個代表在 ID=0, 2, 4, 6 上 <code>write</code> 剛剛的總人數，然後按照 ID 01-23 45-67 這樣分組去看對方寫什麼，把對方寫的人數加進已知總人數。<br>
+第三輪，0123 4567 各組決定出一個代表在 ID=0, 4 上 <code>write</code> 剛剛的總人數，然後按照 ID 0123-4567 這樣分組去看對方寫什麼，把對方寫的人數加進已知總人數。<br>
+第四輪，最後的兩個人知道總人數，選一個代表把總人數 <code>write</code> 在 ID=0，之後其他人去 <code>read</code>。</p>
+<p>各組要決定出一個代表才不會有多個人在同一個 ID 上 <code>write</code>，至於怎麼決定出一個代表，如果兩小組中都有人，就選編號小的。</p>
+<p>這個想法可以推廣到 subtask 4，只能寫 0/1 的話，就把總人數用二進位多分幾次傳，可以拿到一些分數。</p>
 </details>
-
 <details><summary> 優化 1 </summary>
-
-上面說為了避免多人在同一地點 `write`，選擇讓編號小的作為代表負責 `write`，但這樣要花 $7$ 輪才可以傳一個 $N=100$ 這樣大的數字。
-
-其實可以讓多人負責不同 bit，在同一輪 `write`。
-
-要怎麼選出多人，可以維護每個人在現在組內的 ranking，合併左右兩邊的時候就把左邊的人 ranking 加上右邊的人數，然後讓 ranking 前 $7$ 大的人負責 $7$ 個 bit。
-
+<p>上面說為了避免多人在同一地點 <code>write</code>，選擇讓編號小的作為代表負責 <code>write</code>，但這樣要花 $7$ 輪才可以傳一個 $N=100$ 這樣大的數字。</p>
+<p>其實可以讓多人負責不同 bit，在同一輪 <code>write</code>。</p>
+<p>要怎麼選出多人，可以維護每個人在現在組內的 ranking，合併左右兩邊的時候就把左邊的人 ranking 加上右邊的人數，然後讓 ranking 前 $7$ 大的人負責 $7$ 個 bit。</p>
 </details>
-
 <details><summary> 優化 2 </summary>
-
-這樣 merge 是一個樹狀的結構，但是在葉子的地方如果沒幾個人，就不需要用 $7$ bits 傳人數了，可以用少一點的 bit。
-但是如果剛好遇上某一區人很多，又不能這樣節省了。
-
-這裡可以用 random shuffle 把全部人初始分布位置變平均一點，random 的 seed 要是固定的 ( $N$ 個人的程式是分開執行的，但他們打亂的基準要是一樣的，才能成功打亂 )。
-至於樹的哪一層要傳幾個 bit 就可能需要調整一下。
-
-( 我是有成功這樣弄到 $100$ 分 )
-
+<p>這樣 merge 是一個樹狀的結構，但是在葉子的地方如果沒幾個人，就不需要用 $7$ bits 傳人數了，可以用少一點的 bit。<br>
+但是如果剛好遇上某一區人很多，又不能這樣節省了。</p>
+<p>這裡可以用 random shuffle 把全部人初始分布位置變平均一點，random 的 seed 要是固定的 ( $N$ 個人的程式是分開執行的，但他們打亂的基準要是一樣的，才能成功打亂 )。<br>
+至於樹的哪一層要傳幾個 bit 就可能需要調整一下。</p>
+<p>( 我是有成功這樣弄到 $100$ 分 )</p>
 </details>
-
 <details><summary> 確定性作法 </summary>
-
-[官解](https://egoi2026.it/competition/census/)最下面那堆。
-
+<p><a target="_blank" rel="noopener" href="https://egoi2026.it/competition/census/">官解</a>最下面那堆。</p>
 </details>
-
-<h2 id="day2-1"><a href="#day2-1" class="headerlink" title="day2"></a>day2</h2><h3 id="Watering-Plants"><a href="#Watering-Plants" class="headerlink" title="Watering Plants"></a>Watering Plants</h3><details><summary> full </summary>
-
-可以對每個人設一個時間戳 `t[i]` 代表這個人從 `t[i]` 這個時間開始幫樓下鄰居澆花 ( 沒有的話時間戳就設 $-1$ )。
-
-更新的時候就如果某人原本不用幫鄰居澆花，現在變成需要幫鄰居澆花，就幫他打一個時間戳；如果某人原本需要幫鄰居澆花，現在變成不用幫鄰居澆花，就把他到目前為止的澆花時間用一個變數 `ans[i]` 紀錄下來，然後把他的時間戳改成 $-1$。
-更新的時候除了自己，樓上樓下也要更新。
-
-算答案的時候就把 `ans[i]` 和他的時間戳到現在這段澆花時間 ( 可能沒有 ) 加起來。
-
-</details>
-
-<h3 id="Cakes"><a href="#Cakes" class="headerlink" title="Cakes"></a>Cakes</h3><details><summary> full 1 </summary>
-
-$A[i]$ 代表 $i$ 號配料有多少個，$max$ 代表最多個的配料有多少個。
-
-現在決定一個美味度 $d$，這個美味度最少會做出 $L=\lceil \frac{max}{d} \rceil$ 個蛋糕，最多也只能做出 $R=\sum_{i=0}^{N-1} \lfloor \frac{A[i]}{d} \rfloor$ 個蛋糕，至於在 $[L,R]$ 中的個數都是可以被做出來的。
-接下來枚舉所有美味度 $d$，計算這個美味度最多可以做出多少個蛋糕 ( 也就是 $R$ )。可以枚舉 $\lfloor \frac{A[i]}{d} \rfloor=1, 2, 3, ...$ 的蛋糕分別有幾個 ( 使用前綴和 )，就可以用[調和級數和](https://zh.wikipedia.org/zh-tw/%E8%B0%83%E5%92%8C%E7%BA%A7%E6%95%B0)在 $\mathcal{O}(N \log_e N)$ 算完。
-
-詢問想做 $x$ 塊蛋糕時，因為美味度越大可以做出來的最多的蛋糕數 $R$ 越少，所以選擇最小的美味度 $d=\lceil \frac{max}{x} \rceil$，接下來再檢查美味度 $d$ 可以做出最多的蛋糕數量是不是大於 $x$ 就好了。
-
-</details>
-
-<details><summary> full 2 </summary>
-
-官解。
-
-也可以不用先算出每個美味度最多可以做出多少蛋糕，因為 $\lceil \frac{max}{x} \rceil$ 最多只有 $\sqrt{max}$ 種不一樣的值 ( [見這邊](https://hackmd.io/o1_Ere88RuC5U2YQMP6q5g#/1/3) )，所以可以算過的存起來，遇到新的就暴力算。
-
-</details>
-
-<h3 id="Fox-Families"><a href="#Fox-Families" class="headerlink" title="Fox Families"></a>Fox Families</h3><details><summary> subtask 1 & 2 </summary>
-
-每次加入新區間都枚舉所有之前的區間看可不可以合併，然後用並查集維護。
-
-</details>
-
-<details><summary> subtask 3 </summary>
-
-區間長度都很短，每次加入新區間都枚舉前後長度 $2$，看有沒有區間可以合併，然後用並查集維護。
-
-</details>
-
-<details><summary> subtask 4 </summary>
-
-保證 $L_i<L_{i+1}$，所以如果 $i$ 和 $i+1$ 在不同的連通塊的話必有 $R_i<R_{i+1}$。
-
-可以用 `stack` 維護 $R$ 遞增的單調堆疊，加入新區間的時候就一直從 `stack.top()` 看可不可以合併。
-
-![](/images/EGOI_sol_2026d2pC.png)
-
-</details>
-
+<h2 id="day2-2">day2</h2>
+<h3 id="Watering-Plants">Watering Plants</h3>
 <details><summary> full </summary>
-
-每個連通塊紀錄 $minL$、$minR$、$maxL$、$maxR$。
-觀察到我要把區間 $[L,R]$ 和一個連通塊合併時，以下情況會無法合併 :
-
-1. $L<minL \text{ and } R<minR$
-2. $L>maxL \text{ and } R>maxR$
-
-用一個 `set` 存連通塊，按照 $minL$ 由小到大排序，這裡有一個性質是 $minR$、$maxL$、$maxR$ 也都會分別遞增 ( 可以畫圖然後反證看看 )。
-要加入區間 $[L,R]$ 時，先用二分搜找到第一個 $minL \leq L$，然後嘗試合併，一直重覆到無法合併，就直接停止 ( 根據上面說的性質，接下來的連通塊也都無法和 $[L,R]$ 合併 )。
-
-另一個方向也要做一次一樣的事 ( 我是一直找第一個 $minR \leq R$ 然後合併看看 )。
-
+<p>可以對每個人設一個時間戳 <code>t[i]</code> 代表這個人從 <code>t[i]</code> 這個時間開始幫樓下鄰居澆花 ( 沒有的話時間戳就設 $-1$ )。</p>
+<p>更新的時候就如果某人原本不用幫鄰居澆花，現在變成需要幫鄰居澆花，就幫他打一個時間戳；如果某人原本需要幫鄰居澆花，現在變成不用幫鄰居澆花，就把他到目前為止的澆花時間用一個變數 <code>ans[i]</code> 紀錄下來，然後把他的時間戳改成 $-1$。<br>
+更新的時候除了自己，樓上樓下也要更新。</p>
+<p>算答案的時候就把 <code>ans[i]</code> 和他的時間戳到現在這段澆花時間 ( 可能沒有 ) 加起來。</p>
 </details>
+<h3 id="Cakes">Cakes</h3>
+<details><summary> full 1 </summary>
+<p>$A[i]$ 代表 $i$ 號配料有多少個，$max$ 代表最多個的配料有多少個。</p>
+<p>現在決定一個美味度 $d$，這個美味度最少會做出 $L=\lceil \frac{max}{d} \rceil$ 個蛋糕，最多也只能做出 $R=\sum_{i=0}^{N-1} \lfloor \frac{A[i]}{d} \rfloor$ 個蛋糕，至於在 $[L,R]$ 中的個數都是可以被做出來的。<br>
+接下來枚舉所有美味度 $d$，計算這個美味度最多可以做出多少個蛋糕 ( 也就是 $R$ )。可以枚舉 $\lfloor \frac{A[i]}{d} \rfloor=1, 2, 3, …$ 的蛋糕分別有幾個 ( 使用前綴和 )，就可以用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E8%B0%83%E5%92%8C%E7%BA%A7%E6%95%B0">調和級數和</a>在 $\mathcal{O}(N \log_e N)$ 算完。</p>
+<p>詢問想做 $x$ 塊蛋糕時，因為美味度越大可以做出來的最多的蛋糕數 $R$ 越少，所以選擇最小的美味度 $d=\lceil \frac{max}{x} \rceil$，接下來再檢查美味度 $d$ 可以做出最多的蛋糕數量是不是大於 $x$ 就好了。</p>
+</details>
+<details><summary> full 2 </summary>
+<p>官解。</p>
+<p>也可以不用先算出每個美味度最多可以做出多少蛋糕，因為 $\lceil \frac{max}{x} \rceil$ 最多只有 $\sqrt{max}$ 種不一樣的值 ( <a target="_blank" rel="noopener" href="https://hackmd.io/o1_Ere88RuC5U2YQMP6q5g#/1/3">見這邊</a> )，所以可以算過的存起來，遇到新的就暴力算。</p>
+</details>
+<h3 id="Fox-Families">Fox Families</h3>
+<details><summary> subtask 1 & 2 </summary>
+<p>每次加入新區間都枚舉所有之前的區間看可不可以合併，然後用並查集維護。</p>
+</details>
+<details><summary> subtask 3 </summary>
+<p>區間長度都很短，每次加入新區間都枚舉前後長度 $2$，看有沒有區間可以合併，然後用並查集維護。</p>
+</details>
+<details><summary> subtask 4 </summary>
+<p>保證 $L_i&lt;L_{i+1}$，所以如果 $i$ 和 $i+1$ 在不同的連通塊的話必有 $R_i&lt;R_{i+1}$。</p>
+<p>可以用 <code>stack</code> 維護 $R$ 遞增的單調堆疊，加入新區間的時候就一直從 <code>stack.top()</code> 看可不可以合併。</p>
+<p><img src="/images/EGOI_sol_2026d2pC.png" alt=""></p>
+</details>
+<details><summary> full </summary>
+<p>每個連通塊紀錄 $minL$、$minR$、$maxL$、$maxR$。<br>
+觀察到我要把區間 $[L,R]$ 和一個連通塊合併時，以下情況會無法合併 :</p>
+<ol>
+<li>$L&lt;minL \text{ and } R&lt;minR$</li>
+<li>$L&gt;maxL \text{ and } R&gt;maxR$</li>
+</ol>
+<p>用一個 <code>set</code> 存連通塊，按照 $minL$ 由小到大排序，這裡有一個性質是 $minR$、$maxL$、$maxR$ 也都會分別遞增 ( 可以畫圖然後反證看看 )。<br>
+要加入區間 $[L,R]$ 時，先用二分搜找到第一個 $minL \leq L$，然後嘗試合併，一直重覆到無法合併，就直接停止 ( 根據上面說的性質，接下來的連通塊也都無法和 $[L,R]$ 合併 )。</p>
+<p>另一個方向也要做一次一樣的事 ( 我是一直找第一個 $minR \leq R$ 然後合併看看 )。</p>
+</details>
+<h3 id="Seating-Plan-🟡">Seating Plan 🟡</h3>
 
-<h3 id="Seating-Plan-🟡"><a href="#Seating-Plan-🟡" class="headerlink" title="Seating Plan 🟡"></a>Seating Plan 🟡</h3>
 </div> 
 
 <script>
