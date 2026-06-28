@@ -211,8 +211,8 @@ p.spoiler {
 <h3 id="Inflation">Inflation</h3>
 <details>
 <summary> full </summary>
-<p>可以用 <code>sum</code> 先記錄全部的價錢，<code>cnt[x]</code> 紀錄 $x$ 元的東西有幾個，<code>add</code> 紀錄目前上漲多少錢。</p>
-<p>漲價的時候就把漲價的錢加進 <code>add</code>；改值的時候會對 <code>sum</code> 造成 $(y-x) \times cnt[x-add]$ 的影響，更新完 <code>sum</code> 之後要更新 <code>cnt</code>，因為有上漲的關係，計算的時候要用 $x-add$、$y-add$ 平移回去。</p>
+<p>可以用 $sum$ 先記錄全部的價錢，$cnt[x]$ 紀錄 $x$ 元的東西有幾個，$add$ 紀錄目前上漲多少錢。</p>
+<p>漲價的時候就把漲價的錢加進 $add$；改值的時候會對 $sum$ 造成 $(y-x) \times cnt[x-add]$ 的影響，更新完 $sum$ 之後也要更新 $cnt$，因為有上漲的關係，計算的時候要用 $x-add$、$y-add$ 平移回去。</p>
 <p>總和是 $sum + add \times n$。</p>
 </details>
 <h3 id="Padel-Prize-Pursuit">Padel Prize Pursuit</h3>
@@ -222,7 +222,7 @@ p.spoiler {
 </details>
 <details>
 <summary> full </summary>
-<p>像這樣建圖 : 當 $x$ 打敗 $y$，就從 $x$ 連一條邊到 $y$ ( 代表 $x$ 從 $y$ 那邊繼承 $y$ 之前拿的獎牌了，這時要幫 $y$ 新建立一個代表他的節點，$y$ 要重新開始累積獎牌 )，再從 $x$ 連一條邊到他新拿到的獎牌，並額外記錄這些節點建立的時間。<br>
+<p>像這樣建圖 : 當 $x$ 打敗 $y$，就從 $x$ 連一條邊到 $y$ ( 代表 $x$ 從 $y$ 那邊繼承 $y$ 之前拿的獎牌，這時要幫 $y$ 建立一個新的代表他的節點，$y$ 要重新開始累積獎牌 )，再從 $x$ 連一條邊到他新拿到的獎牌，並額外記錄這些節點建立的時間。<br>
 下圖以範測 $1$ 為例。<br>
 <img src="/images/EGOI_sol_2023d1pB.png" alt=""></p>
 <p>接下來就可以用 dfs 從所有 $time=m$ 的樹根往下走，搭配一個 <code>set</code> 紀錄路上的每個持有者持有多少時間，走到底遇到獎牌的時候就可以知道這個獎牌要給誰了。</p>
