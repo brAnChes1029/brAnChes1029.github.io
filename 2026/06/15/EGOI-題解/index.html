@@ -251,6 +251,10 @@ p.spoiler {
 <p>如果箱子不在粉色區域，代表第一列和最後一行都會是空的，就可以用上面說的方法在灰色區域找到箱子了。<br>
 這樣是 $Q=2$。</p>
 </details>
+<details>
+<summary> bonus </summary>
+<p><a target="_blank" rel="noopener" href="https://stats.egoi.org/media/task_solution/findthebox.pdf">官解</a>提供了一個完全不一樣的滿分做法，但有些細節我不是很了解他是怎麼弄的。</p>
+</details>
 <h3 id="Bikes-vs-Cars">Bikes vs Cars</h3>
 <h2 id="day2">day2</h2>
 <h3 id="Carnival-General">Carnival General</h3>
@@ -296,6 +300,38 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 <p>如果會做 $M=0$ 那很多有向樹的狀況也差不多了。</p>
 </details>
 <h3 id="Guessing-Game">Guessing Game</h3>
+<details>
+<summary> $K=99999$ $10$ 分 </summary>
+<p>對於第 $i$ 個造訪的房子，在上面寫 $i$，最後有兩個房子上面的數字一樣，其中一個就是 Emma 家。</p>
+</details>
+<details>
+<summary> $K=50000$ $30$ 分 </summary>
+<p>把全部房子分成兩堆，沿用上述的方法。</p>
+<p>隨便假設 Emma 家在第一堆。<br>
+如果 Emma 填 $1~49999$，那這堆就會有兩個相同的數字；所以當某一堆中有兩個相同的數字時，這兩個其中一個會是 Emma 家。<br>
+否則她就是填了 $50000$，那猜第一堆和第二堆的兩個上面寫 $50000$ 的房子就一定可以找到 Emma 家。</p>
+</details>
+<details>
+<summary> $K=17$ $90$ 分 </summary>
+<p>使用像是線段樹那樣的想法。</p>
+<p>Anna 在房子上寫「可以填滿的最小層數」。<br>
+以下以 $N=8$ 舉例。<br>
+<img src="/images/EGOI_sol_2023d2pD-1.png" alt=""><br>
+<img src="/images/EGOI_sol_2023d2pD-2.png" alt=""></p>
+<p>Bertil 可以看左右子樹，如果有一邊的房子已經「被填滿了」，Emma 家就不會在這一邊，可以把這一邊丟掉然後遞迴下去，直到左右子樹「被填滿的最小層數」一樣時，左右子樹的兩個上面寫「被填滿的最小層數」的房子中有一個會是 Emma 家。<br>
+假設 Emma 寫了 $3$。<br>
+<img src="/images/EGOI_sol_2023d2pD-3.png" alt=""><br>
+假設 Emma 寫了 $2$。<br>
+<img src="/images/EGOI_sol_2023d2pD-4.png" alt=""></p>
+<p>雖然以上示意圖是完美二元樹，但線段樹長相不是完美二元樹的時候實作要小心 ( 測資都是 $N=100000$ )，但狀況可能因寫法而異 ( 我的實作可能沒很好 )。</p>
+</details>
+<details>
+<summary> $K=7$ $100$ 分 </summary>
+<p>Anna 在遇到的前 $N-32$ 個房子上寫 $7$，順便把這些房子的編號總和 $S$ 記起來。<br>
+剩下的 $31$ 個房子沿用上述的作法，蓋一個像線段樹的東西，在房子上寫「可以填滿的最小層數」 ( 現在剩下 $32$ 個房子，只有 $5$ 層 )。與此同時，順便把 $S$ 的資訊用二進位傳過去，因為「可以填滿的最小層數」為 $5$ 的房子一定會有 $16$ 個，並且 $2^{16} &gt; \frac{N}{2}$，把一些原本寫 $5$ 的房子改寫 $6$ 就可以成功傳 $S \mod \frac{N}{2}$。</p>
+<p>如果 Emma 寫了介於 $1$ 到 $6$ 之間的數字，Bertil 就用上述 $K=17$ 的方法找到她家。<br>
+如果 Emma 寫 $7$，那就破譯 $S$，就可以知道要猜哪兩個數字了。</p>
+</details>
 <h1>2026</h1>
 <h2 id="day1-2">day1</h2>
 <h3 id="Ferris-Wheel">Ferris Wheel</h3>
@@ -431,7 +467,16 @@ Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$
 <p>另一個方向也要做一次一樣的事 ( 我是一直找第一個 $minR \leq R$ 然後合併看看 )。</p>
 </details>
 <h3 id="Seating-Plan-🟡">Seating Plan 🟡</h3>
-
+<details><summary> subtask 1 </summary>
+<p>先詢問 $\binom{8}{3}$ 次然後把結果存起來，之後用 <code>next_permutation</code> 找到排列。</p>
+<p>這應該是比較好的方法 ( 我賽中寫了一些恐怖的東西 )。</p>
+</details>
+<details><summary> subtask 2 & $65$ 分 </summary>
+<p>先抓前 $5$ 個人，詢問 $\binom{5}{3}$ 次然後把結果存起來，之後用 <code>next_permutation</code> 找到排列，就可以知道前 $5$ 個人的相對位置，然後用 <code>set&lt; pair&lt;int,int&gt; &gt;</code> 把位置和人的編號存起來。<br>
+選 $5$ 個人是因為選 $3$ 個或 $4$ 個人都沒辦法得知相對位置。</p>
+<p>接下來對於所有未知位置的人，詢問他跟最前面兩個、最後面兩個的人距離多少，就可以推出他的位置，然後加進 <code>set</code>。</p>
+<p>總詢問次數是 $2N$，可以拿到 $9+11+10+35=65$ 分。</p>
+</details>
 </div> 
 
 <script>
