@@ -256,6 +256,22 @@ p.spoiler {
 <p><a target="_blank" rel="noopener" href="https://stats.egoi.org/media/task_solution/findthebox.pdf">官解</a>提供了一個完全不一樣的滿分做法，但有些細節我不是很了解他是怎麼弄的。</p>
 </details>
 <h3 id="Bikes-vs-Cars">Bikes vs Cars</h3>
+<details>
+<summary> subtask 1 & 2 </summary>
+<p>只要 $B+C \geq W$ 就可以成功建造道路 ( $B+C&lt;W$$ 多出來的路寬會使條件無法符合 )，可以在每個 $i$ 和 $i+1$ 建一條腳踏車道寬為 $B$ 的路和一條腳踏車道寬為 $W-C$ 的路。</p>
+</details>
+<details>
+<summary> full </summary>
+<p>對於每個 $b[i][j]$ 和 $c[i][j]$，必須滿足 $b[i][j]+c[i][j] \geq W$ 才可以蓋這兩條路，否則多出來的路寬會使條件無法符合。</p>
+<p>看一下定義 ( 腳踏車道寬 $B$、汽車道寬 $C$ ) :</p>
+<p>$$b[i][j]=max_{\text{every path from i to j}}( min_{\text{every road on this path}}(B) )$$<br>
+$$c[i][j]=max_{\text{every path from i to j}}( min_{\text{every road on this path}}© )$$</p>
+<p>先篩選出可以蓋的路，然後對腳踏車道和汽車道的路分別做兩次最大生成樹 ( 對於一條路徑，能通過這條路徑的最瘦的車為這條路上最小的汽車道路寬度，所以從寬度最大的邊開始選 )，接下來把這兩個最大生成樹選擇的邊集合合併起來，檢查是否滿足題目條件 ( 使可以從 $i$ 走到 $j$ 的最胖的腳踏車寬度為 $b[i][j]$、最胖的汽車寬度為 $c[i][j]$、圖是連通的 )，檢查的方法可以跑一個像 Floyd-Warshall 的東西 :</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>( <span class="type">int</span> k=<span class="number">0</span> ; k&lt;n ; k++ )&#123;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> j=<span class="number">0</span> ; j&lt;n ; j++ )&#123;</span><br><span class="line">            mx[i][j]=<span class="built_in">max</span>( mx[i][j], <span class="built_in">min</span>( mx[i][k], mx[k][j] ) );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>實作的部分若覺得要分別處理腳踏車和汽車檢查很麻煩，可以令 $a[i][j]=W-c[i][j]$，定義就會變成 :</p>
+<p>$$a[i][j]=min_{\text{every path from i to j}}( max_{\text{every road on this path}}(B) )$$</p>
+<p>把對 $c$ 蓋最大生成樹改成對 $a$ 蓋最小生成樹，最後就只要檢查腳踏車道寬度是否符合條件了。</p>
+</details>
 <h2 id="day2">day2</h2>
 <h3 id="Carnival-General">Carnival General</h3>
 <details>
@@ -331,6 +347,11 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 剩下的 $31$ 個房子沿用上述的作法，蓋一個像線段樹的東西，在房子上寫「可以填滿的最小層數」 ( 現在剩下 $32$ 個房子，只有 $5$ 層 )。與此同時，順便把 $S$ 的資訊用二進位傳過去，因為「可以填滿的最小層數」為 $5$ 的房子一定會有 $16$ 個，並且 $2^{16} &gt; \frac{N}{2}$，把一些原本寫 $5$ 的房子改寫 $6$ 就可以成功傳 $S \mod \frac{N}{2}$。</p>
 <p>如果 Emma 寫了介於 $1$ 到 $6$ 之間的數字，Bertil 就用上述 $K=17$ 的方法找到她家。<br>
 如果 Emma 寫 $7$，那就破譯 $S$，( 用一點點數學 ) 就可以知道要猜哪兩個數字了。</p>
+</details>
+<details>
+<summary> bonus </summary>
+<p><a target="_blank" rel="noopener" href="https://github.com/Gullesnuffs/guessing-game">有人好像會做 $K=5$</a>，但我有點看不懂。<br>
+<a target="_blank" rel="noopener" href="https://stats.egoi.org/media/task_solution/guessinggame.pdf">官解</a>說 $K=3$ 被證明出不可能辦到了，但 $K=4$ 還不知道是不是可行的。</p>
 </details>
 <h1>2026</h1>
 <h2 id="day1-2">day1</h2>
