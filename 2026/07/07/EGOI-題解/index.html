@@ -173,7 +173,7 @@ p.spoiler {
     </div>
 
     <span class="post-date">
-      Jun 15, 2026
+      Jul 7, 2026
     </span>
 
   </div>
@@ -206,8 +206,48 @@ p.spoiler {
 <p>現在在施工，請不要靠近，會被磚頭砸到 ( ? ) ⚠️⚠️⚠️</p>
 </marquee>
 <hr>
-<h1>2023</h1>
+<h1>2022</h1>
 <h2 id="day1">day1</h2>
+<h3 id="Subset-Mex">Subset Mex</h3>
+<h3 id="Lego-Wall">Lego Wall</h3>
+<h3 id="Social-Engineering">Social Engineering</h3>
+<h3 id="Tourists">Tourists</h3>
+<h2 id="day2">day2</h2>
+<h3 id="Data-Centers">Data Centers</h3>
+<h3 id="Superpiece">Superpiece</h3>
+<h3 id="Toy-Design">Toy Design</h3>
+<h3 id="Chika-Wants-to-Cheat">Chika Wants to Cheat</h3>
+<details>
+<summary> subtask 1 & 2 </summary>
+<p>數一下發現可以畫的線總共 $28$ 條，所以 $n$ 是多少就畫多少條線上去。</p>
+<p><img src="/images/EGOI_sol_2022d2pD-3.png" alt=""></p>
+</details>
+<details>
+<summary> subtask 3 & 4 </summary>
+<p>不會旋轉。<br>
+每一條線代表一個 bit，用二進位傳。</p>
+</details>
+<details>
+<summary> subtask 5 & 6 </summary>
+<p>沿用上述方法，每條線代表一個 bit，重點變成要知道圖形原本是哪邊朝上。<br>
+把中間四條線留下來，每次都畫粉紅色那條，如果被旋轉了，就把粉紅色那條轉到上方，就可以得知原本圖形的方向了。</p>
+<p><img src="/images/EGOI_sol_2022d2pD-1.png" alt=""></p>
+<p>這樣可以傳至多 $2^{24}=16777216$。</p>
+<p>優化一下，讓這這三種圖樣都表示朝上，就可以傳至多 $3 \times 2^{24}=50331648$ 了。</p>
+<p><img src="/images/EGOI_sol_2022d2pD-2.png" alt=""></p>
+</details>
+<details>
+<summary> full </summary>
+<p>幫所有線分組，把旋轉後會長一樣的線分在同一組，這樣有 $7$ 組，每組 $4$ 條線。</p>
+<p><img src="/images/EGOI_sol_2022d2pD-3.png" alt=""></p>
+<p>考慮 DP ( 以下都是 0-base )，$dp[i]$ 代表第 $i$ 組的線來負責傳達「哪個方向在上面」 ( 共 $3$ 種畫法 )，$0$ 到 $i-1$ 組的線可以隨便傳 ( 最多總共可以傳 $2^{4i}$ )，$i+1$ 組之後的線都不可以傳方向的資訊 ( 總共可以傳 $4^{6-i}$，$4$ 是因為四條線共 $16$ 種要不要畫的方式，減掉 $4$ 個方向各有 $3$ 種可以表達方向的方式 )。</p>
+<p>這樣有 $dp[i]=2^{4i} \times 3 \times 4^{6-i}$，$dp[0]+dp[1]+…+dp[6]=67104768$。</p>
+<p>這樣要傳某數字 $n$ 時，就從 $dp[0]$ 開始看，若 $n$ 比 $dp[0]$ 大，就減掉 $dp[0]$，然後往後試 $dp[1]$…直到 $n&lt;dp[i]$，那就以第 $i$ 組作為傳遞方向的組別，用上面的方法傳數字。</p>
+<p>解密的時候從第 $6$ 組找回來，看從哪一組開始傳的線的樣子有方向的資訊，就知道上面那步選的 $i$ 是什麼了，接下來就是把圖轉回來然後解密。</p>
+<p>實作<s>是個大考驗</s>，可能多用 bitmask 是不錯的選擇。</p>
+</details>
+<h1>2023</h1>
+<h2 id="day1-2">day1</h2>
 <h3 id="Inflation">Inflation</h3>
 <details>
 <summary> full </summary>
@@ -272,7 +312,7 @@ $$c[i][j]=\max_{\text{every path from } i \text{ to } j}\left( \min_{\text{every
 <p>$$a[i][j]=\min_{\text{every path from } i \text{ to } j}\left( \max_{\text{every road on this path}}(B) \right)$$</p>
 <p>把對 $c$ 蓋最大生成樹改成對 $a$ 蓋最小生成樹，最後就只要檢查腳踏車道寬度是否符合條件了。</p>
 </details>
-<h2 id="day2">day2</h2>
+<h2 id="day2-2">day2</h2>
 <h3 id="Carnival-General">Carnival General</h3>
 <details>
 <summary> full </summary>
@@ -344,7 +384,7 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 <details>
 <summary> $K=7$ ( $100$ 分 ) </summary>
 <p>Anna 在遇到的前 $N-32$ 個房子上寫 $7$，順便把這些房子的編號總和 $S$ 記起來。<br>
-剩下的 $31$ 個房子沿用上述的作法，蓋一個像線段樹的東西，在房子上寫「可以填滿的最小層數」 ( 現在剩下 $32$ 個房子，只有 $5$ 層 )。與此同時，順便把 $S$ 的資訊用二進位傳過去，因為「可以填滿的最小層數」為 $5$ 的房子一定會有 $16$ 個，並且 $2^{16} &gt; \frac{N}{2}$，把一些原本寫 $5$ 的房子改寫 $6$ 就可以成功傳 $S \mod \frac{N}{2}$。</p>
+剩下的 $32$ 個房子沿用上述的作法，蓋一個像線段樹的東西，在房子上寫「可以填滿的最小層數」 ( 現在剩下 $32$ 個房子，只有 $5$ 層 )。與此同時，順便把 $S$ 的資訊用二進位傳過去，因為「可以填滿的最小層數」為 $5$ 的房子一定會有 $16$ 個，並且 $2^{16} &gt; \frac{N}{2}$，把一些原本寫 $5$ 的房子改寫 $6$ 就可以成功傳 $S \mod \frac{N}{2}$。</p>
 <p>如果 Emma 寫了介於 $1$ 到 $6$ 之間的數字，Bertil 就用上述 $K=17$ 的方法找到她家。<br>
 如果 Emma 寫 $7$，那就破譯 $S$，( 用一點點數學 ) 就可以知道要猜哪兩個數字了。</p>
 </details>
@@ -354,7 +394,7 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 <a target="_blank" rel="noopener" href="https://stats.egoi.org/media/task_solution/guessinggame.pdf">官解</a>說 $K=3$ 被證明出不可能辦到了，但 $K=4$ 還不知道是不是可行的。</p>
 </details>
 <h1>2026</h1>
-<h2 id="day1-2">day1</h2>
+<h2 id="day1-3">day1</h2>
 <h3 id="Ferris-Wheel">Ferris Wheel</h3>
 <details><summary> full </summary>
 <p><code>+</code> 是往比自己大的連，先把全部是 <code>+</code> 的零件分離出來，編號由小往大連。<br>
@@ -445,7 +485,7 @@ Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$
 <details><summary> 確定性作法 </summary>
 <p><a target="_blank" rel="noopener" href="https://egoi2026.it/competition/census/">官解</a>最下面那堆。</p>
 </details>
-<h2 id="day2-2">day2</h2>
+<h2 id="day2-3">day2</h2>
 <h3 id="Watering-Plants">Watering Plants</h3>
 <details><summary> full </summary>
 <p>可以對每個人設一個時間戳 <code>t[i]</code> 代表這個人從 <code>t[i]</code> 這個時間開始幫樓下鄰居澆花 ( 沒有的話時間戳就設 $-1$ )。</p>
