@@ -10,7 +10,7 @@
 
 
 
-<title>brAnChes&#39;s blog</title>
+<title>Gallery | brAnChes&#39;s blog</title>
 
 <link rel="icon" href="/logo.ico">
 
@@ -116,7 +116,7 @@ p.spoiler {
                    
           
             
-              <li class="menu-item menu-item-active">
+              <li class="menu-item">
                 <a href="/archives/">Archive</a>
               </li> 
                    
@@ -128,7 +128,7 @@ p.spoiler {
                    
           
             
-              <li class="menu-item">
+              <li class="menu-item menu-item-active">
                 <a href="/gallery/">Gallery</a>
               </li> 
                    
@@ -148,203 +148,115 @@ p.spoiler {
 
       <div class="main">
         <div class="flex-container">
-          <div class="post-list">
-    
-    
+          <article id="post">
 
-        
-
-        
-            <div class="year-title">2026</div>
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2026/07/12/EGOI-%E9%A1%8C%E8%A7%A3/">
-                
-                    EGOI 題解
-                
-                </a> 
-            </div>
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="post-title">
             
-            <span class="post-date">Jul 12, 2026</span>
-        </div>
-
-    
-
-        
-
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2026/06/12/EGOI-2026-%E5%BE%8C%E6%97%A5%E8%AB%87/">
-                
-                    EGOI 2026 後日談
-                
-                </a> 
-            </div>
             
-            <span class="post-date">Jun 12, 2026</span>
-        </div>
-
-    
-
-        
-
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2026/06/03/EGOI-2026-Contest/">
-                
-                    EGOI 2026 Contest
-                
-                </a> 
-            </div>
+                Gallery
             
-            <span class="post-date">Jun 3, 2026</span>
-        </div>
-
-    
-
-        
-
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2026/05/11/EGOI-2026/">
-                
-                    EGOI 2026
-                
-                </a> 
-            </div>
             
-            <span class="post-date">May 11, 2026</span>
         </div>
-
-    
-
-        
-
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2026/04/28/Virtual-EGOI-2024/">
-                
-                    Virtual EGOI 2024
-                
-                </a> 
-            </div>
-            
-            <span class="post-date">Apr 28, 2026</span>
-        </div>
-
-    
-
-        
-
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2026/04/17/%E6%B2%92%E6%9C%89-Virtual-EGOI-2023/">
-                
-                    沒有 Virtual EGOI 2023
-                
-                </a> 
-            </div>
-            
-            <span class="post-date">Apr 17, 2026</span>
-        </div>
-
-    
-
-        
-
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2026/04/13/EGOI-%E5%9C%8B%E5%9F%B9/">
-                
-                    EGOI 國培 ( 以及阿飄 )
-                
-                </a> 
-            </div>
-            
-            <span class="post-date">Apr 13, 2026</span>
-        </div>
-
-    
-
-        
-
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2026/04/07/Virtual-EGOI-2022/">
-                
-                    Virtual EGOI 2022
-                
-                </a> 
-            </div>
-            
-            <span class="post-date">Apr 7, 2026</span>
-        </div>
-
-    
-
-        
-
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2026/04/06/%E9%97%9C%E6%96%BC%E6%88%91%E7%9A%84-handle-%E4%BA%8B%E6%95%85/">
-                
-                    關於我的 handle 事故
-                
-                </a> 
-            </div>
-            
-            <span class="post-date">Apr 6, 2026</span>
-        </div>
-
-    
-
-        
-
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2026/03/31/Virtual-EGOI-2021/">
-                
-                    Virtual EGOI 2021
-                
-                </a> 
-            </div>
-            
-            <span class="post-date">Mar 31, 2026</span>
-        </div>
-
-    
-    <div id="paginator">
-        
-    <div class=paginator>
-        <div class="h-line-primary"></div>
-        <nav class="pagination">
-            <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a>
-        </nav>
     </div>
+    <div class="h-line-primary"></div>
+</div>
+    <div class="post-content">
+    
+<style>
 
-    </div>
+.gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
+    gap: 12px !important;
+    padding: 20px 0 !important;
+}
+
+.gallery-item {
+    overflow: hidden !important;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08) !important;
+    transition: transform 0.2s ease !important;
+    aspect-ratio: 1 / 1 !important;
+    cursor: pointer !important;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05) !important;
+}
+
+.gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+
+.gallery-modal {
+    display: none; 
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    z-index: 999999 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    cursor: zoom-out !important;
+}
+
+
+.gallery-modal img {
+    max-width: 90% !important;
+    max-height: 85% !important;
+    object-fit: contain !important;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5) !important;
+}
+</style>
+
+<div class="gallery-grid">
+    
+<div class="gallery-item" onclick="openGalleryModal('/images/EGOI2026day1.jpg')">
+    <img src="/images/EGOI2026day1.jpg" alt="test 1">
 </div>
 
+</div>
+
+<div id="galleryModal" class="gallery-modal" onclick="closeGalleryModal()">
+    <img id="galleryModalImg" src="" alt="Large Image">
+</div>
+
+<script>
+
+function openGalleryModal(imgUrl) {
+    var modal = document.getElementById('galleryModal');
+    var modalImg = document.getElementById('galleryModalImg');
+    if (modal && modalImg) {
+        modalImg.src = imgUrl;
+        modal.style.display = 'flex';
+    }
+}
+
+
+function closeGalleryModal() {
+    var modal = document.getElementById('galleryModal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+</script>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+  
+</article>
         </div>
       </div>
       
