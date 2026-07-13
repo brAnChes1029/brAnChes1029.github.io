@@ -219,7 +219,7 @@ p.spoiler {
 <summary> full </summary>
 <p>想得到一個 $n$，就必須花費 $0$ 到 $n-1$ 各一個。<br>
 可以從 $n$ 往 $0$ 數回來，若數字 $i$ 需要 $k$ 個，就把 $0$ 到 $i-1$ 的現有數量各減 $k$，然後答案加上 $k$。<br>
-這樣模擬的總複雜度為 $\mathcal{O}(TN^2)$。</p>
+這樣模擬的總複雜度為 $\mathcal{O}(tn^2)$。</p>
 </details>
 <h3 id="Lego-Wall">Lego Wall</h3>
 <blockquote>
@@ -231,7 +231,7 @@ p.spoiler {
 如果要拼一個高度為 $h$，寬度為 $i$ 且「不考慮牆壁有沒有斷掉」，方法數就是 $fib_i^h$ ( 可以用快速冪算 )。</p>
 <p>令 $dp[i]$ 表示要拼出高度 $h$，寬度 $i$ 且不可以斷掉的牆壁，有幾種方法。<br>
 可以用扣的，$dp[i]=fib_i^h - \sum_{j=1}^{i-1} dp[j] \times fib_{i-j}^h$。</p>
-<p>複雜度 $\mathcal{O}(W^2+W \log H)$。</p>
+<p>複雜度 $\mathcal{O}(w^2+w \log h)$。</p>
 </details>
 <details>
 <summary> 高度比較低 </summary>
@@ -243,7 +243,7 @@ p.spoiler {
 <p>算 $dp[i][j]$ 的時候，可以枚舉所有 $h-k \geq j$，$dp[i][j]+=dp[i-1][k] \times \binom{h-k}{j}$，代表在 $h-k$ 個凹進去的地方選 $j$ 個放寬度為 $2$ 的積木。<br>
 最後的答案會是 $\sum_{j=1}{h-1} dp[w-1][j]$ ( 剩下洞可以用寬度 $1$ 的積木填補起來 )。<br>
 注意如果 $W=2$，答案要再加 $1$，因為有可能全部都是用寬度為 $2$ 的積木。</p>
-<p>複雜度 $\mathcal{O}(WH^2)$。</p>
+<p>複雜度 $\mathcal{O}(wh^2)$。</p>
 </details>
 <details>
 <summary> full </summary>
@@ -265,8 +265,29 @@ p.spoiler {
 <p>可以 greedy 對於每個點，把他的子樹們的特殊點兩兩配一對，若會剩下一個就往上面連，最後看是否有解。</p>
 </details>
 <h3 id="Tourists">Tourists</h3>
+<details>
+<summary> subtask 1 & 2 & 3 </summary>
+<p>對於操作 <code>t</code>，用倍增 LCA 把人移到目標城市；對於操作 <code>e</code>，就 $\mathcal{O}(m)$ 看每個人是不是在這個城市，是的話就加值，這樣是 $\mathcal{O}(mq \log n)$。</p>
+</details>
+<details>
+<summary> full </summary>
+<p>對所有人開一個懶標線段樹，並在每個 node 紀錄一個變數 $city$ 代表這個 node 底下所有人都在這個城市，如果大家所在城市不同則 $city=-1$；還要另外維護一個差分變數 $v$。</p>
+<ul>
+<li>對於操作 <code>e</code>，可以維護一個陣列 $e$ 紀錄每個城市當前權重，直接加值。</li>
+<li>對於操作 <code>t</code>，用線段樹遞迴下去，如果現在的 node 所有人都在 $city$ 這個城市，並且要移動到 $des$ 這個城市，就把 $v$ 加上 $e[city]-e[des]-LCA(city, des)$，然後把 $city$ 改成 $des$；若不是全部人都在同一個城市，就暴力遞迴下去。</li>
+<li>對於詢問 <code>q</code>，用線段樹遞迴求出他的父節點一路上的 $v$ 的總和 $x$，和這個人現在在的城市 $now$，答案就是 $x+e[now]$ ( 因為是差分，要加回去 )。</li>
+</ul>
+<p>至於 <code>t</code> 操作為什麼均攤是好的，令現在有 $U$ 對的人編號相鄰但是在不同的城市，一次 <code>t</code> 的操作最多使 $U+=2$ ( 把一個連續區段的中間段的人移到別的地方 )。</p>
+<p>總複雜度 $\mathcal{O}(n \log n + (m+q) \log m \log n)$，也可以用 $\mathcal{O}(1)$ 查詢距離把後面的 $\log n$ 壓掉。</p>
+</details>
 <h2 id="day2">day2</h2>
 <h3 id="Data-Centers">Data Centers</h3>
+<details>
+<summary> full </summary>
+<p>先把所有資料中心按照所剩機器數量由大到小排好，這樣每次操作都會是將前 $c$ 個資料中心的機器數量減掉 $m$，然後再將資料中心排序好。</p>
+<p>觀察到前 $c$ 個資料中心的相對順序不變，後 $n-c$ 個資料中心相對順序也不變，所以可以用雙指針在 $\mathcal{O}©$ 內把整個排序好。</p>
+<p>總複雜度 $\mathcal{O}(ns)$，所以 EGOI judge $2$ 秒可以跑 $5e8$ 喔。</p>
+</details>
 <h3 id="Superpiece">Superpiece</h3>
 <details>
 <summary> full </summary>
@@ -292,6 +313,18 @@ p.spoiler {
 最後剩下 P K N B，觀察到任何最小移動方法如果不是只使用一種棋子，就是先用某種棋子走一步之後改使用另一種棋子走完剩下的。</p>
 </details>
 <h3 id="Toy-Design">Toy Design</h3>
+<details>
+<summary> subtask 1 </summary>
+<p>$\mathcal{O}(n^2)$ 試試看所有 pair 是不是連通的。</p>
+</details>
+<details>
+<summary> full </summary>
+<p>令 $small[i]$ 代表 $i$ 在原始的圖中可以連通的最小的點編號，現在依序由小到大加入點 $j$，想知道 $j$ 在原始圖中最小可以連通的點是誰。</p>
+<p>複製的圖有一個性質是如果 $x$、$y$ 不連通，就會建一條邊使 $x$、$y$ 連通，所以可以利用這個性質做出一些圖，令 $idx[i]$ 代表編號 $i$ 的圖可以把 $1$ 到 $idx[i]$ 變成連通，這樣就可以對這些圖二分搜，找到 $j$ 在原始圖中最小可以連通的點是誰。<br>
+之後再把 $j$ 這個點跟 $1$ 到 $j-1$ 的圖連通起來，這樣之後要加進來的點也可以繼續二分搜。</p>
+<p>最後如果 $small[i] \neq i$，就把這條邊加進答案。</p>
+<p>詢問總數大概是嚴格小於 $\mathcal{O}(n \log n)$ 但會比 $1350$ 大一些，但如果控制好對那些版本的圖二分搜之類的話，其實跑不到到這麼多。</p>
+</details>
 <h3 id="Chika-Wants-to-Cheat">Chika Wants to Cheat</h3>
 <blockquote>
 <p>可以在 <a target="_blank" rel="noopener" href="https://qoj.ac/contest/2260/problem/5185">QOJ 題目</a> 題目名字下面的 attachment 按一下就可以下載 <code>grader</code>。</p>
@@ -398,7 +431,7 @@ $$c[i][j]=\max_{\text{every path from } i \text{ to } j}\left( \min_{\text{every
 <p>對於第 $i$ 個人，假設他前面的人都坐好了，你會發現他前面最多只有一半的人不能和他坐在一起，最差也像這樣 :<br>
 ❌✅❌✅❌✅<br>
 反正一定有位子坐，像上面那個例子就是坐最後面。<br>
-所以可以直接開個 <code>vector</code> 之類的存目前的人都怎麼坐，然後對每個 $i$ 找他可以插入在哪，這樣是 $\mathcal{O}(N^2)$。</p>
+所以可以直接開個 <code>vector</code> 之類的存目前的人都怎麼坐，然後對每個 $i$ 找他可以插入在哪，這樣是 $\mathcal{O}(n^2)$。</p>
 </details>
 <h3 id="Candy">Candy</h3>
 <details>
@@ -425,8 +458,8 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 <details>
 <summary> subtask 4 & 5 </summary>
 <p>如果有解，就是把有向樹們的樹根連到另一個有根樹的任一節點，這樣才可以構成一個大的有向樹。</p>
-<p>subtask 4 可以枚舉答案的樹根，然後用 DFS BFS 之類的任何方法把其它有向樹加進來，我的作法是 $\mathcal{O}(N)$ 枚舉答案的樹根，然後再 $\mathcal{O}(N)$ 考慮我要抓進來的每一個有向樹，再 $\mathcal{O}(N)$ 看可不可以順利連邊，這樣是 $\mathcal{O}(N^3)$。</p>
-<p>其實可以用 <code>set</code> 存所有還沒被抓進來的有向樹樹根，因為不能建的邊只有 $K$ 條，所以試圖建邊時最多失敗 $\mathcal{O}(K)$ 次，<s>這樣就 OK 了</s>，可以 $\mathcal{O}((N+K)logN)$ 過 subtask 5。</p>
+<p>subtask 4 可以枚舉答案的樹根，然後用 DFS BFS 之類的任何方法把其它有向樹加進來，我的作法是 $\mathcal{O}(n)$ 枚舉答案的樹根，然後再 $\mathcal{O}(n)$ 考慮我要抓進來的每一個有向樹，再 $\mathcal{O}(n)$ 看可不可以順利連邊，這樣是 $\mathcal{O}(n^3)$。</p>
+<p>其實可以用 <code>set</code> 存所有還沒被抓進來的有向樹樹根，因為不能建的邊只有 $K$ 條，所以試圖建邊時最多失敗 $\mathcal{O}(k)$ 次，<s>這樣就 OK 了</s>，可以 $\mathcal{O}((n+k)logn)$ 過 subtask 5。</p>
 </details>
 <details>
 <summary> full  </summary>
@@ -484,7 +517,7 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 <h3 id="Ovenmasters">Ovenmasters</h3>
 <details><summary> full </summary>
 <p>首先每堆披薩第一個先加入答案，一個想法是可以從所有第二個的披薩和生氣的披薩這個集合裡面每次挑 index 最小的，然後看看能不能成功加進答案，之後再更新集合。<br>
-不過這樣是 $\mathcal{O}(N^2 \log N)$。</p>
+不過這樣是 $\mathcal{O}(n^2 \log n)$。</p>
 <p>這邊有幾個觀察 :</p>
 <ol>
 <li>先把所有桌子按照擺在最上面的披薩編號 $a[i]$ 由小到大排好，編號 $x$ 的披薩目標是放在第 $i$ 桌，必須先滿足 $a[i]&lt;x&lt;a[i+1]$ 這個條件，並且把 $x$ 號成功放上去之後桌上披薩的大小順序不會改變。</li>
@@ -519,7 +552,7 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 </details>
 <details><summary> subtask 5 & 6 </summary>
 <p>優化剛剛的 DP。<br>
-Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$ 轉移，所以 Aurora 可以把最好的轉移點擋掉，因此可以直接用 second max 轉移，這樣 DP 就變 $\mathcal{O}(N)$ 了。</p>
+Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$ 轉移，所以 Aurora 可以把最好的轉移點擋掉，因此可以直接用 second max 轉移，這樣 DP 就變 $\mathcal{O}(n)$ 了。</p>
 </details>
 <details><summary> full </summary>
 <p>令 $B[i]=\text{secondmax}_{i \le j}(W[j]+B[j+1])$。<br>
@@ -576,7 +609,7 @@ Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$
 <details><summary> full 1 </summary>
 <p>$A[i]$ 代表 $i$ 號配料有多少個，$max$ 代表最多個的配料有多少個。</p>
 <p>現在決定一個美味度 $d$，這個美味度最少會做出 $L=\lceil \frac{max}{d} \rceil$ 個蛋糕，最多也只能做出 $R=\sum_{i=0}^{N-1} \lfloor \frac{A[i]}{d} \rfloor$ 個蛋糕，至於在 $[L,R]$ 中的個數都是可以被做出來的。<br>
-接下來枚舉所有美味度 $d$，計算這個美味度最多可以做出多少個蛋糕 ( 也就是 $R$ )。可以枚舉 $\lfloor \frac{A[i]}{d} \rfloor=1, 2, 3, …$ 的蛋糕分別有幾個 ( 使用前綴和 )，就可以用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E8%B0%83%E5%92%8C%E7%BA%A7%E6%95%B0">調和級數和</a>在 $\mathcal{O}(N \log_e N)$ 算完。</p>
+接下來枚舉所有美味度 $d$，計算這個美味度最多可以做出多少個蛋糕 ( 也就是 $R$ )。可以枚舉 $\lfloor \frac{A[i]}{d} \rfloor=1, 2, 3, …$ 的蛋糕分別有幾個 ( 使用前綴和 )，就可以用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E8%B0%83%E5%92%8C%E7%BA%A7%E6%95%B0">調和級數和</a>在 $\mathcal{O}(n \log_e n)$ 算完。</p>
 <p>詢問想做 $x$ 塊蛋糕時，因為美味度越大可以做出來的最多的蛋糕數 $R$ 越少，所以選擇最小的美味度 $d=\lceil \frac{max}{x} \rceil$，接下來再檢查美味度 $d$ 可以做出最多的蛋糕數量是不是大於 $x$ 就好了。</p>
 </details>
 <details><summary> full 2 </summary>
