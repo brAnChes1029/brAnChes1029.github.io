@@ -1013,9 +1013,13 @@ A 是楊岳蓁，B 是陳瑀萱，C 是什麼 ? <s>我知道了，C 是 Luca！<
 下午還有贊助商活動，但她們都想在房間休息，直到 <code>17:00</code> 打完電話回家後我覺得太無聊了啦，所以就自己跑出去散步了。</p>
 <h2 id="社交-let’s-go">社交 let’s go</h2>
 <p><code>18:00</code> 回飯店剛好遇到美國隊想去參加某個贊助商活動，有飲料可以拿 ( 檸檬氣泡水之類的 )，之後就遇到一個美國的前國手 ( ? )，她說可以請我們吃晚餐而且她公司會付錢，然後就莫名其妙揪了一堆人，像是印度隊、英國隊、美國隊、我和一個荷蘭隊的華人。<br>
-我們走了很久終於找到一間餐廳，路上我都在跟由周杭、常貽媗、Pearl、Alina ( 前三個是美國隊，Alina 是荷蘭隊 ) 用中英夾雜的怪文說話，<s>我發現我可以在跟中國人講話時自動切成北京腔欸</s>，然後還聽到一個有料消息是美國隊另一位是 transgender。<br>
-餐廳挺高級的，但大家不想吃正餐，所以點一堆甜點和其他東西 ( 海鮮沙拉、龍蝦有點不新鮮的龍蝦麵、有起司內餡的麵 )，我覺得提拉米蘇最好吃了！！<s>不用付錢好棒。</s><br>
-吃完就快 <code>21:00</code> 了，一定是因為餐等太久，回飯店之後發現大廳正在辦 cultural exchange ，但我有點晚來所以沒拿到 Slovakia 的吊飾好可惜喔，不過 Azerbaijan 的小吊飾好精緻，超可愛的。</p>
+我們走了很久終於找到一間餐廳，路上我都在跟由周杭、常貽媗、Pearl、Alina ( 前三個是美國隊，Alina 是荷蘭隊 ) 用中英夾雜的怪文說話，<s>我發現我可以在跟中國人講話時自動切成北京腔欸</s>，然後還聽到一個有料消息是 transgender 是可以去 EGOI 的 ( 直接講是誰好像有點不好 )。<br>
+餐廳挺高級的，但大家不想吃正餐，所以點一堆甜點和其他東西 ( 海鮮沙拉、龍蝦有點不新鮮的龍蝦麵、有起司內餡的麵 )，我覺得提拉米蘇最好吃了！！<s>不用付錢好棒。</s></p>
+<p>我記得很好笑的有 :<br>
+印度隊 : What time did you start CP?<br>
+Pearl : I started sleepy since the contest ended</p>
+<p>還有我想找垃圾桶，所以我就問她們「你們知道垃圾桶在哪嗎」，但因為中國不講垃圾桶，所以就雞同鴨講超久 ( 是說常貽媗這時候什麼都沒說欸 )</p>
+<p>吃完就快 <code>21:00</code> 了，一定是因為餐等太久，回飯店之後發現大廳正在辦 cultural exchange ，但我有點晚來所以沒拿到 Slovakia 的吊飾好可惜喔，不過 Azerbaijan 的小吊飾好精緻，超可愛的。</p>
 <h2 id="怪事">怪事</h2>
 <p>晚上不知道為什麼她們一直在測什麼雙性戀指數然後都不睡覺，唉。<br>
 然後大力譴責楊岳蓁打呼一整晚，要是你明天還這樣我絕對把你叫起來重睡。</p>
@@ -1384,7 +1388,7 @@ pA $13$ 拿到 <font color=#FF0000> WA WA WA </font> ，十分不妙，出去吃
   </entry>
   <entry>
     <title>EGOI 題解</title>
-    <url>/2026/07/12/EGOI-%E9%A1%8C%E8%A7%A3/</url>
+    <url>/2026/07/20/EGOI-%E9%A1%8C%E8%A7%A3/</url>
     <content><![CDATA[<style>
   summary {
     background-color: #3f6665;
@@ -1711,8 +1715,74 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 <p>可以用時間戳紀錄每個人從什麼時候開始在 Anika 後面，以及 Anika 開始跑這圈的時間，就可以知道 Anika 是不是超過了原本在她後面的人，這時候代表她越過終點線了 ( 越過終點線就要把全部人視為在她前面，並更新新的一圈開始跑的時間 )。</p>
 </details>
 <h3 id="Bouquet">Bouquet</h3>
+<details>
+<summary> full </summary>
+<p>可以先想到一個直觀的 DP，令 $dp[i]$ 代表考慮第 $1$ 朵至第 $i$ 朵的花，並且一定要摘第 $i$ 朵花，這樣最多可以摘多少花。<br>
+轉移的部分可以 $\mathcal{O}(N)$ 枚舉每個 $j&lt;i$，只要滿足 $j+r[j]&lt;i$ 和 $j&lt;i-l[i]$ 就可以轉移，總共是 $\mathcal{O}(N^2)$。</p>
+<p>優化一下，用一個線段樹存目前一些 $j&lt;i$ 的 $dp[j]$ 的值，對於每個 $i$，先把所有符合 $j+r[j]&lt;i$ 的花加進線段樹，再對 $[1, i-l[i])$ query，就可以在 $\mathcal{O}(\log N)$ 轉移好了。</p>
+</details>
+<details>
+<summary> 另解 </summary>
+<p>如果你討厭線段樹 ( ? )，可以用一個陣列 $v[i]$ 存最小的 $j$ 滿足 $dp[j] \geq i$，因為 $v$ 陣列的元素會遞增，轉移的時候就可以二分搜了。</p>
+</details>
 <h3 id="Team-Coding">Team Coding</h3>
 <h3 id="Garden-Decorations">Garden Decorations</h3>
+<details>
+<summary> 小提示 </summary>
+<p>xor (●’◡’●)</p>
+</details>
+<details>
+<summary> subtask 1 & 3 </summary>
+<p>使用 $\oplus$ 這個符號代表 xor，已知 $a \oplus a=0$，也就是同一個數字被 xor 兩次會消掉，可以利用這個性質來做這題。</p>
+<p>交換兩個數字，可以這樣 ( 包在同一個圈圈代表 xor 在一起 ) :<br>
+<img src="/images/EGOI_sol_2024d1pD-1.png" alt=""></p>
+</details>
+<details>
+<summary> subtask 4 & 5 </summary>
+<p>左移和右移，分別可以這樣 ( 包在同一個圈圈代表 xor 在一起 ) :<br>
+<img src="/images/EGOI_sol_2024d1pD-2.png" alt=""></p>
+</details>
+<details>
+<summary> full </summary>
+<p>交換房子的關係圖會形成很多環，如果 $a[i]=j$ ( $i$ 號房子的雕像要變成和 $j$ 號房子一樣 )，就連一條 $i$ 到 $j$ 的邊。<br>
+然後也建反的邊 $c[j]=i$，待會會用到。</p>
+<p>令 $nxt[i]$ 代表沿著箭頭走 ( 從 $i$ 走到 $a[i]$ )，遇到的第一個 $j&lt;i$ ( 先把 index 變成 1-based，如果沒有符合條件的 $j$，代表 $i$ 在這個環中是 index 最小的，就把 $nxt[i]$ 設為 $0$ )。<br>
+令 $pre[i]$ 代表逆著箭頭走，遇到的第一個 $j&lt;i$ ( 如果沒有符合條件的 $j$，就把 $pre[i]$ 設為 $0$ )。</p>
+<p><img src="/images/EGOI_sol_2024d1pD-3.png" alt=""></p>
+<p>令 $B_0(i)$ 代表 $i$ 號房子一開始的雕像狀態。</p>
+<ol>
+<li>
+<p>先使 $B_1(i)=B_0(i) \oplus B_0(nxt[i])$，代表第 $i$ 號房子在第一輪結束時的雕像狀態，如果沒有 $nxt[i]$，那就是 $B_1(i)=B_0(i)$。</p>
+</li>
+<li>
+<p>第二輪結束時使 $B_2(i)=B_0(a[i]) \oplus B_0(a[pre[i]])$。</p>
+<p>至於要怎麼做到 :</p>
+<ul>
+<li>
+<p>對於 $nxt[i]=0$ 的 $i$，沿著這串跳回去</p>
+  <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>( <span class="type">int</span> j=a[i] ; j!=i ; j=nxt[j] ) b[<span class="number">2</span>][i]^=b[<span class="number">1</span>][j];</span><br></pre></td></tr></table></figure>
+<p>沿路跟 $B_1(j)=B_0(j) \oplus B_0(nxt[j])$ xor 在一起，這一路上的東西最後會消掉只剩下最前面和最後面的 $B_0(a[i]) \oplus B_0(i)$，因為 $B_2(i)$ 一開始是 $B_1(i)=B_0(i)$，所以最後 $B_0(a[i]) \oplus B_0(i) \oplus B_0(i) = B_0(a[i])$。</p>
+</li>
+<li>
+<p>對於 $nxt[i] \neq 0$，沿著這串跳回去</p>
+  <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>( <span class="type">int</span> j=a[i] ; j!=nxt[i] ; j=nxt[j] ) b[<span class="number">2</span>][i]^=b[<span class="number">1</span>][j];</span><br></pre></td></tr></table></figure>
+<p>同樣利用消去，這段最後會剩下 $B_0(a[i]) \oplus B_0(nxt[i])$，將其跟 $B_2(i) = B_1(i) = B_0(i) \oplus B_0(nxt[i])$ xor 後，$B_2(i)$ 會變成 $B_0(i) \oplus B_0(a[i])$。</p>
+<p>接下來沿著反方向</p>
+  <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>( <span class="type">int</span> j=c[i] ; j!=pre[i] ; j=pre[j] ) b[<span class="number">2</span>][i]^=b[<span class="number">2</span>][j];</span><br></pre></td></tr></table></figure>
+<p>此時一定有 $j&gt;i$，並且這一輪是反著走的，所以 $B_2(j)$ 已經是算好的 $B_0(a[j]) \oplus B_0(a[pre[j]])$，這一路上的東西消去剩下 $B_0(a[c[i]]) \oplus B_0(a[pre[i]])$。因為 $a[c[i]] = i$，所以結果就是 $B_0(i) \oplus B_0(a[pre[i]])$。</p>
+<p>兩者結合可以得到 $(B_0(i) \oplus B_0(a[i])) \oplus (B_0(i) \oplus B_0(a[pre[i]])) = B_0(a[i]) \oplus B_0(a[pre[i]])$。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>目標是使 $B_3(i)=B_0(a[i])$。</p>
+<p>可以透過像是前綴和</p>
+ <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">b[<span class="number">3</span>][i]^=b[<span class="number">3</span>][pre[i]];</span><br></pre></td></tr></table></figure>
+<p>這一輪是從小走到大，所以 $pre[i]$ 一定會先遇到，根據遞迴關係 $B_3(i) = B_2(i) \oplus B_3(pre[pre[…]]) = B_0(a[i]) \oplus B_0(a[pre[i]]) \oplus B_3(pre[pre[…]])$ 會消掉只剩 $B_0(p[i])$。</p>
+<p>然後就大功告成了 \(≧∇≦)ﾉ</p>
+</li>
+</ol>
+</details>
 <h2 id="day2-3">day2</h2>
 <h3 id="Circle-Passing">Circle Passing</h3>
 <h3 id="Bikeparking">Bikeparking</h3>
@@ -2055,100 +2125,6 @@ P3 : 應該有可以一邊找橋一邊編號的方法，要去查一下<br>
       </tags>
   </entry>
   <entry>
-    <title>Virtual EGOI 2021</title>
-    <url>/2026/03/31/Virtual-EGOI-2021/</url>
-    <content><![CDATA[<h1>Day1</h1>
-<p>Day1 是 3/31 在武陵 vir 的，因為我 <code>14:00</code> 要去烤餅乾，所以從 <code>8:30</code> 開始打。</p>
-<p><code>0:55</code><br>
-看完題目了，精神分數 <code>100/48/9?/0</code>。<br>
-呃其實我沒認真看第四題。</p>
-<p><code>1:03</code><br>
-<code>100/0/0/0</code>。<br>
-pA 就很簡單，接下來決定先寫 pB $48$ 驗想法。</p>
-<p><code>1:33</code><br>
-<code>100/48/0/0</code>。<br>
-代表說 pB 由近到遠拔掉是好的，然後想辦法優化，像是快速找出最近的 pair ( ? ? ?</p>
-<p><code>2:00</code><br>
-pB 一直想到不可做的超詭異線段樹，先跳去 pC。<br>
-看一下之後發現隨機是不是可以做 $100$。</p>
-<p><code>2:39</code><br>
-<code>100/48/51/0</code>，pC 後面兩個子題 RE，有點怪。</p>
-<p><code>2:43</code><br>
-<code>100/48/100/0</code>。<br>
-原來是我 j 打成 i ，超好笑。</p>
-<p><code>4:00</code><br>
-一直想 pB 但沒有進展，要跳去 pD 了。</p>
-<p><code>5:00</code><br>
-不會做 pD 也不會做 pB，唉唉唉。</p>
-<p>結果是 <code>100/48/100/0</code>。</p>
-<hr>
-<h1>Day2</h1>
-<p>Day2 是 4/2 在武陵 vir 的，因為我 <code>14:00</code> 要去上畫地圖課 ( 這是我最喜歡的課欸，要上啦 )，所以從 <code>8:30</code> 開始打。</p>
-<p><code>1:00</code><br>
-看完全部題目，( 對我有看 pD )，精神分數 <code>100/100/7/10</code>。</p>
-<p><code>1:02</code><br>
-pA greedy 拿了一個 $42$，現在 <code>42/0/0/0</code>。<br>
-我好像在 JOIG 看過什麼類似的欸，該不會要 DP。</p>
-<p><code>1:13</code><br>
-DP 過了，成功拿到 <code>100/0/0/0</code>。</p>
-<p><code>1:17</code><br>
-驗一下 pD 我亂 claim 的東西，拿到 $0$ 分，所以精神分數下跌 <code>100/100/7/0</code>。</p>
-<p><code>1:57</code><br>
-確認一下細節之後開寫 pB，<code>100/100/0/0</code>。</p>
-<p><code>2:01</code><br>
-再亂 claim 一次 pD ，再拿一次 $0$。<br>
-我覺得 pD 先放著好了，根本不會做。</p>
-<p><code>3:00</code><br>
-好像成功想到 pC $16$ 分了，以為可以推廣到 $100$ 發現是爛的，反正先做掉。</p>
-<p><code>3:19</code><br>
-pC 拿 $0$ 分了，原來我又把 i 打成 1 了，超級好笑。</p>
-<p><code>3:26</code><br>
-<code>100/100/16/0</code>。</p>
-<p><code>4:02</code><br>
-因為一直沒有進展，所以先把 pC 暴力寫完，<code>100/100/23/0</code>。</p>
-<p><code>5:00</code><br>
-還是沒有進展。</p>
-<p>最後結果 <code>100/100/23/0</code>。</p>
-<hr>
-<h1>傷心的結果</h1>
-<p>Day1 <code>100/48/100/0</code>。<br>
-Day2 <code>100/100/23/0</code>。<br>
-Total <code>471</code>，rk.25。</p>
-<p><a href="https://stats.egoi.org/editions/2021/results/">記分板</a>，金牌線是 <code>539</code>，所以我拿到銀牌了啦 ಥ_ಥ。</p>
-<hr>
-<h1>檢討</h1>
-<h2 id="Day1">Day1</h2>
-<ol>
-<li>pB 沒做出來就是不應該 ( ˘︹˘ )。</li>
-<li>pD 暴力為什麼沒有寫 ( ˘︹˘ )。</li>
-<li>我是不是不太會區間 DP ?</li>
-</ol>
-<h2 id="Day2">Day2</h2>
-<ol>
-<li>C 沒有想樹那個子題。</li>
-<li><code>check</code> 函數沒有初始化拿到很多 WA ( 補題的時候 )。</li>
-</ol>
-<h2 id="General">General</h2>
-<ol>
-<li>打錯變數的名字。</li>
-<li>pD 拿 $0$ 分 ( 至少 day1 滿不應該的 )。</li>
-<li>是不是要對後半場坐牢擬定什麼策略 ? 這是策略能解決的嗎，如果是的話那應該要逼自己去想子題？</li>
-<li>給每一題比較久的思考時間是好的，至少比跳來跳去好很多 ( 應該 )。</li>
-</ol>
-<hr>
-<h1>其他話</h1>
-<p>我很喜歡 day1 C 和 day2 C。<br>
-因為 4/1 是校慶，我原本想說可以 vir Day2，但是我爸媽不給請假學校又沒安靜的地方，<s>呃反正 Day1 和 Day2 中間本來就休一天。</s><br>
-我把 day2 D 丟給謝鈞因為他想知道我都在幹嘛，結果他也 claim 了一個跟我一模一樣的 WA 的東西。<br>
-摩卡超級強，好可惜他沒有進二階 (˘･_･˘) 。</p>
-<p>EGOI 測資是不是有點像 TOI，因為我一個大 bug 都可以撈不少分、二分搜區間太小竟然可以過，還有 $O(N^4)$ 可以拿到 $O(N^3)$ 子題的分數好棒。</p>
-]]></content>
-      <tags>
-        <tag>training</tag>
-        <tag>EGOI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Virtual EGOI 2022</title>
     <url>/2026/04/07/Virtual-EGOI-2022/</url>
     <content><![CDATA[<h1>Day1</h1>
@@ -2251,6 +2227,100 @@ day2 D 打表非常不好玩，還有 B 真的有人可以在賽中推出騎士�
 <h1>題解</h1>
 <p>終於找到比我的瀏海還醜的東西了，看來 EGOI 是希望我不要看解自己想。<br>
 <img src="/images/EGOI_2022_offi_sol.png" alt="P1"></p>
+]]></content>
+      <tags>
+        <tag>training</tag>
+        <tag>EGOI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Virtual EGOI 2021</title>
+    <url>/2026/03/31/Virtual-EGOI-2021/</url>
+    <content><![CDATA[<h1>Day1</h1>
+<p>Day1 是 3/31 在武陵 vir 的，因為我 <code>14:00</code> 要去烤餅乾，所以從 <code>8:30</code> 開始打。</p>
+<p><code>0:55</code><br>
+看完題目了，精神分數 <code>100/48/9?/0</code>。<br>
+呃其實我沒認真看第四題。</p>
+<p><code>1:03</code><br>
+<code>100/0/0/0</code>。<br>
+pA 就很簡單，接下來決定先寫 pB $48$ 驗想法。</p>
+<p><code>1:33</code><br>
+<code>100/48/0/0</code>。<br>
+代表說 pB 由近到遠拔掉是好的，然後想辦法優化，像是快速找出最近的 pair ( ? ? ?</p>
+<p><code>2:00</code><br>
+pB 一直想到不可做的超詭異線段樹，先跳去 pC。<br>
+看一下之後發現隨機是不是可以做 $100$。</p>
+<p><code>2:39</code><br>
+<code>100/48/51/0</code>，pC 後面兩個子題 RE，有點怪。</p>
+<p><code>2:43</code><br>
+<code>100/48/100/0</code>。<br>
+原來是我 j 打成 i ，超好笑。</p>
+<p><code>4:00</code><br>
+一直想 pB 但沒有進展，要跳去 pD 了。</p>
+<p><code>5:00</code><br>
+不會做 pD 也不會做 pB，唉唉唉。</p>
+<p>結果是 <code>100/48/100/0</code>。</p>
+<hr>
+<h1>Day2</h1>
+<p>Day2 是 4/2 在武陵 vir 的，因為我 <code>14:00</code> 要去上畫地圖課 ( 這是我最喜歡的課欸，要上啦 )，所以從 <code>8:30</code> 開始打。</p>
+<p><code>1:00</code><br>
+看完全部題目，( 對我有看 pD )，精神分數 <code>100/100/7/10</code>。</p>
+<p><code>1:02</code><br>
+pA greedy 拿了一個 $42$，現在 <code>42/0/0/0</code>。<br>
+我好像在 JOIG 看過什麼類似的欸，該不會要 DP。</p>
+<p><code>1:13</code><br>
+DP 過了，成功拿到 <code>100/0/0/0</code>。</p>
+<p><code>1:17</code><br>
+驗一下 pD 我亂 claim 的東西，拿到 $0$ 分，所以精神分數下跌 <code>100/100/7/0</code>。</p>
+<p><code>1:57</code><br>
+確認一下細節之後開寫 pB，<code>100/100/0/0</code>。</p>
+<p><code>2:01</code><br>
+再亂 claim 一次 pD ，再拿一次 $0$。<br>
+我覺得 pD 先放著好了，根本不會做。</p>
+<p><code>3:00</code><br>
+好像成功想到 pC $16$ 分了，以為可以推廣到 $100$ 發現是爛的，反正先做掉。</p>
+<p><code>3:19</code><br>
+pC 拿 $0$ 分了，原來我又把 i 打成 1 了，超級好笑。</p>
+<p><code>3:26</code><br>
+<code>100/100/16/0</code>。</p>
+<p><code>4:02</code><br>
+因為一直沒有進展，所以先把 pC 暴力寫完，<code>100/100/23/0</code>。</p>
+<p><code>5:00</code><br>
+還是沒有進展。</p>
+<p>最後結果 <code>100/100/23/0</code>。</p>
+<hr>
+<h1>傷心的結果</h1>
+<p>Day1 <code>100/48/100/0</code>。<br>
+Day2 <code>100/100/23/0</code>。<br>
+Total <code>471</code>，rk.25。</p>
+<p><a href="https://stats.egoi.org/editions/2021/results/">記分板</a>，金牌線是 <code>539</code>，所以我拿到銀牌了啦 ಥ_ಥ。</p>
+<hr>
+<h1>檢討</h1>
+<h2 id="Day1">Day1</h2>
+<ol>
+<li>pB 沒做出來就是不應該 ( ˘︹˘ )。</li>
+<li>pD 暴力為什麼沒有寫 ( ˘︹˘ )。</li>
+<li>我是不是不太會區間 DP ?</li>
+</ol>
+<h2 id="Day2">Day2</h2>
+<ol>
+<li>C 沒有想樹那個子題。</li>
+<li><code>check</code> 函數沒有初始化拿到很多 WA ( 補題的時候 )。</li>
+</ol>
+<h2 id="General">General</h2>
+<ol>
+<li>打錯變數的名字。</li>
+<li>pD 拿 $0$ 分 ( 至少 day1 滿不應該的 )。</li>
+<li>是不是要對後半場坐牢擬定什麼策略 ? 這是策略能解決的嗎，如果是的話那應該要逼自己去想子題？</li>
+<li>給每一題比較久的思考時間是好的，至少比跳來跳去好很多 ( 應該 )。</li>
+</ol>
+<hr>
+<h1>其他話</h1>
+<p>我很喜歡 day1 C 和 day2 C。<br>
+因為 4/1 是校慶，我原本想說可以 vir Day2，但是我爸媽不給請假學校又沒安靜的地方，<s>呃反正 Day1 和 Day2 中間本來就休一天。</s><br>
+我把 day2 D 丟給謝鈞因為他想知道我都在幹嘛，結果他也 claim 了一個跟我一模一樣的 WA 的東西。<br>
+摩卡超級強，好可惜他沒有進二階 (˘･_･˘) 。</p>
+<p>EGOI 測資是不是有點像 TOI，因為我一個大 bug 都可以撈不少分、二分搜區間太小竟然可以過，還有 $O(N^4)$ 可以拿到 $O(N^3)$ 子題的分數好棒。</p>
 ]]></content>
       <tags>
         <tag>training</tag>

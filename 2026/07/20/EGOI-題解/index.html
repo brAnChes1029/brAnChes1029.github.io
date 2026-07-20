@@ -179,7 +179,7 @@ p.spoiler {
     </div>
 
     <span class="post-date">
-      Jul 12, 2026
+      Jul 20, 2026
     </span>
 
   </div>
@@ -518,8 +518,74 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 <p>可以用時間戳紀錄每個人從什麼時候開始在 Anika 後面，以及 Anika 開始跑這圈的時間，就可以知道 Anika 是不是超過了原本在她後面的人，這時候代表她越過終點線了 ( 越過終點線就要把全部人視為在她前面，並更新新的一圈開始跑的時間 )。</p>
 </details>
 <h3 id="Bouquet">Bouquet</h3>
+<details>
+<summary> full </summary>
+<p>可以先想到一個直觀的 DP，令 $dp[i]$ 代表考慮第 $1$ 朵至第 $i$ 朵的花，並且一定要摘第 $i$ 朵花，這樣最多可以摘多少花。<br>
+轉移的部分可以 $\mathcal{O}(N)$ 枚舉每個 $j&lt;i$，只要滿足 $j+r[j]&lt;i$ 和 $j&lt;i-l[i]$ 就可以轉移，總共是 $\mathcal{O}(N^2)$。</p>
+<p>優化一下，用一個線段樹存目前一些 $j&lt;i$ 的 $dp[j]$ 的值，對於每個 $i$，先把所有符合 $j+r[j]&lt;i$ 的花加進線段樹，再對 $[1, i-l[i])$ query，就可以在 $\mathcal{O}(\log N)$ 轉移好了。</p>
+</details>
+<details>
+<summary> 另解 </summary>
+<p>如果你討厭線段樹 ( ? )，可以用一個陣列 $v[i]$ 存最小的 $j$ 滿足 $dp[j] \geq i$，因為 $v$ 陣列的元素會遞增，轉移的時候就可以二分搜了。</p>
+</details>
 <h3 id="Team-Coding">Team Coding</h3>
 <h3 id="Garden-Decorations">Garden Decorations</h3>
+<details>
+<summary> 小提示 </summary>
+<p>xor (●’◡’●)</p>
+</details>
+<details>
+<summary> subtask 1 & 3 </summary>
+<p>使用 $\oplus$ 這個符號代表 xor，已知 $a \oplus a=0$，也就是同一個數字被 xor 兩次會消掉，可以利用這個性質來做這題。</p>
+<p>交換兩個數字，可以這樣 ( 包在同一個圈圈代表 xor 在一起 ) :<br>
+<img src="/images/EGOI_sol_2024d1pD-1.png" alt=""></p>
+</details>
+<details>
+<summary> subtask 4 & 5 </summary>
+<p>左移和右移，分別可以這樣 ( 包在同一個圈圈代表 xor 在一起 ) :<br>
+<img src="/images/EGOI_sol_2024d1pD-2.png" alt=""></p>
+</details>
+<details>
+<summary> full </summary>
+<p>交換房子的關係圖會形成很多環，如果 $a[i]=j$ ( $i$ 號房子的雕像要變成和 $j$ 號房子一樣 )，就連一條 $i$ 到 $j$ 的邊。<br>
+然後也建反的邊 $c[j]=i$，待會會用到。</p>
+<p>令 $nxt[i]$ 代表沿著箭頭走 ( 從 $i$ 走到 $a[i]$ )，遇到的第一個 $j&lt;i$ ( 先把 index 變成 1-based，如果沒有符合條件的 $j$，代表 $i$ 在這個環中是 index 最小的，就把 $nxt[i]$ 設為 $0$ )。<br>
+令 $pre[i]$ 代表逆著箭頭走，遇到的第一個 $j&lt;i$ ( 如果沒有符合條件的 $j$，就把 $pre[i]$ 設為 $0$ )。</p>
+<p><img src="/images/EGOI_sol_2024d1pD-3.png" alt=""></p>
+<p>令 $B_0(i)$ 代表 $i$ 號房子一開始的雕像狀態。</p>
+<ol>
+<li>
+<p>先使 $B_1(i)=B_0(i) \oplus B_0(nxt[i])$，代表第 $i$ 號房子在第一輪結束時的雕像狀態，如果沒有 $nxt[i]$，那就是 $B_1(i)=B_0(i)$。</p>
+</li>
+<li>
+<p>第二輪結束時使 $B_2(i)=B_0(a[i]) \oplus B_0(a[pre[i]])$。</p>
+<p>至於要怎麼做到 :</p>
+<ul>
+<li>
+<p>對於 $nxt[i]=0$ 的 $i$，沿著這串跳回去</p>
+  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>( <span class="type">int</span> j=a[i] ; j!=i ; j=nxt[j] ) b[<span class="number">2</span>][i]^=b[<span class="number">1</span>][j];</span><br></pre></td></tr></table></figure>
+<p>沿路跟 $B_1(j)=B_0(j) \oplus B_0(nxt[j])$ xor 在一起，這一路上的東西最後會消掉只剩下最前面和最後面的 $B_0(a[i]) \oplus B_0(i)$，因為 $B_2(i)$ 一開始是 $B_1(i)=B_0(i)$，所以最後 $B_0(a[i]) \oplus B_0(i) \oplus B_0(i) = B_0(a[i])$。</p>
+</li>
+<li>
+<p>對於 $nxt[i] \neq 0$，沿著這串跳回去</p>
+  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>( <span class="type">int</span> j=a[i] ; j!=nxt[i] ; j=nxt[j] ) b[<span class="number">2</span>][i]^=b[<span class="number">1</span>][j];</span><br></pre></td></tr></table></figure>
+<p>同樣利用消去，這段最後會剩下 $B_0(a[i]) \oplus B_0(nxt[i])$，將其跟 $B_2(i) = B_1(i) = B_0(i) \oplus B_0(nxt[i])$ xor 後，$B_2(i)$ 會變成 $B_0(i) \oplus B_0(a[i])$。</p>
+<p>接下來沿著反方向</p>
+  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>( <span class="type">int</span> j=c[i] ; j!=pre[i] ; j=pre[j] ) b[<span class="number">2</span>][i]^=b[<span class="number">2</span>][j];</span><br></pre></td></tr></table></figure>
+<p>此時一定有 $j&gt;i$，並且這一輪是反著走的，所以 $B_2(j)$ 已經是算好的 $B_0(a[j]) \oplus B_0(a[pre[j]])$，這一路上的東西消去剩下 $B_0(a[c[i]]) \oplus B_0(a[pre[i]])$。因為 $a[c[i]] = i$，所以結果就是 $B_0(i) \oplus B_0(a[pre[i]])$。</p>
+<p>兩者結合可以得到 $(B_0(i) \oplus B_0(a[i])) \oplus (B_0(i) \oplus B_0(a[pre[i]])) = B_0(a[i]) \oplus B_0(a[pre[i]])$。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>目標是使 $B_3(i)=B_0(a[i])$。</p>
+<p>可以透過像是前綴和</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b[<span class="number">3</span>][i]^=b[<span class="number">3</span>][pre[i]];</span><br></pre></td></tr></table></figure>
+<p>這一輪是從小走到大，所以 $pre[i]$ 一定會先遇到，根據遞迴關係 $B_3(i) = B_2(i) \oplus B_3(pre[pre[…]]) = B_0(a[i]) \oplus B_0(a[pre[i]]) \oplus B_3(pre[pre[…]])$ 會消掉只剩 $B_0(p[i])$。</p>
+<p>然後就大功告成了 \(≧∇≦)ﾉ</p>
+</li>
+</ol>
+</details>
 <h2 id="day2-3">day2</h2>
 <h3 id="Circle-Passing">Circle Passing</h3>
 <h3 id="Bikeparking">Bikeparking</h3>
