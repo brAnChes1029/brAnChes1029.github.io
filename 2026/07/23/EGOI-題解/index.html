@@ -220,6 +220,7 @@ p.spoiler {
 <p>想得到一個 $n$，就必須花費 $0$ 到 $n-1$ 各一個。<br>
 可以從 $n$ 往 $0$ 數回來，若數字 $i$ 需要 $k$ 個，就把 $0$ 到 $i-1$ 的現有數量各減 $k$，然後答案加上 $k$。<br>
 這樣模擬的總複雜度為 $\mathcal{O}(tn^2)$。</p>
+<p>當然也可以用差分，不用一個一個減，可以做到 $\mathcal{O}(tn)$。</p>
 </details>
 <h3 id="Lego-Wall">Lego Wall</h3>
 <blockquote>
@@ -271,6 +272,8 @@ p.spoiler {
 </details>
 <details>
 <summary> full </summary>
+<p>如果有個人到城市 $c$ 時，城市 $c$ 的權重是 $e[c]=d_0$，接下來辦了很多活動 $d_1, d_2, d_3…$，最後權重變成 $e[c]= \sum{d_i}$，這個人的滿意度會變成 $\sum{d_i} - d_0$，所以只需要知道來的時候權重多少，和現在權重多少，就可以知道這段時間增加多少滿意度了。<br>
+可以使用「差分」做到這件事。</p>
 <p>對所有人開一個懶標線段樹，並在每個 node 紀錄一個變數 $city$ 代表這個 node 底下所有人都在這個城市，如果大家所在城市不同則 $city=-1$；還要另外維護一個差分變數 $v$。</p>
 <ul>
 <li>對於操作 <code>e</code>，可以維護一個陣列 $e$ 紀錄每個城市當前權重，直接加值。</li>
@@ -285,8 +288,15 @@ p.spoiler {
 <details>
 <summary> full </summary>
 <p>先把所有資料中心按照所剩機器數量由大到小排好，這樣每次操作都會是將前 $c$ 個資料中心的機器數量減掉 $m$，然後再將資料中心排序好。</p>
-<p>觀察到前 $c$ 個資料中心的相對順序不變，後 $n-c$ 個資料中心相對順序也不變，所以可以用雙指針在 $\mathcal{O}©$ 內把整個排序好。</p>
+<p>觀察到前 $c$ 個資料中心的相對順序不變，後 $n-c$ 個資料中心相對順序也不變，所以可以用雙指針在 $\mathcal{O}( c)$ 內把整個排序好。</p>
 <p>總複雜度 $\mathcal{O}(ns)$，所以 EGOI judge $2$ 秒可以跑 $5e8$ 喔。</p>
+</details>
+<details>
+<summary> bonus </summary>
+<p>C++ 有內建神奇函數 <code>inplace_merge</code>，可以把同一個陣列中的兩個連在一起的已排序子區間合併然後排序好。</p>
+<p>舉例一下，第一個子區間在 $[l, mid)$，第二個在 $[mid, r)$，且這兩個子區間都是升序，那可以用</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">inplace_merge</span>( a.<span class="built_in">begin</span>()+l, a.<span class="built_in">begin</span>()+mid, a.<span class="built_in">begin</span>()+r, <span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;() );</span><br></pre></td></tr></table></figure>
+<p>這樣就把 $[l, r)$ 升序排好了。</p>
 </details>
 <h3 id="Superpiece">Superpiece</h3>
 <details>
@@ -303,6 +313,7 @@ p.spoiler {
 <p>騎士的步數有以下的公式 ( <a target="_blank" rel="noopener" href="http://books.google.de/books?id=QxX2CX5OVMsC&amp;pg=PA337&amp;lpg=PA337&amp;dq=knight%20metric&amp;source=bl&amp;ots=3J5nDWweOY&amp;sig=_-pQwRWZrh0fI9SHzmkxlCb-Xcc&amp;hl=de&amp;sa=X&amp;ei=-FkoU6WaLen8ywOjgoHoDg&amp;ved=0CDIQ6AEwAA#v=onepage&amp;q=knight%20metric&amp;f=false">Knight Metric</a> ) :</p>
 <p>$$dis=max( \lceil\frac{|x|}{2}\rceil, \lceil\frac{|y|}{2}\rceil, \lceil\frac{|x|+|y|}{3}\rceil )$$</p>
 <p>如果 $dis$ 和 $|x|+|y|$ 奇偶性不同還要 $+1$，然後 $(1,0)$、$(2,2)$、$(1,1)$ 需要特判。</p>
+<p>至於這是怎麼推出來的，可以參考 <a target="_blank" rel="noopener" href="https://www.luogu.com/article/eqwpn260">這個人畫的彩色的圖</a>。</p>
 <p>先判掉一步可達的情況 :</p>
 <ol>
 <li>在 $x$ 或 $y$ 軸上且有 Q 或 R。</li>
@@ -311,6 +322,11 @@ p.spoiler {
 </ol>
 <p>接下來如果有 Q 或 R 的話兩步可以到，先判掉。<br>
 最後剩下 P K N B，觀察到任何最小移動方法如果不是只使用一種棋子，就是先用某種棋子走一步之後改使用另一種棋子走完剩下的。</p>
+<p>原因是 :</p>
+<ol>
+<li>如果有 B，就用 P K N 任一種改變所在格子的奇偶性，B 就可以在兩步內跳到。</li>
+<li>否則就是剩下 P K N，因為 P K 花兩步以上走到的地方 N 可以花更少 ( 或一樣 ) 的步數抵達，所以 P K 最多貢獻一步。</li>
+</ol>
 </details>
 <h3 id="Toy-Design">Toy Design</h3>
 <blockquote>
