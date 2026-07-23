@@ -179,7 +179,7 @@ p.spoiler {
     </div>
 
     <span class="post-date">
-      Jul 20, 2026
+      Jul 23, 2026
     </span>
 
   </div>
@@ -529,6 +529,30 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 <p>如果你討厭線段樹 ( ? )，可以用一個陣列 $v[i]$ 存最小的 $j$ 滿足 $dp[j] \geq i$，因為 $v$ 陣列的元素會遞增，轉移的時候就可以二分搜了。</p>
 </details>
 <h3 id="Team-Coding">Team Coding</h3>
+<details>
+<summary> subtask 2 & 4 </summary>
+<p>先說 subtask 4。<br>
+先對整個樹 DFS 一次，算 $cnt[lan][depth]$ 代表在 $depth$ 這個深度有多少人用 $lan$ 這個語言。</p>
+<p>接下來 $\mathcal{O}(N)$ 枚舉每個點當 team leader，再對 team learder 的子樹 DFS 一次，算 $cnt2[depth]$ 代表這個深度總共有多少人，和 $cnt3[depth]$ 代表這個深度有多少人使用和 team leader 同一種語言，之後就可以看每個深度可以換掉多少人。<br>
+總複雜度 $\mathcal{O}(N^2)$。</p>
+<p>對於 subtask 2，假設樹根的人使用 $0$ 號語言，那就只要計算 team leader 選擇使用 $1$ 號語言的情況了。</p>
+<p>如果一個點 $i$ 和他的祖先 $p$ 都是使用 $1$ 號語言，那就不用計算以 $i$ 為 team leader 的狀況，因為選擇 $p$ 當 team leader 一定可以有比較多人。<br>
+因此可以用 subtask 4 的做法，因為每個計算的子樹都是獨立的，會均攤 $\mathcal{O}(N)$。</p>
+</details>
+<details>
+<summary> subtask 3 </summary>
+<p>$\mathcal{O}(N)$ 枚舉每個點當 team leader，假設他使用的語言有 $C$ 個人使用。</p>
+<p>接下來 $\mathcal{O}( C)$ 其他使用相同語言的人，如果在子樹內就留著，在外面就考慮可不可以換進來 ( 所以也要考慮子樹內每個深度有多少位子可以換，想知道子樹內部某深度有多少人，可以在 DFS 時先記錄每個點開始 DFS 和結束 DFS 的時間，若 $j$ 在 $i$ 的子樹內，會有 $tin[i]&lt;=tin[j] \text{ and } tout[i]&gt;=tout[j]$，可以用一個 <code>vector&lt;pair&lt;int,int&gt;&gt; d[x]</code> 存深度為 $x$ 的點的 $tin[j]$ 和 $j$，然後就可以用二分搜知道在 $i$ 的子樹內深度 $x$ 共有多少人 )。</p>
+<p>總複雜度 $\mathcal{O}(NC \log N )$，這個子題說 $C_{max}=10$。</p>
+</details>
+<details>
+<summary> full </summary>
+<p>$\mathcal{O}(N)$ 枚舉每個點當 team leader，假設他使用的語言有 $C$ 個人使用。</p>
+<ol>
+<li>如果 $C \leq \sqrt{N}$，那就用 subtask 3 的做法，可以 $\mathcal{O}(N \sqrt{N} \log N)$ 做完。</li>
+<li>如果 $C &gt; \sqrt{N}$，因為使用人數大於 $\sqrt{N}$ 人的語言不會超過 $\sqrt{N}$ 種，那就用 subtask 2 的作法，可以 $\mathcal{O}(N \sqrt{N})$ 做完。</li>
+</ol>
+</details>
 <h3 id="Garden-Decorations">Garden Decorations</h3>
 <details>
 <summary> 小提示 </summary>
@@ -588,6 +612,11 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 </details>
 <h2 id="day2-3">day2</h2>
 <h3 id="Circle-Passing">Circle Passing</h3>
+<details>
+<summary> full </summary>
+<p>觀察到最多只會走一次直徑，所以就是在「不走直徑」、「使用逆時針走到的第一條直徑」、「使用順時針走到的第一條直徑」這三種狀況中取 $min$。</p>
+<p>實作上可以用一個函式算環上兩點不走直徑的最短距離，這樣就不用每次都要判現在要逆時針走還是順時針走。</p>
+</details>
 <h3 id="Bikeparking">Bikeparking</h3>
 <h3 id="Light-Bulbs">Light Bulbs</h3>
 <details>
