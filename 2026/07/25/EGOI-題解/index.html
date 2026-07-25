@@ -179,7 +179,7 @@ p.spoiler {
     </div>
 
     <span class="post-date">
-      Jul 23, 2026
+      Jul 25, 2026
     </span>
 
   </div>
@@ -294,9 +294,9 @@ p.spoiler {
 <details>
 <summary> bonus </summary>
 <p>C++ 有內建神奇函數 <code>inplace_merge</code>，可以把同一個陣列中的兩個連在一起的已排序子區間合併然後排序好。</p>
-<p>舉例一下，第一個子區間在 $[l, mid)$，第二個在 $[mid, r)$，且這兩個子區間都是升序，那可以用</p>
+<p>舉例一下，第一個子區間在 $[l, mid)$，第二個在 $[mid, r)$，且這兩個子區間都是降序，那可以用</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">inplace_merge</span>( a.<span class="built_in">begin</span>()+l, a.<span class="built_in">begin</span>()+mid, a.<span class="built_in">begin</span>()+r, <span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;() );</span><br></pre></td></tr></table></figure>
-<p>這樣就把 $[l, r)$ 升序排好了。</p>
+<p>這樣就把 $[l, r)$ 降序排好了。</p>
 </details>
 <h3 id="Superpiece">Superpiece</h3>
 <details>
@@ -634,6 +634,17 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 <p>實作上可以用一個函式算環上兩點不走直徑的最短距離，這樣就不用每次都要判現在要逆時針走還是順時針走。</p>
 </details>
 <h3 id="Bikeparking">Bikeparking</h3>
+<details>
+<summary> subtask 2 </summary>
+<p>保證全部 $x_i=y_i=c$。</p>
+<p>在 $N \geq 3$ 的時候，可以給所有等級 $1$ 的人等級 $0$ 的車位，給所有等級 $2$ 的人等級 $1$ 的車位，然後給所有等級 $0$ 的人等級 $N-1$ 的車位。<br>
+這樣只有等級 $0$ 的人會生氣，其他人都會開心，可以得到 $(N-2) \times c$ 個好評。</p>
+</details>
+<details>
+<summary> full </summary>
+<p>從 subtask 2 觀察到，如果 $a&lt;b$，並且 $a$ 車位可以使 $x$ 滿意，$b$ 車位可以使 $y$ 滿意 ( 這樣分配可以得到 $0$ 個好評 )，那把 $a$ 車位給 $y$，$b$ 車位給 $x$，會得到一個好評和一個負評，整體上不會比較差。</p>
+<p>所以可以對於等級 $x$ 的人，先看有沒有等級小於 $x$ 的空位，如果有，就從這些車位裡面挑等級盡量大 ( 但還是比 $x$ 小 ) 的車位給他，這樣就可以盡量製造多一點人給好評；如果沒有，那就先跳過這個人，等到全部可以給好評的人都分配完之後，再盡量讓這些沒分配到的人滿意，沒辦法滿意就只好給負評了 ( 上面說要給等級盡量大的車位的原因也是希望可以盡量留多一點等級小的空位下來，盡量讓這些沒分配到的人可以挑到滿意的車位，減少生氣的人 )。</p>
+</details>
 <h3 id="Light-Bulbs">Light Bulbs</h3>
 <details>
 <summary> subtask 1 & 2 </summary>
