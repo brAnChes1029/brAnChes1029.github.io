@@ -676,8 +676,30 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 <p>這樣根據實驗結果會過，然後這題沒有官解 ( ? )。</p>
 </details>
 <h3 id="Make-them-Meet">Make them Meet</h3>
-<h1>2026</h1>
+<h1>2025</h1>
 <h2 id="day1-4">day1</h2>
+<h3 id="Gift-Boxes">Gift Boxes</h3>
+<details>
+<summary> full </summary>
+<p>先找出最長可以取的後綴 $[idx, n-1]$ ( 使用 0-based ) 滿足這段裡面沒有重複的元素。</p>
+<p>接下來依序考慮 $[0, i]$ 這段前綴可以有多長的後綴，首先 $[0, i]$ 必須先滿足這段裡面沒有重複的元素，然後令 $[0, i]$ 裡面第二次出現位置最後面的人出現在 $x$ 這個位置，那這樣後綴最多只能取 $[max( idx, x+1 ), n-1]$。<br>
+對於每個 $i$ 找到最多可以取多少人就可以算出答案了。</p>
+</details>
+<h3 id="Dark-Ride">Dark Ride</h3>
+<details>
+<summary> full </summary>
+<p>如果已經先花 $\log N$ 次找可以分開端點的 bit，就等於已經知道這兩個端點的編號哪些 bit 不一樣了，如果第 $0$ 個、第 $2$ 個和第 $3$ 個 bit 不一樣，就把這個資訊記下來 : $b = 2^0 + 2^2 + 2^3$。</p>
+<p>因此可以二分搜找出其中一個端點 $x$，另一個端點的編號就會是 $x \text{ xor } b$，總共需要 $2 \log N$ 次 query。</p>
+</details>
+<h3 id="Monster-Go">Monster-Go</h3>
+<h3 id="Wind-Turbines">Wind Turbines</h3>
+<h2 id="day2-4">day2</h2>
+<h3 id="A-String-Problem">A String Problem</h3>
+<h3 id="Currents">Currents</h3>
+<h3 id="IMO">IMO</h3>
+<h3 id="Laser-Strike">Laser Strike</h3>
+<h1>2026</h1>
+<h2 id="day1-5">day1</h2>
 <h3 id="Ferris-Wheel">Ferris Wheel</h3>
 <details><summary> full </summary>
 <p><code>+</code> 是往比自己大的連，先把全部是 <code>+</code> 的零件分離出來，編號由小往大連。<br>
@@ -768,7 +790,7 @@ Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$
 <details><summary> 確定性作法 </summary>
 <p><a target="_blank" rel="noopener" href="https://egoi2026.it/competition/census/">官解</a>最下面那堆。</p>
 </details>
-<h2 id="day2-4">day2</h2>
+<h2 id="day2-5">day2</h2>
 <h3 id="Watering-Plants">Watering Plants</h3>
 <details><summary> full </summary>
 <p>可以對每個人設一個時間戳 <code>t[i]</code> 代表這個人從 <code>t[i]</code> 這個時間開始幫樓下鄰居澆花 ( 沒有的話時間戳就設 $-1$ )。</p>
