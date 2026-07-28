@@ -687,6 +687,17 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 </details>
 <h3 id="Dark-Ride">Dark Ride</h3>
 <details>
+<summary> subtask 5 </summary>
+<p>如果我選擇點亮的房間只包含一個端點，就會出現奇數次尖叫聲 :<br>
+<img src="/images/EGOI_sol_2025d1pB-1.png" alt=""></p>
+<p>但如果出現偶數次尖叫聲，就不知道點亮的房間到底是有兩個端點，還是沒有包含任何端點 :<br>
+<img src="/images/EGOI_sol_2025d1pB-2.png" alt=""></p>
+<p>如果可以找到一些房間「只包含一個端點」，就可以對集合二分搜找到他了 !<br>
+但要怎麼成功把兩個端點分開 ?</p>
+<p>因為兩個端點的編號不同，這兩個編號必有一個 bit 不同，所以一定存在一個 bit 可以把兩個端點分到不同集合。</p>
+<p>先花 $\log N$ 次找可以分開端點的 bit，再兩個端點分別花 $\log N$ 二分搜，會需要 $3 \log N$ 次 query，可以有 $71$ 分。</p>
+</details>
+<details>
 <summary> full </summary>
 <p>如果已經先花 $\log N$ 次找可以分開端點的 bit，就等於已經知道這兩個端點的編號哪些 bit 不一樣了，如果第 $0$ 個、第 $2$ 個和第 $3$ 個 bit 不一樣，就把這個資訊記下來 : $b = 2^0 + 2^2 + 2^3$。</p>
 <p>因此可以二分搜找出其中一個端點 $x$，另一個端點的編號就會是 $x \text{ xor } b$，總共需要 $2 \log N$ 次 query。</p>
