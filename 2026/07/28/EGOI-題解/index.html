@@ -703,6 +703,18 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 <p>因此可以二分搜找出其中一個端點 $x$，另一個端點的編號就會是 $x \text{ xor } b$，總共需要 $2 \log N$ 次 query。</p>
 </details>
 <h3 id="Monster-Go">Monster-Go</h3>
+<details><summary> $8$ 分 </summary>
+<p>對於 $N \leq 4$，可以第一個放 $0, 1, … 11$，第二列放 $12,13,…23$，這樣可以放 $4$ 列。</p>
+</details>
+<details><summary> full </summary>
+<p>要怎麼構造出多一點列 ? <s>隨機是不行的，我拿到 $2$ 分。</s></p>
+<p>考慮幫數字分一下組，然後這樣放 :<br>
+<img src="/images/EGOI_sol_2025d1pC.png" alt=""></p>
+<p>所以如果讓 $d$ 個數字一組 ( 當然 $d$ 要是 $12$ 的因數 )，並湊出 $ \frac{12}{d} + i $ 組 ( 要 $12+i \times d \leq 50$ ) ，這樣就可以湊出 $ \binom{ \frac{12}{d} + i }{\frac{12}{d}}$ 列。<br>
+但是這樣 <strong>沒辦法</strong> 只湊出 $ \binom{ \frac{12}{d} + i }{\frac{12}{d}} -1$ 列，因為少了任何列這個構造就會壞掉。</p>
+<p>所以可以用不同的 $d$ 和 $ \frac{12}{d} + i $ 的組合嘗試一下可以湊出幾列，比如說先用 $d=4$ 做出 $5$ 組 ( 花費 $20$ 個數字 )，這樣有 $\binom{5}{3}=10$ 列，再用 $d=3$ 做出 $6$ 組 ( 花費 $18$ 個數字 )，這樣有 $\binom{6}{4}=15$ 列，加起來就可以湊出 $25$ 列了。</p>
+<p>實作的部分使用 DP 會比較方便 ( 可以令 $dp[i]$ 為想湊出 $i$ 列最少需要花費多少個數字 )。</p>
+</details>
 <h3 id="Wind-Turbines">Wind Turbines</h3>
 <h2 id="day2-4">day2</h2>
 <h3 id="A-String-Problem">A String Problem</h3>
