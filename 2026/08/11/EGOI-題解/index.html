@@ -179,7 +179,7 @@ p.spoiler {
     </div>
 
     <span class="post-date">
-      Aug 8, 2026
+      Aug 11, 2026
     </span>
 
   </div>
@@ -816,6 +816,12 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 </details>
 <h2 id="day2-4">day2</h2>
 <h3 id="A-String-Problem">A String Problem</h3>
+<details><summary> full </summary>
+<p>首先兩個平行線的 $(a_i+b_i) \mod (2n)$ 會相等，觀察範測會發現這個 $mod$ 值必須是奇數。</p>
+<p>紀錄出現最多次的平行線 $mod$ 值是多少，把其他線也調成這個平行的樣子。<br>
+最後就是最小化操作步數，可以隨便找一個需要調整的弦，移動某一端到正確位置，然後正確位置上如果有另一根需要調整的弦，那就接著調整他，否則就繼續尋找其他需要調整的弦。<br>
+題目有保證所有弦初始端點皆不同，因此這樣做可以讓每次操作後最多只有一個端點上有兩條弦，也就是每條弦最多只會被移動一個端點。</p>
+</details>
 <h3 id="Currents">Currents</h3>
 <details><summary> subtask 4 </summary>
 <p>這裡保證原圖是 DAG。</p>
