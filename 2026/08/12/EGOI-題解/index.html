@@ -179,7 +179,7 @@ p.spoiler {
     </div>
 
     <span class="post-date">
-      Aug 11, 2026
+      Aug 12, 2026
     </span>
 
   </div>
@@ -505,6 +505,7 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 以下以 $N=8$ 舉例。<br>
 <img src="/images/EGOI_sol_2023d2pD-1.png" alt=""><br>
 <img src="/images/EGOI_sol_2023d2pD-2.png" alt=""></p>
+<hr>
 <p>Bertil 可以看左右子樹，如果有一邊的房子已經「被填滿了」，Emma 家就不會在這一邊，可以把這一邊丟掉然後遞迴下去，直到左右子樹「被填滿的最小層數」一樣時，左右子樹的兩個上面寫「被填滿的最小層數」的房子中有一個會是 Emma 家。<br>
 假設 Emma 寫了 $3$。<br>
 <img src="/images/EGOI_sol_2023d2pD-3.png" alt=""><br>
@@ -834,6 +835,45 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 </details>
 <h3 id="IMO">IMO</h3>
 <h3 id="Laser-Strike">Laser Strike</h3>
+<details><summary> subtask 1 ( star ) </summary>
+<p>使用 $1$ bit 。</p>
+<p>Ann 按照任意順序把所有不是中心的葉子拔掉，使用 $1$ 個 bit 告訴 Kathrin 第一個拔掉兩個點誰是葉子。<br>
+Kathrin 知道第一個拔掉的葉子是誰後，也會順便知道星星中心是誰，因為所有邊都有一端是連到中心，所以之後就可以輕易判斷出 $a$、$b$ 誰是葉子。</p>
+</details>
+<details><summary> subtask 2 ( path ) </summary>
+<p>使用 $1$ bit 。</p>
+<p>Ann 從鍊的一端開始拔 ( 假設從左邊一路拔到右邊 )，使用 $1$ 個 bit 告訴 Kathrin 第一個拔掉兩個點誰是葉子。<br>
+Kathrin 知道第一個拔掉的葉子是誰後，也會順便知道下一個要拔掉的是誰 ( 假設現在要拔掉 $a$，因為 $a$、$b$ 之間有邊，所以下一個就要拔掉 $b$ )。</p>
+</details>
+<details><summary> full </summary>
+<ol>
+<li>
+<p>Ann 先找一個最大的葉子集合滿足在集合內的所有葉子都沒有相同的父節點 ( 也就是說父節點相同的葉子們只要派一個代表放進集合就好了 )。</p>
+<p>接下來把這個集合分成兩邊，A 類放「父節點編號小於葉子編號的邊」，B 類放「父節點編號大於葉子編號的邊」。<br>
+把 A、B 由小到大排序，如果 A 最後一條邊比 B 第一條邊大，就先處理 A ( 對於 A 內的每個父節點，把他的葉子全部拔掉 )；否則先處理 B。</p>
+</li>
+<li>
+<p>接下來就把數上剩下的葉子放進一個 <code>queue</code> 然後像拓樸排序那樣一一拔掉。</p>
+</li>
+</ol>
+<p><img src="/images/EGOI_sol_2025d2pD.png" alt=""></p>
+<hr>
+<p>Kathrin 接下來會依照這些規則判斷 $a$ 還是 $b$ 是葉子 :<br>
+這裡先假設 Kathrin 收到的 bit 是 <code>1</code>，代表 Ann 先處理了 A 類的葉子。</p>
+<ol>
+<li>如果 $a$、$b$ 兩個點都沒出現過，那就 :
+<ul>
+<li>這是第一條邊 : 看 bit，bit 是 <code>1</code> 代表編號比較大的是葉子。</li>
+<li>否則跟上一條適用 <code>1.</code> 的邊比較，如果這條邊大於上一條邊，那就看 bit，bit 是 <code>1</code> 代表編號比較大的是葉子；如果這條邊小於上一條邊，就反轉 bit 的狀態 ( 從 <code>1</code> 變成 <code>0</code> )，代表開始處理 B 類的葉子了，現在編號比較小的才是葉子。</li>
+</ul>
+</li>
+<li>如果這條邊跟上一條邊有共點，不相同的那個點是葉子。</li>
+<li>如果有一個點之前看過，之前看過的那個是葉子。</li>
+</ol>
+<p>令一開始所有葉子都在第 $0$ 層，把這些葉子拔掉後產生的新葉子為第 $1$ 層，以此類推，Ann 會像 BFS 一樣一層一層把點拔掉。<br>
+剛進行到第 $i$ 層的時候 ( $i&gt;0$ )，因為任一層的點數會大於 $1$，所以 Ann 一定可以找到一個點使得這個點在上一步沒有出現，所以這時候會讓 Kathrin 使用 <code>3.</code> 而不是 <code>2.</code>。</p>
+<p>也就是說 Kathrin 的 <code>1.</code>、<code>2.</code> 對應到判斷 Ann 的 <code>1.</code> 階段，Kathrin 的 <code>3.</code> 對應到判斷 Ann 的 <code>2.</code> 階段。</p>
+</details>
 <h1>2026</h1>
 <h2 id="day1-5">day1</h2>
 <h3 id="Ferris-Wheel">Ferris Wheel</h3>
