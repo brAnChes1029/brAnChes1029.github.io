@@ -179,7 +179,7 @@ p.spoiler {
     </div>
 
     <span class="post-date">
-      Aug 12, 2026
+      Aug 17, 2026
     </span>
 
   </div>
@@ -212,8 +212,34 @@ p.spoiler {
 <p>現在在施工，請不要靠近，會被磚頭砸到 ( ? ) ⚠️⚠️⚠️</p>
 </marquee>
 <hr>
-<h1>2022</h1>
+<h1>2021</h1>
 <h2 id="day1">day1</h2>
+<h3 id="Number-of-Zeros">Number of Zeros</h3>
+<details>
+<summary> full </summary>
+<p>因為 $ 2 \times 5 = 10 $，所以想在後面得到一個 $0$，需要一個 $2$ 和一個 $5$，因此答案會是 $2$ 的個數和 $5$ 的個數取 $min$。</p>
+<p>至於 $l$ 到 $r$ 的最小公倍數有幾個 $2$，可以對於每個 $2$ 的冪次 $2^i$，看他的倍數是不是有在 $l$ 到 $r$ 中，找滿足條件的最大的 $i$。</p>
+</details>
+<h3 id="Luna-Likes-Love">Luna Likes Love</h3>
+<details>
+<summary> full </summary>
+<p>令數字 $i$ 第一次出現的位置是 $l[i]$，第二次出現的位置是 $r[i]$。<br>
+把所有數字依照 $r[i]$ 由小到大排序。</p>
+<p>對於第一個 $r[x]$，需要 $r[x]-l[x]$ 次操作，接下來就可以把 $x$ 這個數字刪掉。<br>
+對於第 $j$ 個 $r[y]$，如果 $[l[y], r[y]]$ 區間內有 $cnt$ 個已經被刪掉的數字，就會需要 $r[y]-l[y]-cnt$ 次操作。</p>
+<p>可以用 BIT 快速維護區間內有幾個已經被刪掉的數字。</p>
+</details>
+<h3 id="Twin-Cookies">Twin Cookies</h3>
+<details>
+<summary> full </summary>
+<p>隨機。</p>
+<p>前 $100$ 次每次都隨機生出 $n$ 個餅乾 ( 要注意美味度要跟之前的全部不一樣 )，令第 $i$ 次送達的餅乾是 $a[i]$。</p>
+<p>最後一次抓一些 $a[i]$ 和 $a[j]$ 出來 ( $a[i]&gt;a[j]$ )，把 $a[i]+a[j]$ 和 $a[i]-a[j]$ 放進訂單 ( 一樣注意美味度要跟之前的全部不一樣 )，這樣有 $\binom{100}{2} \times 2=9900$ 種組合，要湊出 $n_{max}=5000$ 種應該是都會成功。</p>
+<p>這樣最後一次送達的餅乾會是之前的某個 $a[i]+a[j]$ 或 $a[i]-a[j]$，一定可以第一個人拿兩片，第二個人拿一片使兩人拿到的美味度總和一樣。</p>
+</details>
+<h3 id="Lanterns">Lanterns</h3>
+<h1>2022</h1>
+<h2 id="day1-2">day1</h2>
 <h3 id="Subset-Mex">Subset Mex</h3>
 <details>
 <summary> full </summary>
@@ -378,7 +404,7 @@ p.spoiler {
 <p>實作<s>是個大考驗</s>，可能多用 bitmask 是不錯的選擇。</p>
 </details>
 <h1>2023</h1>
-<h2 id="day1-2">day1</h2>
+<h2 id="day1-3">day1</h2>
 <h3 id="Inflation">Inflation</h3>
 <details>
 <summary> full </summary>
@@ -526,7 +552,7 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 <a target="_blank" rel="noopener" href="https://stats.egoi.org/media/task_solution/guessinggame.pdf">官解</a>說 $K=3$ 被證明出不可能辦到了，但 $K=4$ 還不知道是不是可行的。</p>
 </details>
 <h1>2024</h1>
-<h2 id="day1-3">day1</h2>
+<h2 id="day1-4">day1</h2>
 <h3 id="Infinite-Race">Infinite Race</h3>
 <details>
 <summary> full </summary>
@@ -742,7 +768,7 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 <p>在 $3n$ 回合內就可以遇到了。</p>
 </details>
 <h1>2025</h1>
-<h2 id="day1-4">day1</h2>
+<h2 id="day1-5">day1</h2>
 <h3 id="Gift-Boxes">Gift Boxes</h3>
 <details>
 <summary> full </summary>
@@ -875,7 +901,7 @@ Kathrin 知道第一個拔掉的葉子是誰後，也會順便知道下一個要
 <p>也就是說 Kathrin 的 <code>1.</code>、<code>2.</code> 對應到判斷 Ann 的 <code>1.</code> 階段，Kathrin 的 <code>3.</code> 對應到判斷 Ann 的 <code>2.</code> 階段。</p>
 </details>
 <h1>2026</h1>
-<h2 id="day1-5">day1</h2>
+<h2 id="day1-6">day1</h2>
 <h3 id="Ferris-Wheel">Ferris Wheel</h3>
 <details><summary> full </summary>
 <p><code>+</code> 是往比自己大的連，先把全部是 <code>+</code> 的零件分離出來，編號由小往大連。<br>
