@@ -179,7 +179,7 @@ p.spoiler {
     </div>
 
     <span class="post-date">
-      Aug 17, 2026
+      Aug 20, 2026
     </span>
 
   </div>
@@ -238,6 +238,55 @@ p.spoiler {
 <p>這樣最後一次送達的餅乾會是之前的某個 $a[i]+a[j]$ 或 $a[i]-a[j]$，一定可以第一個人拿兩片，第二個人拿一片使兩人拿到的美味度總和一樣。</p>
 </details>
 <h3 id="Lanterns">Lanterns</h3>
+<h2 id="day2">day2</h2>
+<h3 id="Shopping-Fever">Shopping Fever</h3>
+<details>
+<summary> full </summary>
+<p>首先由大到小排序。<br>
+打折分開算沒差，買三個最便宜的那個免費，所以所有東西只有可能是三個一組購買，或是一個一個買。<br>
+觀察到排序後如果一次購買三個東西，這三個東西一定連續，因為買三個價格相近的一定比較划算。</p>
+<p>接著可以直接 DP，令 $dp[i]$ 表示已經購買 $1$ 到 $i$ 的東西，需要多少錢。<br>
+轉移就枚舉現在這個東西是只買一個，還是跟前面兩個一起買的。</p>
+</details>
+<h3 id="Railway">Railway</h3>
+<details>
+<summary> full </summary>
+<p>直接枚舉兩個方向的兩台火車，可以先把全部隧道的起始排序，對兩台車交點二分搜就可以知道交點是不是在隧道內。</p>
+<p>需考慮一些 case，像是一台車到站但另一台根本沒出發，或交點有 $0.5$ 之類的。</p>
+</details>
+<h3 id="Angry-Cows">Angry Cows</h3>
+<details>
+<summary> subtask 2 </summary>
+<p>不用考慮偏遠度，所以先在所有跟牛的區域相鄰的未使用區域蓋圍牆。<br>
+如果牛的區域跟登山區之間相鄰 ( 有一條邊 )，那答案顯然是無解。</p>
+<p>接下來只要檢查登山區是否有因此變得不連通就好。</p>
+</details>
+<details>
+<summary> subtask 3 </summary>
+<p>只有一個登山區，所以不用擔心會把登山區域變不連通。</p>
+<p>可以對偏遠度 $x$ 二分搜，把所跟登山區距離小於等於 $x$ 的未使用區域都蓋圍牆，然後檢查牛是否會跑進來。</p>
+</details>
+<details>
+<summary> subtask 4 </summary>
+<p>( 這個子題跟滿分沒什麼關係。 )</p>
+<p>先讓樹根是某個登山區，然後 DP，$dp1[i]$ 代表以 $i$ 為根的子樹下是否有登山區，$dp2[i]$ 代表以 $i$ 為根的子樹下是否有牛。</p>
+<p>如果登山區和牛相鄰、或 $i$ 區域有牛但 $dp1[i]=true$ 就無解。<br>
+否則所有登山區會形成包含樹根的聯通的集合 $S$，若未使用區域 $j$ 滿足 $j$ 和 $S$ 相鄰且 $dp2[j]=true$，則需要在 $j$ 蓋圍牆。</p>
+</details>
+<details>
+<summary> full </summary>
+<p>合併 subtask 2 &amp; 3 的想法，對偏遠度 $x$ 二分搜。</p>
+<p>現在全部區域可以分成</p>
+<ol>
+<li>牛</li>
+<li>登山區</li>
+<li>未使用區，跟最近的登山區距離小於等於 $x$ ( 可以蓋圍牆 )</li>
+<li>未使用區，跟最近的登山區距離大於 $x$ ( 不可以蓋圍牆 )</li>
+</ol>
+<p>注意到如果一個 <code>4.</code> 區域跟牛連通，牛就可以走過來，可以直接視為牛的區域。</p>
+<p>仿照 subtask2 在所有跟牛的區域相鄰的 <code>3.</code> 區域蓋圍牆，如果牛的區域跟登山區之間相鄰就無解，最後一樣要檢查登山區是否有因此變得不連通。</p>
+</details>
+<h3 id="Double-Move">Double Move</h3>
 <h1>2022</h1>
 <h2 id="day1-2">day1</h2>
 <h3 id="Subset-Mex">Subset Mex</h3>
@@ -309,7 +358,7 @@ p.spoiler {
 <p>至於 <code>t</code> 操作為什麼均攤是好的，令現在有 $U$ 對的人編號相鄰但是在不同的城市，一次 <code>t</code> 的操作最多使 $U+=2$ ( 把一個連續區段的中間段的人移到別的地方 )。</p>
 <p>總複雜度 $\mathcal{O}(n \log n + (m+q) \log m \log n)$，也可以用 $\mathcal{O}(1)$ 查詢距離把後面的 $\log n$ 壓掉。</p>
 </details>
-<h2 id="day2">day2</h2>
+<h2 id="day2-2">day2</h2>
 <h3 id="Data-Centers">Data Centers</h3>
 <details>
 <summary> full </summary>
@@ -469,7 +518,7 @@ $$c[i][j]=\max_{\text{every path from } i \text{ to } j}\left( \min_{\text{every
 <p>$$a[i][j]=\min_{\text{every path from } i \text{ to } j}\left( \max_{\text{every road on this path}}(B) \right)$$</p>
 <p>把對 $c$ 蓋最大生成樹改成對 $a$ 蓋最小生成樹，最後就只要檢查腳踏車道寬度是否符合條件了。</p>
 </details>
-<h2 id="day2-2">day2</h2>
+<h2 id="day2-3">day2</h2>
 <h3 id="Carnival-General">Carnival General</h3>
 <details>
 <summary> full </summary>
@@ -653,7 +702,7 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 </li>
 </ol>
 </details>
-<h2 id="day2-3">day2</h2>
+<h2 id="day2-4">day2</h2>
 <h3 id="Circle-Passing">Circle Passing</h3>
 <details>
 <summary> full </summary>
@@ -837,11 +886,11 @@ subtask 2 我是直接構造一個星星的圖，讓 $0$ 當樹根，如果點�
 <p>假設 $l$ 是現在能夠使 $d[i] \geq l$ 的最大的 $l$ ( 也就是 $l=d[i]$ 啦 )，就把 $w_{i.parent}-w_i$ 這個權重存進 $sum[l]$，所以 $\text{prefix sum}(l)$ 就會是滿足 $d[i] \leq l$ 的 $w_{i.parent}-w_i$ 權重總和 ( 可以用 BIT 來支援快速修改和查詢前綴和 )，這樣要詢問 $[l,r]$ 的時候答案就會是</p>
 <p>假設 $l$ 是現在能夠使 $d[i] \geq l$ 的最大的 $l$ ( 也就是 $l=d[i]$ 啦 )，就把 $w_{i.parent}-w_i$ 這個權重存進 $sum[l]$，所以 $\text{prefix sum}(l)$ 就會是滿足 $d[i] \leq l$ 的 $w_{i.parent}-w_i$ 權重總和 ( 可以用 BIT 來支援快速修改和查詢前綴和 )，這樣要詢問 $[l,r]$ 的時候答案就會是</p>
 <p>$$MST-( \text{prefix sum}( r) - \text{prefix sum}(l-1) )$$</p>
-<p>令一條鍊為 $d[i]$ 相同的一串結點，則一條鍊最頂端的節點只會被改 $min( size[i_{lson}], size[i_{rson}] )$ 次 ( worse case 是完美二元樹 )，所以幫鍊改最頂端的節點可以均攤 $O(N \log N)$。</p>
+<p>令一條鍊為 $d[i]$ 相同的一串節點，則一條鍊最頂端的節點只會被改 $min( size[i_{lson}], size[i_{rson}] )$ 次 ( worse case 是完美二元樹 )，所以幫鍊改最頂端的節點可以均攤 $O(N \log N)$。</p>
 <p>每次更新可以先用 LCA 找到舊鏈和新鏈的 LCA 點 $y$，然後在 BIT 刪除 $x$ 一路到 $y$ 的 $w_{i.parent}-w_i$ 權重 ( 總和是 $w_{x.parent}-w_{y}$ ) ，接下來再往 $y$ 的兩個子節點中 $i$ 的祖先的方向走 :<br>
 <img src="/images/EGOI_sol_2025d1pD-2.png" alt=""></p>
 </details>
-<h2 id="day2-4">day2</h2>
+<h2 id="day2-5">day2</h2>
 <h3 id="A-String-Problem">A String Problem</h3>
 <details><summary> full </summary>
 <p>首先兩個平行線的 $(a_i+b_i) \mod (2n)$ 會相等，觀察範測會發現這個 $mod$ 值必須是奇數。</p>
@@ -992,7 +1041,7 @@ Aurora 會選一個 $X$，Bianca 必須選一個不一樣的 $Y$，然後從 $Y$
 <details><summary> 確定性作法 </summary>
 <p><a target="_blank" rel="noopener" href="https://egoi2026.it/competition/census/">官解</a>最下面那堆。</p>
 </details>
-<h2 id="day2-5">day2</h2>
+<h2 id="day2-6">day2</h2>
 <h3 id="Watering-Plants">Watering Plants</h3>
 <details><summary> full </summary>
 <p>可以對每個人設一個時間戳 <code>t[i]</code> 代表這個人從 <code>t[i]</code> 這個時間開始幫樓下鄰居澆花 ( 沒有的話時間戳就設 $-1$ )。</p>
