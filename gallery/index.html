@@ -176,7 +176,7 @@ p.spoiler {
     border-bottom: 1px solid #eee;
 }
 
-/* 分類名稱的樣式（模仿文章列表的極簡風格） */
+/* 分類名稱的樣式 */
 .category-link {
     font-size: 1.1rem;
     color: #fff !important;
@@ -193,7 +193,7 @@ p.spoiler {
 
 /* 返回列表按鈕 */
 .back-to-list {
-    display: none; /* 預設隱藏，進入分類後顯示 */
+    display: none;
     font-size: 0.9rem;
     color: #888 !important;
     text-decoration: none;
@@ -201,10 +201,10 @@ p.spoiler {
     margin-bottom: 20px;
 }
 .back-to-list:hover {
-    color: #000 !important;
+    color: #fff !important;
 }
 
-/* 各個圖片牆的容器（預設全部隱藏，點擊才用 JS 切換） */
+/* 各個圖片牆的容器 */
 .gallery-tab-content {
     display: none;
 }
@@ -250,87 +250,145 @@ p.spoiler {
     justify-content: center !important;
     align-items: center !important;
     cursor: zoom-out !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
 }
 
 .gallery-modal img {
     max-width: 90% !important;
-    max-height: 85% !important;
+    max-height: 75% !important;
     object-fit: contain !important;
     box-shadow: 0 0 20px rgba(0,0,0,0.5) !important;
 }
+
+/* 大圖下方的靠左文字框 */
+.gallery-modal-caption {
+    color: #ffffff !important;
+    font-size: 0.95rem !important;
+    margin-top: 15px !important;
+    text-align: left !important;
+    width: 90% !important;
+    max-width: 1200px !important;
+    max-height: 20vh !important;
+    overflow-y: auto !important;
+    line-height: 1.6 !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    background: #2A2E2B !important;
+    padding: 16px !important;
+    border-radius: 4px !important;
+    
+    /* 💡 上下兩端的分隔橫線 */
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    
+    cursor: auto !important;
+}
+
 </style>
 
+<!-- 分類選單 -->
 <div id="categoryMenu" class="gallery-categories">
     <a class="category-link" onclick="switchGallery('draw')"># 畫畫</a>
     <a class="category-link" onclick="switchGallery('egoi2026')"># EGOI 2026 照片</a>
-    </div>
+</div>
 
+<!-- 返回按鈕 -->
 <div id="backButton" class="back-to-list" onclick="showAllCategories()">
     ← back
 </div>
 
+<!-- 分類 1：畫畫 -->
 <div id="tab-draw" class="gallery-tab-content">
     <div class="gallery-grid">
-        <div class="gallery-item" onclick="openGalleryModal('/images/EGOI2026day1.jpg')">
+        <!-- <s>文字</s> 即可加上刪除線 -->
+        <div class="gallery-item" onclick="openGalleryModal('/images/EGOItrain-frieren.webp', 'EGOI 的芙莉蓮。\n<hr>TOI 三模的時候畫的。我有融合義大利的顏色喔 !\n睿睿抱歉我之後會好好考試。')">
+            <img src="/images/EGOItrain-frieren.webp" alt="">
+        </div>
+        <div class="gallery-item" onclick="openGalleryModal('/images/EGOI2026day1.jpg', 'EGOI 2026 day1。\n<hr>靈感來自春夏秋冬代行者的 Sakura。\n畫裡面的東西分別來自 EGOI 2026 day1 的題目 : Ferris Wheel、Ovenmasters 的披薩、Biscuits ( 我還特別查了杏仁餅乾長怎樣 )、Census ( <s>應該畫一堆奇怪小人就可以了吧 ?</s> )。')">
             <img src="/images/EGOI2026day1.jpg" alt="">
         </div>
+        <div class="gallery-item" onclick="openGalleryModal('/images/draw-magic-hat.webp', '魔法帽 ( ? )\n<hr>靈感來自魔法帽，因為我覺得魔法陣很像寫程式 ( ? )，所以畫了這個圖。')">
+            <img src="/images/draw-magic-hat.webp" alt="">
         </div>
+        <div class="gallery-item" onclick="openGalleryModal('/images/draw-sun.webp', 'Sole\n<hr>靈感來自科學班成發小袋子，我們成發主題是「旭」( 無好心設計的小袋子好可愛 ! )\nSole 是義大利文的太陽。')">
+            <img src="/images/draw-sun.webp" alt="">
+        </div>
+        <div class="gallery-item" onclick="openGalleryModal('/images/draw-NPSC2023.webp', 'NPSC 2023\n<hr>國中打 NPSC 2023 完畫的。\n最近跟楊岳蓁和張語珊打了 NTUCPCPC，有點懷念所以翻出這張圖。\n這張算我國中畫的比較好看的圖 ( ? )\n我那時候帶高中課本去，內積真的有用到。底下藍色很厚的大概是 AP325。')">
+            <img src="/images/draw-NPSC2023.webp" alt="">
+        </div>
+    </div>
 </div>
 
+<!-- 分類 2：以此類推 -->
 
-
-
-<div id="galleryModal" class="gallery-modal" onclick="closeGalleryModal()">
+<!-- 彈出的大圖與說明遮罩層 -->
+<div id="galleryModal" class="gallery-modal" onclick="closeGalleryModal(event)">
     <img id="galleryModalImg" src="" alt="Large Image">
+    <div id="galleryModalCaption" class="gallery-modal-caption" onclick="event.stopPropagation()"></div>
 </div>
 
 <script>
 // 切換到指定的分類
 function switchGallery(tabId) {
-    // 隱藏分類選單
     document.getElementById('categoryMenu').style.display = 'none';
-    
-    // 顯示返回按鈕
     document.getElementById('backButton').style.display = 'block';
     
-    // 隱藏所有分類內容，並顯示被點擊的那一個
     var contents = document.getElementsByClassName('gallery-tab-content');
     for (var i = 0; i < contents.length; i++) {
         contents[i].style.display = 'none';
     }
-    document.getElementById('tab-' + tabId).style.display = 'block';
+    
+    var targetTab = document.getElementById('tab-' + tabId);
+    if (targetTab) {
+        targetTab.style.display = 'block';
+    }
 }
 
 // 返回分類選單
 function showAllCategories() {
-    // 顯示分類選單
     document.getElementById('categoryMenu').style.display = 'flex';
-    
-    // 隱藏返回按鈕
     document.getElementById('backButton').style.display = 'none';
     
-    // 隱藏所有分類內容
     var contents = document.getElementsByClassName('gallery-tab-content');
     for (var i = 0; i < contents.length; i++) {
         contents[i].style.display = 'none';
     }
 }
 
-// 點擊縮圖打開大圖
-function openGalleryModal(imgUrl) {
+// 點擊縮圖打開大圖與說明
+function openGalleryModal(imgUrl, captionText) {
     var modal = document.getElementById('galleryModal');
     var modalImg = document.getElementById('galleryModalImg');
+    var caption = document.getElementById('galleryModalCaption');
+    
     if (modal && modalImg) {
         modalImg.src = imgUrl;
+        
+        if (caption) {
+            if (captionText && captionText.trim() !== '') {
+                // 💡 關鍵修改：改用 innerHTML 以支援刪除線等 HTML 標籤
+                caption.innerHTML = captionText;
+                caption.style.display = 'block';
+            } else {
+                caption.style.display = 'none';
+            }
+        }
+        
         modal.style.display = 'flex';
+        modal.style.flexDirection = 'column';
     }
 }
 
-// 點擊任意處關閉大圖
-function closeGalleryModal() {
+// 點擊任意黑色背景處關閉大圖
+function closeGalleryModal(event) {
     var modal = document.getElementById('galleryModal');
-    if (modal) {
-        modal.style.display = 'none';
+    if (event.target.id === 'galleryModal' || event.target.id === 'galleryModalImg') {
+        if (modal) {
+            modal.style.display = 'none';
+        }
     }
 }
 </script>
