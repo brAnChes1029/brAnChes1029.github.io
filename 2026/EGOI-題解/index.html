@@ -179,7 +179,7 @@ p.spoiler {
     </div>
 
     <span class="post-date">
-      Sep 1, 2026
+      Sep 7, 2026
     </span>
 
   </div>
@@ -206,9 +206,10 @@ p.spoiler {
 <p>「🟡」代表我不會寫滿分。<br>
 如果題解有任何問題歡迎跟我說。</p>
 <hr>
-<p><a target="_blank" rel="noopener" href="https://stats.egoi.org/tasks/">官方題解</a>，按題目名字，可以在右下方找到 solution。<br>
-台灣的翻譯題本是 <code>Chinese (zh_tw)</code> ( 從 $2026$ 才開始有台灣翻譯題本，<a target="_blank" rel="noopener" href="https://loj.ac/p?keyword=EGOI">這個中國 judge </a>有一些簡體中文翻譯 )。</p>
-<marquee direction="left" scrollamount="8"> 
+<p>judge 可以用 <a target="_blank" rel="noopener" href="https://qoj.ac/category/367">QOJ</a>，比較完整而且有 virtual 的好用功能 ( 有倒數而且會幫你聯集分數 )。ojuz 和 loj 也有題目但比較不完整。<br>
+台灣的翻譯題本是 <code>Chinese (zh_tw)</code> ( 從 $2026$ 才開始有台灣翻譯題本，<a target="_blank" rel="noopener" href="https://loj.ac/p?keyword=EGOI">loj </a>有一些簡體中文翻譯 )。</p>
+<p><a target="_blank" rel="noopener" href="https://stats.egoi.org/tasks/">官方題解</a>，按題目名字，可以在右下方找到 solution ( 大部分有 )。</p>
+<marquee direction="left" scrollamount="8">
 <p>現在在施工，請不要靠近，會被磚頭砸到 ( ? ) ⚠️⚠️⚠️</p>
 </marquee>
 <hr>
@@ -238,6 +239,47 @@ p.spoiler {
 <p>這樣最後一次送達的餅乾會是之前的某個 $a[i]+a[j]$ 或 $a[i]-a[j]$，一定可以第一個人拿兩片，第二個人拿一片使兩人拿到的美味度總和一樣。</p>
 </details>
 <h3 id="Lanterns">Lanterns</h3>
+<details>
+<summary> subtask 1 </summary>
+<p>$\mathcal{O}(k!)$ 枚舉拿燈的順序，然後試試看。</p>
+</details>
+<details>
+<summary> subtask 2 </summary>
+<p>觀察到在任何時刻可以到達的高度會呈現一連續區間。<br>
+假設一開始在山峰 $p[x]$，先花 $c[x]$ 元買燈籠，可以到達的高度區間是 $[a[x], b[x]]$ ( 如果 $a[x]&gt;h[p[x]]$ 或 $b[x]&lt;h[p[x]]$ 就一定走不了，先判掉 )。</p>
+<p>對於每個起點 $p[x]$，考慮 $dp[i][j]$ 代表可到達最低高度是 $i$、最高是 $j$，需要花多少錢買燈籠。<br>
+轉移可以 $\mathcal{O}(k)$ 枚舉每個燈籠，看 $p[x]$ 可不可以到，且買了這個燈籠可不可以增加可達連續區間。<br>
+答案就是 $dp[1][n]$。</p>
+<p>因為 $k$ 跟 $n$ 量級一樣所以這樣算是 $\mathcal{O}(n^4)$，但我也不知道為什麼會順便贈送 subtask 3 &amp; 4。</p>
+</details>
+<details>
+<summary> subtask 3 & 4 </summary>
+<p><s>雖然 $\mathcal{O}(n^4)$ 會過但還是講一下</s>。</p>
+<p>改一下狀態 : $dp[i][j]$ 代表目前擁有的可到達高度最低的燈籠是燈籠 $i$ 、目前擁有的可到達高度最高的燈籠是燈籠 $j$，需要花多少錢買燈籠。<br>
+一樣可以 $\mathcal{O}(k)$ 枚舉每個燈籠，假設現在決定花 $c[x]$ 元在 $p[x]$ 山峰買一個燈籠，可達區間變成 $[min(a[x], a[i]), max(b[x], b[j])]$，然後顛倒轉移的方向，從這個比較大的區間轉移給 $dp[i][j]$。</p>
+<p>最後每個燈籠 $x$，答案會是 $dp[x][x]$。</p>
+<p>因為 $k$ 跟 $n$ 量級一樣，這樣是 $\mathcal{O}(n^3)$。</p>
+</details>
+<details>
+<summary> full </summary>
+<p>沿用 subtask 3 &amp; 4 的狀態，$dp[i][j]$ 代表目前擁有的可到達高度最低的燈籠是燈籠 $i$ 、目前擁有的可到達高度最高的燈籠是燈籠 $j$，需要花多少錢買燈籠。<br>
+這時候可達最低高度是 $a[i]$，可達最高高度是 $b[j]$。</p>
+<p>且這時候可以到達的編號最小的山峰是 $l$，可以到達的編號最大的山峰是 $r$，則 $[l,r]$ 之間的山峰都要滿足高度在 $[a[i], b[j]]$ 之間。<br>
+這裡可以預處理「對於某個燈籠 $i$ 往左一直走遇到的第一個比 $a[i]$ 低的山峰」、「對於某個燈籠 $i$ 往右一直走遇到的第一個比 $a[i]$ 低的山峰」、「對於某個燈籠 $i$ 往左一直走遇到的第一個比 $b[i]$ 高的山峰」、「對於某個燈籠 $i$ 往右一直走遇到的第一個比 $b[i]$ 高的山峰」，就可以 $\mathcal{O}(1)$ 算出 $l$ 和 $r$。</p>
+<p>發現 $dp[i][j]$ 會從以下三種狀態轉移 :</p>
+<ol>
+<li>$dp[i][k]+c[k]$ ( 需要滿足 $b[k] &gt; b[j]$ )</li>
+<li>$dp[k][j]+c[k]$ ( 需要滿足 $a[k] &gt; a[i]$ )</li>
+<li>$dp[k][k]+c[k]$ ( 需要滿足 $a[k] &gt; a[i]$ 和 $b[k] &gt; b[j]$ )</li>
+</ol>
+<p>而且都要滿足 $p[k]$ 是可以抵達的，也就是 $l \leq p[k] \leq r$。</p>
+<p>先觀察 <code>1.</code>，發現要從 $b$ 比較大的算到比較小的，轉移順序才會好。<br>
+然後可以開一個 min heap <code>priority_queue&lt; pair&lt;int,int&gt; &gt; pq[i]</code> 存所有 $dp[i][k]+c[k]$，因為 $b$ 遞減，區間會越來越小，每次從 <code>pq</code> 裡面取出最好的轉移點時，如果這個轉移點 $k$ 無法抵達，那對於所有之後的區間，也沒辦法從 $k$ 轉移，所以不能轉移的就可以直接丟掉了。<br>
+<img src="/images/EGOI_sol_2021d1pD.png" alt=""></p>
+<p><code>2.</code> 同理，綜合一下，DP 時第一個維度 $i$ 按照 $a$ 由小到大排序，第二個維度 $j$ 按照 $b$ 由大到小排序，就可以有好的轉移順序了。</p>
+<p>至於 <code>3.</code>，可以 $dp[k][k] \rightarrow dp[i][k] \rightarrow dp[i][j]$，把 $dp[i][k]$ 當中間狀態轉移 ( 注意到 $dp[i][k]$ 是不合法的，因為 $a[k]&lt;a[i]$，這時候就直接讓他 $dp[i][k]=dp[k][k]$，先不加 $c[k]$；也就是先擴展右界，擴展左界的時候再加 $c[k]$ )。</p>
+<p>這樣總共是 $\mathcal{O}(n^2 \log n)$。</p>
+</details>
 <h2 id="day2">day2</h2>
 <h3 id="Shopping-Fever">Shopping Fever</h3>
 <details>
