@@ -954,14 +954,12 @@ code {
   font-size: 0.875rem;
   line-height: 1rem;
   color: #60cfff;
-  font-family: 'Roboto Mono', Menlo, Consolas, 'Microsoft JhengHei', 'PingFang TC', sans-serif !important;
 }
 .code pre span {
   font-family: 'Roboto Mono', menlo, monospace;
   font-size: 0.875rem;
   line-height: 1rem;
   color: #d5d5d5;
-  font-family: 'Roboto Mono', Menlo, Consolas, 'Microsoft JhengHei', 'PingFang TC', sans-serif !important;
 }
 .highlight {
   margin: 0 0 1rem 0;
@@ -990,14 +988,6 @@ td span {
 pre {
   margin: 0;
   overflow-x: auto;
-}
-.MathJax,
-.MathJax *,
-.mjx-chtml,
-.mjx-chtml *,
-.katex,
-.katex * {
-  font-family: KaTeX_Main, MathJax_Main, STIXGeneral, 'Times New Roman', serif !important;
 }
 table,
 td,

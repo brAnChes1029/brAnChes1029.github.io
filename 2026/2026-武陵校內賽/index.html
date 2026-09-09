@@ -158,14 +158,14 @@ p.spoiler {
       <div class="tag-list">
         
           <span class="post-tag">
-            <a href="/tags/%E5%AD%B8%E7%A7%91%E8%83%BD%E7%AB%B6/">
-              #學科能競
+            <a href="/tags/contest/">
+              #contest
             </a>
           </span>
         
           <span class="post-tag">
-            <a href="/tags/contest/">
-              #contest
+            <a href="/tags/%E5%AD%B8%E7%A7%91%E8%83%BD%E7%AB%B6/">
+              #學科能競
             </a>
           </span>
         
@@ -193,30 +193,60 @@ p.spoiler {
 
     <div class="post-content">
     <p>今天 9/8 是武陵的校內賽，因為在下午，直接跟台大微積分第一堂課撞爛了 &gt; &lt;</p>
-<p>還有悲報，我從起床開始發現喉嚨有點痛，然後喉嚨就開始越來越痛，原本早上想 vir 個 ABC 練練手感結果不得不去休息 ( 我們班後面的巧拼城堡好讚 ) ，不然下午可能就沒力氣比賽了，<del>反正我覺得 ABC 不打也還好</del>。</p>
-<p>然後我整個早上都超怕待會會打一打暈倒，然後沒有第一名，一定很尷尬。<br>今天特別注意題目要看兩次、多驗解、慢慢寫，<del>然後不要暈倒</del>。</p>
+<p>還有悲報，我從起床開始發現喉嚨有點痛，然後喉嚨就開始越來越痛，原本早上想 vir 個 ABC 練練手感結果不得不去休息 ( 我們班後面的巧拼城堡好讚 ) ，不然下午可能就沒力氣比賽了，<s>反正我覺得 ABC 不打也還好</s>。</p>
+<p>然後我整個早上都超怕待會會打一打暈倒，然後沒有第一名，一定很尷尬。<br>
+今天特別注意題目要看兩次、多驗解、慢慢寫，<s>然後不要暈倒</s>。</p>
 <hr>
-<h2 id="比賽"><a href="#比賽" class="headerlink" title="比賽"></a>比賽</h2><p><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1ZNHYznk9u-Kt7SPLxkmMgaG6hP4NFXk7?usp=sharing">題目</a>。</p>
-<p>然後今年也很感人的是蕭凱鴻和宋睿軒出題目，不是武陵的老師弄的恐怖 zerojudge 水題大賽 ( 高一打到怕了 )。<br>而且是用 CMS 打，題本和子題也都很精緻喔 ( 愛心 )。</p>
+<h2 id="比賽">比賽</h2>
+<p><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1ZNHYznk9u-Kt7SPLxkmMgaG6hP4NFXk7?usp=sharing">題目</a>。</p>
+<p>然後今年也很感人的是蕭凱鴻和宋睿軒出題目，不是武陵的老師弄的恐怖 zerojudge 水題大賽 ( 高一打到怕了 )。<br>
+而且是用 CMS 打，題本和子題也都很精緻喔 ( 愛心 )。</p>
 <p><code>-0:05</code></p>
-<p>可以開始測環境，只有 codeblocks 和 devc++，我用 codeblocks，發現 <code>&lt;bits/stdc++.h&gt;</code> 不能用，拉完了。<br>而且編譯要 $20$ 秒，拉完了。</p>
+<p>可以開始測環境，只有 codeblocks 和 devc++，我用 codeblocks，發現 <code>&lt;bits/stdc++.h&gt;</code> 不能用，拉完了。<br>
+而且編譯要 $20$ 秒，拉完了。</p>
 <p>監考老師說他也沒辦法，你們就自求多福吧。</p>
-<p><code>0:19</code><br><code>0/0/100/100/0/100/0</code>。<br>寫完三個水題，完成簽到，喉嚨超痛的。</p>
-<p><code>0:25</code><br>pB nim 感覺是 <a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1098/">Nim Game II</a>，但我忘光他在幹嘛了。<br>拿到 $0$ 分，為什麼我連一堆石頭都不會做啊，燒雞。<br>大致把每題都看過，因為頭有點暈所以 pA DP 先跳，去寫 pG。</p>
-<p><code>0:55</code><br><code>0/0/100/100/0/100/50</code>。<br>pG 感覺大致跟 <a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1195">CSES Flight Discount</a> 差不多，只是建 $5$ 層圖。<br>因為我不知道 <code>priority_queue</code> 要 include 啥，所以只好用 <code>set</code> 寫，也不意外<del>暴力又被 TLE</del>。<br>改成 <code>priority_queue</code> 之後還是 TLE。</p>
-<p><code>1:20</code><br><code>0/0/100/100/0/100/100</code>。<br>算一下點有快 $2e5 \times 10$ 個，邊有 $2e5 \times 18$ 條，有點多難怪燒雞。<br>因為 $2$、$3$ 層和 $4$、$5$ 層沒關係，所以把一次跑一個大圖拆成跑兩個小圖。</p>
-<p>猜對 <code>tuple</code> 的標頭檔很不易外的是 <code>&lt;tuple&gt;</code>。<br>砸 <code>set</code> 再次 TLE，改 <code>priority_queue</code> 之後先因為本地不能測試吃到 WA，改一下就過了。</p>
+<p><code>0:19</code><br>
+<code>0/0/100/100/0/100/0</code>。<br>
+寫完三個水題，完成簽到，喉嚨超痛的。</p>
+<p><code>0:25</code><br>
+pB nim 感覺是 <a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1098/">Nim Game II</a>，但我忘光他在幹嘛了。<br>
+拿到 $0$ 分，為什麼我連一堆石頭都不會做啊，燒雞。<br>
+大致把每題都看過，因為頭有點暈所以 pA DP 先跳，去寫 pG。</p>
+<p><code>0:55</code><br>
+<code>0/0/100/100/0/100/50</code>。<br>
+pG 感覺大致跟 <a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1195">CSES Flight Discount</a> 差不多，只是建 $5$ 層圖。<br>
+因為我不知道 <code>priority_queue</code> 要 include 啥，所以只好用 <code>set</code> 寫，也不意外<s>暴力又被 TLE</s>。<br>
+改成 <code>priority_queue</code> 之後還是 TLE。</p>
+<p><code>1:20</code><br>
+<code>0/0/100/100/0/100/100</code>。<br>
+算一下點有快 $2e5 \times 10$ 個，邊有 $2e5 \times 18$ 條，有點多難怪燒雞。<br>
+因為 $2$、$3$ 層和 $4$、$5$ 層沒關係，所以把一次跑一個大圖拆成跑兩個小圖。</p>
+<p>猜對 <code>tuple</code> 的標頭檔很不易外的是 <code>&lt;tuple&gt;</code>。<br>
+砸 <code>set</code> 再次 TLE，改 <code>priority_queue</code> 之後先因為本地不能測試吃到 WA，改一下就過了。</p>
 <p>去上廁所和喝水，然後我覺得我的喉嚨每況愈下了，超級痛。</p>
-<p><code>1:42</code><br><code>45/0/100/100/0/100/100</code>。<br>pA DP 先拿個 $45$，因為我寫的 $\mathcal{O}(N^2)$ 出 bug，所以先用 $\mathcal{O}(N^3)$ 修一下，寫完順便驗解。</p>
-<p><code>1:45</code><br><code>100/0/100/100/0/100/100</code>。<br>pA 過了。</p>
-<p><code>1:51</code><br><code>100/50/100/100/0/100/100</code>。<br>pB nim 成功修好，發現我除錯了，應該要除 $K+1$ 而不是除 $K$。</p>
+<p><code>1:42</code><br>
+<code>45/0/100/100/0/100/100</code>。<br>
+pA DP 先拿個 $45$，因為我寫的 $\mathcal{O}(N^2)$ 出 bug，所以先用 $\mathcal{O}(N^3)$ 修一下，寫完順便驗解。</p>
+<p><code>1:45</code><br>
+<code>100/0/100/100/0/100/100</code>。<br>
+pA 過了。</p>
+<p><code>1:51</code><br>
+<code>100/50/100/100/0/100/100</code>。<br>
+pB nim 成功修好，發現我除錯了，應該要除 $K+1$ 而不是除 $K$。</p>
 <p>再去喝水，喉嚨好痛好痛。</p>
-<p><code>2:07</code><br><code>100/50/100/100/30/100/100</code>。<br>撈個子題，他是個公差完全平方數的東西，然後去喝水。</p>
+<p><code>2:07</code><br>
+<code>100/50/100/100/30/100/100</code>。<br>
+撈個子題，他是個公差完全平方數的東西，然後去喝水。</p>
 <p>感覺 pE 滿分還有機會，先看到加一個人的時候會區間加值，區間是一個後綴可以單調隊列找，但他的公式要乘一個 $-L$，然後我一直想到要用 <a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1736">CSES Polynomial Queries</a>，考量到身體狀況岌岌可危感覺弄不出來，燒雞。</p>
-<p><code>2:37</code><br><code>100/50/100/100/45/100/100</code>。<br>pE 子題拿光了，去喝水。<br>嘗試回想起 nim 在幹嘛，但還是想不起來。</p>
-<p><code>3:00</code><br><code>100/50/100/100/45/100/100=595</code>，<code>rk.1</code>。</p>
+<p><code>2:37</code><br>
+<code>100/50/100/100/45/100/100</code>。<br>
+pE 子題拿光了，去喝水。<br>
+嘗試回想起 nim 在幹嘛，但還是想不起來。</p>
+<p><code>3:00</code><br>
+<code>100/50/100/100/45/100/100=595</code>，<code>rk.1</code>。</p>
 <hr>
-<h2 id="檢討"><a href="#檢討" class="headerlink" title="檢討"></a>檢討</h2><ol>
+<h2 id="檢討">檢討</h2>
+<ol>
 <li>pA 拿子題驗解，讚。</li>
 <li>pB 不會 nim ，檢討 ( 雖然他不在 IOI syllabus 內啦 )。</li>
 <li>pE 爆破數學式的能力有待加強，感覺這種算數列的用前一項推滿不錯的 ( DP )。</li>
@@ -225,11 +255,15 @@ p.spoiler {
 <li>比賽前的身體狀況需要多注意，比賽前可能要多帶口罩 ?</li>
 </ol>
 <hr>
-<h2 id="一些話"><a href="#一些話" class="headerlink" title="一些話"></a>一些話</h2><p>就還滿慶幸生病沒造成什麼悲慘的影響。</p>
-<p>雖然蕭凱鴻和宋睿軒出的比賽滿好玩的，但是武陵的設備爛死了 ( 而且兩年都這樣 )，有點慶幸又不慶幸我最後一年打了。<br>( 去年的 codeblocks 整個爛的，不過最後開放線上 IDE <del>然後就有人作弊</del> )</p>
-<p>建議武陵的學弟妹背一些標頭檔吧，武陵的設備拉完了。<br>背這些應該滿夠的 :</p>
+<h2 id="一些話">一些話</h2>
+<p>就還滿慶幸生病沒造成什麼悲慘的影響。</p>
+<p>雖然蕭凱鴻和宋睿軒出的比賽滿好玩的，但是武陵的設備爛死了 ( 而且兩年都這樣 )，有點慶幸又不慶幸我最後一年打了。<br>
+( 去年的 codeblocks 整個爛的，不過最後開放線上 IDE <s>然後就有人作弊</s> )</p>
+<p>建議武陵的學弟妹背一些標頭檔吧，武陵的設備拉完了。<br>
+背這些應該滿夠的 :</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span> <span class="comment">// 有 sort 之類的</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span> <span class="comment">// 有 priority_queue</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;numeric&gt;</span> <span class="comment">// gcd</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;random&gt;</span> <span class="comment">// 如果想隨機亂搞的話</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;chrono&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>也建議要熟悉用 vscode、codeblocks、devc++，因為你不會知道哪個是爛的。<br>還是說要請資讀在校內賽之前去弄一下設備啊 🤔 ( 如果先知道考場的話 )。</p>
+<p>也建議要熟悉用 vscode、codeblocks、devc++，因為你不會知道哪個是爛的。<br>
+還是說要請資讀在校內賽之前去弄一下設備啊 🤔 ( 如果先知道考場的話 )。</p>
 <p>明年是不是輪到我出了 (☆▽☆)</p>
 
 </div> 
