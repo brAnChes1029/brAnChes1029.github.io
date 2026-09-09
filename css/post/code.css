@@ -1,3 +1,9 @@
+code {
+  font-family: 'Roboto Mono', Menlo, Consolas, 'Microsoft JhengHei', 'PingFang TC', sans-serif !important;
+}
+.code pre span {
+  font-family: 'Roboto Mono', Menlo, Consolas, 'Microsoft JhengHei', 'PingFang TC', sans-serif !important;
+}
 .highlight {
   margin: 0 0 $margin-m-2 0;
 }
@@ -19,4 +25,13 @@ td span {
 pre {
   margin: 0;
   overflow-x: auto;
+}
+/* LaTeX 防護：強制覆蓋，確保公式符號字型不被更改 */
+.MathJax,
+.MathJax *,
+.mjx-chtml,
+.mjx-chtml *,
+.katex,
+.katex * {
+  font-family: KaTeX_Main, MathJax_Main, STIXGeneral, 'Times New Roman', serif !important;
 }
