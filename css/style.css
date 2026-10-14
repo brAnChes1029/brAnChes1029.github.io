@@ -174,10 +174,10 @@ template {
   display: none;
 }
 :not(pre) > code {
-  background-color: #225166 !important; /* Discord 標誌性的深灰背景 */
-  color: #dcddde !important; /* Discord 的淺灰文字顏色 */
-  padding: 2px 6px !important; /* 留出上下左右的適當留白 */
-  border-radius: 3px !important; /* 圓角 */
+  background-color: #225166 !important;
+  color: #dcddde !important;
+  padding: 2px 6px !important;
+  border-radius: 3px !important;
   font-family: Consolas, "Courier New", monospace;
 }
 .highlight {
