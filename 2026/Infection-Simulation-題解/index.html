@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="author" content="brAnChes">
+<meta name="subtitle" content="I want to participate in EGOI">
+
+
+
+<title>感染シミュレーション - 題解 | brAnChes&#39;s blog</title>
+
+<link rel="icon" href="/logo.ico">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+<!-- 新增一個腳本區塊來明確觸發渲染，並指定分隔符 -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+          // 明確告訴 KaTeX 支援哪些符號
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false // 避免錯誤時整個頁面崩潰
+      });
+  });
+</script>
+
+
+
+
+  
+    <link rel="stylesheet" href="/css/style.css">
+  
+
+
+
+
+  
+    <script src="/js/menu.js"></script>
+  
+
+
+
+
+
+  <style type="text/css">
+.spoiler {
+  display: inline;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style><meta name="generator" content="Hexo 8.0.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            AC
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/tags/">Tags</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/gallery/">Gallery</a>
+              </li> 
+                   
+          
+          
+            <li class="menu-item search-btn">
+              <a href="#">Search</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<script src="/js/menu.js"></script>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+  <div class="post-info">
+
+    
+      <div class="tag-list">
+        
+          <span class="post-tag">
+            <a href="/tags/solution/">
+              #solution
+            </a>
+          </span>
+        
+          <span class="post-tag">
+            <a href="/tags/JOI-JOIG/">
+              #JOI/JOIG
+            </a>
+          </span>
+        
+      </div>
+    
+
+    <div class="post-title">
+      
+        感染シミュレーション - 題解
+      
+    </div>
+
+    <span class="post-date">
+      Oct 29, 2026
+    </span>
+
+  </div>
+
+  <div class="post-img">
+    
+      <div class="h-line-primary"></div>
+    
+  </div>
+</div>
+
+    <div class="post-content">
+    <style>
+  summary {
+    background-color: #3f6665;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px 10px 5px 25px;
+  }
+</style>
+<h2 id="前言">前言</h2>
+<p>因為 TLE 說他生病了，希望我沒有被傳染，然後我就想到我去年忘記補這題了 ( °□°)</p>
+<p><s>順便我想在 10/29 寫一個 blog。</s></p>
+<h2 id="題目">題目</h2>
+<p>JOIG 2024 初選的最後一題，JOIG 就是日本版的 TGOI，<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/joig2024-open/tasks/joig2024_f">AtCoder 上面有日文的題目</a>。</p>
+<p>以下是中文 :</p>
+<blockquote>
+<p><s>ㄟ狗蟻</s> ( EGOI ) 餐廳有 $N$ 個客人，第 $i$ 位客人在 $[ L_i, R_i )$ 時間內在餐廳裡面。有 $Q$ 筆詢問，問如果第 $p_i$ 位客人生病，且病毒感染強度是 $x_i$ ( 病毒感染強度 $x$ 代表說，如果一個生病的人跟一個健康的人同時待在餐廳裡的時間 $\geq x$，健康的人就會被傳染 ) ，問會導致多少人生病 ?<br>
+$N, Q \leq 1e5$<br>
+$1 \leq x_i, l_i, r_i \leq 1e9$</p>
+</blockquote>
+<h2 id="題解">題解</h2>
+<details>
+<summary> 題解 </summary>
+<blockquote>
+<p>待會變數都會用小寫，然後用陣列那樣的符號，像是 $l[i]$。</p>
+</blockquote>
+<p>先觀察一下子題 : $Q \leq 5$ ，也就是說每次都可以直接模擬，觀察到店內有生病的人的時間會構成一個連續的區間，病毒不可能消失一段時間之後突然又出現嘛。而且，如果第 $i$ 個人要傳染給第 $j$ 個人 ( 並且滿足 $r[j] &gt; r[i]$，才能延長有病人的時間區間 )，必須滿足 $r[i] - l[j] \geq x$。</p>
+<p><img src="/images/infsimu1.png" alt=""></p>
+<hr>
+<p>現在想要快速算出對於每個詢問，店內有病人的時間區間右界是多少 ( 我覺得是這題最酷的部分 )。</p>
+<p>再觀察一下子題，subtask 7 說保證「$L_1&lt;L_2&lt;…&lt;L_n$ 且 $R_1&lt;R_2&lt;…&lt;R_n$」，也就是說會長這樣 :</p>
+<p><img src="/images/infsimu2.png" alt=""></p>
+<p>那可以對於每個人 $i$，計算「比 $i$ 晚離開餐廳的人之中，最早進來餐廳的人的 $l[j]$ 是多少」，然後令 $cnt=r[i]-l[j]$，就會知道第 $i$ 位客人可以跟比他晚離開的某個人接觸多長的時間 ( 不過在這個子題的限制下，比 $i$ 晚離開又跟他相處最久的人一定是 $i+1$ )。</p>
+<p>對於每個詢問，假設一開始生病的是第 $i$ 個客人，想要算出店內有病人的時間區間 $[l[i], t[i])$，會發現 $t[i]$ 就是所有比 $i$ 號客人還晚離開且 $cnt&lt;x[i]$ 的人之中最早離開的人離開的時間 ( $t[i] = \min \lbrace r[j] \mid r[j] \geq r[i] \text{ and } \text{cnt} &lt; x \rbrace$ )，也就是找到病毒第一個傳染不出去的地方。</p>
+<p>假設一開始生病的是粉紅色那個人，粉色和黃色接觸時間有 $\geq x$、黃色和綠色接觸時間有 $\geq x$，但綠色和黑色接觸時間 $&lt; x$，那麼這個病毒最晚只會存活到綠色的人走出店的那一刻，這就是要算的 $t$。</p>
+<p><img src="/images/infsimu3.png" alt=""></p>
+<p>實作算 $t[i] = \min \lbrace r[j] \mid r[j] \geq r[i] \text{ and } \text{cnt} &lt; x \rbrace$ 的部分，可以把所有人先按照 $r$ 由大到小排序，依序算出 $cnt$ 並丟進一個單調 <code>stack</code>，再搭配二分搜就可以算出來了。</p>
+<p>接下來看如果沒有保證「$L_1&lt;L_2&lt;…&lt;L_n$ 且 $R_1&lt;R_2&lt;…&lt;R_n$」，要怎麼算。<br>
+其實完全可以沿用上面的方法，只是可能會有這種 case :</p>
+<p><img src="/images/infsimu4.png" alt=""></p>
+<p>會發現黃色那個人的 $cnt$ 已經超出他在店裡的總時間了耶，但是沒關係，因為粉紅色的人還是可以傳染給綠色的人 ( 而且要算的是「店內存在病人的時間區間」，不是「這個區間裡出現的每個人都有被傳染到」 )，所以這種 case 就把 $cnt$ 當一種過度狀態，就可以沿用上面的方法算出 $t[i]$。</p>
+<hr>
+<p>現在算出所有的 $[l[i], t[i])$ 了。</p>
+<p>如果 $j$ 這個人會被 $i$ 傳染，那必須滿足 :</p>
+<ol>
+<li>$r[j]-l[j] \geq x[i]$，也就是說他必須在店裡待至少 $x[i]$ 單位的時間</li>
+<li>$r[j]$ 在 $[l[j]+x[i], t[i]]$ 這個區間內，這樣他才會被傳染到</li>
+</ol>
+<p><code>1.</code> 的部分可以把詢問離線，按照 $x[i]$ <code>sort</code> 一下，也把客人按照 $r[j]-l[j]$ <code>sort</code> 一下，就可以用雙指針維護符合 $r[j]-l[j] \geq x[i]$ 的客人有哪些了。<br>
+<code>2.</code> 的部分可以把符合 <code>1.</code> 條件的客人的 $r[j]$ 丟進一個 BIT，數值值域很大所以要離散化。</p>
+<p>複雜度大概是 $\mathcal{O}( (N+Q) \log N )$ ，這樣就算完了。</p>
+</details>
+<details>
+<summary> 我的實作 </summary>
+<p>以下的實作大概是按照這個步驟 :</p>
+<ol>
+<li>把客人按照 { $r$ 大，$l$ } 小排序。</li>
+<li>把詢問按照 $r$ 由大到小排序。</li>
+<li>算 $cnt$ 並用一個單調的 <code>stack</code> 維護，搭配雙指針算出對於每個詢問，店內有病人的時間區間右界 $t$。</li>
+<li>把客人按照 { $r-l$ 大，index } 排序。</li>
+<li>把詢問按照 { $x$ 大， index } 排序。</li>
+<li>用雙指針搭配 BIT 算出答案。</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, q;</span><br><span class="line"><span class="type">int</span> l[<span class="number">100005</span>];</span><br><span class="line"><span class="type">int</span> r[<span class="number">100005</span>];</span><br><span class="line"><span class="type">int</span> p[<span class="number">100005</span>];</span><br><span class="line"><span class="type">int</span> x[<span class="number">100005</span>];</span><br><span class="line"><span class="type">int</span> t[<span class="number">100005</span>];</span><br><span class="line"><span class="type">int</span> ans[<span class="number">100005</span>];</span><br><span class="line">vector&lt; pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; &gt; v;</span><br><span class="line">vector&lt; pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; &gt; v2;</span><br><span class="line">vector&lt; pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; &gt; st;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; uni;</span><br><span class="line"><span class="type">int</span> bit[<span class="number">600005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">( <span class="type">int</span> i, <span class="type">int</span> x )</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>( i&lt;<span class="number">600005</span> )&#123;</span><br><span class="line">        bit[i]+=x;</span><br><span class="line">        i+=(i&amp;(-i));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">sum</span><span class="params">( <span class="type">int</span> i )</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> re=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>( i&gt;<span class="number">0</span> )&#123;</span><br><span class="line">        re+=bit[i];</span><br><span class="line">        i-=(i&amp;(-i));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> re;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        cin &gt;&gt; l[i] &gt;&gt; r[i];</span><br><span class="line">        v.<span class="built_in">push_back</span>(&#123; -r[i], l[i] &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; q;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;q ; i++ )&#123;</span><br><span class="line">        cin &gt;&gt; p[i] &gt;&gt; x[i];</span><br><span class="line">        p[i]--;</span><br><span class="line">        v<span class="number">2.</span><span class="built_in">push_back</span>(&#123; -r[p[i]], i &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>( v<span class="number">2.</span><span class="built_in">begin</span>(), v<span class="number">2.</span><span class="built_in">end</span>() );</span><br><span class="line">    <span class="built_in">sort</span>( v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>() );</span><br><span class="line">    <span class="type">int</span> mnl=<span class="number">2e9</span>, j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ )&#123;</span><br><span class="line">        <span class="keyword">auto</span> [r2, l2]=v[i];</span><br><span class="line">        r2*=<span class="number">-1</span>;</span><br><span class="line">        <span class="type">int</span> cnt=( r2-mnl&lt;=<span class="number">0</span> ? <span class="number">-1</span> : r2-mnl );</span><br><span class="line">        mnl=<span class="built_in">min</span>( mnl, l2 );</span><br><span class="line">        <span class="keyword">while</span>( !st.<span class="built_in">empty</span>() &amp;&amp; st.<span class="built_in">back</span>().first&gt;=cnt ) st.<span class="built_in">pop_back</span>();</span><br><span class="line">        st.<span class="built_in">push_back</span>(&#123; cnt, r2 &#125;);</span><br><span class="line">        <span class="keyword">while</span>( j&lt;q &amp;&amp; -v2[j].<span class="built_in">first</span>&lt;=r2 &amp;&amp; -v2[j].first&gt;( i==n<span class="number">-1</span> ? <span class="number">0</span> : -v[i<span class="number">+1</span>].first ) )&#123;</span><br><span class="line">            <span class="keyword">auto</span> it=<span class="built_in">lower_bound</span>( st.<span class="built_in">begin</span>(), st.<span class="built_in">end</span>(), <span class="built_in">make_pair</span>(x[v2[j].second], <span class="number">0</span>) );</span><br><span class="line">            <span class="keyword">if</span>( it==st.<span class="built_in">begin</span>() )&#123;</span><br><span class="line">                t[v2[j].second]=<span class="number">1e9</span><span class="number">+7</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                it--;</span><br><span class="line">                t[v2[j].second]=it-&gt;second;</span><br><span class="line">            &#125;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    uni.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ ) uni.<span class="built_in">push_back</span>( r[i] );</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;q ; i++ ) uni.<span class="built_in">push_back</span>( t[i] ), uni.<span class="built_in">push_back</span>( l[p[i]]+x[i] );</span><br><span class="line">    <span class="built_in">sort</span>( uni.<span class="built_in">begin</span>(), uni.<span class="built_in">end</span>() );</span><br><span class="line">    uni.<span class="built_in">resize</span>( <span class="built_in">unique</span>( uni.<span class="built_in">begin</span>(), uni.<span class="built_in">end</span>() )-uni.<span class="built_in">begin</span>() );</span><br><span class="line"></span><br><span class="line">    v.<span class="built_in">clear</span>();</span><br><span class="line">    v<span class="number">2.</span><span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;n ; i++ ) v.<span class="built_in">push_back</span>(&#123; -(r[i]-l[i]), i &#125;);</span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;q ; i++ ) v<span class="number">2.</span><span class="built_in">push_back</span>(&#123; -x[i], i &#125;);</span><br><span class="line">    <span class="built_in">sort</span>( v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>() );</span><br><span class="line">    <span class="built_in">sort</span>( v<span class="number">2.</span><span class="built_in">begin</span>(), v<span class="number">2.</span><span class="built_in">end</span>() );</span><br><span class="line">    j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">auto</span> [xx, i] : v2 )&#123;</span><br><span class="line">        xx*=<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">if</span>( r[p[i]]-l[p[i]]&lt;xx )&#123;</span><br><span class="line">            ans[i]=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>( j&lt;n &amp;&amp; -v[j].first&gt;=xx )&#123;</span><br><span class="line">            <span class="type">int</span> idx=<span class="built_in">lower_bound</span>( uni.<span class="built_in">begin</span>(), uni.<span class="built_in">end</span>(), r[v[j].second] )-uni.<span class="built_in">begin</span>();</span><br><span class="line">            <span class="built_in">add</span>( idx, <span class="number">1</span> );</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> idxl=<span class="built_in">lower_bound</span>( uni.<span class="built_in">begin</span>(), uni.<span class="built_in">end</span>(), l[p[i]]+xx )-uni.<span class="built_in">begin</span>();</span><br><span class="line">        <span class="type">int</span> idxr=<span class="built_in">lower_bound</span>( uni.<span class="built_in">begin</span>(), uni.<span class="built_in">end</span>(), t[i] )-uni.<span class="built_in">begin</span>();</span><br><span class="line">        ans[i]=<span class="built_in">sum</span>( idxr )-<span class="built_in">sum</span>( idxl<span class="number">-1</span> );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span> ; i&lt;q ; i++ ) cout &lt;&lt; ans[i] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+<h2 id="趣談">趣談</h2>
+<p><a target="_blank" rel="noopener" href="https://www2.ioi-jp.org/joig/2023/2024-ho/2024-joig-ho-t6-review.pdf">官解</a>表示如果會這題就可以當 EGOI 冠軍 ( 去年好像翻了題解，<s>然後看到好多字喔不想補</s>，結果最有印象的就是這句 ) :</p>
+<p><img src="/images/infsimu_offi_sol.png" alt=""></p>
+<p>但畢竟是 $2024$ 的參考標準。</p>
+<p>看完感覺官解的實作方法滿複雜<s>恐怖</s>的，不過製作得很精美耶，插圖都超漂亮的。</p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2026/EGOI-%E9%A1%8C%E8%A7%A3/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+      <div class="search-popup">
+    <div class="search-popup-overlay">  
+    </div>
+    <div class="search-popup-window" >
+        <div class="search-header">
+            <div class="search-input-container">
+              <input autocomplete="off" autocapitalize="off" maxlength="80"
+                     placeholder="404 Not Found Ahahaha" spellcheck="false"
+                     type="search" class="search-input">
+            </div>
+            <div class="search-close-btn">
+                <div class="icon close-btn"></div>
+            </div>
+        </div>
+        <div class="search-result-container">
+        </div>
+    </div>
+</div>
+
+<script>
+    const searchConfig = {
+        path             : "/search.xml",
+        top_n_per_article: "1",
+        unescape         : "false",
+        trigger: "auto",
+        preload: "false"
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js"></script>
+<script src="/js/search.js"></script>
+    
+    
+
+  </body>
+</html>
