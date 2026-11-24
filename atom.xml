@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <author>
+    <name>brAnChes</name>
+  </author>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  <icon>https://branches1029.github.io/icon.png</icon>
+  <id>https://branches1029.github.io/</id>
+  <link href="https://branches1029.github.io/" rel="alternate"/>
+  <link href="https://branches1029.github.io/atom.xml" rel="self"/>
+  <rights>All rights reserved 2026, brAnChes</rights>
+  <subtitle>I want to participate in EGOI</subtitle>
+  <title>brAnChes's blog</title>
+  <updated>2026-10-28T06:49:30.924Z</updated>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="solution" scheme="https://branches1029.github.io/tags/solution/"/>
+    <category term="JOI/JOIG" scheme="https://branches1029.github.io/tags/JOI-JOIG/"/>
+    <id>https://branches1029.github.io/2026/Infection-Simulation-%E9%A1%8C%E8%A7%A3/</id>
+    <link href="https://branches1029.github.io/2026/Infection-Simulation-%E9%A1%8C%E8%A7%A3/"/>
+    <published>2026-10-29T12:00:00.000Z</published>
+    <summary>
+      <![CDATA[<style>
+  summary {
+    background-color: #3f6665;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px 10px 5px 25px;]]>
+    </summary>
+    <title>感染シミュレーション - 題解</title>
+    <updated>2026-10-28T06:49:30.924Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="EGOI" scheme="https://branches1029.github.io/tags/EGOI/"/>
+    <category term="solution" scheme="https://branches1029.github.io/tags/solution/"/>
+    <id>https://branches1029.github.io/2026/EGOI-%E9%A1%8C%E8%A7%A3/</id>
+    <link href="https://branches1029.github.io/2026/EGOI-%E9%A1%8C%E8%A7%A3/"/>
+    <published>2026-10-17T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<style>
+  summary {
+    background-color: #3f6665;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px 10px 5px 25px;]]>
+    </summary>
+    <title>EGOI 題解</title>
+    <updated>2026-10-25T07:19:10.857Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="training" scheme="https://branches1029.github.io/tags/training/"/>
+    <category term="tutorial" scheme="https://branches1029.github.io/tags/tutorial/"/>
+    <id>https://branches1029.github.io/2026/%E5%B0%8D%E6%8B%8D/</id>
+    <link href="https://branches1029.github.io/2026/%E5%B0%8D%E6%8B%8D/"/>
+    <published>2026-09-21T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>發現我到現在還不會對拍，大燒雞了。</p>
+<p>對拍就是在本地隨機生測資餵給 <code>sol.cpp</code> ( 找不到 bug 的假解 ) 跟 <code>brute.cpp</code> ( 在小測資會正確的暴力解 )，找到讓]]>
+    </summary>
+    <title>對拍</title>
+    <updated>2026-09-21T11:54:12.158Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="學科能競" scheme="https://branches1029.github.io/tags/%E5%AD%B8%E7%A7%91%E8%83%BD%E7%AB%B6/"/>
+    <category term="contest" scheme="https://branches1029.github.io/tags/contest/"/>
+    <id>https://branches1029.github.io/2026/2026-%E6%AD%A6%E9%99%B5%E6%A0%A1%E5%85%A7%E8%B3%BD/</id>
+    <link href="https://branches1029.github.io/2026/2026-%E6%AD%A6%E9%99%B5%E6%A0%A1%E5%85%A7%E8%B3%BD/"/>
+    <published>2026-09-08T02:12:37.000Z</published>
+    <summary>
+      <![CDATA[<p>今天 9/8 是武陵的校內賽，因為在下午，直接跟台大微積分第一堂課撞爛了 &gt; &lt;</p>
+<p>還有悲報，我從起床開始發現喉嚨有點痛，然後喉嚨就開始越來越痛，原本早上想 vir 個 ABC 練練手感結果不得不去休息 ( 我們班後面的巧拼城堡好讚 )]]>
+    </summary>
+    <title>2026 武陵校內賽</title>
+    <updated>2026-09-09T14:05:45.200Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="contest" scheme="https://branches1029.github.io/tags/contest/"/>
+    <category term="experience" scheme="https://branches1029.github.io/tags/experience/"/>
+    <id>https://branches1029.github.io/2026/2026-%E6%9A%91%E5%81%87%E7%9A%84%E5%9C%98%E9%AB%94%E8%B3%BD/</id>
+    <link href="https://branches1029.github.io/2026/2026-%E6%9A%91%E5%81%87%E7%9A%84%E5%9C%98%E9%AB%94%E8%B3%BD/"/>
+    <published>2026-08-29T12:09:56.000Z</published>
+    <summary>
+      <![CDATA[<h1>前言</h1>
+<p>可能是因為看到涓涓都會寫團體賽的 blog 所以讓我也有點想寫哈哈哈哈哈。</p>
+<p>我想到我以前不是喜歡打團體賽的人。<br>
+我覺得團體賽跟別人溝通很麻煩，表現又跟自己打差不多。</p>
+<p>又到了團體賽的季節了，明明之前常常打到不開心]]>
+    </summary>
+    <title>2026 暑假的團體賽</title>
+    <updated>2026-08-31T07:29:29.131Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="EGOI" scheme="https://branches1029.github.io/tags/EGOI/"/>
+    <category term="other" scheme="https://branches1029.github.io/tags/other/"/>
+    <id>https://branches1029.github.io/2026/EGOI-2026-%E5%BE%8C%E6%97%A5%E8%AB%87/</id>
+    <link href="https://branches1029.github.io/2026/EGOI-2026-%E5%BE%8C%E6%97%A5%E8%AB%87/"/>
+    <published>2026-06-11T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>這裡是 EGOI 2026 後日談。<br>
+大概是一點心得。</p>
+<p>我大概從 EGOI 回來不久就有多少打一點，不過我最後決定押 <code>6/12</code> 這個日期。</p>
+<hr>
+<h1>注意注意</h1>
+<h2]]>
+    </summary>
+    <title>EGOI 2026 後日談</title>
+    <updated>2026-07-03T13:12:07.855Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="contest" scheme="https://branches1029.github.io/tags/contest/"/>
+    <category term="EGOI" scheme="https://branches1029.github.io/tags/EGOI/"/>
+    <id>https://branches1029.github.io/2026/EGOI-2026-Contest/</id>
+    <link href="https://branches1029.github.io/2026/EGOI-2026-Contest/"/>
+    <published>2026-06-03T07:53:10.000Z</published>
+    <summary>
+      <![CDATA[<p>這邊是 EGOI 2026 的正式比賽過程。<br>
+如果你想寫題目建議不要看，掰掰。</p>
+<details>
+<summary>day1 大大大暴雷</summary>
+<p><img src="/images/EGOI2026day1.jpg"]]>
+    </summary>
+    <title>EGOI 2026 Contest</title>
+    <updated>2026-06-08T14:18:16.374Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="EGOI" scheme="https://branches1029.github.io/tags/EGOI/"/>
+    <id>https://branches1029.github.io/2026/EGOI-2026/</id>
+    <link href="https://branches1029.github.io/2026/EGOI-2026/"/>
+    <published>2026-05-11T08:00:42.000Z</published>
+    <summary>
+      <![CDATA[<p>先說 EGOI 比賽題目這裡沒有暴雷 (*^▽^*)<br>
+這篇就只是遊記<s>流水帳</s>而已。</p>
+<hr>
+<h1>照片</h1>
+<p><a href="https://photos.app.goo.gl/HCu2hwhoGc6UyNBB7">EGOI]]>
+    </summary>
+    <title>EGOI 2026</title>
+    <updated>2026-08-10T03:24:55.036Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="training" scheme="https://branches1029.github.io/tags/training/"/>
+    <category term="EGOI" scheme="https://branches1029.github.io/tags/EGOI/"/>
+    <id>https://branches1029.github.io/2026/Virtual-EGOI-2024/</id>
+    <link href="https://branches1029.github.io/2026/Virtual-EGOI-2024/"/>
+    <published>2026-04-28T08:11:58.000Z</published>
+    <summary>
+      <![CDATA[<h1>Day1</h1>
+<p>Day1 是 4/28 在武陵 vir 的，從 <code>8:30</code> 開始打。</p>
+<p><code>0:45</code><br>
+今天題目看得有點快，<s>一定是因為我沒有好好看 pD</s>。<br>
+精神分數]]>
+    </summary>
+    <title>Virtual EGOI 2024</title>
+    <updated>2026-06-10T12:55:15.233Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="training" scheme="https://branches1029.github.io/tags/training/"/>
+    <category term="EGOI" scheme="https://branches1029.github.io/tags/EGOI/"/>
+    <id>https://branches1029.github.io/2026/%E6%B2%92%E6%9C%89-Virtual-EGOI-2023/</id>
+    <link href="https://branches1029.github.io/2026/%E6%B2%92%E6%9C%89-Virtual-EGOI-2023/"/>
+    <published>2026-04-17T02:13:08.000Z</published>
+    <summary>
+      <![CDATA[<h1>Day1</h1>
+<p>Day1 是 4/15 在國培 vir 的，從 <code>15:20</code> 開始打，但大家都沒有打完。</p>
+<p>我記得是一開場我就把 pA 寫掉，pB 不會先丟著，把 pC $20$ 分寫掉，<s>然後不會 pB]]>
+    </summary>
+    <title>沒有 Virtual EGOI 2023</title>
+    <updated>2026-06-24T11:56:19.925Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="EGOI" scheme="https://branches1029.github.io/tags/EGOI/"/>
+    <category term="TOI" scheme="https://branches1029.github.io/tags/TOI/"/>
+    <id>https://branches1029.github.io/2026/2026-EGOI-%E5%9C%8B%E5%9F%B9/</id>
+    <link href="https://branches1029.github.io/2026/2026-EGOI-%E5%9C%8B%E5%9F%B9/"/>
+    <published>2026-04-13T12:36:32.000Z</published>
+    <summary>
+      <![CDATA[<p>很高興我可以當上 EGOI 國手，<s>雖然沒有很意外</s>，但就是有種想像的東西成真了的感覺吧。<br>
+也很開心可以再去兩個禮拜的國培，<s>雖然武陵的討論室很好 vir ，但我想玩拼圖和吃泡芙了</s>，加上 4/10 發生了一些事，總之是希望我可以好好練]]>
+    </summary>
+    <title>2026 EGOI 國培 ( 以及阿飄 )</title>
+    <updated>2026-09-09T02:16:47.540Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="training" scheme="https://branches1029.github.io/tags/training/"/>
+    <category term="EGOI" scheme="https://branches1029.github.io/tags/EGOI/"/>
+    <id>https://branches1029.github.io/2026/Virtual-EGOI-2022/</id>
+    <link href="https://branches1029.github.io/2026/Virtual-EGOI-2022/"/>
+    <published>2026-04-07T08:29:16.000Z</published>
+    <summary>
+      <![CDATA[<h1>Day1</h1>
+<p>Day1 是 4/7 在武陵 vir 的，從 <code>8:30</code> 開始打。</p>
+<p><code>0:20</code><br>
+呃我有點想睡覺了，然後我怎麼現在才想完]]>
+    </summary>
+    <title>Virtual EGOI 2022</title>
+    <updated>2026-07-22T13:51:12.569Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="other" scheme="https://branches1029.github.io/tags/other/"/>
+    <id>https://branches1029.github.io/2026/%E9%97%9C%E6%96%BC%E6%88%91%E7%9A%84-handle-%E4%BA%8B%E6%95%85/</id>
+    <link href="https://branches1029.github.io/2026/%E9%97%9C%E6%96%BC%E6%88%91%E7%9A%84-handle-%E4%BA%8B%E6%95%85/"/>
+    <published>2026-04-06T07:16:39.000Z</published>
+    <summary>
+      <![CDATA[<p>好像不小心被發現了，我是覺得沒什麼好看的啦，你們還是不要看好了。<br>
+然後我的生日是 3/7 不是]]>
+    </summary>
+    <title>關於我的 handle 事故</title>
+    <updated>2026-04-07T06:33:22.706Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="training" scheme="https://branches1029.github.io/tags/training/"/>
+    <category term="EGOI" scheme="https://branches1029.github.io/tags/EGOI/"/>
+    <id>https://branches1029.github.io/2026/Virtual-EGOI-2021/</id>
+    <link href="https://branches1029.github.io/2026/Virtual-EGOI-2021/"/>
+    <published>2026-03-31T07:07:21.000Z</published>
+    <summary>
+      <![CDATA[<h1>Day1</h1>
+<p>Day1 是 3/31 在武陵 vir 的，因為我 <code>14:00</code> 要去烤餅乾，所以從 <code>8:30</code> 開始打。</p>
+<p><code>0:55</code><br>
+看完題目了，精神分數]]>
+    </summary>
+    <title>Virtual EGOI 2021</title>
+    <updated>2026-06-10T12:54:16.678Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="EGOI" scheme="https://branches1029.github.io/tags/EGOI/"/>
+    <category term="TOI" scheme="https://branches1029.github.io/tags/TOI/"/>
+    <id>https://branches1029.github.io/2026/2026-EGOI-2-TOI-1/</id>
+    <link href="https://branches1029.github.io/2026/2026-EGOI-2-TOI-1/"/>
+    <published>2026-03-17T13:38:53.000Z</published>
+    <summary>
+      <![CDATA[<p>感覺離國手又更進一步了 (☆▽☆)</p>
+<h2 id="3-16-Mon">3/16 (Mon.)</h2>
+<p>早上中午就在家裡廢，然後 <code>15:00</code> 出發去台北。<br>
+大概 <code>16:00</code>]]>
+    </summary>
+    <title>
+      <![CDATA[2026 EGOI 2 ! & TOI 1 !]]>
+    </title>
+    <updated>2026-09-09T02:15:17.129Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="contest" scheme="https://branches1029.github.io/tags/contest/"/>
+    <category term="EGOI" scheme="https://branches1029.github.io/tags/EGOI/"/>
+    <category term="TOI" scheme="https://branches1029.github.io/tags/TOI/"/>
+    <id>https://branches1029.github.io/2026/2026-EGOI-%E4%BA%8C%E6%A8%A1-TOI-pre/</id>
+    <link href="https://branches1029.github.io/2026/2026-EGOI-%E4%BA%8C%E6%A8%A1-TOI-pre/"/>
+    <published>2026-03-07T12:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>今天是 EGOI 二模、TOI 初選還有我生日 🎉</p>
+<h2]]>
+    </summary>
+    <title>2026 EGOI 二模 / TOI pre</title>
+    <updated>2026-09-09T02:14:44.501Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="EGOI" scheme="https://branches1029.github.io/tags/EGOI/"/>
+    <category term="TOI" scheme="https://branches1029.github.io/tags/TOI/"/>
+    <id>https://branches1029.github.io/2026/2026-EGOI-1%EF%BC%81/</id>
+    <link href="https://branches1029.github.io/2026/2026-EGOI-1%EF%BC%81/"/>
+    <published>2026-02-02T08:46:04.000Z</published>
+    <summary>
+      <![CDATA[<p>終於要踏上國手之路了！！！(☆▽☆)</p>
+<h2 id="02-02-Mon">02/02 (Mon.)</h2>
+<p>因為 8.30 要報到，所以 6.20 就要起床，不然我爸說會塞車。<br>
+然後我妹也跑過來，到底想幹嘛。<br>
+結果 8.]]>
+    </summary>
+    <title>2026 EGOI 1 !</title>
+    <updated>2026-09-09T02:16:24.747Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="學科能競" scheme="https://branches1029.github.io/tags/%E5%AD%B8%E7%A7%91%E8%83%BD%E7%AB%B6/"/>
+    <category term="contest" scheme="https://branches1029.github.io/tags/contest/"/>
+    <id>https://branches1029.github.io/2025/2025-%E5%8C%97%E4%BA%8C%E5%8D%80/</id>
+    <link href="https://branches1029.github.io/2025/2025-%E5%8C%97%E4%BA%8C%E5%8D%80/"/>
+    <published>2025-11-13T11:35:32.000Z</published>
+    <summary>
+      <![CDATA[<p>今天 11/13 是北二區學科能競，經過很久的練習<s>以及感冒的攻擊</s>，希望我可以打很好。</p>
+<h2 id="前日談">前日談</h2>
+<p>上禮拜四 ( 運動會 ) 我跟江語萱一起搭公車回家，車上有很多人。<br>
+我 :]]>
+    </summary>
+    <title>2025 北二區</title>
+    <updated>2026-10-11T08:13:33.932Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="TOI" scheme="https://branches1029.github.io/tags/TOI/"/>
+    <id>https://branches1029.github.io/2025/TOI-%E6%BD%9B%E5%8A%9B%E7%B5%84-202511/</id>
+    <link href="https://branches1029.github.io/2025/TOI-%E6%BD%9B%E5%8A%9B%E7%B5%84-202511/"/>
+    <published>2025-11-11T13:05:22.000Z</published>
+    <summary>
+      <![CDATA[<p>生病 ಥ_ಥ<br>
+但我覺得北二區之前大概是好不了了，所以要習慣一下。</p>
+<p>開場先看題。<br>
+P1 是數學，P2 是 DP，P3 是 BCC。</p>
+<h2]]>
+    </summary>
+    <title>TOI 潛力組 202511</title>
+    <updated>2026-08-21T02:31:18.325Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>brAnChes</name>
+    </author>
+    <category term="training" scheme="https://branches1029.github.io/tags/training/"/>
+    <id>https://branches1029.github.io/2025/2025-%E3%81%AE-%E6%A0%A1%E9%9A%8A%E5%85%AC%E5%81%87-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</id>
+    <link href="https://branches1029.github.io/2025/2025-%E3%81%AE-%E6%A0%A1%E9%9A%8A%E5%85%AC%E5%81%87-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/"/>
+    <published>2025-10-19T10:13:01.000Z</published>
+    <summary>
+      <![CDATA[<p>現在一段終於考完了 (≧∇≦)ﾉ<br>
+然後如果不是有人硬是要把成績端到我面前的話我應該是不會去看了<br>
+對吧，錯那麼多你會訂正嗎 ？<br>
+不會嘛，那你看成績幹嘛。</p>
+<p>因為不知不覺 10]]>
+    </summary>
+    <title>2025 の 校隊公假 について</title>
+    <updated>2026-10-14T07:46:25.389Z</updated>
+  </entry>
+</feed>
